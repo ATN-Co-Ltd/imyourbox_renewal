@@ -1,8 +1,10 @@
 //상세 주문저보 테이블
 
+const {} = require("../constants/model_enum");
+
 module.exports = (sequelize, DataTypes) => {
   const orderInfo = sequelize.define(
-    "ORDER_INFO",
+    "DETAIL_ORDER_INFO",
     {
       seq: {
         type: DataTypes.BIGINT,
@@ -10,7 +12,9 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         autoIncrement: true,
       },
-
+      store_type: {
+        type: DataTypes.ENUM(),
+      },
       reg_date: { type: DataTypes.DATE, allowNull: false },
     },
     {

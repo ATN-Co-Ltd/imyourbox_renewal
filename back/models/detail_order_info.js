@@ -2,7 +2,6 @@
 const DataTypes = require("sequelize");
 const { Model } = DataTypes;
 const {
-  enum_product_type,
   enum_store_type,
   enum_have_barcode,
   enum_input_store_type,
@@ -98,5 +97,11 @@ module.exports = class DETAIL_ORDER_INFO extends Model {
         sequelize,
       }
     );
+  }
+  static associate(db) {
+    db.Detail_order_info.hasMany(db.product_category);
+    db.Detail_order_info.hasMany(db.production_caution);
+    db.Detail_order_info.hasMany(db.store_type);
+    db.Detail_order_info.hasMany(db.logistics_service_kinds);
   }
 };

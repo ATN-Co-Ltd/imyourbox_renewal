@@ -35,7 +35,7 @@ const enum_logistics_service_kinds = [
 
 const enum_have_barcode = ["have_barcode", "no_barcode", "part_barcode"]; //있다,없다,일부만있다
 
-const enum_store_type = ["pallet", "box"]; //박스,파레트
+const enum_input_store_type = ["pallet", "box"]; //박스,파레트
 
 const enum_delivery_box_size = ["mini", "smaill", "medium", "large", "giant"]; //극소,소,중간,큰,특대
 
@@ -58,4 +58,5 @@ module.exports = {
   enum_release_packaging,
   enum_courier_bag,
   enum_processing_need,
+  enum_input_store_type,
 };

@@ -1,7 +1,7 @@
 const DataTypes = require("sequelize");
 const { Model } = DataTypes;
 const { enum_store_type } = require("../constants/model_enum");
-module.exports = class STORE_TYPE extends Model {
+module.exports = class Store_type extends Model {
   static init(sequelize) {
     return super.init(
       {

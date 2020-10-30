@@ -2,7 +2,7 @@
 const DataTypes = require("sequelize");
 const { Model } = DataTypes;
 
-module.exports = class ORDER_INFO extends Model {
+module.exports = class OrderInfo extends Model {
   static init(sequelize) {
     return super.init(
       {

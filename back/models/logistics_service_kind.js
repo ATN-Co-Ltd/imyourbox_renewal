@@ -1,7 +1,7 @@
 const DataTypes = require("sequelize");
 const { Model } = DataTypes;
 const { enum_logistics_service_kinds } = require("../constants/model_enum");
-module.exports = class LOGISTICS_SERVICE_KIND extends Model {
+module.exports = class Logistics_service_kind extends Model {
   static init(sequelize) {
     return super.init(
       {

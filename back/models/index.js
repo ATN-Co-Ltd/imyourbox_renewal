@@ -1,6 +1,13 @@
 const Sequelize = require("sequelize");
 const env = process.env.NODE_ENV || "development";
 const config = require(__dirname + "/../config/config")[env];
+const order_info = require("./order_info");
+const detail_order_info = require("./detail_order_info");
+const product_category = require("./product_category");
+const production_caution = require("./production_caution");
+const store_type = require("./store_type");
+const logistics_service_kind = require("./logistics_service_kind");
+
 const db = {};
 
 const sequelize = new Sequelize(
@@ -10,15 +17,16 @@ const sequelize = new Sequelize(
   config
 );
 
-db.ORDER_INFO = require("./order_info")(sequelize, Sequelize);
-db.DETAIL_ORDER_INFO = require("./detail_order_info")(sequelize, Sequelize);
-db.PRODUCT_CATEGORY = require("./product_category")(sequelize, Sequelize);
-db.PRODUCTION_CAUTION = require("./production_caution")(sequelize, Sequelize);
-db.STORE_TYPE = require("./store_type")(sequelize, Sequelize);
-db.LOGISTICS_SERVICE_KIND = require("./logistics_service_kind")(
-  sequelize,
-  Sequelize
-);
+db.OrderInfo = order_info;
+db.Detail_order_info = detail_order_info;
+db.Product_category = product_category;
+db.Production_caution = production_caution;
+db.Store_type = store_type;
+db.Logistics_service_kind = logistics_service_kind;
+
+Object.keys(db).forEach((modelName) => {
+  db[modelName].init(sequelize);
+});
 
 Object.keys(db).forEach((modelName) => {
   if (db[modelName].associate) {

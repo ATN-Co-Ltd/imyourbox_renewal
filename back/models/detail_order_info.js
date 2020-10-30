@@ -12,7 +12,7 @@ const {
   enum_processing_need,
 } = require("../constants/model_enum");
 
-module.exports = class DETAIL_ORDER_INFO extends Model {
+module.exports = class Detail_order_info extends Model {
   static init(sequelize) {
     return super.init(
       {
@@ -99,9 +99,9 @@ module.exports = class DETAIL_ORDER_INFO extends Model {
     );
   }
   static associate(db) {
-    db.Detail_order_info.hasMany(db.product_category);
-    db.Detail_order_info.hasMany(db.production_caution);
-    db.Detail_order_info.hasMany(db.store_type);
-    db.Detail_order_info.hasMany(db.logistics_service_kinds);
+    db.Detail_order_info.hasMany(db.Product_category);
+    db.Detail_order_info.hasMany(db.Production_caution);
+    db.Detail_order_info.hasMany(db.Store_type);
+    db.Detail_order_info.hasMany(db.Logistics_service_kind);
   }
 };

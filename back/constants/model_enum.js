@@ -39,7 +39,7 @@ const enum_input_store_type = ["pallet", "box"]; //박스,파레트
 
 const enum_delivery_box_size = ["mini", "smaill", "medium", "large", "giant"]; //극소,소,중간,큰,특대
 
-const enum_service_use = ["fisrt", "using"]; //처음,이용중?
+const enum_service_use = ["first", "using"]; //처음,이용중?
 
 const enum_release_packaging = ["total_packaing", "only_packaing"]; //합포장, 단독포장
 

@@ -1,4 +1,5 @@
 const express = require("express");
+
 const cors = require("cors");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
@@ -7,8 +8,9 @@ const hpp = require("hpp");
 const db = require("./models");
 const helmet = require("helmet");
 const orderRouter = require("./routes/order");
-dotenv.config();
 
+dotenv.config();
+const app = express();
 db.sequelize
   .sync()
   .then(() => {

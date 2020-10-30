@@ -1,7 +1,7 @@
 const DataTypes = require("sequelize");
 const { Model } = DataTypes;
 const { enum_caution_product_tpye } = require("../constants/model_enum");
-module.exports = class PRODUCTION_CAUTION extends Model {
+module.exports = class Production_caution extends Model {
   static init(sequelize) {
     return super.init(
       {

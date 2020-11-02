@@ -27,7 +27,7 @@ module.exports = class Detail_order_info extends Model {
         customer_phone: { type: DataTypes.STRING(100), allowNull: true },
         customer_email: { type: DataTypes.STRING(100), allowNull: true },
         customer_memo: { type: DataTypes.STRING(1000), allowNull: true },
-        sotre_type: { type: DataTypes.ENUM(enum_store_type), allowNull: false },
+        detail_product_type: { type: DataTypes.STRING(1000), allowNull: true },
         barcode_have: {
           type: DataTypes.ENUM(enum_have_barcode),
           allowNull: false,

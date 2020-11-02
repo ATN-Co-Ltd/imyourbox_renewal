@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { Order } = require("../models");
+const { OrderInfo } = require("../models");
 
 let jandi_order_info_str = [];
 let setJandiStrFunc = (title, description) => {
@@ -44,7 +44,7 @@ router.post("/order_info", async (req, res, next) => {
 
   try {
     //기본견적주문 디비에넣기
-    await Order.create({
+    await OrderInfo.create({
       customer_company: req.body.customer_company,
       customer_manager_name: req.body.customer_manager_name,
       customer_phone: req.body.customer_phone,
@@ -52,8 +52,10 @@ router.post("/order_info", async (req, res, next) => {
       customer_memo: req.body.customer_memo,
       reg_date: new Date(),
     });
+    return res.status(200).send("ok");
   } catch (error) {
     console.log(error);
+    next(error);
   }
 });
 

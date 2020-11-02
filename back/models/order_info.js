@@ -12,7 +12,7 @@ module.exports = class OrderInfo extends Model {
           allowNull: false,
           autoIncrement: true,
         },
-        customer_comapny: { type: DaㄴtaTypes.STRING(100), allowNull: true },
+        customer_company: { type: DataTypes.STRING(100), allowNull: true },
         customer_manager_name: { type: DataTypes.STRING(100), allowNull: true },
         customer_phone: { type: DataTypes.STRING(100), allowNull: true },
         customer_email: { type: DataTypes.STRING(100), allowNull: true },

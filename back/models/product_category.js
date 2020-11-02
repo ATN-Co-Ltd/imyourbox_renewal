@@ -13,7 +13,7 @@ module.exports = class Product_category extends Model {
       },
       {
         modelName: "Product_category",
-        tableName: "product_catorys",
+        tableName: "product_categorys",
         charset: "utf8mb4",
         collate: "utf8mb4_general_ci",
         sequelize,

@@ -1,5 +1,4 @@
 const express = require("express");
-
 const cors = require("cors");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
@@ -8,8 +7,14 @@ const hpp = require("hpp");
 const db = require("./models");
 const helmet = require("helmet");
 const orderRouter = require("./routes/order");
+// const swaggerUi = require("swagger-ui-express");
+// const swaggerDocument = require("swagger-jsdoc");
 
+//swagger
+
+// router.use("/api-docs", swaggerUi.serve, swaggerUi.setup());
 dotenv.config();
+
 const app = express();
 db.sequelize
   .sync()

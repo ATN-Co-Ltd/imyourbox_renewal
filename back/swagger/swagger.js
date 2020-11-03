@@ -12,7 +12,7 @@ module.exports = {
       description: "아임유어박스 RestAPI 기본정의서입니다.",
     },
     // 주소
-    host: "localhost:3000",
+    host: "localhost:4000",
     // 기본 root path
     basePath: "/",
     contact: {

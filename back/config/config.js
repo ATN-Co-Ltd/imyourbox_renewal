@@ -11,7 +11,6 @@ module.exports = {
   },
   test: {
     username: "root",
-    password: null,
     password: process.env.DB_PASSWORD,
     database: "IMYOURBOX_OFFICIAL_RENEW",
     host: "127.0.0.1",

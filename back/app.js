@@ -7,14 +7,12 @@ const hpp = require("hpp");
 const db = require("./models");
 const helmet = require("helmet");
 const orderRouter = require("./routes/order");
-// const swaggerUi = require("swagger-ui-express");
-// const swaggerDocument = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
+const swaggerJSDoc = require("swagger-jsdoc");
+const swaggerOption = require("./swagger/swagger");
+const swaggerSpec = swaggerJSDoc(swaggerOption);
 
-//swagger
-
-// router.use("/api-docs", swaggerUi.serve, swaggerUi.setup());
 dotenv.config();
-
 const app = express();
 db.sequelize
   .sync()
@@ -24,6 +22,8 @@ db.sequelize
   .catch(console.error);
 
 app.use("/", express.static(path.join(__dirname, "public")));
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 if (process.env.NODE_ENV === "production") {
   app.use(morgan("combined"));
@@ -45,7 +45,6 @@ app.use(express.urlencoded({ extended: true }));
 
 //routes
 app.use("/order", orderRouter);
-
 app.listen(4000, () => {
   console.log("아임유어박스 실행중!");
 });

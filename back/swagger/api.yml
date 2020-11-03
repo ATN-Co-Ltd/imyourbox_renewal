@@ -150,44 +150,44 @@ definitions:
       category:
         type: array
         itmes:
-          enum: ["clothes",
-          "stuff",
-          "beauty",
-          "electronics",
-          "stationery",
-          "food",
-          "etc"]
+          enum:
+            [
+              "clothes",
+              "stuff",
+              "beauty",
+              "electronics",
+              "stationery",
+              "food",
+              "etc",
+            ]
       cautiontype:
         type: array
         itmes:
           type: string
-          enum: [
-          "fragile",
-          "discoloration",
-          "highprice",
-          "fitness_product",
-          "largefurniture",
-          ]  
+          enum:
+            [
+              "fragile",
+              "discoloration",
+              "highprice",
+              "fitness_product",
+              "largefurniture",
+            ]
       storetype:
         type: array
         itmes:
           type: string
-          enum: [
-          "room_temperature",
-          "low_temperature",
-          "refrigerated_storage",
-          "fronze_storage",
-          ]
+          enum:
+            [
+              "room_temperature",
+              "low_temperature",
+              "refrigerated_storage",
+              "fronze_storage",
+            ]
       servicekinds:
         type: array
         itmes:
           type: string
-          enum: [
-          "fullfillment",
-          "storeproduct",
-          "processing",
-          "etc",
-          ]
+          enum: ["fullfillment", "storeproduct", "processing", "etc"]
       xml:
         name: "Order"
 

@@ -9,6 +9,7 @@ const {
   Logistics_service_kind,
 } = require("../models");
 const axios = require("axios");
+const sendMail = require("../lib/nodemailer").SendmailTransport;
 
 //잔디
 let jandi_order_info_str = [];
@@ -27,6 +28,10 @@ router.post("/order_info", async (req, res, next) => {
     setJandiStrFunc("전화번호", `${req.body.customer_phone}`);
     setJandiStrFunc("이메일", `${req.body.customer_email}`);
     setJandiStrFunc("요청사항", `${req.body.customer_memo}`);
+
+    if (req.body.customer_email.match(/([@])\w+/g)) {
+      sendMail(req.body.customer_email); //nodemailer
+    }
     await axios
       .post(
         "https://wh.jandi.com/connect-api/webhook/18447744/6f4ca941899922f6c7a94460abf62a35",
@@ -49,7 +54,6 @@ router.post("/order_info", async (req, res, next) => {
   } catch (error) {
     console.log(error);
   }
-
   jandi_order_info_str = [];
   try {
     //기본견적주문 디비에넣기
@@ -61,6 +65,7 @@ router.post("/order_info", async (req, res, next) => {
       customer_memo: req.body.customer_memo,
       reg_date: new Date(),
     });
+
     res.status(200).send("정상적으로 신청되었습니다.");
   } catch (error) {
     console.log(error);

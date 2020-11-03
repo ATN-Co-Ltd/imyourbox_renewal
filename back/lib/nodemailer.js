@@ -13,13 +13,19 @@ async function SendmailTransport(email) {
         pass: process.env.MAIL_PASSWORD,
       },
     };
-    console.log(email);
+
     let message = {
       from: process.env.MAIL_EMAIL,
       to: email,
-      subject:
-        "아임유어박스 견적신청을 해주셔서 정말 감사합니다.아래 서비스소개파일을 받아보실수있습니다.",
-      html: "<p>테스트해보기<p/>",
+      subject: "안녕하세요 아임유어박스입니다.",
+      html:
+        "<h2>견적신청이 정상적으로 신청되었습니다.</h2><p>아임유어박스팀 드림</p>",
+      attachments: [
+        {
+          filename: "아임유어박스 회사소개서_2020",
+          path: "./files/Imyourbox.pdf",
+        },
+      ],
     };
     let transporter = nodemailer.createTransport(mailConfig);
     await transporter.sendMail(message);

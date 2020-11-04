@@ -35,7 +35,11 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(
   cors({
-    origin: "http://127.0.0.1:5500",
+    origin: [
+      "http://imyourbox.com",
+      "http://imyourbox.co.kr",
+      "http://localhost:3000",
+    ],
     credentials: true,
   })
 );
@@ -45,6 +49,6 @@ app.use(express.urlencoded({ extended: true }));
 
 //routes
 app.use("/order", orderRouter);
-app.listen(4000, () => {
+app.listen(80, () => {
   console.log("아임유어박스 실행중!");
 });

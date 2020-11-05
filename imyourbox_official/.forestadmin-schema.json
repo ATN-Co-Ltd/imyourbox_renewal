@@ -1003,7 +1003,7 @@
   "meta": {
     "database_type": "mysql",
     "liana": "forest-express-sequelize",
-    "liana_version": "6.3.13",
+    "liana_version": "6.3.14",
     "engine": "nodejs",
     "engine_version": "12.16.1",
     "framework": "express",

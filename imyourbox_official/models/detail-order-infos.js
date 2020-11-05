@@ -123,13 +123,6 @@ module.exports = (sequelize, DataTypes) => {
 
   // This section contains the relationships for this model. See: https://docs.forestadmin.com/documentation/v/v6/reference-guide/relationships#adding-relationships.
   DetailOrderInfos.associate = (models) => {
-    DetailOrderInfos.hasMany(models.logisticsServiceKinds, {
-      foreignKey: {
-        name: 'detailOrderInfoSeqKey',
-        field: 'DetailOrderInfoSeq',
-      },
-      as: 'detailOrderInfoSeqLogisticsServiceKinds',
-    });
     DetailOrderInfos.hasMany(models.productCategorys, {
       foreignKey: {
         name: 'detailOrderInfoSeqKey',
@@ -150,6 +143,13 @@ module.exports = (sequelize, DataTypes) => {
         field: 'DetailOrderInfoSeq',
       },
       as: 'detailOrderInfoSeqStoreTypes',
+    });
+    DetailOrderInfos.hasMany(models.logisticsServiceKinds, {
+      foreignKey: {
+        name: 'detailOrderInfoSeqKey',
+        field: 'DetailOrderInfoSeq',
+      },
+      as: 'detailOrderInfoSeqLogisticsServiceKinds',
     });
   };
 

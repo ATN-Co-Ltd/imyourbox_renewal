@@ -28,8 +28,9 @@ router.post("/order_info", async (req, res, next) => {
     setJandiStrFunc("전화번호", `${req.body.customer_phone}`);
     setJandiStrFunc("이메일", `${req.body.customer_email}`);
     setJandiStrFunc("요청사항", `${req.body.customer_memo}`);
-
+    console.log("들어오기전");
     if (req.body.customer_email.match(/([@])\w+/g)) {
+      console.log("들어오나요?");
       sendMail(req.body.customer_email); //nodemailer
     }
     await axios

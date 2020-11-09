@@ -148,14 +148,13 @@ router.post("/detail_order_info", async (req, res, next) => {
       attributes: ["seq"],
     });
     const seq = findSeq.getDataValue("seq");
-    const arrCategory = arrProductType_enToKr[req.body.category];
-    const arrCautiontype = arrCautionType_enToKr[req.body.cautiontype];
-    const arrStoreType = arrStoreType_enToKr[req.body.storetype];
-    const arrServiceKinds =
-      arrLogisticsServiceKinds_enToKr[req.body.servicekinds];
-    for (const category of arrCategory) {
+    const arrCategory = req.body.category;
+    const arrCautiontype = req.body.cautiontype;
+    const arrStoreType = req.body.storetype;
+    const arrServiceKinds = req.body.servicekinds;
+    for (arrProductType_enToKr of arrCategory) {
       await Product_category.create({
-        category: category,
+        category: arrProductType_enToKr,
         DetailOrderInfoSeq: seq,
       });
     }

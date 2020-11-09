@@ -20,6 +20,48 @@ let setJandiStrFunc = (title, description) => {
   });
 };
 
+//한글화
+
+const arrProductType_enToKr = [
+  {
+    clothes: "의류",
+    stuff: "잡화",
+    beauty: "뷰티",
+    stationery: "문구류",
+    electronics: "가전/가구",
+    food: "식음료",
+    etc: "기타",
+  },
+];
+
+const arrStoreType_enToKr = [
+  {
+    room_temperature: "상온보관",
+    low_temperature: "저온보관",
+    refrigerated_storage: "냉장보관",
+    fronze_storage: "냉동보관",
+  },
+];
+
+const arrCautionType_enToKr = [
+  {
+    fragile: "파손주의",
+    discoloration: "변색주의",
+    highprice: "고가품",
+    fitness_product: "20kg이상중량물",
+    largefurniture: "대형가구",
+  },
+];
+
+const arrLogisticsServiceKinds_enToKr = [
+  {
+    fullfillment: "풀필먼트",
+    storeproduct: "상품보관",
+    processing: "임가공",
+    etc: "기타문의",
+  },
+];
+
 //간단주문견적
 router.post("/order_info", async (req, res, next) => {
   try {
@@ -112,25 +154,25 @@ router.post("/detail_order_info", async (req, res, next) => {
     const arrServiceKinds = req.body.servicekinds;
     for (const category of arrCategory) {
       await Product_category.create({
-        category: category,
+        category: arrProductType_enToKr[category],
         DetailOrderInfoSeq: seq,
       });
     }
     for (const cautiontype of arrCautiontype) {
       await Production_caution.create({
-        cautiontype: cautiontype,
+        cautiontype: arrCautionType_enToKr[cautiontype],
         DetailOrderInfoSeq: seq,
       });
     }
     for (const storetype of arrStoreType) {
       await Store_type.create({
-        storetype: storetype,
+        storetype: arrStoreType_enToKr[storetype],
         DetailOrderInfoSeq: seq,
       });
     }
     for (const servicekinds of arrServiceKinds) {
       await Logistics_service_kind.create({
-        servicekinds: servicekinds,
+        servicekinds: arrLogisticsServiceKinds_enToKr[servicekinds],
         DetailOrderInfoSeq: seq,
       });
     }

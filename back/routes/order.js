@@ -152,9 +152,10 @@ router.post("/detail_order_info", async (req, res, next) => {
     const arrCautiontype = req.body.cautiontype;
     const arrStoreType = req.body.storetype;
     const arrServiceKinds = req.body.servicekinds;
-    for (arrProductType_enToKr of arrCategory) {
+    for (const category of arrCategory) {
+      await console.log(arrProductType_enToKr[category]);
       await Product_category.create({
-        category: arrProductType_enToKr,
+        category: category,
         DetailOrderInfoSeq: seq,
       });
     }

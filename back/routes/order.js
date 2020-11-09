@@ -72,7 +72,6 @@ router.post("/order_info", async (req, res, next) => {
     setJandiStrFunc("요청사항", `${req.body.customer_memo}`);
     console.log("들어오기전");
     if (req.body.customer_email.match(/([@])\w+/g)) {
-      console.log("들어오나요?");
       sendMail(req.body.customer_email); //nodemailer
     }
     await axios
@@ -200,7 +199,9 @@ router.post("/detail_order_info", async (req, res, next) => {
     setJandiStrFunc("출고패키징", `${req.body.output_packaing}`);
     setJandiStrFunc("출고용박스여부", `${req.body.courier_bag}`);
     setJandiStrFunc("임가공여부", `${req.body.processing_need}`);
-
+    if (req.body.customer_email.match(/([@])\w+/g)) {
+      sendMail(req.body.customer_email); //nodemailer
+    }
     await axios
       .post(
         "https://wh.jandi.com/connect-api/webhook/18447744/6f4ca941899922f6c7a94460abf62a35",

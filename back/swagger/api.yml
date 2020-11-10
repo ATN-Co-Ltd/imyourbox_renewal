@@ -148,7 +148,7 @@ definitions:
         type: "string"
         enum: ["need", "not_need"]
       category:
-        type: array
+        type: string
         itmes:
           enum:
             [
@@ -161,9 +161,8 @@ definitions:
               "etc",
             ]
       cautiontype:
-        type: array
+        type: string
         itmes:
-          type: string
           enum:
             [
               "fragile",
@@ -173,9 +172,8 @@ definitions:
               "largefurniture",
             ]
       storetype:
-        type: array
+        type: string
         itmes:
-          type: string
           enum:
             [
               "room_temperature",
@@ -184,11 +182,11 @@ definitions:
               "fronze_storage",
             ]
       servicekinds:
-        type: array
+        type: string
         itmes:
-          type: string
           enum: ["fullfillment", "storeproduct", "processing", "etc"]
-      xml:
+
+          xml:
         name: "Order"
 
 externalDocs:

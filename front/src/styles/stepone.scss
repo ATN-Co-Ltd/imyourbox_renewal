@@ -2,7 +2,13 @@
     --background_color_one: #fff;
     --brand_color: #ff9948;
     --font_color: #ffa63f;
+    --font_stepbar_color: #6d6d6d;
+    --color_step_eclispe: #fff3d2;
+    --color_range_bar: #ffc671;
 }
+$complete: #f68e20;
+$active: #ff9948;
+$mute: #e6e6e6;
 
 .wrapper {
     width: 100%;
@@ -17,8 +23,11 @@
     margin: 0 auto;
     height: inherit;
 }
+.inner__fixed {
+    width: 100%;
+    max-width: 62rem;
+}
 #navbar {
-    position: fixed;
     width: 100%;
     max-width: 62rem;
     display: flex;
@@ -49,8 +58,67 @@
 .navbar__logo {
     margin: 1rem;
     cursor: pointer;
+    background: url(../images/horizontal-logo.png);
 }
 .logo {
     width: 10.44rem;
     height: 2.5rem;
+}
+
+.stepbar {
+    position: absolute;
+    width: 62rem;
+    max-width: 62rem;
+    counter-reset: step;
+}
+.stepbar li {
+    list-style-type: none;
+    float: left;
+    width: 25%;
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+}
+.stepbar li:before {
+    /* CSS for creating steper block before the li item*/
+    content: counter(step);
+    counter-increment: step;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border: 2px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 100%;
+    background-color: white;
+}
+.stepbar li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+.stepbar li:first-child:after {
+    content: none;
+}
+.stepbar li.active {
+    color: #27ae60;
+}
+.stepbar li.active:before {
+    border-color: #27ae60;
+}
+.stepbar li.active + li:after {
+    background-color: #27ae60;
+}
+
+.square {
+    width: 100%;
+    margin: 0 auto;
+    height: 19.25rem;
+    background-color: #c4c4c4;
 }

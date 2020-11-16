@@ -36,10 +36,74 @@
                         <li class="stepbar__list__item"></li>
                     </ul>
                     </div>
-                </div>    
-                <div class="square"> </div>
-             
-                    
+                </div>
+                <section id="stepone">
+                    <div class="square"> </div>
+                    <div class="stepone__container">
+                        <div class="divider"></div>   
+                        <span class="stepone__title">STEP 1</span>
+                        <span class="stepone__description">문의하실 상품의 정보를 입력해주세요</span>
+                        <div class="stepone__category">
+                            <span class="stepone__category-title">상품종류</span>
+                            <span class="stepone__category-description">중복 선택이 가능합니다.</span>
+                        </div>
+                        <div class="stepone__category__buttons">
+                            <button class="stepone__category__buttons clothes">의류 
+                            </button>
+                            <button class="stepone__category__buttons stuff">
+                                잡화</button>
+                            <button class="stepone__category__buttons beauty">뷰티</button>
+                            <button class="stepone__category__buttons householdgoods">생활용품</button>
+                            <button class="stepone__category__buttons electronics">가전/가구</button>
+                            <button class="stepone__category__buttons stationery">문구류</button>
+                            <button class="stepone__category__buttons food">식음료</button>
+                            <button class="stepone__category__buttons etc">기타</button>
+                        </div>
+                        <div class="steopone__detailProduct">
+                            <span class="stepone__category-title">상세품목</span>
+                            <span class="stepone__category-description">문의하고자 하는 품목의 상세한 종류를 입력해주세요.</span>
+                        </div>
+                        <input class="stepone_detailProduct__input" placeholder="         예시)  시계,립틴트,더치커피(병)"></input>
+                        <div class="stepone__storagetype">
+                            <span class="stepone__category-title">보관형태</span>
+                            <span class="stepone__category-description">상품이 보관될 창고의 온도 조절 방식을 선택해주세요.(중복선택가능)</span>
+                        </div>
+                            <div class="stepone__storagetype__buttons">
+                                <button class="stepone__storagetype__buttons room_temperature">상온 보관 
+                                        <i class="fas fa-check checked"></i>
+                                </button>
+                                <button class="stepone__storagetype__buttons low_temperature">저온 보관   <i class="fas fa-check checked"></i></button>
+                                <button disabled class="stepone__storagetype__buttons refrigerated_storage">냉장 보관</button>
+                                <button disabled class="stepone__storagetype__buttons fronze_storage">냉동 보관</button>
+                            </div>
+                            <span class="stepone__storagetype__span">* 냉장/냉동 보관방식은 준비중입니다.</span>
+                            <div class="stepone__havebarcode">
+                                <span class="stepone__category-title">바코드 여부</span>
+                                <span class="stepone__category-description">스캔이 가능한 바코드가 제품에 부착되어 있는지 여부를 확인해주세요</span>
+                            </div>
+                            <div class="stepone__havebarcode__radio__groups">
+                               
+                                    <label class="stepone__havebarcode__radio__groups__radio">
+                                        <input checked type="radio" id="have_barcode" name="barcode" value="have_barcode">
+                                        바코드 있음
+                                    </label>
+                              
+                                    <label class="stepone__havebarcode__radio__groups__radio">
+                                        <input type="radio" name="barcode" value="no_barcode">
+                                      바코드 없음 
+                                    </label>
+                                
+                                    <label class="stepone__havebarcode__radio__groups__radio">
+                                    <input type="radio" name="barcode" value="part_barcode">
+                                    일부만 있음
+                                    </label>
+                            </div>
+                            <div class="stepone__option">
+                                <span class="stepone__option-title">선택정보</span>
+                                <hr class="stepone__option-line"/>
+                            </div>
+                    </div>
+                </section>    
                  
             </div> 
             

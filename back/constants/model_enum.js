@@ -2,6 +2,7 @@ const enum_product_type = [
   "clothes",
   "stuff",
   "beauty",
+  "householdgoods",
   "electronics",
   "stationery",
   "food",

@@ -58,14 +58,45 @@ buttons_storage_type.forEach(e=> {
 });
 
 //바코드여부
+let barcodeValue = "";
  const radio__havebarcode = document.querySelector(".stepone__havebarcode__radio__groups");
-radio__havebarcode.addEventListener('click',(e)=> {
-    const selected = document.querySelector(".stepone__havebarcode__radio__groups__radio");
-    console.log(selected);
-      selected.classList.toggle("selected");
-      console.log(`${selected}dfdfdfd`)
+radio__havebarcode.addEventListener('change',(e)=> {
+    const selected = document.querySelectorAll('label');
+    const white = "#ffffff"
+    const black = "#000000"
+    const selectedColor = "#ff9948";
+    barcodeValue = e.target.value;
+    console.log(barcodeValue);
+    switch (e.target.value) {
+        case "have_barcode":
+            selected[0].style.backgroundColor =selectedColor;
+            selected[0].style.color =white;
+            selected[1].style.color =black;
+            selected[2].style.color =black;
+            selected[1].style.backgroundColor =white;
+            selected[2].style.backgroundColor =white;
+            break;
+        case "no_barcode":
+            selected[1].style.backgroundColor =selectedColor;
+            selected[0].style.backgroundColor =white;
+            selected[2].style.backgroundColor =white;
+            selected[0].style.color =black;
+            selected[1].style.color =white;
+            selected[2].style.color =black;
+            break;
+        case "part_barcode":
+            selected[2].style.backgroundColor =selectedColor;
+            selected[1].style.backgroundColor =white;
+            selected[0].style.backgroundColor =white;
+            selected[0].style.color =black;
+            selected[1].style.color =black;
+            selected[2].style.color =white;
+            break;
+        default:
+            break;
+    }
 })
 
   
- 
+
 

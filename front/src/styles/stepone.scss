@@ -354,13 +354,9 @@ $mute: #e6e6e6;
     justify-content: flex-start;
     align-items: center;
     margin: 0;
-    margin-right: 20px;
+    margin-right: 1.4375rem;
     cursor: pointer;
 }
-// .stepone__havebarcode__radio__groups__radio.active {
-//     background-color: #ffa63f;
-//     color: var(--color_button_deactive);
-// }
 
 .stepone__havebarcode__radio__groups input {
     width: 1.25rem;
@@ -368,10 +364,14 @@ $mute: #e6e6e6;
     margin-left: 1rem;
     margin-right: 6rem;
 }
-.stepone__havebarcode__radio__groups__radio.selected {
-    background-color: #ff9948;
-    color: #ffffff;
-}
+
+// input[type="radio"]:checked {
+//     appearance: none;
+//     border-radius: 20px;
+//     border: 1.5px solid #ff9948;
+//     box-sizing: border-box;
+//     background-color: #ffa63f;
+// }
 
 .stepone__option {
     display: flex;
@@ -388,4 +388,111 @@ $mute: #e6e6e6;
     width: 58rem;
     margin: 0;
     border: 1px solid #bfbfbf;
+}
+.stepone__option-description {
+    font-weight: 500;
+    font-size: 0.875rem;
+    font-style: normal;
+    color: #666666;
+    margin-top: 0.375rem;
+}
+
+.stepone__productURL {
+    margin-top: 2.75rem;
+    display: flex;
+    flex-direction: column;
+}
+.stepone__productURL__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.stepone__productURL__input {
+    border: 0.5px solid #c4c4c4;
+    background: #f2f2f2;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    height: 2.8125rem;
+    max-width: 100%;
+    margin-top: 1.5625rem;
+    font-size: 0.8125rem;
+}
+.stepone__productURL__input::placeholder {
+    color: #bfbfbf;
+    font-size: 0.8125rem;
+}
+
+.stepone__cautionProduct {
+    margin-top: 4.9375rem;
+    display: flex;
+    flex-direction: column;
+}
+.stepone__cautionProduct__header {
+    display: flex;
+    flex-direction: row;
+}
+.stepone__cautionProduct-subDescription {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #a3a3a3;
+    margin-top: 0.25rem;
+}
+
+.stepone__cautionProduct__buttons input {
+    width: 11.5625rem;
+    height: 8.125rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+    margin-right: 0.626rem;
+    margin-top: 1.625rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 14rem;
+}
+.fa-check.caution_checked {
+    position: absolute;
+    margin-top: 1.875rem;
+    margin-left: 9.375rem;
+    color: var(--color_button_deactive);
+}
+.stepone__cautionProduct__button {
+    display: inline;
+}
+
+.stepone__cautionProduct__buttons.fragile {
+    background: url("../images/buttons/catecory01.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4.375rem 4.375rem;
+    margin-top: 20px;
+}
+.stepone__cautionProduct__buttons.discoloration {
+    background: url("../images/buttons/catecory01.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4.375rem 4.375rem;
+    margin-top: 20px;
+}
+.stepone__cautionProduct__buttons.highprice {
+    background: url("../images/buttons/catecory01.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4.375rem 4.375rem;
+    margin-top: 20px;
+}
+.stepone__cautionProduct__buttons.fitness_product {
+    background: url("../images/buttons/catecory01.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4.375rem 4.375rem;
+    margin-top: 20px;
+}
+.stepone__cautionProduct__buttons.largefurniture {
+    background: url("../images/buttons/catecory01.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4.375rem 4.375rem;
+    margin-top: 20px;
 }

@@ -207,7 +207,7 @@ $mute: #e6e6e6;
 }
 .stepone__category__buttons.etc {
     margin-right: 0rem !important;
-    background: url("../images/buttons/catecory07.svg");
+    background: url("../images/buttons/catecory08.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 3.375rem 3.375rem;
@@ -240,7 +240,7 @@ $mute: #e6e6e6;
 }
 .stepone__category__buttons.etc.clicked {
     background-color: #ffa63f;
-    background-image: url("../images/buttons/catecory07(hover).svg");
+    background-image: url("../images/buttons/catecory08(hover).svg");
     color: #ffffff;
 }
 
@@ -460,39 +460,108 @@ $mute: #e6e6e6;
 .stepone__cautionProduct__button {
     display: inline;
 }
+.stepone__cautionProduct__buttons.fragile:hover {
+    background-color: #ffa63f;
+    background-image: url("../images/buttons/warning01(hover).svg");
+    color: #ffffff;
+}
+.stepone__cautionProduct__buttons.discoloration:hover {
+    background-color: #ffa63f;
+    background-image: url("../images/buttons/warning02(hover).svg");
+    color: #ffffff;
+}
+.stepone__cautionProduct__buttons.highprice:hover {
+    background-color: #ffa63f;
+    background-image: url("../images/buttons/warning03(hover).svg");
+    color: #ffffff;
+}
+.stepone__cautionProduct__buttons.fitness_product:hover {
+    background-color: #ffa63f;
+    background-image: url("../images/buttons/warning04(hover).svg");
+    color: #ffffff;
+}
+.stepone__cautionProduct__buttons.largefurniture:hover {
+    background-color: #ffa63f;
+    background-image: url("../images/buttons/warning05(hover).svg");
+    color: #ffffff;
+}
 
 .stepone__cautionProduct__buttons.fragile {
-    background: url("../images/buttons/catecory01.svg");
+    background: url("../images/buttons/warning01.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 4.375rem 4.375rem;
     margin-top: 20px;
 }
 .stepone__cautionProduct__buttons.discoloration {
-    background: url("../images/buttons/catecory01.svg");
+    background: url("../images/buttons/warning02.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 4.375rem 4.375rem;
     margin-top: 20px;
 }
 .stepone__cautionProduct__buttons.highprice {
-    background: url("../images/buttons/catecory01.svg");
+    background: url("../images/buttons/warning03.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 4.375rem 4.375rem;
     margin-top: 20px;
 }
 .stepone__cautionProduct__buttons.fitness_product {
-    background: url("../images/buttons/catecory01.svg");
+    background: url("../images/buttons/warning04.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 4.375rem 4.375rem;
     margin-top: 20px;
 }
 .stepone__cautionProduct__buttons.largefurniture {
-    background: url("../images/buttons/catecory01.svg");
+    background: url("../images/buttons/warning05.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 4.375rem 4.375rem;
     margin-top: 20px;
+}
+.stepone__cautionProduct__buttons.fragile.clicked {
+    background-color: #ffa63f;
+    background-image: url("../images/buttons/warning01(hover).svg");
+    color: #ffffff;
+}
+.stepone__cautionProduct__buttons.discoloration.clicked {
+    background-color: #ffa63f;
+    background-image: url("../images/buttons/warning02(hover).svg");
+    color: #ffffff;
+}
+.stepone__cautionProduct__buttons.highprice.clicked {
+    background-color: #ffa63f;
+    background-image: url("../images/buttons/warning03(hover).svg");
+    color: #ffffff;
+}
+.stepone__cautionProduct__buttons.fitness_product.clicked {
+    background-color: #ffa63f;
+    background-image: url("../images/buttons/warning04(hover).svg");
+    color: #ffffff;
+}
+.stepone__cautionProduct__buttons.largefurniture.clicked {
+    background-color: #ffa63f;
+    background-image: url("../images/buttons/warning05(hover).svg");
+    color: #ffffff;
+}
+
+.stepone__nextBtn__container {
+    margin-top: 7.6rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.stepone__nextBtn {
+    background: var(--brand_color);
+    width: 11.5625rem;
+    height: 2.8125rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    border: 2px solid #ff9948;
+    color: var(--color_button_deactive);
+    font-family: FontAwesome;
+    cursor: pointer;
+}
+.fa-angle-right.next {
 }

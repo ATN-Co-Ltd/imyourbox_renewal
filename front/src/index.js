@@ -99,4 +99,25 @@ radio__havebarcode.addEventListener('change',(e)=> {
 
   
 
+//상품취급 주의사항
+const arr_caution_product_type = [];
+const buttons_caution_product_type = document.querySelectorAll("div.stepone__cautionProduct__buttons > .stepone__cautionProduct__button > input");
 
+buttons_caution_product_type.forEach(e=> {
+    console.log(e)
+    e.addEventListener('click',()=> {
+        const splitStorageType =e.className.split(" ")[1];
+        console.log(`${splitStorageType}`)
+        console.log(arr_caution_product_type.includes(splitStorageType));
+        if(arr_caution_product_type.includes(splitStorageType))
+        {
+            arr_caution_product_type.splice(arr_caution_product_type.indexOf(splitStorageType),1);
+        }
+        else {
+            arr_caution_product_type.push(splitStorageType);
+        }
+    console.log(arr_caution_product_type);
+    e.classList.toggle(CLICKED_CLASS);
+    
+    })
+});

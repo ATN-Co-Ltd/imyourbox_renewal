@@ -3,7 +3,7 @@ require('normalize.css/normalize.css');
 require('./styles/style.scss');
 require('./styles/stepone.scss');
 // require('./js/all');
-require('./js/includeHTML');
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const pluginsTriggerElement = document.getElementById('plugins-trigger');

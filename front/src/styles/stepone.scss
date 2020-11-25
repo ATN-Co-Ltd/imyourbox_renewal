@@ -565,3 +565,13 @@ $mute: #e6e6e6;
 }
 .fa-angle-right.next {
 }
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        max-width: 47.9375rem;
+    }
+    .inner {
+        width: 100%;
+        max-width: 100%;
+    }
+}

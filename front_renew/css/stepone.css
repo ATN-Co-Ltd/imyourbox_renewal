@@ -194,99 +194,76 @@
 }
 .stepone__category__list li .clothes {
   background: url("../이미지/catecory01.svg") no-repeat center;
-  background-size: 2.1875rem 2.1875rem;
 }
 .stepone__category__list li .clothes.clicked {
-  background-color: #ffa63f;
   background: url("../이미지/catecory01(hover).svg") no-repeat center;
-  color: #ffffff;
-  background-size: 2.1875rem 2.1875rem;
-  border: 0;
-  outline: 0;
 }
 .stepone__category__list li .stuff {
   background: url("../이미지/catecory02.svg") no-repeat center;
-  background-size: 2.1875rem 2.1875rem;
 }
 .stepone__category__list li .stuff.clicked {
-  background-color: #ffa63f;
   background: url("../이미지/catecory02(hover).svg") no-repeat center;
-  color: #ffffff;
-  background-size: 2.1875rem 2.1875rem;
-  border: 0;
-  outline: 0;
 }
 .stepone__category__list li .beauty {
   background: url("../이미지/catecory03.svg") no-repeat center;
-  background-size: 2.1875rem 2.1875rem;
 }
 .stepone__category__list li .beauty.clicked {
-  background-color: #ffa63f;
   background: url("../이미지/catecory03(hover).svg") no-repeat center;
-  color: #ffffff;
-  background-size: 2.1875rem 2.1875rem;
-  border: 0;
-  outline: 0;
 }
 .stepone__category__list li .householdgoods {
   background: url("../이미지/catecory04.svg") no-repeat center;
-  background-size: 2.1875rem 2.1875rem;
 }
 .stepone__category__list li .householdgoods.clicked {
-  background-color: #ffa63f;
   background: url("../이미지/catecory04(hover).svg") no-repeat center;
-  color: #ffffff;
-  background-size: 2.1875rem 2.1875rem;
-  border: 0;
-  outline: 0;
 }
 .stepone__category__list li .electronics {
   background: url("../이미지/catecory05.svg") no-repeat center;
-  background-size: 2.1875rem 2.1875rem;
 }
 .stepone__category__list li .electronics.clicked {
-  background-color: #ffa63f;
   background: url("../이미지/catecory05(hover).svg") no-repeat center;
-  color: #ffffff;
-  background-size: 2.1875rem 2.1875rem;
-  border: 0;
-  outline: 0;
 }
 .stepone__category__list li .stationery {
   background: url("../이미지/catecory06.svg") no-repeat center;
-  background-size: 2.1875rem 2.1875rem;
 }
 .stepone__category__list li .stationery.clicked {
-  background-color: #ffa63f;
   background: url("../이미지/catecory06(hover).svg") no-repeat center;
-  color: #ffffff;
-  background-size: 2.1875rem 2.1875rem;
-  border: 0;
-  outline: 0;
 }
 .stepone__category__list li .food {
   background: url("../이미지/catecory07.svg") no-repeat center;
-  background-size: 2.1875rem 2.1875rem;
 }
 .stepone__category__list li .food.clicked {
-  background-color: #ffa63f;
   background: url("../이미지/catecory07(hover).svg") no-repeat center;
-  color: #ffffff;
-  background-size: 2.1875rem 2.1875rem;
-  border: 0;
-  outline: 0;
 }
 .stepone__category__list li .etc {
   background: url("../이미지/catecory08.svg") no-repeat center;
-  background-size: 2.1875rem 2.1875rem;
 }
 .stepone__category__list li .etc.clicked {
-  background-color: #ffa63f;
   background: url("../이미지/catecory08(hover).svg") no-repeat center;
-  color: #ffffff;
+}
+.stepone__category__list li .clothes,
+.stepone__category__list li .stuff,
+.stepone__category__list li .beauty,
+.stepone__category__list li .householdgoods,
+.stepone__category__list li .electronics,
+.stepone__category__list li .stationery,
+.stepone__category__list li .food,
+.stepone__category__list li .etc {
   background-size: 2.1875rem 2.1875rem;
+}
+.stepone__category__list li .clothes.clicked,
+.stepone__category__list li .stuff.clicked,
+.stepone__category__list li .beauty.clicked,
+.stepone__category__list li .householdgoods.clicked,
+.stepone__category__list li .electronics.clicked,
+.stepone__category__list li .stationery.clicked,
+.stepone__category__list li .food.clicked,
+.stepone__category__list li .etc.clicked {
+  background-size: 3.375rem 3.375rem;
+  color: #ffffff;
   border: 0;
   outline: 0;
+  background-color: #ffa63f;
+  border-radius: 10px;
 }
 
 .detail__container {
@@ -296,6 +273,10 @@
   align-items: left;
   text-align: left;
   margin: 1.75rem 5%;
+}
+.detail__container .detail__text__container {
+  display: flex;
+  flex-direction: column;
 }
 
 .detail__input {
@@ -494,6 +475,10 @@
   text-align: left;
   margin: 1.75rem 5%;
 }
+.productURL__container .productURL__text__container {
+  display: flex;
+  flex-direction: column;
+}
 .productURL__container .productURL__input {
   border: 0.5px solid #c4c4c4;
   background: #f2f2f2;
@@ -642,6 +627,7 @@
 }
 .stepBtn .stepBtn__preBtn {
   margin-left: 0.9375rem;
+  visibility: hidden;
 }
 .stepBtn .stepBtn__nextBtn,
 .stepBtn .stepBtn__preBtn {
@@ -663,6 +649,144 @@
   border: 0px;
 }
 
+@media screen and (min-width: 768px) {
+  .square {
+    max-width: 100%;
+    height: 19.25rem;
+  }
+
+  .stepone__category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stepone__category-description {
+    margin-left: 1.875rem;
+  }
+
+  .stepone__category__list li {
+    width: calc((100%-16px) / 10);
+    height: 6.875rem;
+  }
+  .stepone__category__list li .stepone__category__list__label__input {
+    line-height: 11.5rem;
+  }
+  .stepone__category__list li .clothes,
+.stepone__category__list li .stuff,
+.stepone__category__list li .beauty,
+.stepone__category__list li .householdgoods,
+.stepone__category__list li .electronics,
+.stepone__category__list li .stationery,
+.stepone__category__list li .food,
+.stepone__category__list li .etc {
+    background-size: 3.375rem 3.375rem;
+  }
+  .stepone__category__list li .clothes.clicked,
+.stepone__category__list li .stuff.clicked,
+.stepone__category__list li .beauty.clicked,
+.stepone__category__list li .householdgoods.clicked,
+.stepone__category__list li .electronics.clicked,
+.stepone__category__list li .stationery.clicked,
+.stepone__category__list li .food.clicked,
+.stepone__category__list li .etc.clicked {
+    background-size: 3.375rem 3.375rem;
+  }
+
+  .detail__container {
+    display: flex;
+  }
+  .detail__container .detail__text__container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+  }
+
+  .storageType__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .storageType__container .stepone__category-description.both {
+    margin-left: -1.4%;
+    color: #666666;
+  }
+
+  .storageType__container__buttons li {
+    width: calc((128%-16px) / 6);
+    height: 2.8125rem;
+  }
+
+  .barcode__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1.5625rem;
+  }
+  .barcode__container .barcode-description {
+    margin-left: 1.1875rem;
+  }
+
+  .barcode__radio__groups li {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    width: calc((128%-16px) / 4.4);
+    height: 2.5rem;
+  }
+
+  .option__title__container .option__title-line {
+    max-width: 92%;
+  }
+
+  .option__description {
+    margin: 0;
+  }
+
+  .productURL__container .productURL__text__container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+  }
+
+  .productCaution__container .productCaution__title__container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+  }
+  .productCaution__container .productCaution__title__container .productURL__description {
+    margin-left: 1.875rem;
+  }
+
+  .productCaution__list li {
+    width: calc((104%-16px) / 6);
+    height: 130px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-left: 0.9375rem;
+    margin-top: 0.5625rem;
+  }
+  .productCaution__list li .productCaution__list__btn {
+    line-height: 13.5rem;
+  }
+
+  .stepBtn {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 9vh;
+    bottom: 0%;
+    background-color: var(--color__white);
+    opacity: 0.9;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 @media screen and (min-width: 1024px) {
   .square {
     max-width: 1024px;

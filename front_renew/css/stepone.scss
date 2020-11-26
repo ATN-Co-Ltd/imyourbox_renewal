@@ -194,100 +194,76 @@
   }
   .clothes {
     background: url("../이미지/catecory01.svg") no-repeat center;
-    background-size: 2.1875rem 2.1875rem;
   }
-
   .clothes.clicked {
-    background-color: #ffa63f;
     background: url("../이미지/catecory01(hover).svg") no-repeat center;
-    color: #ffffff;
-    background-size: 2.1875rem 2.1875rem;
-    border: 0;
-    outline: 0;
   }
   .stuff {
     background: url("../이미지/catecory02.svg") no-repeat center;
-    background-size: 2.1875rem 2.1875rem;
   }
   .stuff.clicked {
-    background-color: #ffa63f;
     background: url("../이미지/catecory02(hover).svg") no-repeat center;
-    color: #ffffff;
-    background-size: 2.1875rem 2.1875rem;
-    border: 0;
-    outline: 0;
   }
   .beauty {
     background: url("../이미지/catecory03.svg") no-repeat center;
-    background-size: 2.1875rem 2.1875rem;
   }
   .beauty.clicked {
-    background-color: #ffa63f;
     background: url("../이미지/catecory03(hover).svg") no-repeat center;
-    color: #ffffff;
-    background-size: 2.1875rem 2.1875rem;
-    border: 0;
-    outline: 0;
   }
   .householdgoods {
     background: url("../이미지/catecory04.svg") no-repeat center;
-    background-size: 2.1875rem 2.1875rem;
   }
   .householdgoods.clicked {
-    background-color: #ffa63f;
     background: url("../이미지/catecory04(hover).svg") no-repeat center;
-    color: #ffffff;
-    background-size: 2.1875rem 2.1875rem;
-    border: 0;
-    outline: 0;
   }
   .electronics {
     background: url("../이미지/catecory05.svg") no-repeat center;
-    background-size: 2.1875rem 2.1875rem;
   }
   .electronics.clicked {
-    background-color: #ffa63f;
     background: url("../이미지/catecory05(hover).svg") no-repeat center;
-    color: #ffffff;
-    background-size: 2.1875rem 2.1875rem;
-    border: 0;
-    outline: 0;
   }
   .stationery {
     background: url("../이미지/catecory06.svg") no-repeat center;
-    background-size: 2.1875rem 2.1875rem;
   }
   .stationery.clicked {
-    background-color: #ffa63f;
     background: url("../이미지/catecory06(hover).svg") no-repeat center;
-    color: #ffffff;
-    background-size: 2.1875rem 2.1875rem;
-    border: 0;
-    outline: 0;
   }
   .food {
     background: url("../이미지/catecory07.svg") no-repeat center;
-    background-size: 2.1875rem 2.1875rem;
   }
   .food.clicked {
-    background-color: #ffa63f;
     background: url("../이미지/catecory07(hover).svg") no-repeat center;
-    color: #ffffff;
-    background-size: 2.1875rem 2.1875rem;
-    border: 0;
-    outline: 0;
   }
   .etc {
     background: url("../이미지/catecory08.svg") no-repeat center;
-    background-size: 2.1875rem 2.1875rem;
   }
   .etc.clicked {
-    background-color: #ffa63f;
     background: url("../이미지/catecory08(hover).svg") no-repeat center;
-    color: #ffffff;
+  }
+  .clothes,
+  .stuff,
+  .beauty,
+  .householdgoods,
+  .electronics,
+  .stationery,
+  .food,
+  .etc {
     background-size: 2.1875rem 2.1875rem;
+  }
+  .clothes.clicked,
+  .stuff.clicked,
+  .beauty.clicked,
+  .householdgoods.clicked,
+  .electronics.clicked,
+  .stationery.clicked,
+  .food.clicked,
+  .etc.clicked {
+    background-size: 3.375rem 3.375rem;
+    color: #ffffff;
     border: 0;
     outline: 0;
+    background-color: #ffa63f;
+    border-radius: 10px;
   }
 }
 
@@ -298,6 +274,10 @@
   align-items: left;
   text-align: left;
   margin: 1.75rem 5%;
+  .detail__text__container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .detail__input {
   border: 0.5px solid #c4c4c4;
@@ -490,6 +470,10 @@
   align-items: left;
   text-align: left;
   margin: 1.75rem 5%;
+  .productURL__text__container {
+    display: flex;
+    flex-direction: column;
+  }
   .productURL__input {
     border: 0.5px solid #c4c4c4;
     background: #f2f2f2;
@@ -638,6 +622,7 @@
   }
   .stepBtn__preBtn {
     margin-left: 0.9375rem;
+    visibility: hidden;
   }
   .stepBtn__nextBtn,
   .stepBtn__preBtn {
@@ -657,6 +642,142 @@
     background: var(--syboml__color);
     color: var(--color__white);
     border: 0px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .square {
+    max-width: 100%;
+    height: 19.25rem;
+  }
+  .stepone__category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  .stepone__category-description {
+    margin-left: 1.875rem;
+  }
+  .stepone__category__list li {
+    width: calc((100%-16px) / 10);
+    height: 6.875rem;
+    .stepone__category__list__label__input {
+      line-height: 11.5rem;
+    }
+    .clothes,
+    .stuff,
+    .beauty,
+    .householdgoods,
+    .electronics,
+    .stationery,
+    .food,
+    .etc {
+      background-size: 3.375rem 3.375rem;
+    }
+    .clothes.clicked,
+    .stuff.clicked,
+    .beauty.clicked,
+    .householdgoods.clicked,
+    .electronics.clicked,
+    .stationery.clicked,
+    .food.clicked,
+    .etc.clicked {
+      background-size: 3.375rem 3.375rem;
+    }
+  }
+  .detail__container {
+    display: flex;
+    .detail__text__container {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      align-items: center;
+    }
+  }
+  .storageType__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .stepone__category-description.both {
+      margin-left: -1.4%;
+      color: #666666;
+    }
+  }
+  .storageType__container__buttons li {
+    width: calc((128%-16px) / 6);
+    height: 2.8125rem;
+  }
+  .barcode__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1.5625rem;
+    .barcode-description {
+      margin-left: 1.1875rem;
+    }
+  }
+  .barcode__radio__groups li {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    width: calc((128%-16px) / 4.4);
+    height: 2.5rem;
+  }
+  .option__title__container {
+    .option__title-line {
+      max-width: 92%;
+    }
+  }
+  .option__description {
+    margin: 0;
+  }
+  .productURL__container {
+    .productURL__text__container {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      align-items: center;
+    }
+  }
+  .productCaution__container {
+    .productCaution__title__container {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      align-items: center;
+      .productURL__description {
+        margin-left: 1.875rem;
+      }
+    }
+  }
+
+  .productCaution__list {
+    li {
+      width: calc((104%-16px) / 6);
+      // width: 165px;
+      // width: 4.6875rem;
+      height: 130px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      margin-left: 0.9375rem;
+      margin-top: 0.5625rem;
+      .productCaution__list__btn {
+        line-height: 13.5rem;
+      }
+    }
+  }
+
+  .stepBtn {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 9vh;
+    bottom: 0%;
+    background-color: var(--color__white);
+    opacity: 0.9;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 

@@ -12,6 +12,7 @@
   --color__white: #ffffff;
   --color__tesxt: #23232;
 }
+$baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 
 /* Setion common */
 .section {
@@ -193,52 +194,52 @@
     line-height: 8rem;
   }
   .clothes {
-    background: url("../이미지/catecory01.svg") no-repeat center;
+    background: url("#{$baseURL}/catecory01.svg") no-repeat center;
   }
   .clothes.clicked {
-    background: url("../이미지/catecory01(hover).svg") no-repeat center;
+    background: url("#{$baseURL}/catecory01(hover).svg") no-repeat center;
   }
   .stuff {
-    background: url("../이미지/catecory02.svg") no-repeat center;
+    background: url("#{$baseURL}/catecory02.svg") no-repeat center;
   }
   .stuff.clicked {
-    background: url("../이미지/catecory02(hover).svg") no-repeat center;
+    background: url("#{$baseURL}/catecory02(hover).svg") no-repeat center;
   }
   .beauty {
-    background: url("../이미지/catecory03.svg") no-repeat center;
+    background: url("#{$baseURL}/catecory03.svg") no-repeat center;
   }
   .beauty.clicked {
-    background: url("../이미지/catecory03(hover).svg") no-repeat center;
+    background: url("#{$baseURL}/catecory03(hover).svg") no-repeat center;
   }
   .householdgoods {
-    background: url("../이미지/catecory04.svg") no-repeat center;
+    background: url("#{$baseURL}/catecory04.svg") no-repeat center;
   }
   .householdgoods.clicked {
-    background: url("../이미지/catecory04(hover).svg") no-repeat center;
+    background: url("#{$baseURL}/catecory04(hover).svg") no-repeat center;
   }
   .electronics {
-    background: url("../이미지/catecory05.svg") no-repeat center;
+    background: url("#{$baseURL}/catecory05.svg") no-repeat center;
   }
   .electronics.clicked {
-    background: url("../이미지/catecory05(hover).svg") no-repeat center;
+    background: url("#{$baseURL}/catecory05(hover).svg") no-repeat center;
   }
   .stationery {
-    background: url("../이미지/catecory06.svg") no-repeat center;
+    background: url("#{$baseURL}/catecory06.svg") no-repeat center;
   }
   .stationery.clicked {
-    background: url("../이미지/catecory06(hover).svg") no-repeat center;
+    background: url("#{$baseURL}/catecory06(hover).svg") no-repeat center;
   }
   .food {
-    background: url("../이미지/catecory07.svg") no-repeat center;
+    background: url("#{$baseURL}/catecory07.svg") no-repeat center;
   }
   .food.clicked {
-    background: url("../이미지/catecory07(hover).svg") no-repeat center;
+    background: url("#{$baseURL}/catecory07(hover).svg") no-repeat center;
   }
   .etc {
-    background: url("../이미지/catecory08.svg") no-repeat center;
+    background: url("#{$baseURL}/catecory08.svg") no-repeat center;
   }
   .etc.clicked {
-    background: url("../이미지/catecory08(hover).svg") no-repeat center;
+    background: url("#{$baseURL}/catecory08(hover).svg") no-repeat center;
   }
   .clothes,
   .stuff,
@@ -611,7 +612,7 @@
   max-width: 100%;
   height: 9vh;
   bottom: 0%;
-  background-color: var(--color__white);
+  background-color: var(--coㄱlor__white);
   opacity: 0.9;
   border-radius: 5%;
   display: flex;
@@ -623,7 +624,7 @@
   }
   .stepBtn__preBtn {
     margin-left: 0.9375rem;
-    visibility: hidden;
+    // visibility: hidden;
   }
   .stepBtn__nextBtn,
   .stepBtn__preBtn {
@@ -645,6 +646,7 @@
     border: 0px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .square {
     max-width: 100%;
@@ -662,6 +664,7 @@
   .stepone__category__list li {
     width: calc((100%-16px) / 10);
     height: 6.875rem;
+    margin-bottom: 5rem;
     .stepone__category__list__label__input {
       line-height: 11.5rem;
     }
@@ -693,6 +696,9 @@
       flex-direction: row;
       text-align: center;
       align-items: center;
+    }
+    .detail__input__container {
+      margin-bottom: 5rem;
     }
   }
   .storageType__container {

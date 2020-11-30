@@ -121,32 +121,55 @@
   letter-spacing: -5%;
   font-style: normal;
 }
-.stepone__category .service__container input[type="checkbox"] {
-  display: none;
-}
-.stepone__category .service__container input[type="checkbox"]:checked + label {
-  background-color: var(--syboml__color);
-  border-radius: 25%;
-}
-.stepone__category .service__container input[type="checkbox"] + label {
-  display: inline-block;
-  width: 1.875rem;
-  height: 1.875rem;
-  cursor: pointer;
-  border-radius: 25%;
-}
-.stepone__category .service__container:after {
-  display: block;
-  clear: both;
-  content: "";
-}
-.stepone__category .service__container input[type="checkbox"] + label span {
-  position: absolute;
-  top: 50;
-  left: 40px;
-  display: block;
-  font-weight: bold;
-}
-.stepone__category {
-  position: relative;
+
+.logistics_service_kinds__container {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  text-align: center;
+  li {
+    width: calc((100%-16px) / 1);
+    // width: 165px;
+    // width: 4.6875rem;
+    height: 120px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-left: 0.9375rem;
+    margin-right: 0.9375rem;
+    margin-top: 0.5625rem;
+    i {
+      position: relative;
+      bottom: 41%;
+      left: 40%;
+      color: #ff8d33;
+    }
+  }
+  .logistics_service_kinds__list {
+    margin-left: 0.90125rem;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  .logistics_service_kinds__list-title {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .logistics_service_kinds__list-description {
+    margin-top: 0.5625rem;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  li:hover {
+    box-shadow: 0px 0px 5px #ff8d33;
+  }
+
+  .fullfillment.clicked,
+  .storeproduct.clicked,
+  .processing.clicked,
+  .etc.clicked {
+    box-shadow: 0px 0px 5px #ff8d33;
+  }
 }

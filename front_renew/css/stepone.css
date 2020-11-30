@@ -12,6 +12,7 @@
   --color_button_deactive: #ffffff;
   --color__white: #ffffff;
   --color__tesxt: #23232;
+  --color__checked: #f18b24;
 }
 
 /* Setion common */
@@ -195,50 +196,26 @@
 .stepone__category__list li .clothes {
   background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory01.svg") no-repeat center;
 }
-.stepone__category__list li .clothes.clicked {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory01(hover).svg") no-repeat center;
-}
 .stepone__category__list li .stuff {
   background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory02.svg") no-repeat center;
-}
-.stepone__category__list li .stuff.clicked {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory02(hover).svg") no-repeat center;
 }
 .stepone__category__list li .beauty {
   background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory03.svg") no-repeat center;
 }
-.stepone__category__list li .beauty.clicked {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory03(hover).svg") no-repeat center;
-}
 .stepone__category__list li .householdgoods {
   background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory04.svg") no-repeat center;
-}
-.stepone__category__list li .householdgoods.clicked {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory04(hover).svg") no-repeat center;
 }
 .stepone__category__list li .electronics {
   background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory05.svg") no-repeat center;
 }
-.stepone__category__list li .electronics.clicked {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory05(hover).svg") no-repeat center;
-}
 .stepone__category__list li .stationery {
   background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory06.svg") no-repeat center;
-}
-.stepone__category__list li .stationery.clicked {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory06(hover).svg") no-repeat center;
 }
 .stepone__category__list li .food {
   background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory07.svg") no-repeat center;
 }
-.stepone__category__list li .food.clicked {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory07(hover).svg") no-repeat center;
-}
 .stepone__category__list li .etc {
   background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory08.svg") no-repeat center;
-}
-.stepone__category__list li .etc.clicked {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory08(hover).svg") no-repeat center;
 }
 .stepone__category__list li .clothes,
 .stepone__category__list li .stuff,
@@ -249,6 +226,16 @@
 .stepone__category__list li .food,
 .stepone__category__list li .etc {
   background-size: 2.1875rem 2.1875rem;
+}
+.stepone__category__list li .clothes:hover,
+.stepone__category__list li .stuff:hover,
+.stepone__category__list li .beauty:hover,
+.stepone__category__list li .householdgoods:hover,
+.stepone__category__list li .electronics:hover,
+.stepone__category__list li .stationery:hover,
+.stepone__category__list li .food:hover,
+.stepone__category__list li .etc:hover {
+  box-shadow: 0px 0px 5px 0px #ff9948;
 }
 .stepone__category__list li .clothes.clicked,
 .stepone__category__list li .stuff.clicked,
@@ -262,9 +249,10 @@
   color: #ffffff;
   border: 0;
   outline: 0;
-  background-color: #ffa63f;
   border-radius: 10px;
   background-size: 2.1875rem 2.1875rem;
+  box-shadow: 0px 0px 5px 0px #ff9948;
+  color: var(--color__checked);
 }
 
 .detail__container {
@@ -345,6 +333,16 @@
   background-color: #f2f2f2;
   color: #bfbfbf;
 }
+.storageType__container__buttons li .room_temperature:hover,
+.storageType__container__buttons li .low_temperature:hover {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+}
+.storageType__container__buttons li .room_temperature.clicked,
+.storageType__container__buttons li .low_temperature.clicked {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+  border: 0;
+  outline: 0;
+}
 .storageType__container__buttons li span {
   font-weight: 500;
   font-size: 0.65rem;
@@ -417,6 +415,7 @@
 .barcode__radio__groups li input:checked ~ .check {
   background-color: var(--color__white);
   border-color: var(--color__white);
+  border: 1px solid #f18b24;
 }
 .barcode__radio__groups li .check:after {
   content: "";
@@ -433,6 +432,10 @@
 }
 .barcode__radio__groups li label input:checked ~ .check:after {
   display: block;
+}
+
+.barcode__radio__groups li:hover {
+  box-shadow: 0px 0px 5px 0px #ff9948;
 }
 
 .option__container {
@@ -561,32 +564,17 @@
 .productCaution__list .fragile {
   background: url("../이미지/warning01.svg") no-repeat center;
 }
-.productCaution__list .fragile.clicked {
-  background: url("../이미지/warning01(hover).svg") no-repeat center;
-}
 .productCaution__list .discoloration {
   background: url("../이미지/warning02.svg") no-repeat center;
-}
-.productCaution__list .discoloration.clicked {
-  background: url("../이미지/warning02(hover).svg") no-repeat center;
 }
 .productCaution__list .highprice {
   background: url("../이미지/warning03.svg") no-repeat center;
 }
-.productCaution__list .highprice.clicked {
-  background: url("../이미지/warning03(hover).svg") no-repeat center;
-}
 .productCaution__list .fitness_product {
   background: url("../이미지/warning04.svg") no-repeat center;
 }
-.productCaution__list .fitness_product.clicked {
-  background: url("../이미지/warning04(hover).svg") no-repeat center;
-}
 .productCaution__list .largefurniture {
   background: url("../이미지/warning05.svg") no-repeat center;
-}
-.productCaution__list .largefurniture.clicked {
-  background: url("../이미지/warning05(hover).svg") no-repeat center;
 }
 .productCaution__list .fragile,
 .productCaution__list .discoloration,
@@ -595,15 +583,22 @@
 .productCaution__list .largefurniture {
   background-size: 3.75rem 3.75rem;
 }
+.productCaution__list .fragile:hover,
+.productCaution__list .discoloration:hover,
+.productCaution__list .highprice:hover,
+.productCaution__list .fitness_product:hover,
+.productCaution__list .largefurniture:hover {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+}
 .productCaution__list .fragile.clicked,
 .productCaution__list .discoloration.clicked,
 .productCaution__list .highprice.clicked,
 .productCaution__list .fitness_product.clicked,
 .productCaution__list .largefurniture.clicked {
-  color: #ffffff;
+  color: var(--color__checked);
   border: 0;
   outline: 0;
-  background-color: #ffa63f;
+  box-shadow: 0px 0px 5px 0px #ff9948;
   background-size: 3.75rem 3.75rem;
 }
 .productCaution__list .position {
@@ -622,12 +617,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--color__white);
 }
 .stepBtn .stepBtn__nextBtn {
   margin-right: 0.9375rem;
 }
 .stepBtn .stepBtn__preBtn {
   margin-left: 0.9375rem;
+  visibility: hidden;
 }
 .stepBtn .stepBtn__nextBtn,
 .stepBtn .stepBtn__preBtn {
@@ -721,6 +718,7 @@
   .storageType__container__buttons li {
     width: calc((128%-16px) / 6);
     height: 2.8125rem;
+    margin-bottom: 5rem;
   }
 
   .barcode__container {

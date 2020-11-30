@@ -1,0 +1,152 @@
+:root {
+  --syboml__color: #ff9948;
+  --background_color_one: #fff;
+  --font_color: #ffa63f;
+  --font_stepbar_color: #6d6d6d;
+  --font_text_color: #474747;
+  --color_step_eclispe: #fff3d2;
+  --color_range_bar: #ffc671;
+  --color_divider: #ffd18c;
+  --color_category_description: #666666;
+  --color_button_deactive: #ffffff;
+  --color__white: #ffffff;
+  --color__tesxt: #23232;
+}
+
+.stepbox__two {
+  width: 100%;
+  height: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.stepbox__two .stepbar {
+  counter-reset: step;
+}
+.stepbox__two .stepbar li {
+  width: 25%;
+  float: left;
+  font-size: 14px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: #b9cbe8;
+  line-height: 3;
+}
+.stepbox__two .stepbar li:before {
+  color: #6d6d6d;
+  width: 1.875rem;
+  height: 1.875rem;
+  font-weight: 500;
+  content: counter(step);
+  counter-increment: step;
+  font-size: 0.0625rem;
+  line-height: 1.875rem;
+  border: 6px solid #ffffff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto 10px auto;
+  text-align: center;
+  background-color: #fff3de;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+.stepbox__two .stepbar li:after {
+  width: 100%;
+  height: 3px;
+  content: "";
+  background-color: #ff9948;
+  top: 20px;
+  left: -50%;
+  position: absolute;
+  z-index: 1;
+}
+.stepbox__two .stepbar li:first-child:after {
+  content: none;
+}
+.stepbox__two .stepbar li.step_finished:before {
+  background-color: var(--font_color);
+  color: var(--color__white);
+  border: 6px solid var(--font_color);
+}
+.stepbox__two .stepbar li.step_active:before {
+  background-color: #ff8d33;
+  width: 70px;
+  border-radius: 20px;
+  font-weight: 700;
+  color: #f2f2f2;
+  border: 6px solid #ff8d33;
+  content: "STEP 2";
+  font-size: 13px;
+}
+.stepbox__two .stepbar li.step_highlight:before {
+  box-shadow: 0px 0px 5px #ff8d33;
+}
+
+.step__container {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 100px;
+  margin: 0 auto;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 9rem;
+}
+
+.top__divider {
+  width: 90%;
+  max-width: 100%;
+  border: 1px solid var(--color_divider);
+  margin: 0rem auto;
+}
+
+.service__container {
+  margin-top: 0.8125rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 10px;
+  letter-spacing: -5%;
+  font-style: normal;
+}
+
+.stepone__category .service__container input[type=checkbox] {
+  display: none;
+}
+
+.stepone__category .service__container input[type=checkbox]:checked + label {
+  background-color: var(--syboml__color);
+  border-radius: 25%;
+}
+
+.stepone__category .service__container input[type=checkbox] + label {
+  display: inline-block;
+  width: 1.875rem;
+  height: 1.875rem;
+  cursor: pointer;
+  border-radius: 25%;
+}
+
+.stepone__category .service__container:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.stepone__category .service__container input[type=checkbox] + label span {
+  position: absolute;
+  top: 50;
+  left: 40px;
+  display: block;
+  font-weight: bold;
+}
+
+.stepone__category {
+  position: relative;
+}
+
+/*# sourceMappingURL=steptwo.css.map */

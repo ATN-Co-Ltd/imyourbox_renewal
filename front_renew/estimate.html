@@ -163,6 +163,13 @@
                     <li></li>
                 </ul>
             </div>
+            <div class="stepbox__two">
+                <ul class="stepbar">
+                    <li class="step_finished"></li>
+                    <li class="step_active step_highlight"><li>
+                    <li></li>
+                </ul>
+            </div>
         </div>
         <!--inner-->
     </header>
@@ -301,7 +308,7 @@
                         <span class="productURL__description">상품의 URL이 있을 경우 입력해주세요.</span>
                     </div>
                     <div class="productURL__input__container">
-                        <input type="input"class="productURL__input" placeholder="         URL을 입력해주세요." required></input>
+                        <input type="input"class="productURL__input" placeholder="         URL을 입력해주세요." ></input>
                     </div>                    
                 </div>
                 <div class="productCaution__container">
@@ -342,14 +349,36 @@
                     </input>
                     </li>
                 </ul>
-                <div class="stepBtn">
-                    <input type="submit" class="stepBtn__preBtn" value="&#xf104;  이전" disabled>      
-                    <input type="submit" class="stepBtn__nextBtn" value="다음  &#xf105;">        
-                </div>
+             
     </div>
 </form>
 </section>
-   
+<section id="steptwo" class="section">
+<div class="section__container">
+    <div class="step__container">
+    <div class="top__divider"></div> 
+    <span class="stepone__title">STEP 2</span>
+     <span class="stepone__description">문의를 위한 물류 기본정보를 알려주세요.</span>
+    </div>
+    <div class="stepone__category">
+        <span class="stepone__category-title">서비스 런칭여부</span>
+        <span class="stepone__category-description">고객님의 서비스 또는 상품이 출시 전이라면 알려주세요. 상담시 반영됩니다.</span>
+        <div class="service__container">
+            <input id="prepare" type="checkbox">
+            <i class="fas fa-check"></i>
+            <label for="prepare" ><span>상품 준비중입니다.</span></label>
+        </div>
+    </div>
+
+
+</div>
+</section>
+
+
+<div class="stepBtn">
+    <input type="button" class="stepBtn__preBtn" onclick=prevBtn() value="&#xf104;  이전" >      
+    <input type="button" class="stepBtn__nextBtn" onclick=nextBtn() value="다음  &#xf105;">        
+</div>
 
 
     <footer id="footer">

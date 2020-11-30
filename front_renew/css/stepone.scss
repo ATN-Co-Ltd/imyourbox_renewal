@@ -11,6 +11,7 @@
   --color_button_deactive: #ffffff;
   --color__white: #ffffff;
   --color__tesxt: #23232;
+  --color__checked: #f18b24;
 }
 $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 
@@ -193,54 +194,32 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     color: #474747;
     line-height: 8rem;
   }
+
   .clothes {
     background: url("#{$baseURL}/catecory01.svg") no-repeat center;
-  }
-  .clothes.clicked {
-    background: url("#{$baseURL}/catecory01(hover).svg") no-repeat center;
   }
   .stuff {
     background: url("#{$baseURL}/catecory02.svg") no-repeat center;
   }
-  .stuff.clicked {
-    background: url("#{$baseURL}/catecory02(hover).svg") no-repeat center;
-  }
   .beauty {
     background: url("#{$baseURL}/catecory03.svg") no-repeat center;
-  }
-  .beauty.clicked {
-    background: url("#{$baseURL}/catecory03(hover).svg") no-repeat center;
   }
   .householdgoods {
     background: url("#{$baseURL}/catecory04.svg") no-repeat center;
   }
-  .householdgoods.clicked {
-    background: url("#{$baseURL}/catecory04(hover).svg") no-repeat center;
-  }
   .electronics {
     background: url("#{$baseURL}/catecory05.svg") no-repeat center;
-  }
-  .electronics.clicked {
-    background: url("#{$baseURL}/catecory05(hover).svg") no-repeat center;
   }
   .stationery {
     background: url("#{$baseURL}/catecory06.svg") no-repeat center;
   }
-  .stationery.clicked {
-    background: url("#{$baseURL}/catecory06(hover).svg") no-repeat center;
-  }
   .food {
     background: url("#{$baseURL}/catecory07.svg") no-repeat center;
-  }
-  .food.clicked {
-    background: url("#{$baseURL}/catecory07(hover).svg") no-repeat center;
   }
   .etc {
     background: url("#{$baseURL}/catecory08.svg") no-repeat center;
   }
-  .etc.clicked {
-    background: url("#{$baseURL}/catecory08(hover).svg") no-repeat center;
-  }
+
   .clothes,
   .stuff,
   .beauty,
@@ -250,6 +229,16 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   .food,
   .etc {
     background-size: 2.1875rem 2.1875rem;
+  }
+  .clothes:hover,
+  .stuff:hover,
+  .beauty:hover,
+  .householdgoods:hover,
+  .electronics:hover,
+  .stationery:hover,
+  .food:hover,
+  .etc:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
   }
   .clothes.clicked,
   .stuff.clicked,
@@ -263,9 +252,10 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     color: #ffffff;
     border: 0;
     outline: 0;
-    background-color: #ffa63f;
     border-radius: 10px;
     background-size: 2.1875rem 2.1875rem;
+    box-shadow: 0px 0px 5px 0px #ff9948;
+    color: var(--color__checked);
   }
 }
 
@@ -343,6 +333,16 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     background-color: #f2f2f2;
     color: #bfbfbf;
   }
+  .room_temperature:hover,
+  .low_temperature:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
+  .room_temperature.clicked,
+  .low_temperature.clicked {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+    border: 0;
+    outline: 0;
+  }
   span {
     font-weight: 500;
     font-size: 0.65rem;
@@ -387,6 +387,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   font-size: 0.9375rem;
   font-weight: 400;
   font-family: "Noto Sans KR", sans-serif;
+
   label {
     display: block;
     position: relative;
@@ -413,6 +414,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     background-color: var(--color__white);
     //체크되었을때 하얀색으로
     border-color: var(--color__white);
+    border: 1px solid #f18b24;
   }
   .check:after {
     content: "";
@@ -432,6 +434,9 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
       display: block;
     }
   }
+}
+.barcode__radio__groups li:hover {
+  box-shadow: 0px 0px 5px 0px #ff9948;
 }
 
 .option__container {
@@ -557,32 +562,17 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   .fragile {
     background: url("../이미지/warning01.svg") no-repeat center;
   }
-  .fragile.clicked {
-    background: url("../이미지/warning01(hover).svg") no-repeat center;
-  }
   .discoloration {
     background: url("../이미지/warning02.svg") no-repeat center;
-  }
-  .discoloration.clicked {
-    background: url("../이미지/warning02(hover).svg") no-repeat center;
   }
   .highprice {
     background: url("../이미지/warning03.svg") no-repeat center;
   }
-  .highprice.clicked {
-    background: url("../이미지/warning03(hover).svg") no-repeat center;
-  }
   .fitness_product {
     background: url("../이미지/warning04.svg") no-repeat center;
   }
-  .fitness_product.clicked {
-    background: url("../이미지/warning04(hover).svg") no-repeat center;
-  }
   .largefurniture {
     background: url("../이미지/warning05.svg") no-repeat center;
-  }
-  .largefurniture.clicked {
-    background: url("../이미지/warning05(hover).svg") no-repeat center;
   }
   .fragile,
   .discoloration,
@@ -591,15 +581,23 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   .largefurniture {
     background-size: 3.75rem 3.75rem;
   }
+  .fragile:hover,
+  .discoloration:hover,
+  .highprice:hover,
+  .fitness_product:hover,
+  .largefurniture:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
+
   .fragile.clicked,
   .discoloration.clicked,
   .highprice.clicked,
   .fitness_product.clicked,
   .largefurniture.clicked {
-    color: #ffffff;
+    color: var(--color__checked);
     border: 0;
     outline: 0;
-    background-color: #ffa63f;
+    box-shadow: 0px 0px 5px 0px #ff9948;
     background-size: 3.75rem 3.75rem;
   }
   .position {
@@ -618,13 +616,13 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  background-color: var(--color__white);
   .stepBtn__nextBtn {
     margin-right: 0.9375rem;
   }
   .stepBtn__preBtn {
     margin-left: 0.9375rem;
-    // visibility: hidden;
+    visibility: hidden;
   }
   .stepBtn__nextBtn,
   .stepBtn__preBtn {
@@ -713,6 +711,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   .storageType__container__buttons li {
     width: calc((128%-16px) / 6);
     height: 2.8125rem;
+    margin-bottom: 5rem;
   }
   .barcode__container {
     display: flex;

@@ -562,19 +562,19 @@
   border-radius: 10px;
 }
 .productCaution__list .fragile {
-  background: url("../이미지/warning01.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning01.svg") no-repeat center;
 }
 .productCaution__list .discoloration {
-  background: url("../이미지/warning02.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning02.svg") no-repeat center;
 }
 .productCaution__list .highprice {
-  background: url("../이미지/warning03.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning03.svg") no-repeat center;
 }
 .productCaution__list .fitness_product {
-  background: url("../이미지/warning04.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning04.svg") no-repeat center;
 }
 .productCaution__list .largefurniture {
-  background: url("../이미지/warning05.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning05.svg") no-repeat center;
 }
 .productCaution__list .fragile,
 .productCaution__list .discoloration,

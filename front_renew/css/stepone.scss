@@ -560,19 +560,19 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     border-radius: 10px;
   }
   .fragile {
-    background: url("../이미지/warning01.svg") no-repeat center;
+    background: url("#{$baseURL}/warning01.svg") no-repeat center;
   }
   .discoloration {
-    background: url("../이미지/warning02.svg") no-repeat center;
+    background: url("#{$baseURL}/warning02.svg") no-repeat center;
   }
   .highprice {
-    background: url("../이미지/warning03.svg") no-repeat center;
+    background: url("#{$baseURL}/warning03.svg") no-repeat center;
   }
   .fitness_product {
-    background: url("../이미지/warning04.svg") no-repeat center;
+    background: url("#{$baseURL}/warning04.svg") no-repeat center;
   }
   .largefurniture {
-    background: url("../이미지/warning05.svg") no-repeat center;
+    background: url("#{$baseURL}/warning05.svg") no-repeat center;
   }
   .fragile,
   .discoloration,

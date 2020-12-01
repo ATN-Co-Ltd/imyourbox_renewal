@@ -11,7 +11,9 @@
   --color_button_deactive: #ffffff;
   --color__white: #ffffff;
   --color__tesxt: #23232;
+  --color__checked__font: #f18b24;
 }
+$baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 
 .stepbox__two {
   width: 100%;
@@ -133,7 +135,7 @@
     width: calc((100%-16px) / 1);
     // width: 165px;
     // width: 4.6875rem;
-    height: 120px;
+    height: 90px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     margin-left: 0.9375rem;
@@ -141,28 +143,33 @@
     margin-top: 0.5625rem;
     i {
       position: relative;
-      bottom: 41%;
-      left: 40%;
-      color: #ff8d33;
+      bottom: 95%;
+      left: 45%;
+      color: #ffffff;
     }
   }
   .logistics_service_kinds__list {
-    margin-left: 0.90125rem;
+    width: 100%;
+    height: inherit;
     display: flex;
     flex-direction: column;
     text-align: start;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
   }
   .logistics_service_kinds__list-title {
     margin-top: 0.5rem;
     font-size: 14px;
     font-weight: 700;
+    margin-left: 0.90125rem;
   }
   .logistics_service_kinds__list-description {
     margin-top: 0.5625rem;
     font-size: 12px;
     font-weight: 500;
+    margin-left: 0.90125rem;
   }
-  li:hover {
+  .logistics_service_kinds__list:hover {
     box-shadow: 0px 0px 5px #ff8d33;
   }
 
@@ -171,5 +178,103 @@
   .processing.clicked,
   .etc.clicked {
     box-shadow: 0px 0px 5px #ff8d33;
+    span {
+      color: var(--color__checked__font);
+    }
   }
+}
+
+.inputStoreType__radio__groups {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  text-align: center;
+  .none {
+    visibility: hidden;
+  }
+}
+.inputStoreType__radio__groups li {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: calc((128%-16px) / 3);
+  height: 12.5rem;
+  margin-left: 0.9375rem;
+  margin-top: 0.5625rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-family: "Noto Sans KR", sans-serif;
+
+  label {
+    display: block;
+    position: relative;
+    padding-top: 0.625rem;
+    padding-left: 0.875rem;
+    height: inherit;
+    cursor: pointer;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 100px;
+      text-align: left;
+    }
+  }
+  .pallet {
+    background: url("#{$baseURL}/processing04.svg") no-repeat center;
+  }
+  .box {
+    background: url("#{$baseURL}/processing04.svg") no-repeat center;
+  }
+  .pallet,
+  .box {
+    background-size: 4.375rem 4.375rem;
+    background-position: 50% 25%;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .check {
+    position: absolute;
+    top: 0.5rem;
+    left: 6.5rem;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: var(--color__white);
+    border-radius: 50%;
+    border: 2px solid #474747;
+  }
+  input:checked ~ .check {
+    background-color: var(--color__white);
+    //체크되었을때 하얀색으로
+    border-color: var(--color__white);
+    border: 1px solid #f18b24;
+  }
+  .check:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  label {
+    .check:after {
+      top: 5px;
+      left: 5.1px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--syboml__color);
+    }
+    input:checked ~ .check:after {
+      display: block;
+    }
+  }
+}
+.barcode__radio__groups li:hover {
+  box-shadow: 0px 0px 5px 0px #ff9948;
 }

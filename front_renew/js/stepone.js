@@ -122,6 +122,36 @@ buttons_caution_product_type.forEach(e=> {
 });
 
 
+//문의할 물류 서비스
+const arr_logistics_service_kinds =[];
+const buttons_logistics_service_kinds_type =  document.querySelectorAll("ul.logistics_service_kinds__container > li >div");
+buttons_logistics_service_kinds_type.forEach(e=> {
+    e.addEventListener('click',()=> {
+        const checked__icon = e.parentElement.childNodes[3];
+        const splitStorageType =e.className.split(" ")[1];
+        // console.log(`${splitStorageType}`)
+        // console.log(arr_logistics_service_kinds.includes(splitStorageType));
+        if(arr_logistics_service_kinds.includes(splitStorageType))
+        {
+            arr_logistics_service_kinds.splice(arr_logistics_service_kinds.indexOf(splitStorageType),1);
+            checked__icon.style.color ="#ffffff";
+            checked__icon.style.opacity =0.7;
+        }
+        else {
+            arr_logistics_service_kinds.push(splitStorageType);
+            checked__icon.style.color ="#f18b24";
+            checked__icon.style.opacity =0.7;
+        }
+    console.log(arr_logistics_service_kinds);
+    e.classList.toggle(CLICKED_CLASS);
+    })
+})
+
+
+
+
+
+
 const stepone = document.querySelector("#stepone");
 const steptwo = document.querySelector("#steptwo");
 const preBtn = document.querySelector(".stepBtn__preBtn");

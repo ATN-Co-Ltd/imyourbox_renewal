@@ -374,7 +374,7 @@
         <span class="stepone__category-description">중복 선택이 가능합니다.</span>
     </div>
     <ul class="logistics_service_kinds__container">
-        <li>
+        <li class="">
          <div class="logistics_service_kinds__list fullfillment">
              <span class="logistics_service_kinds__list-title">풀필먼트</span>
              <span class="logistics_service_kinds__list-description" >상품의 입고부터 출고까지 물류의 모든 것을 대행해드리는 서비스입니다.</span>
@@ -403,7 +403,34 @@
             <i class="fas fa-check"></i>
         </li>
     </ul>
-
+    <div class="stepone__category">
+        <span class="stepone__category-title">물류 보관량</span>
+        <span class="stepone__category-description">서비스를 이용하실 물류의 양을 알려주세요. 보관비용 계산에 필요한 정보입니다.</span>
+    </div>
+    <ul class="inputStoreType__radio__groups">
+        <li>
+            <label class="pallet">
+                <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="pallet" required >
+                <span class="check"></span>
+                <div class="inputStoreType__radio__groups_radio__text">
+                    <span class="radio__title">상품보관만</span>
+                    <span class="radio__description">입고된 물류를 지정한 기간 동안 보관해드리는 서비스입니다.</span>
+                </div>
+            </label>
+        </input>
+        </li>
+        <li>
+            <label class="box">
+                <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="box">
+                 <span class="check"></span>
+                <div class="inputStoreType__radio__groups_radio__text">
+                <span class="radio__title">합포장</span>
+                <span class="radio__description">우체국택배 상자 규격 기준 1,2호 사이즈 입니다.</span>
+            </div>
+            </label>
+        </input>
+        </li>
+    </ul>
 </div>
 </section>
 

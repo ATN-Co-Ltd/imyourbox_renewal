@@ -148,10 +148,62 @@ buttons_logistics_service_kinds_type.forEach(e=> {
 })
 
 
+//물류보관량
+let inputStoreValue = "";
+ const radio_inputStores = document.querySelector(".inputStoreType__radio__groups");
+ radio_inputStores.addEventListener('change',(e)=> {
+    const selected = document.querySelectorAll('.inputStoreType__radio__groups > li');
+    const black = "#000000"
+    const selectedColor = "#f18b24";
+    inputStoreValue = e.target.value;
+    console.log(inputStoreValue);
+    switch (inputStoreValue) {
+        case "pallet":
+            selected[0].style.boxShadow = "0px 0px 5px 0px #ff9948";
+            selected[0].childNodes[1].childNodes[5].childNodes[1].style.color =selectedColor;
+            selected[0].childNodes[1].childNodes[5].childNodes[3].style.color =selectedColor;
+            selected[1].style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
+            selected[1].childNodes[1].childNodes[5].childNodes[1].style.color =black;
+            selected[1].childNodes[1].childNodes[5].childNodes[3].style.color =black;
+            break;
+        case "box":
+            selected[1].style.boxShadow = "0px 0px 5px 0px #ff9948";
+            selected[1].childNodes[1].childNodes[5].childNodes[1].style.color =selectedColor;
+            selected[1].childNodes[1].childNodes[5].childNodes[3].style.color =selectedColor;
+            selected[0].style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
+            selected[0].childNodes[1].childNodes[5].childNodes[1].style.color =black;
+            selected[0].childNodes[1].childNodes[5].childNodes[3].style.color =black;
+            break;
+        default:
+            break;
+    }
+})
+
+
+let range__inputStore = document.querySelector(".inputStore__range");
+let indicatorInputStore = document.querySelector(".indicator__inputStore__range");
+
+range__inputStore.addEventListener('input',e=> {
+    indicatorInputStore.value = e.target.value;
+   document.querySelector(".indicator__inputStore__range").innerHTML = inputStoreValue;
+});
+
+indicatorInputStore.addEventListener('input',(e)=> {
+    console.log(e.target.value);
+    range__inputStore.value = e.target.value;
+})
 
 
 
 
+
+
+
+
+
+
+
+//앞뒤버튼
 const stepone = document.querySelector("#stepone");
 const steptwo = document.querySelector("#steptwo");
 const preBtn = document.querySelector(".stepBtn__preBtn");

@@ -410,27 +410,37 @@
     <ul class="inputStoreType__radio__groups">
         <li>
             <label class="pallet">
-                <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="pallet" required >
+                <input type="radio" name="inputStore" value="pallet"  >
                 <span class="check"></span>
                 <div class="inputStoreType__radio__groups_radio__text">
-                    <span class="radio__title">상품보관만</span>
-                    <span class="radio__description">입고된 물류를 지정한 기간 동안 보관해드리는 서비스입니다.</span>
+                    <span class="radio__title">파레트</span>
+                    <span class="radio__description">110cm X 110cm의 KPP규격 파레트를 사용합니다.</span>
                 </div>
             </label>
-        </input>
         </li>
         <li>
             <label class="box">
-                <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="box">
+                <input type="radio" name="inputStore" value="box">
                  <span class="check"></span>
                 <div class="inputStoreType__radio__groups_radio__text">
-                <span class="radio__title">합포장</span>
-                <span class="radio__description">우체국택배 상자 규격 기준 1,2호 사이즈 입니다.</span>
+                <span class="radio__title">박스</span>
+                <span class="radio__description">파레트 양을 모를 경우 보관될 박스의 사이즈를 알려주세요.</span>
             </div>
-            </label>
-        </input>
+            </label>    
         </li>
     </ul>
+    <div class="range__container">
+         <div class="range__firstColumn">
+            <span class="">보관량</span>
+         <input class="indicator__inputStore__range" type="number" value="0">
+            <span>plt</span>
+        </div>
+         <div class="range__secondColumn">
+             <input class="inputStore__range" type="range" min="0" max="1000" value="0">
+        </div>
+        <!-- <div>test</div> -->
+       
+    </div>
 </div>
 </section>
 

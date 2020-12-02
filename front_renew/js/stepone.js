@@ -182,15 +182,17 @@ let inputStoreValue = "";
 
 let range__inputStore = document.querySelector(".inputStore__range");
 let indicatorInputStore = document.querySelector(".indicator__inputStore__range");
-
+let inputStoreCount = 0;
 range__inputStore.addEventListener('input',e=> {
     indicatorInputStore.value = e.target.value;
-   document.querySelector(".indicator__inputStore__range").innerHTML = inputStoreValue;
+    inputStoreCount = indicatorInputStore.value;
+    // console.log(inputStoreCount);
 });
 
 indicatorInputStore.addEventListener('input',(e)=> {
-    console.log(e.target.value);
     range__inputStore.value = e.target.value;
+    inputStoreCount = range__inputStore.value;
+    // console.log(inputStoreCount);
 })
 
 
@@ -215,7 +217,7 @@ let stepStatus = 1;
 const nextBtn = () => {
     stepStatus++;
     console.log(stepStatus);
-   
+   console.log(inputStoreCount);
     if(stepStatus === 2)
     {
         preBtn.style.visibility='visible';

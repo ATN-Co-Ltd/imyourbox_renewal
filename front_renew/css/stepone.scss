@@ -312,13 +312,16 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   height: 2.5rem;
   margin-left: 0.9375rem;
   margin-top: 0.5625rem;
+
   i {
     position: relative;
     bottom: 75%;
     left: 30%;
     color: #ffffff;
   }
+
   .storageType__container__button {
+    -webkit-appearance: none; //safari;
     width: 100%;
     height: inherit;
     border: 0px solid #ffffff;

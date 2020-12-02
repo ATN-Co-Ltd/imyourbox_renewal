@@ -317,6 +317,7 @@
   color: #ffffff;
 }
 .storageType__container__buttons li .storageType__container__button {
+  -webkit-appearance: none;
   width: 100%;
   height: inherit;
   border: 0px solid #ffffff;

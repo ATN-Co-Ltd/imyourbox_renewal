@@ -44,7 +44,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   font-family: "Noto Sans KR", sans-serif;
 
   .stepbar {
-    counter-reset: step;
+    counter-reset: step + 1;
     li {
       width: 25%;
       float: left;

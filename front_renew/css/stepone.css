@@ -43,7 +43,7 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 .stepbox .stepbar {
-  counter-reset: step;
+  counter-reset: step1;
 }
 .stepbox .stepbar li {
   width: 25%;

@@ -94,7 +94,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
         font-weight: 500;
         content: counter(step);
         counter-increment: step;
-        font-size: 0.0625rem;
+        font-size: 10px;
         line-height: 1.875rem;
         border: 6px solid #ffffff;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);

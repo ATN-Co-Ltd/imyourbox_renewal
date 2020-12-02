@@ -44,7 +44,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   font-family: "Noto Sans KR", sans-serif;
 
   .stepbar {
-    counter-reset: step + 1;
+    counter-reset: step;
     li {
       width: 25%;
       float: left;
@@ -54,6 +54,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
       text-transform: uppercase;
       color: #b9cbe8;
       line-height: 3;
+
       &:before {
         color: #6d6d6d;
         width: 1.875rem;
@@ -61,7 +62,8 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
         font-weight: 500;
         content: counter(step);
         counter-increment: step;
-        font-size: 0.0625rem;
+        // font-size: 0.0625rem;
+        font-size: 10px;
         line-height: 1.875rem;
         border: 6px solid #ffffff;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);

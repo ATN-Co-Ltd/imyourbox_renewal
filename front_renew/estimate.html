@@ -410,7 +410,7 @@
     <ul class="inputStoreType__radio__groups">
         <li>
             <label class="pallet">
-                <input type="radio" name="inputStore" value="pallet"  >
+                <input type="radio" name="inputStore" value="pallet" checked  >
                 <span class="check"></span>
                 <div class="inputStoreType__radio__groups_radio__text">
                     <span class="radio__title">파레트</span>
@@ -429,16 +429,17 @@
             </label>    
         </li>
     </ul>
+    <div class="pallet__checked__container">
     <div class="range__container">
          <div class="range__firstColumn">
                  <span class="stepone__category-title">보관량</span>
              <div class="range__description">
-                 <input class="indicator__inputStore__range" type="number" value="0">
+                 <input class="indicator__inputStore__range" type="number" value="500">
                 <span>plt</span>
             </div>
         </div>
          <div class="range__secondColumn">
-             <input class="inputStore__range" type="range" min="0" max="1000" value="0">
+             <input class="inputStore__range" type="range" min="0" max="1000" value="500">
             <div class="inputStore__range__count">
                 <span class="count__one">1</span> <span>250</span> <span>500</span> <span>750</span> <span class="count__thousnd">1000</span>
             </div>
@@ -448,17 +449,29 @@
          <div class="range__firstColumn">
                  <span class="stepone__category-title">상품종류(SKU)</span>
              <div class="range__description">
-                 <input class="indicator__inputStore__range" type="number" value="0">
-                <span>plt</span>
+                 <input class="indicator__inputStore__sku__range" type="number" value="250">
+                <span>개</span>
             </div>
         </div>
          <div class="range__secondColumn">
-             <input class="inputStore__range" type="range" min="0" max="1000" value="0">
+             <input class="inputStore__sku__range" type="range" min="0" max="1000" value="250">
             <div class="inputStore__range__count">
                 <span class="count__one">1</span> <span>250</span> <span>500</span> <span>750</span> <span class="count__thousnd">1000</span>
             </div>
         </div>
     </div>
+    <div class="range__container">
+        <div class="range__firstColumn">
+            <span class="stepone__category-title">입고 예정일</span>
+   </div>
+    <div class="range__secondColumn">
+        <input class="pallet__date" type="date" placeholder="날짜를 입력해주세요.">
+   </div>
+</div>
+    </div>
+</div>
+
+
 </div>
 </section>
 

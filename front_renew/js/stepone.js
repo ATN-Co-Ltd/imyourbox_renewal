@@ -23,6 +23,17 @@ buttons_category.forEach(e=> {
     
     })
 });
+
+//상세 품목
+let detailInput = "";
+const input_detail = document.querySelector(".detail__input");
+
+input_detail.addEventListener('input',e=> {
+    detailInput = e.target.value;
+    console.log(detailInput);
+})
+
+
 //보관형태
 const arr_storage_type = [];
 const buttons_storage_type = document.querySelectorAll("ul.storageType__container__buttons > li> input");
@@ -149,7 +160,7 @@ buttons_logistics_service_kinds_type.forEach(e=> {
 
 
 //물류보관량
-let inputStoreValue = "";
+let inputStoreValue = "pallet";
  const radio_inputStores = document.querySelector(".inputStoreType__radio__groups");
  radio_inputStores.addEventListener('change',(e)=> {
     const selected = document.querySelectorAll('.inputStoreType__radio__groups > li');
@@ -196,13 +207,28 @@ indicatorInputStore.addEventListener('input',(e)=> {
 })
 
 //inputStoreCountSKU
+let sku__range__inputStore = document.querySelector(".inputStore__sku__range");
+let indicatorSKUInputStore = document.querySelector(".indicator__inputStore__sku__range");
+let skuInputStoreCount = 0;
+sku__range__inputStore.addEventListener('input',e=> {
+    indicatorSKUInputStore.value = e.target.value;
+    skuInputStoreCount = indicatorSKUInputStore.value;
+});
+
+indicatorSKUInputStore.addEventListener('input',(e)=> {
+    sku__range__inputStore.value = e.target.value;
+    skuInputStoreCount = sku__range__inputStore.value;
+})
 
 
 
 
 
-
-
+//값이 비어있을때 메세지
+function errMsg(msg,scrollY) {
+    alert(msg);
+    window.scrollTo(0,scrollY);
+}
 
 
 
@@ -218,9 +244,38 @@ steptwo.style.display='none';
 stepbar__two.style.display="none";
 let stepStatus = 1;
 const nextBtn = () => {
+    console.log(window.scrollY)
+    console.log(detailInput.length);
+    //step1
+    let errBollean = false;
+    if(product_category.length <1)
+    {
+        errMsg('상품종류 하나이상을 선택해주세요!',161);
+        return;
+    }
+    else if(detailInput.length <1)
+    {
+        errMsg('상세품목을 입력해주세요!',361);
+        return;
+    }
+    else if(arr_storage_type.length <1)
+    {
+     errMsg('보관형태 하나이상을 선택해주세요!',500);
+     return;
+    }
+    else if(barcodeValue.length<1)
+    {
+        errMsg('바코드 여부를 선택해주세요!',700);
+        return;
+    }
+
+    
+   
+    
+
+
+
     stepStatus++;
-    console.log(stepStatus);
-   console.log(inputStoreCount);
     if(stepStatus === 2)
     {
         preBtn.style.visibility='visible';

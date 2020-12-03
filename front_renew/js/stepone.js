@@ -179,7 +179,7 @@ let inputStoreValue = "";
     }
 })
 
-
+//inputStoreCountPallet
 let range__inputStore = document.querySelector(".inputStore__range");
 let indicatorInputStore = document.querySelector(".indicator__inputStore__range");
 let inputStoreCount = 0;
@@ -194,6 +194,9 @@ indicatorInputStore.addEventListener('input',(e)=> {
     inputStoreCount = range__inputStore.value;
     // console.log(inputStoreCount);
 })
+
+//inputStoreCountSKU
+
 
 
 

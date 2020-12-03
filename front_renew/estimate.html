@@ -246,7 +246,7 @@
                     <li>
                     <input class="storageType__container__button room_temperature" type="button" value="상온보관">
                     <i class="fas fa-check"></i>
-                    </input>
+                </input>
                     </li>
                     <li>
                         <input class="storageType__container__button low_temperature" type="button" value="저온보관">
@@ -431,13 +431,32 @@
     </ul>
     <div class="range__container">
          <div class="range__firstColumn">
-            <span class="">보관량</span>
-         <input class="indicator__inputStore__range" type="number" value="0">
-            <span>plt</span>
+                 <span class="stepone__category-title">보관량</span>
+             <div class="range__description">
+                 <input class="indicator__inputStore__range" type="number" value="0">
+                <span>plt</span>
+            </div>
         </div>
          <div class="range__secondColumn">
              <input class="inputStore__range" type="range" min="0" max="1000" value="0">
-            
+            <div class="inputStore__range__count">
+                <span class="count__one">1</span> <span>250</span> <span>500</span> <span>750</span> <span class="count__thousnd">1000</span>
+            </div>
+        </div>
+    </div>
+    <div class="range__container">
+         <div class="range__firstColumn">
+                 <span class="stepone__category-title">상품종류(SKU)</span>
+             <div class="range__description">
+                 <input class="indicator__inputStore__range" type="number" value="0">
+                <span>plt</span>
+            </div>
+        </div>
+         <div class="range__secondColumn">
+             <input class="inputStore__range" type="range" min="0" max="1000" value="0">
+            <div class="inputStore__range__count">
+                <span class="count__one">1</span> <span>250</span> <span>500</span> <span>750</span> <span class="count__thousnd">1000</span>
+            </div>
         </div>
     </div>
 </div>

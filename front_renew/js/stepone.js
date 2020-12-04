@@ -1,3 +1,5 @@
+//lib
+
 //상품종류
 const product_category = [];
 const buttons_category = document.querySelectorAll("ul.stepone__category__list > li>input");
@@ -221,6 +223,12 @@ indicatorSKUInputStore.addEventListener('input',(e)=> {
 })
 
 
+let dateSelector = document.querySelector('.inputStore__date');
+
+dateSelector.fla;
+
+
+
 
 
 
@@ -247,27 +255,26 @@ const nextBtn = () => {
     console.log(window.scrollY)
     console.log(detailInput.length);
     //step1
-    let errBollean = false;
-    if(product_category.length <1)
-    {
-        errMsg('상품종류 하나이상을 선택해주세요!',161);
-        return;
-    }
-    else if(detailInput.length <1)
-    {
-        errMsg('상세품목을 입력해주세요!',361);
-        return;
-    }
-    else if(arr_storage_type.length <1)
-    {
-     errMsg('보관형태 하나이상을 선택해주세요!',500);
-     return;
-    }
-    else if(barcodeValue.length<1)
-    {
-        errMsg('바코드 여부를 선택해주세요!',700);
-        return;
-    }
+    // if(product_category.length <1)
+    // {
+    //     errMsg('상품종류 하나이상을 선택해주세요!',161);
+    //     return;
+    // }
+    // else if(detailInput.length <1)
+    // {
+    //     errMsg('상세품목을 입력해주세요!',361);
+    //     return;
+    // }
+    // else if(arr_storage_type.length <1)
+    // {
+    //  errMsg('보관형태 하나이상을 선택해주세요!',500);
+    //  return;
+    // }
+    // else if(barcodeValue.length<1)
+    // {
+    //     errMsg('바코드 여부를 선택해주세요!',700);
+    //     return;
+    // }
 
     
    

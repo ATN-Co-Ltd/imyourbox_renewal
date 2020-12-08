@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+
 :root {
   --syboml__color: #ff9948;
   --background_color_one: #fff;
@@ -17,7 +23,7 @@
 
 input[type="range"] {
   -webkit-appearance: none;
-  width: 100%;
+  width: 90%;
   height: 14px;
   background: transparent;
   cursor: pointer;
@@ -399,10 +405,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   .range__secondColumn {
     width: 100%;
     margin: 5% auto;
-    input {
-      width: 90%;
-      height: 30%;
-    }
+
     .inputStore__range__count {
       width: 90;
       display: flex;
@@ -414,6 +417,13 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
       .count__thousnd {
         margin-right: 5%;
       }
+    }
+    .calendar-inputStoreDate {
+      width: 90%;
+      height: 40px;
+      border-radius: 10px;
+      border: 0.5px solid #c4c4c4;
+      background: #f2f2f2;
     }
   }
 }

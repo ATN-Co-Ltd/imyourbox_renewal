@@ -1,4 +1,3 @@
-//lib
 
 //상품종류
 const product_category = [];
@@ -6,7 +5,7 @@ const buttons_category = document.querySelectorAll("ul.stepone__category__list >
 const CLICKED_CLASS = "clicked";
 buttons_category.forEach(e=> {
     e.addEventListener('click',()=> {
-      const checked__icon = e.parentElement.childNodes[3];
+      const checked__icon = e.parentElement.childNodes[2];
         const splitCategory =e.className.split(" ")[1];
         if(product_category.includes(splitCategory))
         {
@@ -22,14 +21,12 @@ buttons_category.forEach(e=> {
         }
     // console.log(product_category);
     e.classList.toggle(CLICKED_CLASS);
-    
     })
 });
 
 //상세 품목
 let detailInput = "";
 const input_detail = document.querySelector(".detail__input");
-
 input_detail.addEventListener('input',e=> {
     detailInput = e.target.value;
     console.log(detailInput);
@@ -42,7 +39,7 @@ const buttons_storage_type = document.querySelectorAll("ul.storageType__containe
 
 buttons_storage_type.forEach(e=> {
     e.addEventListener('click',()=> {
-        const checked__icon = e.parentElement.childNodes[3];
+        const checked__icon = e.parentElement.childNodes[2];
         console.log(checked__icon);
         const splitStorageType =e.className.split(" ")[1];
         console.log(`${splitStorageType}`)
@@ -113,7 +110,7 @@ const buttons_caution_product_type = document.querySelectorAll("ul.productCautio
 buttons_caution_product_type.forEach(e=> {
     // console.log(e)
     e.addEventListener('click',()=> {
-        const checked__icon = e.parentElement.childNodes[3];
+        const checked__icon = e.parentElement.childNodes[2];
         const splitStorageType =e.className.split(" ")[1];
         // console.log(`${splitStorageType}`)
         // console.log(arr_caution_product_type.includes(splitStorageType));
@@ -133,6 +130,14 @@ buttons_caution_product_type.forEach(e=> {
     
     })
 });
+
+
+
+//step2
+
+
+
+
 
 
 //문의할 물류 서비스
@@ -166,6 +171,8 @@ let inputStoreValue = "pallet";
  const radio_inputStores = document.querySelector(".inputStoreType__radio__groups");
  radio_inputStores.addEventListener('change',(e)=> {
     const selected = document.querySelectorAll('.inputStoreType__radio__groups > li');
+    const palletItem = document.querySelector('.pallet__checked__container');
+
     const black = "#000000"
     const selectedColor = "#f18b24";
     inputStoreValue = e.target.value;
@@ -178,6 +185,7 @@ let inputStoreValue = "pallet";
             selected[1].style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
             selected[1].childNodes[1].childNodes[5].childNodes[1].style.color =black;
             selected[1].childNodes[1].childNodes[5].childNodes[3].style.color =black;
+            palletItem.style.display = '';
             break;
         case "box":
             selected[1].style.boxShadow = "0px 0px 5px 0px #ff9948";
@@ -186,6 +194,8 @@ let inputStoreValue = "pallet";
             selected[0].style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
             selected[0].childNodes[1].childNodes[5].childNodes[1].style.color =black;
             selected[0].childNodes[1].childNodes[5].childNodes[3].style.color =black;
+            console.log(palletItem);
+            palletItem.style.display = "none";
             break;
         default:
             break;
@@ -199,7 +209,7 @@ let inputStoreCount = 0;
 range__inputStore.addEventListener('input',e=> {
     indicatorInputStore.value = e.target.value;
     inputStoreCount = indicatorInputStore.value;
-    // console.log(inputStoreCount);
+     console.log(inputStoreCount);
 });
 
 indicatorInputStore.addEventListener('input',(e)=> {
@@ -222,25 +232,11 @@ indicatorSKUInputStore.addEventListener('input',(e)=> {
     skuInputStoreCount = sku__range__inputStore.value;
 })
 
-
-let dateSelector = document.querySelector('.inputStore__date');
-
-dateSelector.fla;
-
-
-
-
-
-
 //값이 비어있을때 메세지
 function errMsg(msg,scrollY) {
     alert(msg);
     window.scrollTo(0,scrollY);
 }
-
-
-
-
 
 //앞뒤버튼
 const stepone = document.querySelector("#stepone");
@@ -254,6 +250,7 @@ let stepStatus = 1;
 const nextBtn = () => {
     console.log(window.scrollY)
     console.log(detailInput.length);
+    window.scrollTo(0,0);
     //step1
     // if(product_category.length <1)
     // {
@@ -275,13 +272,6 @@ const nextBtn = () => {
     //     errMsg('바코드 여부를 선택해주세요!',700);
     //     return;
     // }
-
-    
-   
-    
-
-
-
     stepStatus++;
     if(stepStatus === 2)
     {
@@ -290,12 +280,11 @@ const nextBtn = () => {
         steptwo.style.display = '';
         stepbar__two.style.display='';
         stepbar__one.style.display='none'
-        console.log(steptwo);
+        console.log(steptwo);   
     }
-
 }
-
 const prevBtn = () => {
+    window.scrollTo(0,0);
     stepStatus--;
     console.log(stepStatus);
     if(stepStatus === 1)

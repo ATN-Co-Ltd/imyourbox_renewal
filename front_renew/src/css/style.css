@@ -1,7 +1,7 @@
 @import "./access.css";
 @import "./contact.css";
-@import "./index.css";
+@import "./index.scss";
 @import "./price.css";
 @import "./responsive.css";
-@import "./stepone.css";
-@import "./steptwo.css";
+@import "./stepone.scss";
+@import "./steptwo.scss";

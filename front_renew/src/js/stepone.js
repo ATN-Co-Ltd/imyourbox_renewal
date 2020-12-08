@@ -1,4 +1,10 @@
 
+import flatpickr from 'flatpickr';
+
+flatpickr(".calendar-inputStoreDate",{
+
+});
+
 //상품종류
 const product_category = [];
 const buttons_category = document.querySelectorAll("ul.stepone__category__list > li>input");
@@ -242,12 +248,13 @@ function errMsg(msg,scrollY) {
 const stepone = document.querySelector("#stepone");
 const steptwo = document.querySelector("#steptwo");
 const preBtn = document.querySelector(".stepBtn__preBtn");
+const nextBtn = document.querySelector(".stepBtn__nextBtn");
 const stepbar__two = document.querySelector(".stepbox__two");
 const stepbar__one = document.querySelector(".stepbox");
 steptwo.style.display='none';
 stepbar__two.style.display="none";
 let stepStatus = 1;
-const nextBtn = () => {
+nextBtn.addEventListener('click',()=> {
     console.log(window.scrollY)
     console.log(detailInput.length);
     window.scrollTo(0,0);
@@ -282,8 +289,8 @@ const nextBtn = () => {
         stepbar__one.style.display='none'
         console.log(steptwo);   
     }
-}
-const prevBtn = () => {
+})
+preBtn.addEventListener('click',()=> {
     window.scrollTo(0,0);
     stepStatus--;
     console.log(stepStatus);
@@ -295,7 +302,7 @@ const prevBtn = () => {
         stepbar__two.style.display='none';
         stepbar__one.style.display=''
     }
+})
 
-}
 
 

@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+//날짜 css
+@import url("https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css");
 
 :root {
   --syboml__color: #ff9948;
@@ -21,8 +23,8 @@
   --color__deactive: #f2f2f2;
 }
 
-input[type="range"] {
-  -webkit-appearance: none;
+//noUiSlider
+.noUi-target {
   width: 90%;
   height: 14px;
   background: transparent;
@@ -30,69 +32,24 @@ input[type="range"] {
   background: var(--color__deactive);
   border-radius: 10px; /* iOS */
   margin-bottom: 0.5rem;
+  margin: 3% auto;
 }
-::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 20px; /* 1 */
-  height: 40px;
-  background: #fff;
-
-  border: 2px solid #999; /* 1 */
+.noUi-connect {
+  background: #ffc671;
 }
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
+.noUi-handle {
+  &:before,
+  &:after {
+    display: none;
+  }
   border: none;
-  height: 25px;
-  width: 25px;
+  box-shadow: none;
+  background-color: #ff8d33;
   border-radius: 50%;
-  margin-top: -6px;
-  background: #f18b24;
-  box-shadow: -100vw 0vw 0 100vw #ffc671;
+  width: 30px;
+  height: 20px;
 }
-input[type="range"]::-webkit-slider-runnable-track {
-  width: 50px;
-  height: 14px;
-  background: var(--color__deactive);
-  border-radius: 10px;
-  overflow: hidden;
-}
-input[type="range"]:focus {
-  outline: none;
-}
-
-// input[type="date"]::-webkit-calendar-picker-indicator,
-// input[type="date"]::-webkit-inner-spin-button {
-//   display: none;
-//   appearance: none;
-// }
-// input[type="date"]::-webkit-datetime-edit-text {
-//   -webkit-appearance: none;
-//   display: none;
-// }
-// input[type="date"]::-webkit-datetime-edit-month-field {
-//   -webkit-appearance: none;
-//   display: none;
-// }
-// input[type="date"]::-webkit-datetime-edit-day-field {
-//   -webkit-appearance: none;
-//   display: none;
-// }
-// input[type="date"]::-webkit-datetime-edit-year-field {
-//   -webkit-appearance: none;
-//   display: none;
-// }
-
-// input[type="date"]::-webkit-calendar-picker-indicator {
-//   color: rgba(0, 0, 0, 0); //숨긴다
-//   opacity: 1;
-//   display: block;
-//   background: url(https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/calendar.svg)
-//     no-repeat; // 대체할 아이콘
-//   width: 20px;
-//   height: 20px;
-//   border-width: thin;
-// }
+// noUiSlider end
 
 $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 
@@ -424,6 +381,178 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
       border-radius: 10px;
       border: 0.5px solid #c4c4c4;
       background: #f2f2f2;
+    }
+  }
+}
+
+//물품보관량 - 박스선택했을때
+.box__checked__container {
+  .box__inputStoreRadio__lists {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    li:hover {
+      box-shadow: 0px 0px 5px 0px #ff9948;
+    }
+    li {
+      width: calc((100%-16px) / 1);
+      height: 90px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      margin-left: 0.9375rem;
+      margin-right: 0.9375rem;
+      margin-top: 0.5625rem;
+      label {
+        display: block;
+        position: relative;
+        padding-top: 0.625rem;
+        padding-left: 0.875rem;
+        width: 100%;
+        height: inherit;
+        cursor: pointer;
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .check {
+        position: absolute;
+        top: 2rem;
+        left: 1.0525rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        background-color: var(--color__white);
+        border-radius: 50%;
+        border: 2px solid #474747;
+      }
+      input:checked ~ .check {
+        background-color: var(--color__white);
+        //체크되었을때 하얀색으로
+        border-color: var(--color__white);
+        border: 1px solid #f18b24;
+      }
+      .check:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      label {
+        .check:after {
+          top: 5px;
+          left: 5.1px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: var(--syboml__color);
+        }
+        input:checked ~ .check:after {
+          display: block;
+        }
+      }
+      .box__inputStoreRadio__lists-title {
+        position: absolute;
+        top: 1rem;
+        left: 3rem;
+        color: var(--font_text_color);
+        font-weight: 500;
+      }
+      .box__inputStoreRadio__lists-description {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        color: var(--font_stepbar_color);
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+//출고택배사이즈 - 라디오박스
+.outputBoxsize__container {
+  .outputBoxsize__Radio__lists {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    li:hover {
+      box-shadow: 0px 0px 5px 0px #ff9948;
+    }
+    li {
+      width: calc((100%-16px) / 1);
+      height: 90px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      margin-left: 0.9375rem;
+      margin-right: 0.9375rem;
+      margin-top: 0.5625rem;
+      label {
+        display: block;
+        position: relative;
+        padding-top: 0.625rem;
+        padding-left: 0.875rem;
+        width: 100%;
+        height: inherit;
+        cursor: pointer;
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .check {
+        position: absolute;
+        top: 2rem;
+        left: 1.0525rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        background-color: var(--color__white);
+        border-radius: 50%;
+        border: 2px solid #474747;
+      }
+      input:checked ~ .check {
+        background-color: var(--color__white);
+        //체크되었을때 하얀색으로
+        border-color: var(--color__white);
+        border: 1px solid #f18b24;
+      }
+      .check:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      label {
+        .check:after {
+          top: 5px;
+          left: 5.1px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: var(--syboml__color);
+        }
+        input:checked ~ .check:after {
+          display: block;
+        }
+      }
+      .outputBoxsize__Radio__lists-title {
+        position: absolute;
+        top: 1rem;
+        left: 3rem;
+        color: var(--font_text_color);
+        font-weight: 500;
+      }
+      .outputBoxsize__Radio__lists-description {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        color: var(--font_stepbar_color);
+        font-size: 0.75rem;
+      }
     }
   }
 }

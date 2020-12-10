@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   // Learn more here: https://docs.forestadmin.com/documentation/v/v6/reference-guide/models/enrich-your-models#declaring-a-new-field-in-a-model
   const ProductCategorys = sequelize.define('productCategorys', {
     category: {
-      type: DataTypes.ENUM('clothes','stuff','beauty','electronics','stationery','food','etc'),
+      type: DataTypes.ENUM('clothes','stuff','beauty','householdgoods','electronics','stationery','food','etc'),
       allowNull: false,
     },
     createdAt: {

@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: imyourbox_official
+    container_name: imyourbox_admin
     environment:
       - APPLICATION_PORT=${APPLICATION_PORT}
       - DATABASE_URL=${DOCKER_DATABASE_URL}

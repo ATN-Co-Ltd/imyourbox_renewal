@@ -32,7 +32,8 @@
   background: var(--color__deactive);
   border-radius: 10px; /* iOS */
   margin-bottom: 0.5rem;
-  margin: 3% auto;
+  margin: 2% auto;
+  margin-bottom: 1%;
 }
 .noUi-connect {
   background: #ffc671;
@@ -46,8 +47,9 @@
   box-shadow: none;
   background-color: #ff8d33;
   border-radius: 50%;
-  width: 30px;
-  height: 20px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
 }
 // noUiSlider end
 
@@ -152,7 +154,27 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   border: 1px solid var(--color_divider);
   margin: 0rem auto;
 }
-.service__container {
+.service {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  align-items: left;
+  text-align: left;
+  margin: 1.75rem 5%;
+}
+.service__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.service__description {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  font-style: normal;
+  color: var(--color_category_description);
+  margin: 0rem 1.5%;
+}
+.service__checkbox {
   margin-top: 0.8125rem;
   font-weight: 400;
   font-size: 0.875rem;
@@ -234,92 +256,90 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   .none {
     visibility: hidden;
   }
-}
-.inputStoreType__radio__groups li:hover {
-  box-shadow: 0px 0px 5px #ff8d33;
-}
-.inputStoreType__radio__groups li {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  width: calc((128%-16px) / 3);
-  height: 12.5rem;
-  margin-left: 0.9375rem;
-  margin-top: 0.5625rem;
-  font-size: 0.9375rem;
-  font-weight: 400;
-  font-family: "Noto Sans KR", sans-serif;
-
-  label {
-    display: block;
-    position: relative;
+  li:hover {
+    box-shadow: 0px 0px 5px #ff8d33;
+  }
+  li {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    width: calc((128%-16px) / 3);
+    height: 12.5rem;
     padding-top: 0.625rem;
     padding-left: 0.875rem;
-    height: inherit;
-    cursor: pointer;
+    margin: 0.5625rem auto;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    font-family: "Noto Sans KR", sans-serif;
 
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin-top: 100px;
-      text-align: left;
-    }
-  }
-  .pallet {
-    background: url("#{$baseURL}/processing04.svg") no-repeat center;
-  }
-  .box {
-    background: url("#{$baseURL}/processing04.svg") no-repeat center;
-  }
-  .pallet,
-  .box {
-    background-size: 4.375rem 4.375rem;
-    background-position: 50% 25%;
-  }
-
-  input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  .check {
-    position: absolute;
-    top: 0.5rem;
-    left: 6.5rem;
-    height: 1.25rem;
-    width: 1.25rem;
-    background-color: var(--color__white);
-    border-radius: 50%;
-    border: 2px solid #474747;
-  }
-  input:checked ~ .check {
-    background-color: var(--color__white);
-    //체크되었을때 하얀색으로
-    border-color: var(--color__white);
-    border: 1px solid #f18b24;
-  }
-  .check:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  label {
-    .check:after {
-      top: 5px;
-      left: 5.1px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--syboml__color);
-    }
-    input:checked ~ .check:after {
+    label {
       display: block;
+      position: relative;
+      width: 100%;
+      height: inherit;
+      cursor: pointer;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 6.25rem;
+        text-align: left;
+      }
+    }
+    .pallet {
+      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+    }
+    .box {
+      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+    }
+    .pallet,
+    .box {
+      background-size: 4.375rem 4.375rem;
+      background-position: 50% 25%;
+    }
+    input {
+      position: relative;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .check {
+      position: absolute;
+      margin-top: 5%;
+      margin-left: 30%;
+      height: 1.25rem;
+      width: 1.25rem;
+      background-color: var(--color__white);
+      border-radius: 50%;
+      border: 2px solid #474747;
+    }
+    input:checked ~ .check {
+      background-color: var(--color__white);
+      //체크되었을때 하얀색으로
+      border-color: var(--color__white);
+      border: 1px solid #f18b24;
+    }
+    .check:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    label {
+      .check:after {
+        top: 5px;
+        left: 5.1px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--syboml__color);
+      }
+      input:checked ~ .check:after {
+        display: block;
+      }
     }
   }
-}
-.barcode__radio__groups li:hover {
-  box-shadow: 0px 0px 5px 0px #ff9948;
+  .barcode__radio__groups li:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
 }
 
 .range__container {
@@ -336,7 +356,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     align-items: center;
     text-align: center;
     margin-left: 1.875rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     justify-content: space-between;
     font-size: 1rem;
     font-weight: 700 !important;
@@ -361,10 +381,10 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   }
   .range__secondColumn {
     width: 100%;
-    margin: 5% auto;
+    margin: 0 auto;
 
     .inputStore__range__count {
-      width: 90;
+      width: 90%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -383,6 +403,9 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
       background: #f2f2f2;
     }
   }
+  .inputDate {
+    margin-top: 3%;
+  }
 }
 
 //물품보관량 - 박스선택했을때
@@ -399,7 +422,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     }
     li {
       width: calc((100%-16px) / 1);
-      height: 90px;
+      height: 5.625rem;
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
       border-radius: 10px;
       margin-left: 0.9375rem;
@@ -552,6 +575,56 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
         left: 3rem;
         color: var(--font_stepbar_color);
         font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+//responsive
+@media screen and (min-width: 768px) {
+  .service__description {
+    margin: 0;
+  }
+  .service {
+    margin-bottom: 5rem;
+  }
+  .logistics_service_kinds__container {
+    margin-bottom: 5rem;
+    li {
+      width: calc((130%-16px) / 3);
+      margin: 0.5625rem 0.5rem 0 0.5rem;
+    }
+    .logistics_service_kinds__list-title {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .inputStoreType__radio__groups {
+    li {
+      width: calc((127%-16px) / 3);
+      height: 8.125rem;
+      margin: 0 0.5rem;
+      label {
+        div {
+          margin-top: 3.5rem;
+        }
+      }
+      .check {
+        margin-top: 1%;
+        margin-left: 38%;
+      }
+    }
+  }
+  .inputDate {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .range__container {
+    .range__secondColumn {
+      .calendar-inputStoreDate {
+        margin-left: 3.2rem;
+        width: 20.5rem;
+        height: 40px;
       }
     }
   }

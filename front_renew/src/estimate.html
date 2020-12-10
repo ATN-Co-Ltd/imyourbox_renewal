@@ -159,6 +159,7 @@
         </div>
         <!--inner-->
     </header>
+<!-- step 1 -->
 <section id="stepone" class="section">
     <form>
     <div class="section__container">
@@ -337,6 +338,7 @@
     </div>
 </form>
 </section>
+<!-- step 2 -->
 <section id="steptwo" class="section">
 <div class="section__container">
     <div class="step__container">
@@ -344,10 +346,10 @@
     <span class="stepone__title">STEP 2</span>
      <span class="stepone__description">문의를 위한 물류 기본정보를 알려주세요.</span>
     </div>
-    <div class="stepone__category">
-        <span class="stepone__category-title">서비스 런칭여부</span>
-        <span class="stepone__category-description">고객님의 서비스 또는 상품이 출시 전이라면 알려주세요. 상담시 반영됩니다.</span>
-        <div class="service__container">
+    <div class="service">
+        <span class="service__title">서비스 런칭여부</span>
+        <span class="service__description">고객님의 서비스 또는 상품이 출시 전이라면 알려주세요. 상담시 반영됩니다.</span>
+        <div class="service__checkbox">
             <input id="prepare" type="checkbox">
             <!-- <i class="fas fa-check"></i> -->
             <label for="prepare" ><span>상품 준비중입니다.</span></label>
@@ -358,7 +360,7 @@
         <span class="stepone__category-description">중복 선택이 가능합니다.</span>
     </div>
     <ul class="logistics_service_kinds__container">
-        <li class="">
+        <li>
          <div class="logistics_service_kinds__list fullfillment">
              <span class="logistics_service_kinds__list-title">풀필먼트</span>
              <span class="logistics_service_kinds__list-description" >상품의 입고부터 출고까지 물류의 모든 것을 대행해드리는 서비스입니다.</span>
@@ -498,9 +500,9 @@
         <div class="range__firstColumn">
             <span class="stepone__category-title">입고 예정일</span>
    </div>
-    <div class="range__secondColumn">
+    <div class="range__secondColumn inputDate">
         <label>
-            <input class="calendar-inputStoreDate" type="text" placeholder="날짜를 입력해주세요." data-min-date=today >
+            <input class="calendar-inputStoreDate" type="text" placeholder="        날짜를 입력해주세요." data-min-date=today >
         </label>
    </div>
 </div>

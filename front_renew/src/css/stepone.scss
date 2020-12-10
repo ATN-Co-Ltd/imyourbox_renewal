@@ -24,7 +24,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 /* Setion common */
 .section {
   text-align: center;
-  margin: 120px auto;
+  margin: 120px auto 10px auto;
 }
 
 .section__container {
@@ -621,7 +621,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   max-width: 100%;
   height: 9vh;
   bottom: 0%;
-  background-color: var(--coㄱlor__white);
+  background-color: var(--color__white);
   opacity: 0.9;
   border-radius: 5%;
   display: flex;
@@ -784,10 +784,11 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     }
   }
   .stepBtn {
-    position: relative;
+    position: static;
+    margin: 0 auto;
     width: 100%;
-    max-width: 100%;
-    height: 9vh;
+    max-width: 1024px;
+    height: 5vh;
     bottom: 0%;
     background-color: var(--color__white);
     opacity: 0.9;

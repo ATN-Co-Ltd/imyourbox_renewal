@@ -1,6 +1,14 @@
-import noUiSlider from 'nouislider';
-import wNumb from 'wnumb';
 
+import noUiSlider from 'nouislider';
+import 'nouislider/distribute/nouislider.css';
+import wNumb from 'wnumb';
+import flatpickr from 'flatpickr';
+import 'flatpickr/dist/themes/material_orange.css';
+import {Korean} from 'flatpickr/dist/l10n/ko';
+flatpickr(".calendar-inputStoreDate",{
+    "locale" :Korean,
+});
+const CLICKED_CLASS = "clicked";
 //step2
 //문의할 물류 서비스
 const arr_logistics_service_kinds =[];

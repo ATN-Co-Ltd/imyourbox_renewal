@@ -6,7 +6,12 @@ module.exports = class Production_caution extends Model {
     return super.init(
       {
         cautiontype: {
-          type: DataTypes.ENUM(enum_caution_product_tpye),
+          type: DataTypes.ENUM,
+          values:["fragile",
+          "discoloration",
+          "highprice",
+          "fitness_product",
+          "largefurniture"],
           allowNull: false,
         },
       },

@@ -1,0 +1,662 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+//날짜 css
+@import url("https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css");
+
+:root {
+  --syboml__color: #ff9948;
+  --background_color_one: #fff;
+  --font_color: #ffa63f;
+  --font_stepbar_color: #6d6d6d;
+  --font_text_color: #474747;
+  --color_step_eclispe: #fff3d2;
+  --color_range_bar: #ffc671;
+  --color_divider: #ffd18c;
+  --color_category_description: #666666;
+  --color_button_deactive: #ffffff;
+  --color__white: #ffffff;
+  --color__tesxt: #23232;
+  --color__checked__font: #f18b24;
+  --color__deactive: #f2f2f2;
+}
+
+//noUiSlider
+.noUi-target {
+  width: 90%;
+  height: 14px;
+  background: transparent;
+  cursor: pointer;
+  background: var(--color__deactive);
+  border-radius: 10px; /* iOS */
+  margin-bottom: 0.5rem;
+  margin: 2% auto;
+  margin-bottom: 1%;
+}
+.noUi-connect {
+  background: #ffc671;
+}
+.noUi-handle {
+  &:before,
+  &:after {
+    display: none;
+  }
+  border: none;
+  box-shadow: none;
+  background-color: #ff8d33;
+  border-radius: 50%;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+// noUiSlider end
+
+$baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
+
+.stepbox__two {
+  width: 100%;
+  height: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+
+  .stepbar {
+    counter-reset: step;
+    li {
+      width: 25%;
+      float: left;
+      font-size: 14px;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      color: #b9cbe8;
+      line-height: 3;
+      &:before {
+        color: #6d6d6d;
+        width: 1.875rem;
+        height: 1.875rem;
+        font-weight: 500;
+        content: counter(step);
+        counter-increment: step;
+        font-size: 10px;
+        line-height: 1.875rem;
+        border: 6px solid #ffffff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+        display: block;
+        margin: 0 auto 10px auto; // ***very important
+        text-align: center;
+        background-color: #fff3de;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+      }
+      &:after {
+        width: 100%;
+        height: 3px;
+        content: "";
+        background-color: #ff9948;
+        top: 20px;
+        left: -50%; //**very important
+        position: absolute;
+        z-index: 1;
+      }
+      &:first-child {
+        &:after {
+          content: none;
+        }
+      }
+    }
+    li.step_finished {
+      &:before {
+        background-color: var(--font_color);
+        color: var(--color__white);
+        border: 6px solid var(--font_color);
+      }
+    }
+    li.step_active {
+      &:before {
+        background-color: #ff8d33;
+        width: 70px;
+        border-radius: 20px;
+        font-weight: 700;
+        color: #f2f2f2;
+        border: 6px solid #ff8d33;
+        content: "STEP 2";
+        font-size: 13px;
+      }
+    }
+    li.step_highlight {
+      &:before {
+        box-shadow: 0px 0px 5px #ff8d33;
+      }
+    }
+  }
+}
+
+.step__container {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 100px;
+  margin: 0 auto;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 9rem;
+}
+
+.top__divider {
+  width: 90%;
+  max-width: 100%;
+  border: 1px solid var(--color_divider);
+  margin: 0rem auto;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  align-items: left;
+  text-align: left;
+  margin: 1.75rem 5%;
+}
+.service__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.service__description {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  font-style: normal;
+  color: var(--color_category_description);
+  margin: 0rem 1.5%;
+}
+.service__checkbox {
+  margin-top: 0.8125rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 10px;
+  letter-spacing: -5%;
+  font-style: normal;
+}
+
+.logistics_service_kinds__container {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  text-align: center;
+  li {
+    width: calc((100%-16px) / 1);
+    // width: 165px;
+    // width: 4.6875rem;
+    height: 90px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-left: 0.9375rem;
+    margin-right: 0.9375rem;
+    margin-top: 0.5625rem;
+    i {
+      position: relative;
+      bottom: 95%;
+
+      left: 45%;
+      color: #ffffff;
+    }
+  }
+
+  .logistics_service_kinds__list {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+  }
+  .logistics_service_kinds__list-title {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 0.90125rem;
+  }
+  .logistics_service_kinds__list-description {
+    margin-top: 0.5625rem;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 0.90125rem;
+  }
+  .logistics_service_kinds__list:hover {
+    box-shadow: 0px 0px 5px #ff8d33;
+  }
+
+  .fullfillment.clicked,
+  .storeproduct.clicked,
+  .processing.clicked,
+  .etc.clicked {
+    box-shadow: 0px 0px 5px #ff8d33;
+    span {
+      color: var(--color__checked__font);
+    }
+  }
+}
+
+.inputStoreType__radio__groups {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  text-align: center;
+  .none {
+    display: none;
+  }
+  li:hover {
+    box-shadow: 0px 0px 5px #ff8d33;
+  }
+  li {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    width: calc((128%-16px) / 3);
+    height: 12.5rem;
+    padding-top: 0.625rem;
+    padding-left: 0.875rem;
+    margin: 0.5625rem auto;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    font-family: "Noto Sans KR", sans-serif;
+
+    label {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: inherit;
+      cursor: pointer;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 6.25rem;
+        text-align: left;
+      }
+    }
+    .pallet {
+      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+    }
+    .box {
+      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+    }
+    .pallet,
+    .box {
+      background-size: 4.375rem 4.375rem;
+      background-position: 50% 25%;
+    }
+    input {
+      position: relative;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .check {
+      position: absolute;
+      margin-top: 5%;
+      margin-left: 30%;
+      height: 1.25rem;
+      width: 1.25rem;
+      background-color: var(--color__white);
+      border-radius: 50%;
+      border: 2px solid #474747;
+    }
+    input:checked ~ .check {
+      background-color: var(--color__white);
+      //체크되었을때 하얀색으로
+      border-color: var(--color__white);
+      border: 1px solid #f18b24;
+    }
+    .check:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    label {
+      .check:after {
+        top: 5px;
+        left: 5.1px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--syboml__color);
+      }
+      input:checked ~ .check:after {
+        display: block;
+      }
+    }
+  }
+  .barcode__radio__groups li:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
+}
+
+.range__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  .range__firstColumn {
+    width: 93%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-left: 1.875rem;
+    margin-top: 2rem;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 700 !important;
+    .range__description {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      align-items: center;
+      margin-right: 1.875rem;
+      input {
+        display: inline;
+        width: 120px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: #f6f6f6;
+        border: 0.5px solid #cacaca;
+        box-sizing: border-box;
+        text-align: center;
+        margin-right: 1.875rem;
+      }
+    }
+  }
+  .range__secondColumn {
+    width: 100%;
+    margin: 0 auto;
+
+    .inputStore__range__count {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .count__one {
+        margin-left: 5%;
+      }
+      .count__thousnd {
+        margin-right: 5%;
+      }
+    }
+    .calendar-inputStoreDate::placeholder {
+      background-image: url("#{$baseURL}/calendar.svg");
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+      background-position: 3% center;
+    }
+    .calendar-inputStoreDate {
+      width: 90%;
+      height: 40px;
+      border-radius: 10px;
+      border: 0.5px solid #c4c4c4;
+      background: #f2f2f2;
+    }
+  }
+  .inputDate {
+    margin-top: 3%;
+    margin-bottom: 4.9375rem;
+  }
+}
+
+//물품보관량 - 박스선택했을때
+.box__checked__container {
+  .box__inputStoreRadio__lists {
+    display: flex;
+    margin: 2rem auto 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    li:hover {
+      box-shadow: 0px 0px 5px 0px #ff9948;
+    }
+    .none {
+      visibility: hidden;
+    }
+    li {
+      width: calc((100%-16px) / 1);
+      height: 5.625rem;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      margin-left: 0.9375rem;
+      margin-right: 0.9375rem;
+      margin-top: 0.5625rem;
+      label {
+        display: block;
+        position: relative;
+        padding-top: 0.625rem;
+        padding-left: 0.875rem;
+        width: 100%;
+        height: inherit;
+        cursor: pointer;
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .check {
+        position: absolute;
+        top: 2rem;
+        left: 1.0525rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        background-color: var(--color__white);
+        border-radius: 50%;
+        border: 2px solid #474747;
+      }
+      input:checked ~ .check {
+        background-color: var(--color__white);
+        //체크되었을때 하얀색으로
+        border-color: var(--color__white);
+        border: 1px solid #f18b24;
+      }
+      .check:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      label {
+        .check:after {
+          top: 5px;
+          left: 5.1px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: var(--syboml__color);
+        }
+        input:checked ~ .check:after {
+          display: block;
+        }
+      }
+      .box__inputStoreRadio__lists-title {
+        position: absolute;
+        top: 1rem;
+        left: 3rem;
+        color: var(--font_text_color);
+        font-weight: 500;
+      }
+      .box__inputStoreRadio__lists-description {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        color: var(--font_stepbar_color);
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+//출고택배사이즈 - 라디오박스
+.outputBoxsize__container {
+  .outputBoxsize__Radio__lists {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    li:hover {
+      box-shadow: 0px 0px 5px 0px #ff9948;
+    }
+    .none {
+      display: none;
+    }
+    li {
+      width: calc((100%-16px) / 1);
+      height: 90px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      margin-left: 0.9375rem;
+      margin-right: 0.9375rem;
+      margin-top: 0.5625rem;
+      label {
+        display: block;
+        position: relative;
+        padding-top: 0.625rem;
+        padding-left: 0.875rem;
+        width: 100%;
+        height: inherit;
+        cursor: pointer;
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .check {
+        position: absolute;
+        top: 2rem;
+        left: 1.0525rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        background-color: var(--color__white);
+        border-radius: 50%;
+        border: 2px solid #474747;
+      }
+      input:checked ~ .check {
+        background-color: var(--color__white);
+        //체크되었을때 하얀색으로
+        border-color: var(--color__white);
+        border: 1px solid #f18b24;
+      }
+      .check:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      label {
+        .check:after {
+          top: 5px;
+          left: 5.1px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: var(--syboml__color);
+        }
+        input:checked ~ .check:after {
+          display: block;
+        }
+      }
+      .outputBoxsize__Radio__lists-title {
+        position: absolute;
+        top: 1rem;
+        left: 3rem;
+        color: var(--font_text_color);
+        font-weight: 500;
+      }
+      .outputBoxsize__Radio__lists-description {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        color: var(--font_stepbar_color);
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+//responsive
+@media screen and (min-width: 768px) {
+  .service__description {
+    margin: 0;
+  }
+  .service {
+    margin-bottom: 5rem;
+  }
+  .logistics_service_kinds__container {
+    margin-bottom: 5rem;
+    li {
+      width: calc((130%-16px) / 3);
+      margin: 0.5625rem 0.5rem 0 0.5rem;
+    }
+    .logistics_service_kinds__list-title {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .inputStoreType__radio__groups {
+    li {
+      width: calc((127%-16px) / 3);
+      height: 8.125rem;
+      margin: 0 0.5rem;
+      label {
+        div {
+          margin-top: 3.5rem;
+        }
+      }
+      .check {
+        margin-top: 1%;
+        margin-left: 38%;
+      }
+    }
+  }
+  .inputDate {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .range__container {
+    .range__secondColumn {
+      .calendar-inputStoreDate {
+        margin-left: 3.2rem;
+        width: 20.5rem;
+        height: 40px;
+      }
+    }
+  }
+  .calendar-inputStoreDate::placeholder {
+    background-position: 7% center;
+  }
+  .outputBoxsize__container,
+  .box__checked__container {
+    .box__inputStoreRadio__lists,
+    .outputBoxsize__Radio__lists {
+      .none {
+        visibility: hidden;
+        display: block;
+      }
+      li {
+        width: calc((130%-16px) / 3);
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

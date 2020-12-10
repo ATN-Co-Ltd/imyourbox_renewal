@@ -6,7 +6,11 @@ module.exports = class Store_type extends Model {
     return super.init(
       {
         storetype: {
-          type: DataTypes.ENUM(enum_store_type),
+          type: DataTypes.ENUM,
+          values:["room_temperature",
+          "low_temperature",
+          "refrigerated_storage",
+          "fronze_storage"],
           allowNull: false,
         },
       },

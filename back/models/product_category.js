@@ -7,7 +7,15 @@ module.exports = class Product_category extends Model {
     return super.init(
       {
         category: {
-          type: DataTypes.ENUM(enum_product_type),
+          type: DataTypes.ENUM,
+          values:[ "clothes",
+          "stuff",
+          "beauty",
+          "householdgoods",
+          "electronics",
+          "stationery",
+          "food",
+          "etc"],
           allowNull: false,
         },
       },

@@ -6,7 +6,8 @@ module.exports = class Logistics_service_kind extends Model {
     return super.init(
       {
         servicekinds: {
-          type: DataTypes.ENUM(enum_logistics_service_kinds),
+          type: DataTypes.ENUM,
+          values: ["fullfillment","storeproduct","processing","etc"],
           allowNull: false,
         },
       },

@@ -4,15 +4,11 @@ dotenv.config();
 module.exports = {
   development: {
     username: "root",
-    password: process.env.DB_PASSWORD,
+    password: process.env.DEV_DB_PASSWORD,
     database: "IMYOURBOX_OFFICIAL_DB",
-    host: "imyourbox-db1.cojejpgfslhc.ap-northeast-2.rds.amazonaws.com",
+    host: "127.0.0.1",
     port: 3306,
     dialect: "mysql",
-    dialectOptions: {
-      ssl: "Amazon RDS",
-    },
-    pool: { maxConnections: 5, maxIdleTime: 30 },
   },
   test: {
     username: "root",

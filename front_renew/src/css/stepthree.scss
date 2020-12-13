@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+
+.stepbox__three {
+  width: 100%;
+  height: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+
+  .stepbar {
+    counter-reset: step;
+    li {
+      width: 25%;
+      float: left;
+      font-size: 14px;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      color: #b9cbe8;
+      line-height: 3;
+      &:before {
+        color: #6d6d6d;
+        width: 1.875rem;
+        height: 1.875rem;
+        font-weight: 500;
+        content: counter(step);
+        counter-increment: step;
+        font-size: 10px;
+        line-height: 1.875rem;
+        border: 6px solid #ffffff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+        display: block;
+        margin: 0 auto 10px auto; // ***very important
+        text-align: center;
+        background-color: #fff3de;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+      }
+      &:after {
+        width: 100%;
+        height: 3px;
+        content: "";
+        background-color: #ff9948;
+        top: 20px;
+        left: -50%; //**very important
+        position: absolute;
+        z-index: 1;
+      }
+      &:first-child {
+        &:after {
+          content: none;
+        }
+      }
+    }
+    li.step_finished {
+      &:before {
+        background-color: var(--font_color);
+        color: var(--color__white);
+        border: 6px solid var(--font_color);
+      }
+    }
+    li.step_active {
+      &:before {
+        background-color: #ff8d33;
+        width: 70px;
+        border-radius: 20px;
+        font-weight: 700;
+        color: #f2f2f2;
+        border: 6px solid #ff8d33;
+        content: "STEP 3";
+        font-size: 13px;
+      }
+    }
+    li.step_highlight {
+      &:before {
+        box-shadow: 0px 0px 5px #ff8d33;
+      }
+    }
+  }
+}
+.jumpFour {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 9vh;
+  bottom: 0%;
+  margin-top: 1.125rem;
+  .jumbFour_btn {
+    width: 7.5rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    background: #fff3e1;
+    color: #ffa63f;
+    border: 1px solid #ff9948;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    margin-right: 0.9375rem;
+  }
+}
+
+.radio__groups {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  text-align: center;
+  li {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    width: calc((180%-16px) / 2);
+    height: 2.5rem;
+    margin: 0 auto 0.8125rem auto;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    font-family: "Noto Sans KR", sans-serif;
+
+    label {
+      display: block;
+      position: relative;
+      padding-top: 0.625rem;
+      padding-left: 0.875rem;
+      cursor: pointer;
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .check {
+      position: absolute;
+      top: 0.5rem;
+      left: 1.0525rem;
+      height: 1.25rem;
+      width: 1.25rem;
+      background-color: var(--color__white);
+      border-radius: 50%;
+      border: 2px solid #474747;
+    }
+    input:checked ~ .check {
+      background-color: var(--color__white);
+      //체크되었을때 하얀색으로
+      border-color: var(--color__white);
+      border: 1px solid #f18b24;
+    }
+    .check:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    label {
+      .check:after {
+        top: 5px;
+        left: 5.1px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--syboml__color);
+      }
+      input:checked ~ .check:after {
+        display: block;
+      }
+    }
+  }
+  .radio__groups li:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
+}
+
+.output__radio__groups {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  text-align: center;
+  .none {
+    display: none;
+  }
+  li:hover {
+    box-shadow: 0px 0px 5px #ff8d33;
+  }
+  li {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    width: calc((128%-16px) / 3);
+    height: 12.5rem;
+    padding-top: 0.625rem;
+    padding-left: 0.875rem;
+    margin: 0.5625rem auto;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    font-family: "Noto Sans KR", sans-serif;
+
+    label {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: inherit;
+      cursor: pointer;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 6.25rem;
+        text-align: left;
+      }
+    }
+    .pallet {
+      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+    }
+    .box {
+      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+    }
+    .pallet,
+    .box {
+      background-size: 4.375rem 4.375rem;
+      background-position: 50% 25%;
+    }
+    input {
+      position: relative;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .check {
+      position: absolute;
+      margin-top: 2%;
+      margin-left: 20%;
+      height: 1.25rem;
+      width: 1.25rem;
+      background-color: var(--color__white);
+      border-radius: 50%;
+      border: 2px solid #474747;
+    }
+    input:checked ~ .check {
+      background-color: var(--color__white);
+      //체크되었을때 하얀색으로
+      border-color: var(--color__white);
+      border: 1px solid #f18b24;
+    }
+    .check:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    label {
+      .check:after {
+        top: 5px;
+        left: 5.1px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--syboml__color);
+      }
+      input:checked ~ .check:after {
+        display: block;
+      }
+    }
+  }
+  .barcode__radio__groups li:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
+}

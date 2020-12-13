@@ -5,11 +5,6 @@ import wNumb from 'wnumb';
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/themes/material_orange.css';
 import {Korean} from 'flatpickr/dist/l10n/ko';
-
-
-
-
-
 const CLICKED_CLASS = "clicked";
 //step2
 //서비스런칭 여부
@@ -19,9 +14,6 @@ checkbox.addEventListener('change',(e)=> {
     service_launching_status = e.target.checked;
     console.log(service_launching_status);
 })
-
-
-
 //문의할 물류 서비스
 const arr_logistics_service_kinds =[];
 const buttons_logistics_service_kinds_type =  document.querySelectorAll("ul.logistics_service_kinds__container > li >div");
@@ -110,7 +102,6 @@ let inputStoreBoxsizeValue = "";
         }
     })
 })
-
 //inputStoreCount
 let indicatorInputStore = document.querySelector(".indicator__inputStore__range");
 let inputStoreCount = 0;
@@ -166,8 +157,6 @@ indicatorSKUInputStore.addEventListener('input',(e)=> {
     skuInputStoreCount = sku__range__inputStore.noUiSlider.get();
     console.log(skuInputStoreCount);
 });
-
-
 
 //출고택배
 let outputBoxsizeValue = "";
@@ -233,6 +222,8 @@ flatpickr(".calendar-inputStoreDate",{
 
 
 
+
+
 export {
     //service_launching_status
     service_launching_status,
@@ -250,4 +241,6 @@ export {
     inputStoreDate,
     //output_delivery_box_size
     outputBoxsizeValue,
+    //output_delivery_box_amount,
+    outputRangeSlider,
 }

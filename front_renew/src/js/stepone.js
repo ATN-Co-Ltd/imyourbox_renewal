@@ -144,12 +144,16 @@ function errMsg(msg,scrollY) {
 //앞뒤버튼
 const stepone = document.querySelector("#stepone");
 const steptwo = document.querySelector("#steptwo");
+const stepthree = document.querySelector("#stepthree");
 const preBtn = document.querySelector(".stepBtn__preBtn");
 const nextBtn = document.querySelector(".stepBtn__nextBtn");
 const stepbar__two = document.querySelector(".stepbox__two");
+const stepbar__three = document.querySelector(".stepbox__three");
 const stepbar__one = document.querySelector(".stepbox");
 steptwo.style.display='none';
+stepthree.style.display='none';
 stepbar__two.style.display="none";
+stepbar__three.style.display="none";
 let stepStatus = 1;
 nextBtn.addEventListener('click',()=> {
     console.log(window.scrollY)
@@ -181,9 +185,22 @@ nextBtn.addEventListener('click',()=> {
     {
         preBtn.style.visibility='visible';
         stepone.style.display = "none";
+        stepthree.style.display = 'none';
         steptwo.style.display = '';
         stepbar__two.style.display='';
+        stepbar__three.style.display='none';
         stepbar__one.style.display='none'
+        console.log(steptwo);   
+    }
+    else if(stepStatus === 3)
+    {
+        preBtn.style.visibility='visible';
+        stepone.style.display = "none";
+        steptwo.style.display = 'none';
+        stepthree.style.display = '';
+        stepbar__one.style.display='none';
+        stepbar__two.style.display='none';
+        stepbar__three.style.display='';
         console.log(steptwo);   
     }
 })
@@ -198,6 +215,15 @@ preBtn.addEventListener('click',()=> {
         steptwo.style.display = 'none';
         stepbar__two.style.display='none';
         stepbar__one.style.display=''
+    }
+    else if(stepStatus === 2)
+    {
+        stepone.style.display = "none";
+        steptwo.style.display = '';
+        stepthree.style.display = 'none';
+        stepbar__one.style.display='none';
+        stepbar__two.style.display='';
+        stepbar__three.style.display='none';
     }
 })
 

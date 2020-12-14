@@ -1,5 +1,4 @@
-
-
+import Swal from 'sweetalert2';
 
 
 
@@ -111,8 +110,19 @@ const jumpToFourBtn = document.querySelector(".jumbFour_btn");
 jumpToFourBtn.addEventListener('click',(e)=> {
     if(use_service.length || releasepackaing.length || courier_bag.length || processing_need.length >1)
     {
-        confirm('작성중인 내용이있습니다.\n저장하지않고 이동하시겠습니까?');
-
+        Swal.fire({
+            title: '작성중인 내용이있습니다.\n저장하지않고 이동하시겠습니까?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '이동',
+            cancelButtonText:'닫기'
+          }).then((result) => {
+            if (result.isConfirmed) {
+             
+            }
+          })
     }
 })
 

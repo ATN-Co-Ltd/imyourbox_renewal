@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-
+import {stepStatus} from './stepone';
 
 
 
@@ -106,7 +106,13 @@ let processing_need = "";
 
 //건너뛰기 버튼
 const jumpToFourBtn = document.querySelector(".jumbFour_btn");
-
+const stepone = document.querySelector("#stepone");
+const steptwo = document.querySelector("#steptwo");
+const stepthree = document.querySelector("#stepthree");
+const stepfour = document.querySelector("#stepfour");
+const stepbar__two = document.querySelector(".stepbox__two");
+const stepbar__three = document.querySelector(".stepbox__three");
+const stepbar__one = document.querySelector(".stepbox");
 jumpToFourBtn.addEventListener('click',(e)=> {
     if(use_service.length || releasepackaing.length || courier_bag.length || processing_need.length >1)
     {
@@ -120,7 +126,14 @@ jumpToFourBtn.addEventListener('click',(e)=> {
             cancelButtonText:'닫기'
           }).then((result) => {
             if (result.isConfirmed) {
-             
+                stepStatus++;
+                stepone.style.display = "none";
+                steptwo.style.display = 'none';
+                stepthree.style.display = 'none';
+                stepfour.style.display = '';
+                stepbar__one.style.display='none';
+                stepbar__two.style.display='none';
+                stepbar__three.style.display='';
             }
           })
     }

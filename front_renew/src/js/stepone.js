@@ -145,6 +145,7 @@ function errMsg(msg,scrollY) {
 const stepone = document.querySelector("#stepone");
 const steptwo = document.querySelector("#steptwo");
 const stepthree = document.querySelector("#stepthree");
+const stepfour = document.querySelector("#stepfour");
 const preBtn = document.querySelector(".stepBtn__preBtn");
 const nextBtn = document.querySelector(".stepBtn__nextBtn");
 const stepbar__two = document.querySelector(".stepbox__two");
@@ -152,6 +153,9 @@ const stepbar__three = document.querySelector(".stepbox__three");
 const stepbar__one = document.querySelector(".stepbox");
 steptwo.style.display='none';
 stepthree.style.display='none';
+stepfour.style.display='none';
+
+
 stepbar__two.style.display="none";
 stepbar__three.style.display="none";
 let stepStatus = 1;
@@ -186,6 +190,7 @@ nextBtn.addEventListener('click',()=> {
         preBtn.style.visibility='visible';
         stepone.style.display = "none";
         stepthree.style.display = 'none';
+        stepfour.style.display = 'none';
         steptwo.style.display = '';
         stepbar__two.style.display='';
         stepbar__three.style.display='none';
@@ -198,10 +203,24 @@ nextBtn.addEventListener('click',()=> {
         stepone.style.display = "none";
         steptwo.style.display = 'none';
         stepthree.style.display = '';
+        stepfour.style.display = 'none';
         stepbar__one.style.display='none';
         stepbar__two.style.display='none';
         stepbar__three.style.display='';
         console.log(steptwo);   
+    }
+    else if(stepStatus === 4)
+    {
+        preBtn.style.visibility='visible';
+
+        stepone.style.display = "none";
+        steptwo.style.display = 'none';
+        stepthree.style.display = 'none';
+        stepfour.style.display = '';
+        stepbar__one.style.display='none';
+        stepbar__two.style.display='none';
+        stepbar__three.style.display='';
+       
     }
 })
 preBtn.addEventListener('click',()=> {
@@ -225,7 +244,21 @@ preBtn.addEventListener('click',()=> {
         stepbar__two.style.display='';
         stepbar__three.style.display='none';
     }
+    else if(stepStatus === 3)
+    {
+        stepone.style.display = "none";
+        steptwo.style.display = 'none';
+        stepthree.style.display = '';
+        stepfour.style.display = 'none';
+        stepbar__one.style.display='none';
+        stepbar__two.style.display='none';
+        stepbar__three.style.display='';
+    }
 })
 
 
 
+
+export {
+    stepStatus
+}

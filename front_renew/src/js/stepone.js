@@ -150,6 +150,7 @@ const preBtn = document.querySelector(".stepBtn__preBtn");
 const nextBtn = document.querySelector(".stepBtn__nextBtn");
 const stepbar__two = document.querySelector(".stepbox__two");
 const stepbar__three = document.querySelector(".stepbox__three");
+const stepbar__four = document.querySelector(".stepbox__four");
 const stepbar__one = document.querySelector(".stepbox");
 steptwo.style.display='none';
 stepthree.style.display='none';
@@ -158,6 +159,7 @@ stepfour.style.display='none';
 
 stepbar__two.style.display="none";
 stepbar__three.style.display="none";
+stepbar__four.style.display="none";
 let stepStatus = 1;
 nextBtn.addEventListener('click',()=> {
     console.log(window.scrollY)
@@ -194,6 +196,7 @@ nextBtn.addEventListener('click',()=> {
         steptwo.style.display = '';
         stepbar__two.style.display='';
         stepbar__three.style.display='none';
+        stepbar__four.style.display='none';
         stepbar__one.style.display='none'
         console.log(steptwo);   
     }
@@ -207,6 +210,7 @@ nextBtn.addEventListener('click',()=> {
         stepbar__one.style.display='none';
         stepbar__two.style.display='none';
         stepbar__three.style.display='';
+        stepbar__four.style.display='none';
         console.log(steptwo);   
     }
     else if(stepStatus === 4)
@@ -219,7 +223,8 @@ nextBtn.addEventListener('click',()=> {
         stepfour.style.display = '';
         stepbar__one.style.display='none';
         stepbar__two.style.display='none';
-        stepbar__three.style.display='';
+        stepbar__three.style.display='none';
+        stepbar__four.style.display='';
        
     }
 })
@@ -253,6 +258,7 @@ preBtn.addEventListener('click',()=> {
         stepbar__one.style.display='none';
         stepbar__two.style.display='none';
         stepbar__three.style.display='';
+        stepbar__four.style.display='none';
     }
 })
 

@@ -146,6 +146,10 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   flex-direction: column;
   text-align: left;
   margin-top: 9rem;
+  .step__firstColumn {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .top__divider {

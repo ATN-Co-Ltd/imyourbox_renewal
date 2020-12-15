@@ -100,7 +100,7 @@ nextBtn.addEventListener('click',()=> {
         console.log(stepStatus);
         return;
     }
-    else if(stepStatus === 3 && arr_logistics_service_kinds.length >=1 && inputStoreBoxsizeValue.length>=1 && outputBoxsizeValue.length>=1) //step3이거나 step2필드를 다채웠을경우
+    else if(stepStatus === 3 && arr_logistics_service_kinds.length >=1 || inputStoreBoxsizeValue.length>=1 && outputBoxsizeValue.length >=1) //step3이거나 step2필드를 다채웠을경우
     {
         stepone.style.display = "none";
         steptwo.style.display = 'none';
@@ -134,6 +134,8 @@ preBtn.addEventListener('click',()=> {
         preBtn.style.visibility='hidden';
         stepone.style.display = '';
         steptwo.style.display = 'none';
+        stepthree.style.display = 'none';
+        stepfour.style.display = 'none';
         stepbar__two.style.display='none';
         stepbar__one.style.display=''
     }
@@ -142,6 +144,7 @@ preBtn.addEventListener('click',()=> {
         stepone.style.display = "none";
         steptwo.style.display = '';
         stepthree.style.display = 'none';
+        stepfour.style.display = 'none';
         stepbar__one.style.display='none';
         stepbar__two.style.display='';
         stepbar__three.style.display='none';

@@ -112,6 +112,7 @@ const stepthree = document.querySelector("#stepthree");
 const stepfour = document.querySelector("#stepfour");
 const stepbar__two = document.querySelector(".stepbox__two");
 const stepbar__three = document.querySelector(".stepbox__three");
+const stepbar__four = document.querySelector(".stepbox__four");
 const stepbar__one = document.querySelector(".stepbox");
 jumpToFourBtn.addEventListener('click',(e)=> {
     if(use_service.length || releasepackaing.length || courier_bag.length || processing_need.length >1)
@@ -133,10 +134,26 @@ jumpToFourBtn.addEventListener('click',(e)=> {
                 stepfour.style.display = '';
                 stepbar__one.style.display='none';
                 stepbar__two.style.display='none';
-                stepbar__three.style.display='';
+                stepbar__three.style.display='none';
+                stepbar__four.style.display='';
             }
           })
+    }else
+    {
+    stepStatus++;
+    stepone.style.display = "none";
+    steptwo.style.display = 'none';
+    stepthree.style.display = 'none';
+    stepfour.style.display = '';
+    stepbar__one.style.display='none';
+    stepbar__two.style.display='none';
+    stepbar__three.style.display='none';
+    stepbar__four.style.display='';
     }
+    // stepStatus++;
+    // console.log(stepStatus);
+   
+
 })
 
 

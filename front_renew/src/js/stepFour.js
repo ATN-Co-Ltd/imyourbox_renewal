@@ -78,7 +78,12 @@ const postDetailOrderInfoBtn= document.querySelector(".stepBtn__nextBtn");
 postDetailOrderInfoBtn.addEventListener('click',()=> {
     if(stepStatus === 5)
     {
+        stepStatus--;
         //주문정보
+        if(permissionPersonalInfo)
+        {
+
+        
         const orderDate ={
             customer_company,
             customer_manager_name,
@@ -86,12 +91,17 @@ postDetailOrderInfoBtn.addEventListener('click',()=> {
             customer_email,
             customer_memo,
         }
-        orderInfo(orderDate)
+        orderInfo(orderDate).then((r)=> {
+            console.log(r.data);
+        }).catch((e)=> {
+            console.log(e);
+        })
+    } else {
+        
+    }
 
     }
 })
-
-
 
 export {
     customer_company,

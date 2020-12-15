@@ -1,6 +1,5 @@
 
 
-
 //상품종류
 const product_category = [];
 const buttons_category = document.querySelectorAll("ul.stepone__category__list > li>input");
@@ -104,6 +103,23 @@ radio__havebarcode.addEventListener('change',(e)=> {
 })
 
 
+
+
+
+
+
+
+
+//optional
+
+//대표상품 URL
+let product_url ="";
+const input_product_url = document.querySelector(".productURL__input");
+input_product_url.addEventListener('input',e=> {
+    product_url = e.target.value;
+    console.log(product_url);
+})
+
 //상품취급 주의사항
 const arr_caution_product_type = [];
 const buttons_caution_product_type = document.querySelectorAll("ul.productCaution__list > li> input");
@@ -134,137 +150,11 @@ buttons_caution_product_type.forEach(e=> {
 
 
 
-
-//값이 비어있을때 메세지
-function errMsg(msg,scrollY) {
-    alert(msg);
-    window.scrollTo(0,scrollY);
-}
-
-//앞뒤버튼
-const stepone = document.querySelector("#stepone");
-const steptwo = document.querySelector("#steptwo");
-const stepthree = document.querySelector("#stepthree");
-const stepfour = document.querySelector("#stepfour");
-const preBtn = document.querySelector(".stepBtn__preBtn");
-const nextBtn = document.querySelector(".stepBtn__nextBtn");
-const stepbar__two = document.querySelector(".stepbox__two");
-const stepbar__three = document.querySelector(".stepbox__three");
-const stepbar__four = document.querySelector(".stepbox__four");
-const stepbar__one = document.querySelector(".stepbox");
-steptwo.style.display='none';
-stepthree.style.display='none';
-stepfour.style.display='none';
-
-
-stepbar__two.style.display="none";
-stepbar__three.style.display="none";
-stepbar__four.style.display="none";
-let stepStatus = 1;
-nextBtn.addEventListener('click',()=> {
-    console.log(window.scrollY)
-    console.log(detailInput.length);
-    window.scrollTo(0,0);
-    //step1
-    // if(product_category.length <1)
-    // {
-    //     errMsg('상품종류 하나이상을 선택해주세요!',161);
-    //     return;
-    // }
-    // else if(detailInput.length <1)
-    // {
-    //     errMsg('상세품목을 입력해주세요!',361);
-    //     return;
-    // }
-    // else if(arr_storage_type.length <1)
-    // {
-    //  errMsg('보관형태 하나이상을 선택해주세요!',500);
-    //  return;
-    // }
-    // else if(barcodeValue.length<1)
-    // {
-    //     errMsg('바코드 여부를 선택해주세요!',700);
-    //     return;
-    // }
-    stepStatus++;
-    if(stepStatus === 2)
-    {
-        preBtn.style.visibility='visible';
-        stepone.style.display = "none";
-        stepthree.style.display = 'none';
-        stepfour.style.display = 'none';
-        steptwo.style.display = '';
-        stepbar__two.style.display='';
-        stepbar__three.style.display='none';
-        stepbar__four.style.display='none';
-        stepbar__one.style.display='none'
-        console.log(steptwo);   
-    }
-    else if(stepStatus === 3)
-    {
-        preBtn.style.visibility='visible';
-        stepone.style.display = "none";
-        steptwo.style.display = 'none';
-        stepthree.style.display = '';
-        stepfour.style.display = 'none';
-        stepbar__one.style.display='none';
-        stepbar__two.style.display='none';
-        stepbar__three.style.display='';
-        stepbar__four.style.display='none';
-        console.log(steptwo);   
-    }
-    else if(stepStatus === 4)
-    {
-        preBtn.style.visibility='visible';
-
-        stepone.style.display = "none";
-        steptwo.style.display = 'none';
-        stepthree.style.display = 'none';
-        stepfour.style.display = '';
-        stepbar__one.style.display='none';
-        stepbar__two.style.display='none';
-        stepbar__three.style.display='none';
-        stepbar__four.style.display='';
-       
-    }
-})
-preBtn.addEventListener('click',()=> {
-    window.scrollTo(0,0);
-    stepStatus--;
-    console.log(stepStatus);
-    if(stepStatus === 1)
-    {
-        preBtn.style.visibility='hidden';
-        stepone.style.display = '';
-        steptwo.style.display = 'none';
-        stepbar__two.style.display='none';
-        stepbar__one.style.display=''
-    }
-    else if(stepStatus === 2)
-    {
-        stepone.style.display = "none";
-        steptwo.style.display = '';
-        stepthree.style.display = 'none';
-        stepbar__one.style.display='none';
-        stepbar__two.style.display='';
-        stepbar__three.style.display='none';
-    }
-    else if(stepStatus === 3)
-    {
-        stepone.style.display = "none";
-        steptwo.style.display = 'none';
-        stepthree.style.display = '';
-        stepfour.style.display = 'none';
-        stepbar__one.style.display='none';
-        stepbar__two.style.display='none';
-        stepbar__three.style.display='';
-        stepbar__four.style.display='none';
-    }
-})
-
-
-
-
 export {
-    stepStatus
+    product_category,
+    detailInput,
+    arr_storage_type,
+    barcodeValue,
+    product_url,
+    arr_caution_product_type
 }

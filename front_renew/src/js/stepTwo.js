@@ -85,6 +85,7 @@ let inputStoreBoxsizeValue = "";
     const black = "#000000"
     const selectedColor = "#f18b24";
     inputStoreBoxsizeValue = e.target.value;
+    console.log(inputStoreBoxsizeValue);
     selected.forEach((e)=> {
         const box = e.parentElement.parentElement;
         const titleText = e.parentElement.childNodes[4];
@@ -167,19 +168,20 @@ let outputBoxsizeValue = "";
     const selectedColor = "#f18b24";
     outputBoxsizeValue = e.target.value;
     selected.forEach((e)=> {
-        const box = e.parentElement.parentElement;
+        const outputbox = e.parentElement.parentElement;
+        console.log(outputbox);
         const titleText = e.parentElement.childNodes[4];
         const descriptionText = e.parentElement.childNodes[6];
         if(e.value === outputBoxsizeValue)
         {
-            box.style.boxShadow = "0px 0px 5px 0px #ff9948";
+            outputbox.style.boxShadow = "0px 0px 5px 0px #ff9948";
             titleText.style.color =selectedColor;
             descriptionText.style.color =selectedColor;
         }
         else {
             titleText.style.color =black;
             descriptionText.style.color =black;
-            box.style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
+            outputbox.style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
         }
     })
 });
@@ -218,8 +220,6 @@ flatpickr(".calendar-inputStoreDate",{
         // console.log(typeof inputStoreDate);
     }
 });
-
-
 
 
 

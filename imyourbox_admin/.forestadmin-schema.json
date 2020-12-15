@@ -503,7 +503,20 @@
       }]
     }],
     "segments": [],
-    "actions": []
+    "actions": [{
+      "name": "견적서보기",
+      "type": "bulk",
+      "baseUrl": null,
+      "endpoint": "/forest/actions/",
+      "httpMethod": "POST",
+      "redirect": null,
+      "download": false,
+      "fields": [],
+      "hooks": {
+        "load": false,
+        "change": []
+      }
+    }]
   }, {
     "name": "logisticsServiceKinds",
     "nameOld": "logisticsServiceKinds",

@@ -1,5 +1,7 @@
 import { orderInfo } from "./lib/api/order_info";
 import { stepStatus } from "./button";
+import Swal from 'sweetalert2';
+
 //업체명
 let customer_company = "";
 //연락처
@@ -78,12 +80,30 @@ const postDetailOrderInfoBtn= document.querySelector(".stepBtn__nextBtn");
 postDetailOrderInfoBtn.addEventListener('click',()=> {
     if(stepStatus === 5)
     {
+        function checkNull(value,msg) {
+            if(value.length<1)
+            {
+                Swal.fire({
+                    icon:'warning',
+                    text:`${msg} 를 입력해주세요`,
+                    confirmButtonText:'확인'
+                })
+                return value.length;
+            }
+        }
+        checkNull(customer_company,"회사명");
+        checkNull(customer_phone,"연락처");
+        checkNull(customer_email,"이메일");
+        checkNull(customer_manager_name,"담당자명");
+        checkNull(customer_memo,"상담내용");
+        if( checkNull(customer_company,"회사명") ||  checkNull(customer_phone,"연락처") || checkNull(customer_email,"이메일") ||   checkNull(customer_manager_name,"담당자명") ||  checkNull(customer_memo,"상담내용") <1)
+        {
+            return;
+        }
         stepStatus--;
         //주문정보
         if(permissionPersonalInfo)
         {
-
-        
         const orderDate ={
             customer_company,
             customer_manager_name,
@@ -97,7 +117,11 @@ postDetailOrderInfoBtn.addEventListener('click',()=> {
             console.log(e);
         })
     } else {
-        
+        Swal.fire({
+            icon:'warning',
+            text:"개인정보 수집 및 이용목적에 동의해주세요.\n 동의 후 예상견적 확인이 가능합니다.",
+            confirmButtonText:'확인'
+        })
     }
 
     }

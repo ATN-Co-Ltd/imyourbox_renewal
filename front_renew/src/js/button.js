@@ -34,12 +34,6 @@ stepbar__four.style.display="none";
 
 
 
-const errStepOne = () => {
- 
-}
-
-
-
 nextBtn.addEventListener('click',()=> {
     console.log(window.scrollY)
     //console.log(detailInput.length);
@@ -66,7 +60,6 @@ nextBtn.addEventListener('click',()=> {
    }
     window.scrollTo(0,0);
     stepStatus++;
-    
     if(stepStatus === 2) //step2일떄
     {
         preBtn.style.visibility='visible';
@@ -124,6 +117,7 @@ nextBtn.addEventListener('click',()=> {
         nextBtn.value ="예상견적 확인";
        
     }
+    console.log(stepStatus);
 })
 preBtn.addEventListener('click',()=> {
     window.scrollTo(0,0);
@@ -162,7 +156,6 @@ preBtn.addEventListener('click',()=> {
         nextBtn.value ="다음";
         
     }
-    console.log(`last ${stepStatus}`);
 })
 
 

@@ -105,6 +105,7 @@ let processing_need = "";
 })
 
 //건너뛰기 버튼
+const nextBtn = document.querySelector(".stepBtn__nextBtn");
 const jumpToFourBtn = document.querySelector(".jumbFour_btn");
 const stepone = document.querySelector("#stepone");
 const steptwo = document.querySelector("#steptwo");
@@ -128,6 +129,7 @@ jumpToFourBtn.addEventListener('click',(e)=> {
           }).then((result) => {
             if (result.isConfirmed) {
                 stepStatus++;
+                console.log(stepStatus);
                 stepone.style.display = "none";
                 steptwo.style.display = 'none';
                 stepthree.style.display = 'none';
@@ -136,6 +138,7 @@ jumpToFourBtn.addEventListener('click',(e)=> {
                 stepbar__two.style.display='none';
                 stepbar__three.style.display='none';
                 stepbar__four.style.display='';
+                nextBtn.value ="예상견적 확인";
             }
           })
     }else

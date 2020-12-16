@@ -9,6 +9,12 @@ collection('detailOrderInfos', {
   actions: [{
     name : "견적서보기"
   }],
-  fields: [],
+  isSearchable: true,
+  fields: [
+    {
+      field: 'salesManager',
+      type: 'String',
+    }
+  ],
   segments: [],
 });

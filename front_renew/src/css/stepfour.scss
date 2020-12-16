@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+:root {
+  --syboml__color: #ff9948;
+  --background_color_one: #fff;
+  --font_color: #ffa63f;
+  --font_stepbar_color: #6d6d6d;
+  --font_text_color: #474747;
+  --color_step_eclispe: #fff3d2;
+  --color_range_bar: #ffc671;
+  --color_divider: #ffd18c;
+  --color_category_description: #666666;
+  --color_button_deactive: #ffffff;
+  --color__white: #ffffff;
+  --color__tesxt: #23232;
+  --color__checked__font: #f18b24;
+  --color__deactive: #f2f2f2;
+}
+
+.stepbox__four {
+  width: 100%;
+  height: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+
+  .stepbar {
+    counter-reset: step;
+    li {
+      width: 25%;
+      float: left;
+      font-size: 14px;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      color: #b9cbe8;
+      line-height: 3;
+      &:before {
+        color: #6d6d6d;
+        width: 1.875rem;
+        height: 1.875rem;
+        font-weight: 500;
+        content: counter(step);
+        counter-increment: step;
+        font-size: 10px;
+        line-height: 1.875rem;
+        border: 6px solid #ffffff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+        display: block;
+        margin: 0 auto 10px auto; // ***very important
+        text-align: center;
+        background-color: #fff3de;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+      }
+      &:after {
+        width: 100%;
+        height: 3px;
+        content: "";
+        background-color: #ff9948;
+        top: 20px;
+        left: -50%; //**very important
+        position: absolute;
+        z-index: 1;
+      }
+      &:last-child {
+        &:before {
+          background-color: #ff8d33;
+          width: 70px;
+          border-radius: 20px;
+          font-weight: 700;
+          color: #f2f2f2;
+          border: 6px solid #ff8d33;
+          content: "STEP 4";
+          font-size: 13px;
+        }
+      }
+      &:first-child {
+        &:after {
+          content: none;
+        }
+      }
+    }
+    li.step_finished {
+      &:before {
+        background-color: var(--font_color);
+        color: var(--color__white);
+        border: 6px solid var(--font_color);
+      }
+    }
+  }
+}
+.companyNameWrapper {
+  margin: 0%;
+}
+.company__input {
+  margin-top: 0.5rem;
+}
+.customer_memo {
+  height: 6.25rem;
+}
+
+.last__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.8125rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 10px;
+  letter-spacing: -5%;
+  font-style: normal;
+  label {
+    margin-left: 1.5rem;
+  }
+  #permission {
+    width: 5.5rem;
+  }
+}
+
+//responsive
+@media screen and (min-width: 768px) {
+  .stepFour__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .stepFour__container {
+    width: calc((130%-16px) / 3);
+    margin-bottom: 0%;
+  }
+  .memo__container {
+    margin-bottom: 0%;
+  }
+  .memo__input__container {
+    margin-bottom: 0%;
+  }
+  .first__detail__container {
+    margin-right: 0.875rem;
+  }
+  .second__detail__container {
+    margin-left: 0%;
+  }
+  .customer_memo {
+    height: 8.75rem;
+  }
+  #permission {
+    width: 1.875rem !important;
+  }
+}
+
+@media screen and (min-width: 330px) {
+  #permission {
+    width: 5.5rem;
+  }
+}
+@media screen and (min-width: 450px) {
+  #permission {
+    width: 3.5rem;
+  }
+}

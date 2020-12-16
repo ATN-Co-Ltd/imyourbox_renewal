@@ -5,7 +5,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 //날짜 css
 @import url("https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css");
-
+$baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 :root {
   --syboml__color: #ff9948;
   --background_color_one: #fff;
@@ -21,6 +21,32 @@
   --color__tesxt: #23232;
   --color__checked__font: #f18b24;
   --color__deactive: #f2f2f2;
+}
+
+input[type="checkbox"] {
+  width: 1.875rem;
+  height: 1.875rem !important;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border: 0px solid #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  background: url() no-repeat;
+}
+//#checkbox check 상태
+input[type="checkbox"]:checked {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  content: "hello";
+  // background: url() no-repeat;
+  background: center var(--font_color) url("#{$baseURL}/checkicon.png")
+    no-repeat;
 }
 
 //noUiSlider
@@ -52,8 +78,6 @@
   border-bottom: 10px solid transparent;
 }
 // noUiSlider end
-
-$baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 
 .stepbox__two {
   width: 100%;
@@ -146,6 +170,10 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   flex-direction: column;
   text-align: left;
   margin-top: 9rem;
+  .step__firstColumn {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .top__divider {
@@ -175,6 +203,8 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   margin: 0rem 1.5%;
 }
 .service__checkbox {
+  display: flex;
+  align-items: center;
   margin-top: 0.8125rem;
   font-weight: 400;
   font-size: 0.875rem;

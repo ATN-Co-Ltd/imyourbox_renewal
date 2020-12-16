@@ -57,4 +57,16 @@ router.delete('/detailOrderInfos', permissionMiddlewareCreator.delete(), (reques
   next();
 });
 
+router.post('/actions/견적서보기', permissionMiddlewareCreator.smartAction(), (req, res) => {
+  return new RecordsGetter(detailOrderInfos).getIdsFromRequest(req)
+    .then((seq) => {
+      console.log(res);
+      return detailOrderInfos
+        .update({ status: 'live' }, { where: { id: seq }})
+        .then(() => {
+          res.send({ success: 'Company is now live!' });
+        });
+    });
+});
+
 module.exports = router;

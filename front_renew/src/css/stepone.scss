@@ -710,7 +710,12 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     .detail__input__container {
       margin-bottom: 5rem;
     }
+    //stepFour
+    .stepfour__detail__input__container {
+      margin-bottom: 0%;
+    }
   }
+
   .storageType__container {
     display: flex;
     flex-direction: row;

@@ -5,11 +5,15 @@ import wNumb from 'wnumb';
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/themes/material_orange.css';
 import {Korean} from 'flatpickr/dist/l10n/ko';
-flatpickr(".calendar-inputStoreDate",{
-    "locale" :Korean,
-});
 const CLICKED_CLASS = "clicked";
 //step2
+//서비스런칭 여부
+let service_launching_status = false;
+const checkbox = document.querySelector('#prepare');
+checkbox.addEventListener('change',(e)=> {
+    service_launching_status = e.target.checked;
+    console.log(service_launching_status);
+})
 //문의할 물류 서비스
 const arr_logistics_service_kinds =[];
 const buttons_logistics_service_kinds_type =  document.querySelectorAll("ul.logistics_service_kinds__container > li >div");
@@ -81,6 +85,7 @@ let inputStoreBoxsizeValue = "";
     const black = "#000000"
     const selectedColor = "#f18b24";
     inputStoreBoxsizeValue = e.target.value;
+    console.log(inputStoreBoxsizeValue);
     selected.forEach((e)=> {
         const box = e.parentElement.parentElement;
         const titleText = e.parentElement.childNodes[4];
@@ -98,7 +103,6 @@ let inputStoreBoxsizeValue = "";
         }
     })
 })
-
 //inputStoreCount
 let indicatorInputStore = document.querySelector(".indicator__inputStore__range");
 let inputStoreCount = 0;
@@ -155,8 +159,6 @@ indicatorSKUInputStore.addEventListener('input',(e)=> {
     console.log(skuInputStoreCount);
 });
 
-
-
 //출고택배
 let outputBoxsizeValue = "";
  const radio_outputBoxsize = document.querySelector(".outputBoxsize__Radio__lists");
@@ -166,19 +168,20 @@ let outputBoxsizeValue = "";
     const selectedColor = "#f18b24";
     outputBoxsizeValue = e.target.value;
     selected.forEach((e)=> {
-        const box = e.parentElement.parentElement;
+        const outputbox = e.parentElement.parentElement;
+        console.log(outputbox);
         const titleText = e.parentElement.childNodes[4];
         const descriptionText = e.parentElement.childNodes[6];
         if(e.value === outputBoxsizeValue)
         {
-            box.style.boxShadow = "0px 0px 5px 0px #ff9948";
+            outputbox.style.boxShadow = "0px 0px 5px 0px #ff9948";
             titleText.style.color =selectedColor;
             descriptionText.style.color =selectedColor;
         }
         else {
             titleText.style.color =black;
             descriptionText.style.color =black;
-            box.style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
+            outputbox.style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
         }
     })
 });
@@ -207,3 +210,37 @@ indicatorOutputBox.addEventListener('input',(e)=> {
     outputRangeSlider.noUiSlider.set(e.target.value);
     outputBoxCount = outputRangeSlider.noUiSlider.get();
 });
+//input_store_date
+let inputStoreDate = new Date();
+flatpickr(".calendar-inputStoreDate",{
+    "locale" :Korean,
+    onChange: (selectedDate,dateStr)=> {
+        inputStoreDate = dateStr;
+        // console.log(nputStoreDate);
+        // console.log(typeof inputStoreDate);
+    }
+});
+
+
+
+
+export {
+    //service_launching_status
+    service_launching_status,
+    //물류서비스/servicekinds
+    arr_logistics_service_kinds,
+    //물류보관타입/input_store_type
+    inputStoreValue,
+    //입고박스사이즈/input_box_size
+    inputStoreBoxsizeValue,
+    //보관량/input_store_num
+    inputStoreCount,
+    //입고sku양 /input_sku_store_num
+    skuInputStoreCount,
+    //input_store_date
+    inputStoreDate,
+    //output_delivery_box_size
+    outputBoxsizeValue,
+    //output_delivery_box_amount,
+    outputRangeSlider,
+}

@@ -122,7 +122,7 @@ jumpToFourBtn.addEventListener('click',(e)=> {
             title: '작성중인 내용이있습니다.\n저장하지않고 이동하시겠습니까?',
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
+            confirmButtonColor: '#ff9948',
             cancelButtonColor: '#d33',
             confirmButtonText: '이동',
             cancelButtonText:'닫기'
@@ -152,6 +152,7 @@ jumpToFourBtn.addEventListener('click',(e)=> {
     stepbar__two.style.display='none';
     stepbar__three.style.display='none';
     stepbar__four.style.display='';
+    nextBtn.value ="예상견적 확인";
     }
     // stepStatus++;
     // console.log(stepStatus);

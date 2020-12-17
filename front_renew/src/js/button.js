@@ -15,6 +15,8 @@ const stepone = document.querySelector("#stepone");
 const steptwo = document.querySelector("#steptwo");
 const stepthree = document.querySelector("#stepthree");
 const stepfour = document.querySelector("#stepfour");
+const stepresult = document.querySelector("#stepresult");
+
 const preBtn = document.querySelector(".stepBtn__preBtn");
 const nextBtn = document.querySelector(".stepBtn__nextBtn");
 const stepbar__two = document.querySelector(".stepbox__two");
@@ -31,8 +33,6 @@ stepbar__four.style.display="none";
 
 
 nextBtn.addEventListener('click',()=> {
-    console.log(window.scrollY)
-    //console.log(detailInput.length);
       //step1
    if(product_category.length <1)
    {    
@@ -111,14 +111,19 @@ nextBtn.addEventListener('click',()=> {
         stepbar__three.style.display='none';
         stepbar__four.style.display='';
         nextBtn.value ="예상견적 확인";
-       
     }
-    console.log(stepStatus);
+    //stepresult
+    else if(stepStatus === 5)
+    {
+        stepfour.style.display = 'none';
+        stepbar__four.style.display='none';
+        preBtn.style.visibility='hidden';
+        nextBtn.style.visibility='hidden';
+    }
 })
 preBtn.addEventListener('click',()=> {
     window.scrollTo(0,0);
     stepStatus--;
-    console.log(stepStatus);
     if(stepStatus === 1)
     {
         preBtn.style.visibility='hidden';

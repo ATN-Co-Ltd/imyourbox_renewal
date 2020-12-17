@@ -1,4 +1,3 @@
-import Swal from 'sweetalert2';
 import { arr_storage_type, barcodeValue, detailInput, product_category } from './stepone';
 import { arr_logistics_service_kinds, inputStoreBoxsizeValue, inputStoreValue, outputBoxsizeValue } from './stepTwo';
 
@@ -6,10 +5,7 @@ let stepStatus = 1;
 
 //값이 비어있을때 메세지
 function errMsg(msg,scrollY) {
-    Swal.fire({
-        text:msg,
-        confirmButtonText:'확인',
-    });
+    alert(msg)
     window.scrollTo(0,scrollY);
 }
 
@@ -89,7 +85,7 @@ nextBtn.addEventListener('click',()=> {
     else if(outputBoxsizeValue.length <1)
     {
         stepStatus--;
-        errMsg('출고택배 사이즈를 선택해주세요!',2200);
+        errMsg('출고택배 사이즈를 선택해주세요!',1300);
         console.log(stepStatus);
         return;
     }

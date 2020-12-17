@@ -242,5 +242,5 @@ export {
     //output_delivery_box_size
     outputBoxsizeValue,
     //output_delivery_box_amount,
-    outputRangeSlider,
+    outputBoxCount,
 }

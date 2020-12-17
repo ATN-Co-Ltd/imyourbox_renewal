@@ -7,7 +7,7 @@ import {stepStatus} from './button';
 
 
 //물류대행서비스 이용여부
-let use_service = "";
+let use_service = [];
  const radio_inputUseSrvice = document.querySelector(".fullfillmentRadios");
  radio_inputUseSrvice.addEventListener('change',(e)=> {
     const selected = document.querySelectorAll('.fullfillmentRadios > li > label > input');
@@ -116,7 +116,8 @@ const stepbar__three = document.querySelector(".stepbox__three");
 const stepbar__four = document.querySelector(".stepbox__four");
 const stepbar__one = document.querySelector(".stepbox");
 jumpToFourBtn.addEventListener('click',(e)=> {
-    if(use_service.length || releasepackaing.length || courier_bag.length || processing_need.length >1)
+    console.log(`점프버튼 ${use_service.length} , ${releasepackaing.length} , ${courier_bag.length} , ${processing_need.length}`);
+    if(use_service.length >=1 || releasepackaing.length>=1 || courier_bag.length >= 1|| processing_need.length >=1)
     {
         Swal.fire({
             title: '작성중인 내용이있습니다.\n저장하지않고 이동하시겠습니까?',

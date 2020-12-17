@@ -1,6 +1,6 @@
 import client from './client';
 
-export async function detailOrderInfo({detailOrderInfoData}) {
+export async function detailOrderInfo(detailOrderInfoData) {
     try {
         const response = await client.post('/order/detail_order_info',detailOrderInfoData);
         return response;

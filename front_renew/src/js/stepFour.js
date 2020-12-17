@@ -1,6 +1,10 @@
 import { orderInfo } from "./lib/api/order_info";
 import { stepStatus } from "./button";
 import Swal from 'sweetalert2';
+import { arr_caution_product_type, arr_storage_type, barcodeValue, detailInput, product_category, product_url } from "./stepone";
+import { arr_logistics_service_kinds, service_launching_status ,inputStoreValue,inputStoreBoxsizeValue,inputStoreCount,skuInputStoreCount,inputStoreDate,outputBoxsizeValue,outputBoxCount} from "./stepTwo";
+import { courier_bag, processing_need, releasepackaing, use_service } from "./stepThree";
+import { detailOrderInfo } from "./lib/api/detail_order_info";
 
 //업체명
 let customer_company = "";
@@ -130,7 +134,7 @@ postDetailOrderInfoBtn.addEventListener('click',()=> {
             })
           
         }
-        else if(permissionPersonalInfo)
+        else if(!permissionPersonalInfo)
         {
             Swal.fire({
                 icon:'warning',
@@ -152,7 +156,56 @@ postDetailOrderInfoBtn.addEventListener('click',()=> {
     customer_email,
     customer_memo,
 }
-orderInfo(orderDate).then((r)=> {
+//상세견적정보
+const detailOrderData = {
+    customer_company,
+    customer_manager_name,
+    customer_phone,
+    customer_email,
+    customer_memo,
+    "detail_product_type":detailInput,
+    "category":product_category,
+    "storetype":arr_storage_type,
+    "barcode_have":barcodeValue,
+    "product_url":product_url,
+    "cautiontype":arr_caution_product_type,
+    "service_launching_status":service_launching_status,
+    "servicekinds":arr_logistics_service_kinds,
+    "input_store_type":inputStoreValue,
+    "input_box_size":inputStoreBoxsizeValue,
+    "input_store_num":inputStoreCount,
+    "input_sku_store_num":skuInputStoreCount,
+    "input_store_date" :inputStoreDate,
+    "output_delivery_box_size":outputBoxsizeValue,
+    "output_delivery_box_amount":outputBoxCount,
+    "use_service" : use_service,
+    "output_packaing":releasepackaing,
+    "courier_bag" :courier_bag,
+    "processing_need" : processing_need,
+}
+
+
+console.log(detailInput);
+console.log(product_category);
+console.log(arr_storage_type);
+console.log(barcodeValue);
+console.log(product_url);
+console.log(arr_caution_product_type);
+console.log(service_launching_status);
+console.log(arr_logistics_service_kinds);
+console.log(inputStoreValue);
+console.log(inputStoreBoxsizeValue);
+console.log(inputStoreCount);
+console.log(skuInputStoreCount);
+console.log(inputStoreDate);
+console.log(outputBoxsizeValue);
+console.log(outputBoxCount);
+console.log(use_service);
+console.log(releasepackaing);
+console.log(courier_bag);
+console.log(processing_need);
+
+detailOrderInfo(detailOrderData).then((r)=> {
     console.log(r.data);
 }).catch((e)=> {
     console.log(e);

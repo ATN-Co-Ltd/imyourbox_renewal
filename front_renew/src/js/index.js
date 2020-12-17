@@ -5,6 +5,7 @@ import '../css/style.css';
 import './stepTwo';
 import './stepThree';
 import './stepFour';
+import './price';
 import './button';
 
 

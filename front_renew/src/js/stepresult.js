@@ -16,15 +16,11 @@ stepResultButton.addEventListener('click',()=> {
     {
         
         let sumPrice = caclulateStoreFee(inputStoreValue,inputStoreCount,inputStoreBoxsizeValue) + cacluateDeliveryFee(outputBoxCount,outputBoxsizeValue,releasepackaing) + caclutateWMSfee(skuInputStoreCount);
-        console.log(inputStoreValue);
-        console.log(inputStoreCount);
-        console.log(inputStoreBoxsizeValue);
-        console.log(`합가격 : ${sumPrice}`);
         customerCompany.textContent = `"${customer_company}" 고객님의 예상 비용`;
-        totalPrice.textContent = `월 ${sumPrice} 원`
-        monthStoreFee.textContent = `${caclulateStoreFee(inputStoreValue,inputStoreCount,inputStoreBoxsizeValue)}`;
-        monthDeliveryFee.textContent = `${cacluateDeliveryFee(outputBoxCount,outputBoxsizeValue,releasepackaing)}`;
-        monthWMSFee.textContent = `${caclutateWMSfee(skuInputStoreCount)} 원`;
+        totalPrice.textContent = `월 ${sumPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`
+        monthStoreFee.textContent = `${caclulateStoreFee(inputStoreValue,inputStoreCount,inputStoreBoxsizeValue).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+        monthDeliveryFee.textContent = `${cacluateDeliveryFee(outputBoxCount,outputBoxsizeValue,releasepackaing).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+        monthWMSFee.textContent = `${caclutateWMSfee(skuInputStoreCount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
     }
 })
 

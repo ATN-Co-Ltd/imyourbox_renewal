@@ -123,7 +123,7 @@ const caclutateWMSfee = (skuCount) => {
     {
         wmsFee =50000
     }
-    else if(skuCount <=100 &&  skuCount>50)
+    else if(skuCount <=100 && skuCount>50)
     {
         wmsFee = 70000
     }

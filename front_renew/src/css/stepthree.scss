@@ -146,6 +146,9 @@
   justify-content: center;
   flex-flow: row wrap;
   text-align: center;
+  li:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
   li {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
@@ -162,12 +165,16 @@
       padding-top: 0.625rem;
       padding-left: 0.875rem;
       cursor: pointer;
+      :hover {
+        box-shadow: none;
+      }
     }
     input {
       position: absolute;
       opacity: 0;
       cursor: pointer;
     }
+
     .check {
       position: absolute;
       top: 0.5rem;
@@ -202,9 +209,6 @@
         display: block;
       }
     }
-  }
-  .radio__groups li:hover {
-    box-shadow: 0px 0px 5px 0px #ff9948;
   }
 }
 

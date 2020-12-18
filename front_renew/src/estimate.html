@@ -781,50 +781,58 @@
 <section id="stepresult" class="section">
     <div class="section_container">
     <div class="avatar">
-        <img src="" alt="" class="avartar__img">
-        <span class="avartar__title"></span>
-        <span class="avartar__price"></span>
-        <span class="avartar__description"></span>
+        <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/profile.svg"alt="아바타이미지" class="avartar__img">
+        <span class="avartar__title">"업체명" 고객님의 예상 비용</span>
+        <span class="avartar__price">월 000,000원</span>
+        <span class="avartar__description">제공되는 비용은 예상 견적이며, 상담 진행시 협의를 통해 변동될 수 있습니다.</span>
+        <div class="avartar__button">
+            <a href="index.html">
+                <button class="home">메인으로</button>
+            </a>
+            <a href="service.html">
+                <button class="home">계약 프로세스 확인</button>
+            </a>
+        </div>
     </div>
-    <div class="liner"></div>
+    <div class="liner stepresultLiner"></div>
+    <span class="detailOrder__title">상세 견적 내용</span>
     <div class="detailOrder">
         <div class="detailOrder__item">
-            <span>보관료(월)</span>
-            <span class="inputStoreFee"></span>
+            <span class="detailOrder__item__title">보관료(월)</span>
+            <span class="inputStoreFee">000,000원</span>
         </div>
         <div class="detailOrder__item">
-            <span>택배비(월)</span>
-            <span class="inputStoreFee"></span>
+            <span class="detailOrder__item__title">택배비(월)</span>
+            <span class="inputStoreFee">000,000원</span>
         </div>
         <div class="detailOrder__item">
-            <span>WMS이용료(월)</span>
-            <span class="inputStoreFee"></span>
+            <span class="detailOrder__item__title">WMS이용료(월)</span>
+            <span class="inputStoreFee">000,000원</span>
         </div>
     </div>
     <div class="result__details">
-
+        <div class="line"></div>
+        <div class="item__Bigtitle">상품정보</div>
         <div class="result__detail">
-            <div class="line"></div>
-            <div class="item__Bigtitle">상품정보</div>
             <div class="item">
                 <span class="item__title">상품 종류</span>
-                <span class="item content"></span>
+                <span class="item__content">의류, 잡화 , 뷰티</span>
             </div>
             <div class="item">
                 <span class="item__title">상세 품목</span>
-                <span class="item content"></span>
+                <span class="item__content"></span>
             </div>
             <div class="item">
                 <span class="item__title">바코드 여부</span>
-                <span class="item content"></span>
+                <span class="item__content"></span>
             </div>
             <div class="item">
                 <span class="item__title">상품 URL</span>
-                <span class="item content"></span>
+                <span class="item__content">https://smartstore.naver.com/mizline1004/</span>
             </div>
             <div class="item">
                 <span class="item__title">상품 취급 주의사항</span>
-                <span class="item content"></span>
+                <span class="item__content"></span>
             </div>
         </div>
 
@@ -908,8 +916,14 @@
 
     </div>
     <div class="liner"></div>
-    <button class="home"></button>
-    <button class="serbice"></button>
+    <div class="avartar__button">
+        <a href="index.html">
+            <button class="home">메인으로</button>
+        </a>
+        <a href="service.html">
+            <button class="home">계약 프로세스 확인</button>
+        </a>
+    </div>
 </div>
 </section>
 
@@ -917,8 +931,6 @@
     <input type="button" class="stepBtn__preBtn" value="&#xf104;  이전" >      
     <input type="button" class="stepBtn__nextBtn" value="다음  &#xf105;">        
 </div>
-
-
     <footer id="footer">
         <div class="inner">
             <div class="footer-logo">

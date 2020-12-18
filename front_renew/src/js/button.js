@@ -31,6 +31,11 @@ stepbar__three.style.display="none";
 stepbar__four.style.display="none";
 
 
+stepone.style.display='none';
+stepbar__one.style.display='none';
+stepresult.style.display='';
+
+
 
 nextBtn.addEventListener('click',()=> {
       //step1
@@ -117,6 +122,7 @@ nextBtn.addEventListener('click',()=> {
     {
         stepfour.style.display = 'none';
         stepbar__four.style.display='none';
+        stepresult.style.display ='';
         preBtn.style.visibility='hidden';
         nextBtn.style.visibility='hidden';
     }

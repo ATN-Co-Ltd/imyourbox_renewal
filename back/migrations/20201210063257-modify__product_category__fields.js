@@ -54,6 +54,7 @@ module.exports = {
     queryInterface.changeColumn('detail_order_infos','customer_manager_name'),
     queryInterface.changeColumn('detail_order_infos','customer_phone'),
     queryInterface.changeColumn('detail_order_infos','customer_email'),
+    queryInterface.changeColumn('detail_order_infos','customer_memo'),
     queryInterface.changeColumn('detail_order_infos','detail_product_type'),
     queryInterface.changeColumn('detail_order_infos','use_service'),
     queryInterface.changeColumn('detail_order_infos','output_packaing'),

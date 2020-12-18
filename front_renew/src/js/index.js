@@ -7,6 +7,6 @@ import './stepThree';
 import './stepFour';
 import './price';
 import './button';
-
+import './stepresult';
 
 console.log('hello webpack!');

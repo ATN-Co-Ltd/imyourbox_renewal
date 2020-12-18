@@ -21,6 +21,7 @@ const caclulateStoreFee = (storeType,storeValue,boxsize) => {
         oneDayStorePrice = 500;
     }
     //파레트일떄 월보관료
+    console.log(`caclulateStoreFee ${monthStoreprice}`);
    return monthStoreprice = (storeValue * oneDayStorePrice) *30;
     }
     else if(storeType === 'box' )
@@ -28,6 +29,7 @@ const caclulateStoreFee = (storeType,storeValue,boxsize) => {
         let boxcount = 0;
         if(boxsize === null)
         {
+            console.log('설마여기로들어오나?');
             return;
         }
         if(boxsize === 'mini')
@@ -67,8 +69,10 @@ const caclulateStoreFee = (storeType,storeValue,boxsize) => {
         oneDayStorePrice = 500;
          }
         //박스일때 월보관료
-        monthStoreprice = (covnvertToPlt * oneDayStorePrice) *30;   
+        console.log(`caclulateStoreFee when Box ${(covnvertToPlt *oneDayStorePrice) * 30}`);
+       return monthStoreprice = (covnvertToPlt * oneDayStorePrice) *30;   
     }
+
 }
 
 const cacluateDeliveryFee = (monthDeliveryCount,outputBoxSize,outputType) => {
@@ -127,4 +131,10 @@ const caclutateWMSfee = (skuCount) => {
         wmsFee = 100000
     }
     return wmsFee;
+}
+
+export {
+    caclulateStoreFee,
+    cacluateDeliveryFee,
+    caclutateWMSfee,
 }

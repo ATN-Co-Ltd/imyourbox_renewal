@@ -6,9 +6,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 
-#stepresult {
-  //   display: none;
-}
 .avatar {
   display: flex;
   flex-direction: column;
@@ -34,7 +31,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     margin-top: 0.25rem;
     font-weight: 500;
     font-style: normal;
-    color: #787878;
+    color: hsl(0, 0%, 47%);
     font-size: 0.8125rem;
   }
   .avartar__button {

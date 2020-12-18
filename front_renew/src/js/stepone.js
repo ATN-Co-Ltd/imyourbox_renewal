@@ -150,6 +150,7 @@ buttons_caution_product_type.forEach(e=> {
 
 
 
+
 export {
     product_category,
     detailInput,

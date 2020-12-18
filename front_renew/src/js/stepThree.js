@@ -2,6 +2,7 @@ import Swal from 'sweetalert2';
 import {stepStatus} from './button';
 
 
+
 //물류대행서비스 이용여부
 let use_service = "";
  const radio_inputUseSrvice = document.querySelector(".fullfillmentRadios");
@@ -26,7 +27,7 @@ let use_service = "";
 
 
 //출고패키징
-let releasepackaing = "";
+let releasepackaing = "total_packaing";
  const radio_inputStores = document.querySelector(".output__radio__groups");
  radio_inputStores.addEventListener('change',(e)=> {
     const selected = document.querySelectorAll('.output__radio__groups > li');
@@ -113,7 +114,7 @@ const stepbar__four = document.querySelector(".stepbox__four");
 const stepbar__one = document.querySelector(".stepbox");
 jumpToFourBtn.addEventListener('click',(e)=> {
     console.log(`점프버튼 ${use_service.length} , ${releasepackaing.length} , ${courier_bag.length} , ${processing_need.length}`);
-    if(use_service.length >=1 || releasepackaing.length>=1 || courier_bag.length >= 1|| processing_need.length >=1)
+    if(use_service.length >=1 || courier_bag.length >= 1|| processing_need.length >=1)
     {
         Swal.fire({
             title: '작성중인 내용이있습니다.\n저장하지않고 이동하시겠습니까?',
@@ -125,8 +126,8 @@ jumpToFourBtn.addEventListener('click',(e)=> {
             cancelButtonText:'닫기'
           }).then((result) => {
             if (result.isConfirmed) {
-                stepStatus++;
-                console.log(stepStatus);
+                stepStatus = 4;
+                console.log(`jump : ${stepStatus}`);
                 stepone.style.display = "none";
                 steptwo.style.display = 'none';
                 stepthree.style.display = 'none';
@@ -151,10 +152,6 @@ jumpToFourBtn.addEventListener('click',(e)=> {
     stepbar__four.style.display='';
     nextBtn.value ="예상견적 확인";
     }
-    // stepStatus++;
-    // console.log(stepStatus);
-   
-
 })
 
 

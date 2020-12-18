@@ -6,6 +6,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/themes/material_orange.css';
 import {Korean} from 'flatpickr/dist/l10n/ko';
 const CLICKED_CLASS = "clicked";
+
 //step2
 //서비스런칭 여부
 let service_launching_status = false;
@@ -43,6 +44,7 @@ buttons_logistics_service_kinds_type.forEach(e=> {
 //물류보관량
 let inputStoreValue = "pallet";
 const boxItem = document.querySelector('.box__checked__container');
+const storeUnit = document.querySelector('.store__unit');
 boxItem.style.display ='none';
  const radio_inputStores = document.querySelector(".inputStoreType__radio__groups");
  radio_inputStores.addEventListener('change',(e)=> {
@@ -59,6 +61,7 @@ boxItem.style.display ='none';
             selected[1].style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
             selected[1].childNodes[0].childNodes[3].childNodes[0].style.color =black;
             selected[1].childNodes[0].childNodes[3].childNodes[2].style.color =black;
+            storeUnit.textContent ='plt'
             boxItem.style.display ='none';
             break;
         case "box":
@@ -68,6 +71,7 @@ boxItem.style.display ='none';
             selected[0].style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
             selected[0].childNodes[0].childNodes[3].childNodes[0].style.color =black;
             selected[0].childNodes[0].childNodes[3].childNodes[2].style.color =black;
+            storeUnit.textContent ='박스'
             boxItem.style.display = "";
             break;
         default:
@@ -85,6 +89,7 @@ let inputStoreBoxsizeValue = "";
     const black = "#000000"
     const selectedColor = "#f18b24";
     inputStoreBoxsizeValue = e.target.value;
+    console.log(`박스크기 ${inputStoreBoxsizeValue}`);
     console.log(inputStoreBoxsizeValue);
     selected.forEach((e)=> {
         const box = e.parentElement.parentElement;
@@ -169,7 +174,7 @@ let outputBoxsizeValue = "";
     outputBoxsizeValue = e.target.value;
     selected.forEach((e)=> {
         const outputbox = e.parentElement.parentElement;
-        console.log(outputbox);
+        console.log(`출고택배 크기 :${outputBoxsizeValue}`);
         const titleText = e.parentElement.childNodes[4];
         const descriptionText = e.parentElement.childNodes[6];
         if(e.value === outputBoxsizeValue)
@@ -220,8 +225,6 @@ flatpickr(".calendar-inputStoreDate",{
         // console.log(typeof inputStoreDate);
     }
 });
-
-
 
 
 export {

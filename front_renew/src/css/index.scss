@@ -59,10 +59,15 @@ h3 {
 
 #header {
   width: 100%;
+  max-width: 1024px; //내가한거
+  left: 0; //내가한거
+  right: 0; //내가한거
+  margin: 0 auto;
   position: fixed;
   top: 0;
   z-index: 99999;
   padding: 10px;
+  border-bottom: 2px solid #ffa63f;
   background-color: rgba(256, 256, 256);
 }
 

@@ -108,12 +108,13 @@ let inputStoreBoxsizeValue = "";
         }
     })
 })
+
 //inputStoreCount
 let indicatorInputStore = document.querySelector(".indicator__inputStore__range");
 let inputStoreCount = 0;
 let range__inputStore = document.getElementById('inputStore__range');
 noUiSlider.create(range__inputStore,{
-    start:[500],
+    start:[0],
     connect:[true,false],
     // behaviour:'snap',
     range:{
@@ -142,7 +143,7 @@ let sku__range__inputStore = document.querySelector(".inputStore__sku__range");
 let indicatorSKUInputStore = document.querySelector(".indicator__inputStore__sku__range");
 let skuInputStoreCount = 0;
 noUiSlider.create(sku__range__inputStore,{
-    start:[250],
+    start:[0],
     connect:[true,false],
     // behaviour:'snap',
     range:{
@@ -196,7 +197,7 @@ let outputRangeSlider = document.querySelector(".output__range");
 let indicatorOutputBox = document.querySelector(".indicator__output__range");
 let outputBoxCount = 0;
 noUiSlider.create(outputRangeSlider,{
-    start:[250],
+    start:[0],
     connect:[true,false],
     // behaviour:'snap',
     range:{

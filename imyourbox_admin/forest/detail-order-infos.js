@@ -7,14 +7,24 @@ const { collection } = require('forest-express-sequelize');
 // - Smart segments: https://docs.forestadmin.com/documentation/reference-guide/segments/smart-segments
 collection('detailOrderInfos', {
   actions: [{
-    name : "견적서보기"
+    name : "계약서 및 견적서 업데이트",
+    type:'single',
+    fields:[
+      {
+      field:'계약서 업데이트',
+      description:'고객사와 계약한 계약서를 업로드합니다.',
+      type:'File',
+      isRequired:'false'
+      },
+      {
+      field:'맞춤 견적서 업데이트',
+      description:'고객사에게 제공한 견적서를 업로드합니다.',
+      type:'File',
+      isRequired:'false'
+      },
+  ]
   }],
   isSearchable: true,
-  fields: [
-    {
-      field: 'salesManager',
-      type: 'String',
-    }
-  ],
+  fields: [],
   segments: [],
 });

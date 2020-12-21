@@ -4,6 +4,7 @@
 const product_category = [];
 const buttons_category = document.querySelectorAll("ul.stepone__category__list > li>input");
 const CLICKED_CLASS = "clicked";
+const white = "#ffffff";
 buttons_category.forEach(e=> {
     e.addEventListener('click',()=> {
       const checked__icon = e.parentElement.childNodes[2];
@@ -31,6 +32,7 @@ const input_detail = document.querySelector(".detail__input");
 input_detail.addEventListener('input',e=> {
     detailInput = e.target.value;
     console.log(detailInput);
+    input_detail.style.backgroundColor = white;
 })
 
 
@@ -115,8 +117,10 @@ radio__havebarcode.addEventListener('change',(e)=> {
 //대표상품 URL
 let product_url ="";
 const input_product_url = document.querySelector(".productURL__input");
+
 input_product_url.addEventListener('input',e=> {
     product_url = e.target.value;
+    input_product_url.style.backgroundColor = white;
     console.log(product_url);
 })
 

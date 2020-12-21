@@ -434,21 +434,6 @@
         "value": null
       }]
     }, {
-      "field": "salesManager",
-      "type": "String",
-      "defaultValue": null,
-      "enums": null,
-      "integration": null,
-      "isFilterable": false,
-      "isPrimaryKey": false,
-      "isReadOnly": true,
-      "isRequired": false,
-      "isSortable": false,
-      "isVirtual": true,
-      "reference": null,
-      "inverseOf": null,
-      "validations": []
-    }, {
       "field": "seq",
       "type": "Number",
       "defaultValue": null,
@@ -519,14 +504,34 @@
     }],
     "segments": [],
     "actions": [{
-      "name": "견적서보기",
-      "type": "bulk",
+      "name": "계약서 및 견적서 업데이트",
+      "type": "single",
       "baseUrl": null,
       "endpoint": "/forest/actions/",
       "httpMethod": "POST",
       "redirect": null,
       "download": false,
-      "fields": [],
+      "fields": [{
+        "field": "계약서 업데이트",
+        "type": "File",
+        "defaultValue": null,
+        "enums": null,
+        "isRequired": "false",
+        "reference": null,
+        "description": "고객사와 계약한 계약서를 업로드합니다.",
+        "position": 0,
+        "widget": null
+      }, {
+        "field": "맞춤 견적서 업데이트",
+        "type": "File",
+        "defaultValue": null,
+        "enums": null,
+        "isRequired": "false",
+        "reference": null,
+        "description": "고객사에게 제공한 견적서를 업로드합니다.",
+        "position": 1,
+        "widget": null
+      }],
       "hooks": {
         "load": false,
         "change": []
@@ -785,7 +790,30 @@
       "validations": []
     }],
     "segments": [],
-    "actions": []
+    "actions": [{
+      "name": "is",
+      "type": "single",
+      "baseUrl": null,
+      "endpoint": "/forest/actions/is",
+      "httpMethod": "POST",
+      "redirect": null,
+      "download": false,
+      "fields": [{
+        "field": "dfdfdf",
+        "type": "File",
+        "defaultValue": null,
+        "enums": null,
+        "isRequired": "true",
+        "reference": null,
+        "description": "dfdfd.",
+        "position": 0,
+        "widget": null
+      }],
+      "hooks": {
+        "load": false,
+        "change": []
+      }
+    }]
   }, {
     "name": "productCategorys",
     "nameOld": "productCategorys",

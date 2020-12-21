@@ -616,6 +616,8 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   }
 }
 .stepBtn {
+  border-top: 2px solid #ffa63f;
+  z-index: 2;
   position: fixed;
   width: 100%;
   max-width: 100%;
@@ -789,6 +791,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     }
   }
   .stepBtn {
+    border-top: 0;
     position: static;
     margin: 0 auto;
     width: 100%;

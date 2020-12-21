@@ -175,9 +175,9 @@
 <section id="stepone" class="section">
     <form>
     <div class="section__container">
-        <div class="square"> </div>
+        <!-- <div class="square"> </div> -->
         <div class="stepone__container">
-            <div class="divider"></div> 
+            <!-- <div class="divider"></div>  -->
         <span class="stepone__title">STEP 1</span>
         <span class="stepone__description">문의하실 상품의 정보를 입력해주세요</span>
         </div>
@@ -354,7 +354,7 @@
 <section id="steptwo" class="section">
 <div class="section__container">
     <div class="step__container">
-    <div class="top__divider"></div> 
+    <!-- <div class="top__divider"></div>  -->
     <span class="stepone__title">STEP 2</span>
      <span class="stepone__description">문의를 위한 물류 기본정보를 알려주세요.</span>
     </div>
@@ -592,7 +592,7 @@
    </div>
     <div class="range__secondColumn">
         <div class="output__range"></div>
-       <div class="inputStore__range__count">
+       <div class="inputStore__range__count step__two__last">
            <span class="count__one">1</span> <span>250</span> <span>500</span> <span>750</span> <span class="count__thousnd">1000</span>
        </div>
    </div>
@@ -608,7 +608,7 @@
 <!-- step 3 -->
 <section id="stepthree" class="section">
     <div class="section__container">
-        <div class="liner"></div> 
+        <!-- <div class="liner"></div>  -->
         <div class="step__container step__stepThree">
             <div class="step__firstColumn">
             <span class="stepone__title">STEP 3</span>
@@ -644,7 +644,7 @@
     </div>
     <ul class="output__radio__groups">
         <li>
-            <label class="pallet">
+            <label class="pallet total">
                 <input type="radio" name="inputStore" value="total_packaing">
                 <span class="check"></span>
                 <div class="output__radio__groups_radio__text">
@@ -654,7 +654,7 @@
             </label>
         </li>
         <li>
-            <label class="box">
+            <label class="box only">
                 <input type="radio" name="inputStore" value="only_packaing">
                  <span class="check"></span>
                 <div class="output__radio__groups_radio__text">
@@ -716,7 +716,7 @@
 <!-- step 4 -->
 <section id="stepfour" class="secton">
     <div class="section__container">
-        <div class="liner"></div> 
+        <!-- <div class="liner"></div>  -->
         <div class="step__container step__stepThree">
             <div class="step__firstColumn">
             <span class="stepone__title">LAST STEP</span>
@@ -816,23 +816,23 @@
         <div class="result__detail">
             <div class="item">
                 <span class="item__title">상품 종류</span>
-                <span class="item__content">의류, 잡화 , 뷰티</span>
+                <span class="item__content productCategory"></span>
             </div>
             <div class="item">
                 <span class="item__title">상세 품목</span>
-                <span class="item__content"></span>
+                <span class="item__content detailInput"></span>
             </div>
             <div class="item">
                 <span class="item__title">바코드 여부</span>
-                <span class="item__content"></span>
+                <span class="item__content haveBarcode"></span>
             </div>
             <div class="item">
                 <span class="item__title">상품 URL</span>
-                <span class="item__content">https://smartstore.naver.com/mizline1004/</span>
+                <span class="item__content productURL"></span>
             </div>
             <div class="item">
                 <span class="item__title">상품 취급 주의사항</span>
-                <span class="item__content"></span>
+                <span class="item__content proCaution"></span>
             </div>
         </div>
 
@@ -842,27 +842,27 @@
             <div class="item__Bigtitle">물류 기본정보</div>
             <div class="item">
                 <span class="item__title">서비스 런칭여부</span>
-                <span class="item content"></span>
+                <span class="item__content serviceLaunching"></span>
             </div>
             <div class="item">
                 <span class="item__title">문의할 물류 서비스</span>
-                <span class="item content"></span>
+                <span class="item__content logisticsServiceKinds"></span>
             </div>
             <div class="item">
                 <span class="item__title">물류 보관량</span>
-                <span class="item content"></span>
+                <span class="item__content inputStoreCount"></span>
             </div>
             <div class="item">
                 <span class="item__title">상품 종류(SKU)</span>
-                <span class="item content"></span>
+                <span class="item__content inputSKUcount"></span>
             </div>
             <div class="item">
                 <span class="item__title">입고 예정일</span>
-                <span class="item content"></span>
+                <span class="item__content inputDateResult"></span>
             </div>
             <div class="item">
                 <span class="item__title">출고 택배량</span>
-                <span class="item content"></span>
+                <span class="item__content outputDeliveryCount"></span>
             </div>
         </div>
 

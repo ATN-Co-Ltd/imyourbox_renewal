@@ -252,11 +252,11 @@
         text-align: left;
       }
     }
-    .pallet {
-      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+    .total {
+      background: url("#{$baseURL}/packing.svg") no-repeat center;
     }
-    .box {
-      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+    .only {
+      background: url("#{$baseURL}/box.svg") no-repeat center;
     }
     .pallet,
     .box {

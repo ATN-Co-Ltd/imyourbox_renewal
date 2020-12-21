@@ -17,7 +17,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   --color_divider: #ffd18c;
   --color_category_description: #666666;
   --color_button_deactive: #ffffff;
-  --color__white: #ffffff;
+  --color__white: #050404;
   --color__tesxt: #23232;
   --color__checked__font: #f18b24;
   --color__deactive: #f2f2f2;
@@ -317,10 +317,10 @@ input[type="checkbox"]:checked {
       }
     }
     .pallet {
-      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+      background: url("#{$baseURL}/pallet.svg") no-repeat center;
     }
     .box {
-      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+      background: url("#{$baseURL}/box.svg") no-repeat center;
     }
     .pallet,
     .box {
@@ -688,5 +688,9 @@ input[type="checkbox"]:checked {
         margin-right: 0.5rem;
       }
     }
+  }
+
+  .step__two__last {
+    margin-bottom: 7.375rem;
   }
 }

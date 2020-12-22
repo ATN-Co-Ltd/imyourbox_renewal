@@ -6,20 +6,7 @@ const { collection } = require('forest-express-sequelize');
 // - Smart relationships: https://docs.forestadmin.com/documentation/reference-guide/relationships/create-a-smart-relationship
 // - Smart segments: https://docs.forestadmin.com/documentation/reference-guide/segments/smart-segments
 collection('orderInfos', {
-  actions: [
-    {
-      name : "is",
-      type:'single',
-      fields:[
-        {
-        field:"dfdfdf",
-        description:'dfdfd.',
-        type:'File',
-        isRequired:'true'
-        },
-    ]
-    }
-  ],
+  actions: [],
   fields: [],
   segments: [],
 });

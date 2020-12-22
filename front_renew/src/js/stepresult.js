@@ -1,11 +1,9 @@
-import {customer_company} from './stepFour'
 import  {caclulateStoreFee,cacluateDeliveryFee,caclutateWMSfee} from './price'
 import {outputBoxCount,inputStoreDate,arr_logistics_service_kinds,inputStoreValue,inputStoreBoxsizeValue,inputStoreCount,skuInputStoreCount,outputBoxsizeValue,service_launching_status} from './stepTwo';
 import {product_category,detailInput,barcodeValue,product_url,arr_caution_product_type} from "./stepone"
-import  {releasepackaing} from './stepThree'
+import  {releasepackaing,use_service,courier_bag,processing_need} from './stepThree'
+import {customer_company,customer_phone,customer_email,customer_manager_name,customer_memo} from './stepFour';
 import {stepStatus} from './button'
-
-
 
 const enToKr = (obj,arr) => {
 
@@ -18,6 +16,15 @@ const enToKr = (obj,arr) => {
     return newArr.toString();
 }
 
+const checkNull = (val) => {
+    if(val === undefined)
+    {
+      return  val = "";
+    }
+    else {
+        return val;
+    }
+}
 
 //stepOne
 
@@ -78,7 +85,7 @@ const haveBarcodeMap = {
 
 const deliveryBoxSizeMap = {
     mini:"극소",
-    smaill:"소", 
+    small:"소", 
     medium:"중",
     large:"대",
     giant:"특대"
@@ -133,6 +140,28 @@ const HTMLinputDateResult = document.querySelector('.inputDateResult');
 const HTMLoutputDeliveryCount = document.querySelector('.outputDeliveryCount');
 
 
+//stepThree
+
+const HTMLuseService = document.querySelector('.userService');
+const HTMLoutputPackaing = document.querySelector('.outputPackaing');
+const HTMLcourierBagSpan = document.querySelector('.courierBagSpan');
+const HTMLprocessingNeedWork = document.querySelector('.processingNeedWork');
+
+
+//StepResult
+
+const HTMLResultCustomerCompany =  document.querySelector('.ResultCustomerCompany');
+const HTMLResultCustomerPhone = document.querySelector('.ResultCustomerPhone');
+const HTMLResultCustomerEmail = document.querySelector('.ResultCustomerEmail');
+const HTMLResultCustomerName = document.querySelector('.ResultCustomerName');
+const HTMLResultCustomerMemo = document.querySelector('.ResultCustomerMemo');
+
+
+
+//step
+
+const HTMLStepButtonContainer = document.querySelector('.stepBtn');
+
 
 
 
@@ -141,28 +170,41 @@ const HTMLoutputDeliveryCount = document.querySelector('.outputDeliveryCount');
 stepResultButton.addEventListener('click',()=> {
     if(stepStatus === 5)
     {
+        //스텝버튼영역 지우기
+        HTMLStepButtonContainer.style.visibility ="hidden";
         let sumPrice = caclulateStoreFee(inputStoreValue,inputStoreCount,inputStoreBoxsizeValue) + cacluateDeliveryFee(outputBoxCount,outputBoxsizeValue,releasepackaing) + caclutateWMSfee(skuInputStoreCount);
         customerCompany.textContent = `"${customer_company}" 고객님의 예상 비용`;
         totalPrice.textContent = `월 ${sumPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`
-        monthStoreFee.textContent = `${caclulateStoreFee(inputStoreValue,inputStoreCount,inputStoreBoxsizeValue).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
-        monthDeliveryFee.textContent = `${cacluateDeliveryFee(outputBoxCount,outputBoxsizeValue,releasepackaing).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+        monthStoreFee.textContent = `${caclulateStoreFee(inputStoreValue,inputStoreCount,inputStoreBoxsizeValue).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
+        monthDeliveryFee.textContent = `${cacluateDeliveryFee(outputBoxCount,outputBoxsizeValue,releasepackaing).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
         monthWMSFee.textContent = `${caclutateWMSfee(skuInputStoreCount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
-
-
         //상품정보
         HTMLproductCategory.textContent = `${enToKr(clothMap,product_category)}`;
         HTMLdetailInput.textContent = `${detailInput}`;
         HTMLhaveBarcode.textContent = `${haveBarcodeMap[barcodeValue]}`;
         HTMLproductURL.textContent = `${product_url}`;
         HTMLproductCaution.textContent = `${enToKr(productCautionMap,arr_caution_product_type)}`;
-
         //물류기본정보
         HTMLserviceLaunching.textContent = `${serviceLaunching(service_launching_status)}`;
         HTMLlogisticsServiceKinds.textContent = `${enToKr(logistics_service_kindsMap,arr_logistics_service_kinds)}`;
         HTMLinputStoreCount.textContent = `${inputStoreCount} ${inputStoreValue}`;
         HTMLinputSKUcount.textContent = `${skuInputStoreCount.toString()} 개`;
-        HTMLinputDateResult.textContent = `${inputStoreDate}`;
-        HTMLoutputDeliveryCount.textContent = `${outputBoxCount.toString()}${outputBoxsizeValue}`
+        HTMLinputDateResult.textContent = `${inputStoreDate.toISOString().substring(0,10)}`;
+        console.log(typeof deliveryBoxSizeMap[outputBoxsizeValue]);
+        HTMLoutputDeliveryCount.textContent = `${outputBoxCount.toString()}  ${deliveryBoxSizeMap[outputBoxsizeValue]}`;
+        //물류추가정보
+        HTMLuseService.textContent = `${checkNull(serviceUseMap[use_service])}`;
+        HTMLoutputPackaing.textContent = `${checkNull(releasepackagingMap[releasepackaing])}`;
+        HTMLcourierBagSpan.textContent = `${checkNull(courierBagMap[courier_bag])}`;
+        HTMLprocessingNeedWork.textContent = `${checkNull(processingNeedMap[processing_need])}`;
+        //연락처정보
+        HTMLResultCustomerCompany.textContent = `${customer_company}`;
+        HTMLResultCustomerPhone.textContent = `${customer_phone}`;
+        HTMLResultCustomerEmail.textContent = `${customer_email}`;
+        HTMLResultCustomerName.textContent = `${customer_manager_name}`;
+        HTMLResultCustomerMemo.textContent = `${checkNull(customer_memo)}`;
+
+
     }
 })
 

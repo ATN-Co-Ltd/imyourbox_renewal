@@ -57,7 +57,7 @@ router.delete('/detailOrderInfos', permissionMiddlewareCreator.delete(), (reques
   next();
 });
 
-router.post('/actions/견적서보기', permissionMiddlewareCreator.smartAction(), (req, res) => {
+router.post('/actions/upload estimate', permissionMiddlewareCreator.smartAction(), (req, res) => {
   return new RecordsGetter(detailOrderInfos).getIdsFromRequest(req)
     .then((seq) => {
       console.log(res);

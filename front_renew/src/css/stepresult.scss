@@ -57,6 +57,11 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     }
   }
 }
+
+.last__title {
+  margin: 0.5rem 5% 0px;
+}
+
 .stepresultLiner {
   margin-bottom: 1.5625rem;
 }
@@ -124,6 +129,30 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
       font-size: 0.875rem;
       margin-left: 20%;
       color: #777777;
+    }
+    .haveBarcode {
+      margin-left: 17.5%;
+    }
+    .proCaution {
+      margin-left: 9%;
+    }
+    .serviceLaunching {
+      margin-left: 15%;
+    }
+    .logisticsServiceKinds {
+      margin-left: 12%;
+    }
+    .inputSKUcount {
+      margin-left: 16%;
+    }
+    .outputPackaing {
+      margin-left: 28%;
+    }
+    .ResultCustomerName {
+      margin-left: 13%;
+    }
+    .ResultCustomerMemo {
+      margin-left: 17%;
     }
   }
 }

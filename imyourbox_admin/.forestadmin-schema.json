@@ -504,32 +504,22 @@
     }],
     "segments": [],
     "actions": [{
-      "name": "계약서 및 견적서 업데이트",
+      "name": "upload estimate",
       "type": "single",
       "baseUrl": null,
-      "endpoint": "/forest/actions/",
+      "endpoint": "/forest/actions/upload-estimate",
       "httpMethod": "POST",
       "redirect": null,
       "download": false,
       "fields": [{
-        "field": "계약서 업데이트",
-        "type": "File",
-        "defaultValue": null,
-        "enums": null,
-        "isRequired": "false",
-        "reference": null,
-        "description": "고객사와 계약한 계약서를 업로드합니다.",
-        "position": 0,
-        "widget": null
-      }, {
         "field": "맞춤 견적서 업데이트",
         "type": "File",
         "defaultValue": null,
         "enums": null,
-        "isRequired": "false",
+        "isRequired": true,
         "reference": null,
-        "description": "고객사에게 제공한 견적서를 업로드합니다.",
-        "position": 1,
+        "description": "고객사에게 제공할 견적서를 업로드합니다.",
+        "position": 0,
         "widget": null
       }],
       "hooks": {
@@ -790,30 +780,7 @@
       "validations": []
     }],
     "segments": [],
-    "actions": [{
-      "name": "is",
-      "type": "single",
-      "baseUrl": null,
-      "endpoint": "/forest/actions/is",
-      "httpMethod": "POST",
-      "redirect": null,
-      "download": false,
-      "fields": [{
-        "field": "dfdfdf",
-        "type": "File",
-        "defaultValue": null,
-        "enums": null,
-        "isRequired": "true",
-        "reference": null,
-        "description": "dfdfd.",
-        "position": 0,
-        "widget": null
-      }],
-      "hooks": {
-        "load": false,
-        "change": []
-      }
-    }]
+    "actions": []
   }, {
     "name": "productCategorys",
     "nameOld": "productCategorys",

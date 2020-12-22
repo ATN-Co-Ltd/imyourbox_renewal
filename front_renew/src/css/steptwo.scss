@@ -164,7 +164,7 @@ input[type="checkbox"]:checked {
   width: 100%;
   max-width: 100%;
   margin-top: 100px;
-  margin: 0 auto;
+  // margin: 0 auto;
   height: inherit;
   display: flex;
   flex-direction: column;
@@ -174,6 +174,10 @@ input[type="checkbox"]:checked {
     display: flex;
     flex-direction: column;
   }
+}
+
+.stepTwo__title {
+  margin: 0.5rem 5% 0 5%;
 }
 
 .top__divider {

@@ -451,6 +451,9 @@ input[type="checkbox"]:checked {
     margin-bottom: 4.9375rem;
   }
 }
+.end__container {
+  margin: 0 auto 8rem auto;
+}
 
 //물품보관량 - 박스선택했을때
 .box__checked__container {
@@ -678,6 +681,10 @@ input[type="checkbox"]:checked {
       }
     }
   }
+  .end__container {
+    margin: 0 auto;
+  }
+
   .calendar-inputStoreDate::placeholder {
     background-position: 7% center;
   }

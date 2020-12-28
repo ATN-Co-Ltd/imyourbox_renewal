@@ -211,6 +211,9 @@
     }
   }
 }
+.processinglist {
+  margin: 0 auto 8rem auto;
+}
 
 .output__radio__groups {
   display: flex;
@@ -369,6 +372,7 @@
   .processinglist {
     margin-bottom: 7.5rem;
   }
+
   .inputDate {
     display: flex;
     justify-content: flex-start;

@@ -538,7 +538,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 
 .productCaution__list {
   display: flex;
-  margin: 0 auto;
+  margin: 0 auto 8rem auto;
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
@@ -777,6 +777,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   }
 
   .productCaution__list {
+    margin: 0 auto;
     li {
       width: calc((104%-16px) / 6);
       // width: 165px;

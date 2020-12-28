@@ -208,3 +208,14 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     margin-top: 1.1875rem;
   }
 }
+
+.endfour__container {
+  margin: 1.75rem 5% 8rem 5%;
+}
+
+//responsive
+@media screen and (min-width: 768px) {
+  .endfour__container {
+    margin: 1.75rem 5%;
+  }
+}

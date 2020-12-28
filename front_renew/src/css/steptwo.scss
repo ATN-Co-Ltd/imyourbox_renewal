@@ -69,6 +69,7 @@ input[type="checkbox"]:checked {
   &:after {
     display: none;
   }
+  width: 30px !important;
   border: none;
   box-shadow: none;
   background-color: #ff8d33;
@@ -77,6 +78,11 @@ input[type="checkbox"]:checked {
   border-right: 10px solid transparent;
   border-bottom: 10px solid transparent;
 }
+// .noUi-horizontal,
+// .noUi-handle {
+//   width: 30px;
+//   height: 30px;
+// }
 // noUiSlider end
 
 .stepbox__two {

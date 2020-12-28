@@ -61,6 +61,7 @@ module.exports = {
     queryInterface.changeColumn('detail_order_infos','courier_bag'),
     queryInterface.changeColumn('detail_order_infos','processing_need'),
   
+    
   
   ]);
   }

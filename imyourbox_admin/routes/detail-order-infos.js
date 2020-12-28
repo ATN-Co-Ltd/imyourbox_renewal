@@ -4,6 +4,13 @@ const { detailOrderInfos } = require('../models');
 
 const router = express.Router();
 const permissionMiddlewareCreator = new PermissionMiddlewareCreator('detailOrderInfos');
+const uuid = require('uuid/v4');
+const S3Helper = require('../services/s3-helper');
+const P = require('bluebird');
+
+
+//내가작성한거
+// const uuid = require('uu')
 
 // This file contains the logic of every route in Forest Admin for the collection detailOrderInfos:
 // - Native routes are already generated but can be extended/overriden - Learn how to extend a route here: https://docs.forestadmin.com/documentation/v/v6/reference-guide/routes/extend-a-route
@@ -57,16 +64,7 @@ router.delete('/detailOrderInfos', permissionMiddlewareCreator.delete(), (reques
   next();
 });
 
-router.post('/actions/upload estimate', permissionMiddlewareCreator.smartAction(), (req, res) => {
-  return new RecordsGetter(detailOrderInfos).getIdsFromRequest(req)
-    .then((seq) => {
-      console.log(res);
-      return detailOrderInfos
-        .update({ status: 'live' }, { where: { id: seq }})
-        .then(() => {
-          res.send({ success: 'Company is now live!' });
-        });
-    });
-});
+
 
 module.exports = router;
+ 

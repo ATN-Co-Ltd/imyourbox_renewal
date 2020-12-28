@@ -189,8 +189,9 @@ stepResultButton.addEventListener('click',()=> {
         HTMLlogisticsServiceKinds.textContent = `${enToKr(logistics_service_kindsMap,arr_logistics_service_kinds)}`;
         HTMLinputStoreCount.textContent = `${inputStoreCount} ${inputStoreValue}`;
         HTMLinputSKUcount.textContent = `${skuInputStoreCount.toString()} 개`;
-        HTMLinputDateResult.textContent = `${inputStoreDate.toISOString().substring(0,10)}`;
-        console.log(typeof deliveryBoxSizeMap[outputBoxsizeValue]);
+        
+        console.log(inputStoreDate);
+        HTMLinputDateResult.textContent = `${inputStoreDate}`;
         HTMLoutputDeliveryCount.textContent = `${outputBoxCount.toString()}  ${deliveryBoxSizeMap[outputBoxsizeValue]}`;
         //물류추가정보
         HTMLuseService.textContent = `${checkNull(serviceUseMap[use_service])}`;

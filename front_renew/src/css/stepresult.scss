@@ -130,29 +130,58 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
       margin-left: 20%;
       color: #777777;
     }
+    .productCategory,
+    .detailInput,
+    .productURL {
+      margin-left: 3rem;
+    }
     .haveBarcode {
-      margin-left: 17.5%;
+      margin-left: 2.2rem;
     }
     .proCaution {
-      margin-left: 9%;
+      margin-left: 1rem;
     }
     .serviceLaunching {
-      margin-left: 15%;
+      margin-left: 3rem;
     }
     .logisticsServiceKinds {
-      margin-left: 12%;
+      margin-left: 2rem;
+    }
+    .inputStoreCount {
+      margin-left: 4.2rem;
     }
     .inputSKUcount {
-      margin-left: 16%;
+      margin-left: 3rem;
+    }
+    .inputDateResult {
+      margin-left: 4rem;
+    }
+    .outputDeliveryCount {
+      margin-left: 4rem;
     }
     .outputPackaing {
-      margin-left: 28%;
+      margin-left: 4.2rem;
     }
+    .userService {
+      margin-left: 1rem;
+    }
+    .courierBagSpan {
+      margin-left: 2rem;
+    }
+    .processingNeedWork {
+      margin-left: 1.8rem;
+    }
+    .ResultCustomerCompany,
+    .ResultCustomerPhone,
+    .ResultCustomerEmail {
+      margin-left: 4.6rem;
+    }
+
     .ResultCustomerName {
-      margin-left: 13%;
+      margin-left: 3rem;
     }
     .ResultCustomerMemo {
-      margin-left: 17%;
+      margin-left: 3.8rem;
     }
   }
 }

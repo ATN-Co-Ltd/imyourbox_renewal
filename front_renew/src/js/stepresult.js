@@ -171,7 +171,7 @@ stepResultButton.addEventListener('click',()=> {
     if(stepStatus === 5)
     {
         //스텝버튼영역 지우기
-        HTMLStepButtonContainer.style.visibility ="hidden";
+        //HTMLStepButtonContainer.style.visibility ="hidden";
         let sumPrice = caclulateStoreFee(inputStoreValue,inputStoreCount,inputStoreBoxsizeValue) + cacluateDeliveryFee(outputBoxCount,outputBoxsizeValue,releasepackaing) + caclutateWMSfee(skuInputStoreCount);
         customerCompany.textContent = `"${customer_company}" 고객님의 예상 비용`;
         totalPrice.textContent = `월 ${sumPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`

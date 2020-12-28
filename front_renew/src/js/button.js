@@ -26,6 +26,8 @@ const stepbar__two = document.querySelector(".stepbox__two");
 const stepbar__three = document.querySelector(".stepbox__three");
 const stepbar__four = document.querySelector(".stepbox__four");
 const stepbar__one = document.querySelector(".stepbox");
+const HTMLStepButtonContainer = document.querySelector('.stepBtn');
+
 steptwo.style.display='none';
 stepthree.style.display='none';
 stepfour.style.display='none';
@@ -33,9 +35,6 @@ stepresult.style.display='none';
 stepbar__two.style.display="none";
 stepbar__three.style.display="none";
 stepbar__four.style.display="none";
-
-
-
 
 
 nextBtn.addEventListener('click',()=> {
@@ -121,13 +120,12 @@ nextBtn.addEventListener('click',()=> {
         stepbar__two.style.display='none';
         stepbar__three.style.display='none';
         stepbar__four.style.display='';
+        // nextBtn.style.display="";
         nextBtn.value ="예상견적 확인";
     }
     //stepresult
     else if(stepStatus === 5)
     {
-        
-        
 
         if(customer_company.length<1)
         {
@@ -139,10 +137,11 @@ nextBtn.addEventListener('click',()=> {
             }).then((result)=> {
                 if(result.isConfirmed) {
                     stepStatus =4;
+                    console.log(` 버튼확인하기 : ${stepStatus}`);
+                  
                     return;
                 }
             })
-            console.log(stepStatus);
         }
        else if(customer_phone.length<1)
         {
@@ -258,6 +257,7 @@ detailOrderInfo(detailOrderData).then((r)=> {
 }).catch((e)=> {
     console.log(e);
 });
+
         stepresult.style.display ='';
         stepone.style.display = "none";
         steptwo.style.display = 'none';
@@ -269,6 +269,8 @@ detailOrderInfo(detailOrderData).then((r)=> {
         stepbar__four.style.display='none';
         preBtn.style.visibility='hidden';
         nextBtn.style.visibility='hidden';
+        HTMLStepButtonContainer.style.visibility='hidden';
+     
 }
 }
 console.log(`스텝벨류 : ${stepStatus}`);

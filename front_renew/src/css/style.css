@@ -8,3 +8,12 @@
 @import "./stepthree.scss";
 @import "./stepfour.scss";
 @import "./stepresult.scss";
+
+#kakao-talk-channel-chat-button {
+  visibility: hidden;
+  position: fixed;
+  top: 80vh;
+  right: 5vw;
+  cursor: pointer;
+  z-index: 5000;
+}

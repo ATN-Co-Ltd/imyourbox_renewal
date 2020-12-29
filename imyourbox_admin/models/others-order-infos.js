@@ -8,7 +8,6 @@ module.exports = (sequelize, DataTypes) => {
       seq: {
         type: DataTypes.BIGINT,
         primaryKey: true,
-        allowNull: false,
         autoIncrement: true,
       },
       manager: { 

@@ -12,6 +12,13 @@ function errMsg(msg,scrollY) {
     window.scrollTo(0,scrollY);
 }
 
+function alertMsg(msg,className) {
+    const scrollTo =  document.querySelector(`.${className}`);
+    alert(msg)
+    scrollTo.scrollIntoView({behavior:'smooth',block:'center'});
+
+}
+
 
 //앞뒤버튼
 const stepone = document.querySelector("#stepone");
@@ -42,22 +49,22 @@ nextBtn.addEventListener('click',()=> {
       console.log('hello button!');
    if(product_category.length <1)
    {    
-       errMsg('상품종류 하나이상을 선택해주세요!',161);
+       alertMsg('상품종류 하나이상을 선택해주세요!',"stepone__category-title");
        return;
    }
    else if(detailInput.length <1)
    {
-       errMsg('상세품목을 입력해주세요!',361);
+       alertMsg('상세품목을 입력해주세요!','detail__input__container');
        return;
    }
    else if(arr_storage_type.length <1)
    {
-       errMsg('보관형태 하나이상을 선택해주세요!',500);
+       alertMsg('보관형태 하나이상을 선택해주세요!','room_temperature');
        return;
    }
    else if(barcodeValue.length<1)
    {
-       errMsg('바코드 여부를 선택해주세요!',700);
+       alertMsg('바코드 여부를 선택해주세요!','barcode__radio__groups');
        return;
    }
     window.scrollTo(0,0);
@@ -78,7 +85,7 @@ nextBtn.addEventListener('click',()=> {
     else if(arr_logistics_service_kinds.length <1)
     {
         stepStatus = 2;
-        errMsg('문의할 물류서비스를 하나 이상 선택해주세요!',200);
+        alertMsg('문의할 물류서비스를 하나 이상 선택해주세요!','fullfillment');
         console.log(stepStatus);
         return;
     }
@@ -86,20 +93,19 @@ nextBtn.addEventListener('click',()=> {
     {
         console.log(inputStoreValue);
         stepStatus = 2;
-        errMsg('박스크기를 선택해주세요!',600);
+        alertMsg('박스크기를 선택해주세요!','box__inputStoreRadio__lists');
         return;
     }
     else if(outputBoxsizeValue.length <1)
     {
         stepStatus = 2;
-        errMsg('출고택배 사이즈를 선택해주세요!',1300);
+        alertMsg('출고택배 사이즈를 선택해주세요!','outputBoxsize__Radio__lists-radio');
         console.log(stepStatus);
         return;
     }
     else if((arr_logistics_service_kinds.length >=1 || inputStoreBoxsizeValue.length>=1 && outputBoxsizeValue.length >=1) && stepStatus === 3  ) //step3이거나 step2필드를 다채웠을경우
     {
-        console.log(stepStatus);
-        console.log('3일로안들어오나??');
+       
         stepone.style.display = "none";
         steptwo.style.display = 'none';
         stepthree.style.display = '';
@@ -111,7 +117,6 @@ nextBtn.addEventListener('click',()=> {
     }
     else if(stepStatus === 4)
     {
-        console.log('일로안들어오나??');
         stepone.style.display = "none";
         steptwo.style.display = 'none';
         stepthree.style.display = 'none';

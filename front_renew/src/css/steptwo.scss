@@ -240,9 +240,10 @@ input[type="checkbox"]:checked {
     margin-top: 0.5625rem;
     i {
       position: relative;
-      bottom: 95%;
-
-      left: 45%;
+      // bottom: 95%;
+      // left: 45%;
+      left: 93%;
+      bottom: 50%;
       color: #ffffff;
     }
   }

@@ -121,6 +121,16 @@ module.exports = (sequelize, DataTypes) => {
       field: 'contractDoc',
       allowNull: true,
     },
+    contract_status: {
+      type: DataTypes.ENUM,
+      values:["no_response", "no_negotiation","compare_otherCompany","inquire_storeType","ongoing_negotiation","complete_negotiation"],
+      allowNull: true,
+    },
+    history : {
+      type: DataTypes.STRING,
+      field: 'history',
+      allowNull: true,
+    },
 
     regDate: {
       type: DataTypes.DATE,

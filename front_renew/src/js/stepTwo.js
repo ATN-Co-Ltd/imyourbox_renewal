@@ -21,7 +21,6 @@ const buttons_logistics_service_kinds_type =  document.querySelectorAll("ul.logi
 buttons_logistics_service_kinds_type.forEach(e=> {
     e.addEventListener('click',()=> {
         const checked__icon = e.childNodes[4];
-        console.log(checked__icon);
         const splitStorageType =e.className.split(" ")[1];
         // console.log(`${splitStorageType}`)
         // console.log(arr_logistics_service_kinds.includes(splitStorageType));

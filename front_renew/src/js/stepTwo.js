@@ -5,6 +5,7 @@ import wNumb from 'wnumb';
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/themes/material_orange.css';
 import {Korean} from 'flatpickr/dist/l10n/ko';
+import moment from 'moment';
 const CLICKED_CLASS = "clicked";
 
 //step2
@@ -217,7 +218,8 @@ indicatorOutputBox.addEventListener('input',(e)=> {
     outputBoxCount = outputRangeSlider.noUiSlider.get();
 });
 //input_store_date
-let inputStoreDate = new Date();
+let inputStoreDate = moment().format('YYYY-MM-DD');
+
 flatpickr(".calendar-inputStoreDate",{
     "locale" :Korean,
     onChange: (selectedDate,dateStr)=> {

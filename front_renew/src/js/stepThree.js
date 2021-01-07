@@ -2,7 +2,6 @@ import Swal from 'sweetalert2';
 import {stepStatus} from './button';
 
 
-
 //물류대행서비스 이용여부
 let use_service = "";
  const radio_inputUseSrvice = document.querySelector(".fullfillmentRadios");

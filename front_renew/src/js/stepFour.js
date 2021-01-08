@@ -66,6 +66,9 @@ checkbox.addEventListener('change',(e)=> {
 
 
 
+
+
+
 export {
     customer_company,
     customer_phone,

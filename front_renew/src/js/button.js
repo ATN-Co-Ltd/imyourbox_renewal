@@ -143,7 +143,6 @@ nextBtn.addEventListener('click',()=> {
                 if(result.isConfirmed) {
                     stepStatus =4;
                     console.log(` 버튼확인하기 : ${stepStatus}`);
-                  
                     return;
                 }
             })

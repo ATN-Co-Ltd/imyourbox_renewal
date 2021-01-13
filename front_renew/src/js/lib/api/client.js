@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const client = axios.create();
 
-client.defaults.baseURL = "http://13.124.166.15:80"
+client.defaults.baseURL = "https://api.imyourbox.com"
 
 //헤더설정
 // client.defaults.headers

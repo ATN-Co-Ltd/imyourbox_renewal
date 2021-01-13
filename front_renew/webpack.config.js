@@ -27,7 +27,7 @@ module.exports = {
         options: {
             name:'[path][name].[ext]',
         },
-      }, 
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -47,7 +47,7 @@ module.exports = {
       filename: 'estimate.html',
       template: path.resolve(__dirname, "src", "estimate.html")
     }),
-    // new BundleAnalyzerPlugin(),
+    //  new BundleAnalyzerPlugin(),
   ],
 
   optimization: {

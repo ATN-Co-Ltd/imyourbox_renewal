@@ -1,9 +1,3 @@
-import { stepStatus } from "./button";
-import Swal from 'sweetalert2';
-import { arr_caution_product_type, arr_storage_type, barcodeValue, detailInput, product_category, product_url } from "./stepone";
-import { arr_logistics_service_kinds, service_launching_status ,inputStoreValue,inputStoreBoxsizeValue,inputStoreCount,skuInputStoreCount,inputStoreDate,outputBoxsizeValue,outputBoxCount} from "./stepTwo";
-import { courier_bag, processing_need, releasepackaing, use_service } from "./stepThree";
-import { detailOrderInfo } from "./lib/api/detail_order_info";
 
 //업체명
 let customer_company = "";
@@ -15,6 +9,7 @@ let customer_email = "";
 let customer_manager_name = "";
 //상담내용
 let customer_memo = "";
+
 const white = "#ffffff";
 
 const input_customer_company = document.querySelector(".customer_company");
@@ -65,15 +60,11 @@ checkbox.addEventListener('change',(e)=> {
 })
 
 
-
-
-
-
 export {
     customer_company,
     customer_phone,
     customer_email,
     customer_manager_name,
     customer_memo,
-    permissionPersonalInfo
+    permissionPersonalInfo,
 }

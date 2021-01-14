@@ -22,7 +22,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader,'css-loader',"sass-loader",],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|pdf)$/i,
         loader: 'file-loader',
         options: {
             name:'[path][name].[ext]',
@@ -47,7 +47,7 @@ module.exports = {
       filename: 'estimate.html',
       template: path.resolve(__dirname, "src", "estimate.html")
     }),
-    //  new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
 
   optimization: {

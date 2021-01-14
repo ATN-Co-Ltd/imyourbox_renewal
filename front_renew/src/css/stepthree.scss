@@ -165,6 +165,8 @@
       padding-top: 0.625rem;
       padding-left: 0.875rem;
       cursor: pointer;
+      width: inherit;
+      height: inherit;
       :hover {
         box-shadow: none;
       }

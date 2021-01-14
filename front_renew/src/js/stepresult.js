@@ -164,9 +164,6 @@ const HTMLStepButtonContainer = document.querySelector('.stepBtn');
 
 
 
-
-
-
 stepResultButton.addEventListener('click',()=> {
     if(stepStatus === 5)
     {

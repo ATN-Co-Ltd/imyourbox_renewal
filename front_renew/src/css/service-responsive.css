@@ -1,0 +1,38 @@
+@media screen and (min-width:0px) and (max-width:1023px) {
+    .main-text {
+        font-size: 20px;
+    }
+    .sub-text {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+    #content1,
+    #content2,
+    #content3,
+    #content4 {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .cont1 {
+        padding: 3em 1em;
+    }
+    #header .inner {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .main-text {
+        font-size: 25px;
+    }
+    .sub-text {
+        font-size: 15px;
+        margin-bottom: 70px;
+    }
+    .cont1 {
+        padding: 5em 0;
+    }
+    #header .inner {
+        width: 1024px;
+    }
+}

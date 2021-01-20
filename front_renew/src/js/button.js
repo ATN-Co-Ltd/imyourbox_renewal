@@ -321,12 +321,7 @@ preBtn.addEventListener('click',()=> {
 
 
 
-        
-
-
-
-
-
+    
 
 export {
     errMsg,

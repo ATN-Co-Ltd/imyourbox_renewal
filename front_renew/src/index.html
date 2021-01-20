@@ -1,664 +1,561 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="Subject" content="아임유어박스" />
+        <meta name="Title" content="아임유어박스" />
+        <meta name="description" content="3PL 물류서비스 아임유어박스" />
+        <meta name="keywords" content="imyourbox,i'myourbox,아임유어박스,3PL서비스,3PL,4PL,온라인쇼핑,온라인쇼핑물류,기업물류,소상공인물류,블로그마켓,3rdPartyLogistic,재고관리,포장대행,포장작업,택배대행,물류대행,택배배송,택배발송,WMS,OMS,e-Logistics,e-commer,이커머스,풀필먼트,fullfillment,물류보관,운송대행,보관,세트포장,셋트포장,소분작업,소분택배,소호사무실,소호,soho,blogmarket,스타트업,start-up,의류포장,악세서리포장,신발포장,화장품포장,잡화포장,임가공,짐보관,창고임대,공간임대,"/>
+        <meta name="author" content="limhanel" />
+        <title>아임유어박스</title>
+        <link rel="shortcut icon" href="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/imyourbox.ico" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <!-- 폰트어썸 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+        <!-- css부분 -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />       
+    </head>
+        <header id="header">
+            <div class="cont--inner">
+                <h1 class="logo">
+                    <a href="index.html"><img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/horizontal-logo.png" alt="아임유어박스">IMYOURBOX</a>
+                </h1>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="Subject" content="아임유어박스" />
-    <meta name="Title" content="아임유어박스" />
-    <meta name="description" content="3PL 물류서비스 아임유어박스" />
-    <meta name="keywords" content="imyourbox,i'myourbox,아임유어박스,3PL서비스,3PL,4PL,온라인쇼핑,온라인쇼핑물류,기업물류,소상공인물류,블로그마켓,3rdPartyLogistic,재고관리,포장대행,포장작업,택배대행,물류대행,택배배송,택배발송,WMS,OMS,e-Logistics,e-commer,이커머스,풀필먼트,fullfillment,물류보관,운송대행,보관,세트포장,셋트포장,소분작업,소분택배,소호사무실,소호,soho,blogmarket,스타트업,start-up,의류포장,악세서리포장,신발포장,화장품포장,잡화포장,임가공,짐보관,창고임대,공간임대,"
-    />
-    <meta name="author" content="limhanel" />
+                <div class="header--gnb pc">
+                    <ul class="gnb">
+                        <li>
+                            <a href="enquiry.html">간편문의</a>
+                        </li>
+                        <li>
+                            <a href="estimate.html">예상견적</a>
+                        </li>
+                        <li>
+                            <a href="service.html">SERVICE</a>
+                        </li>
+                        <li>
+                            <a href="introduction.html">회사소개</a>
+                        </li>
+                        <li>
+                            <a href="http://222.231.61.51/" target="_blank">WMS</a>
+                        </li>
+                    </ul>
 
-    <title>아임유어박스</title>
+                </div>
 
-    <link rel="shortcut icon" href="images/imyourbox.ico" />
-    <!-- 폰트어썸 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
-    <!-- css부분 -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
-    <!-- 폰트 -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
-    <!-- 구글 광고 -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146580343-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-
-        gtag("config", "UA-146580343-1");
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Ads: 611833307 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-611833307"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-
-        gtag("config", "AW-611833307");
-    </script>
-
-    <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-   
-    <script>
-        $("#more").click(function() {
-            if (content.style.display == "none") {
-                content.style.display = "";
-                more.innerText = ">닫기";
-            } else {
-                content.style.display = "none";
-                more.innerText = ">더보기";
-            }
-            $("#content").slideToggle("slow", function() {});
-        });
-
-        $(".hover").mouseleave(function() {
-            $(this).removeClass("hover");
-        });
-    </script>
-
-    <!-- Channel Plugin Scripts -->
-    <script>
-        window.channelPluginSettings = {
-            pluginKey: "1d3ff2cc-c8c5-46bf-8b53-c75f5ead8ba1",
-        };
-        (function() {
-            var w = window;
-            if (w.ChannelIO) {
-                return (window.console.error || window.console.log || function() {})(
-                    "ChannelIO script included twice."
-                );
-            }
-            var d = window.document;
-            var ch = function() {
-                ch.c(arguments);
-            };
-            ch.q = [];
-            ch.c = function(args) {
-                ch.q.push(args);
-            };
-            w.ChannelIO = ch;
-
-            function l() {
-                if (w.ChannelIOInitialized) {
-                    return;
-                }
-                w.ChannelIOInitialized = true;
-                var s = document.createElement("script");
-                s.type = "text/javascript";
-                s.async = true;
-                s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
-                s.charset = "UTF-8";
-                var x = document.getElementsByTagName("script")[0];
-                x.parentNode.insertBefore(s, x);
-            }
-            if (document.readyState === "complete") {
-                l();
-            } else if (window.attachEvent) {
-                window.attachEvent("onload", l);
-            } else {
-                window.addEventListener("DOMContentLoaded", l, false);
-                window.addEventListener("load", l, false);
-            }
-        })();
-
-        $(document).ready(function() {
-            $("#spreadBtn").click(function() {
-                if ($("#hiddenList").is(":visible")) {
-                    /*toggleClass(기존클래스명 바꿀클래스명);*/
-                    $("#spreadBtn").toggleClass("btn01 btn02");
-                    $("#hiddenList").slideUp();
-                } else {
-                    $("#spreadBtn").toggleClass("btn02 btn01");
-                    $("#hiddenList").slideDown();
-                }
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("#mainpop .btn_close").click(function() {
-                setCookieMobile("todayCookie", "done", 1);
-                $("#mainclose").hide();
-            });
-        });
-
-        function setCookieMobile(name, value, expiredays) {
-            var todayDate = new Date();
-            todayDate.setDate(todayDate.getDate() + expiredays);
-            document.cookie =
-                name +
-                "=" +
-                escape(value) +
-                "; path=/; expires=" +
-                todayDate.toGMTString() +
-                ";";
-        }
-
-        function getCookieMobile() {
-            var cookiedata = document.cookie;
-            if (cookiedata.indexOf("todayCookier=done") < 0) {
-                $("#mainpop").show();
-            } else {
-                $("#mainpop").hide();
-            }
-        }
-        getCookieMobile();
-    </script>
-    <!-- Mirae Log Analysis Script Ver 1.0   -->
-    <script type="text/javascript">
-        var mi_adkey = "okrcl";
-        var mi_is_defender = "";
-        var mi_date =
-            parseInt(
-                new Date()
-                .toISOString()
-                .slice(0, 13)
-                .replace(/-/g, "")
-                .replace(/t/gi, "")
-                .replace(/:/gi, "")
-            ) + Math.abs(new Date().getTimezoneOffset() / 60);
-        var mi_script =
-            "<scr" +
-            "ipt " +
-            "type='text/javascr" +
-            "ipt' src='//log1.toup.net/mirae_log.js?t=" +
-            mi_date +
-            "' async='true'></scr" +
-            "ipt>";
-        document.writeln(mi_script);
-    </script>
-    <!-- Mirae Log Analysis Script END  -->
-
-    <!-- Enliple Common Tracker v3.6 [공용] start -->
-    <script type="text/javascript">
-        function mobRf() {
-            var rf = new EN();
-            rf.setData("userid", "imyourbox");
-            rf.setSSL(true);
-            rf.sendRf();
-        }
-    </script>
-    <script src="https://cdn.megadata.co.kr/js/en_script/3.6/enliple_min3.6.js" defer="defer" onload="mobRf()"></script>
-    <!-- Enliple Common Tracker v3.6 [공용] end -->
-</head>
-
-<body>
-
-    <header id="header">
-        <div class="inner">
-            <h1 class="logo">
-                <a href="index.html"><img src="images/horizontal-logo.png" alt="아임유어박스">IMYOURBOX</a>
-            </h1>
-           
-
-            <div class="header--gnb pc">
-                <ul class="gnb">
-                    <li>
-                        <a href="enquiry.html">간편문의</a>
-                    </li>
-                    <li>
-                        <a href="estimate.html">예상견적</a>
-                    </li>
-                    <li>
-                        <a href="service.html">SERVICE</a>
-                    </li>
-                    <li>
-                        <a href="introduction.html">회사소개</a>
-                    </li>
-                    <li>
-                        <a href="http://222.231.61.51/" target="_blank">WMS</a>
-                    </li>
-                </ul>
-            </div>
-         
-            <!-- gnb -->
-
-            <input type="checkbox" id="menuicon">
-            <label for="menuicon">
+                <input type="checkbox" id="menuicon">
+                <label for="menuicon">
             <span></span>
             <span></span>
             <span></span>            
             </label>
 
-            <div class="sidebar">
-                <p>MENU</p>
-                <ul class="gnb">
-                    <li>
-                        <a href="enquiry.html">간편문의</a>
-                    </li>
-                    <li>
-                        <a href="estimate.html">예상견적</a>
-                    </li>
-                    <li>
-                        <a href="service.html">SERVICE</a>
-                    </li>
-                    <li>
-                        <a href="introduction.html">회사소개</a>
-                    </li>
-                    <li>
-                        <a href="http://222.231.61.51/" target="_blank">WMS</a>
-                    </li>
-                </ul>
-                <!-- gnb mobile-->
-                <ul class="sns">
-                    <li>
-                        <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x" ></i></a>
-                    </li>
-                    <li>
-                        <a href="https://blog.naver.com/imyourbox" target="_blank"><i class="fab fa-blogger-b fa-2x" ></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x" ></i></a>
-                    </li>
-                </ul>
-                <!--sns-->
-            </div>
+                <div class="sidebar">
+                    <p>MENU</p>
+                    <ul class="gnb">
+                        <li>
+                            <a href="enquiry.html">간편문의</a>
+                        </li>
+                        <li>
+                            <a href="estimate.html">예상견적</a>
+                        </li>
+                        <li>
+                            <a href="service.html">SERVICE</a>
+                        </li>
+                        <li>
+                            <a href="introduction.html">회사소개</a>
+                        </li>
+                        <li>
+                            <a href="http://222.231.61.51/" target="_blank">WMS</a>
+                        </li>
+                    </ul>
+                    <!-- gnb mobile-->
+                    <ul class="sns">
+                        <li>
+                            <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x" ></i></a>
+                        </li>
+                        <li>
+                            <a href="https://blog.naver.com/imyourbox" target="_blank"><i class="fab fa-blogger-b fa-2x" ></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x" ></i></a>
+                        </li>
+                    </ul>
+                    <!--sns-->
+                </div>
 
 
-
-        </div>
-        <!--inner-->
-
-
-    </header>
-
-    <div id="container">
-        <div class="cont1">
-            <video playsinline autoplay="autoplay" loop="loop" muted="muted" poster="URL" preload="auto">
-          <source src="vedio/remain.mp4" type="video/mp4" />
-        </video>
-        </div>
-        <!--cont1-->
-
-        <div class="cont2">
-            <div class="cont--inner">
-                <p class="cont2--text1">사장님께선 <span>물건판매</span>만 하세요.</p>
-                <p class="cont2--text2">물류는</p>
-                <p class="cont2--text3"><span>아임유어박스</span>가</p>
-                <p class="cont2--text4">다 아니까!</p>
-
-                <p class="cont2--text5 pc">포장부터 출고까지 모든 물류를 full로<br> 13년 경력의 fullfillment 서비스와 성장하세요
-                </p>
-                <a class="button">예상견적 <p class="mobile">내 물류상황에 맞는 상세한 견적을 확인하고 싶으시다면?</p></a>
-                <a class="button">간편문의<p class="mobile">물류 전문가와 빠른 상담을 통해 견적을 확인하고 싶으시다면?</p></a>
 
             </div>
+            <!--inner-->
+
+
+        </header>
+
+        <div id="container">
+            <div class="cont1">
+                <div class="inner">
+                    <div class="slide-area">
+                        <div class="slide-box">
+
+                            <div class="block-line">
+                            </div>
+                            <div class="block">
+                                <ul id="ticker">
+                                    <li><a href="#">에어캡포장</a></li>
+                                    <li><a href="#">이커머스 풀필먼트</a></li>
+                                    <li><a href="#">선물세트 제작</a></li>
+                                    <li><a href="#">당일배송</a></li>
+                                    <li><a href="#">아마존 진출</a></li>
+                                </ul>
+                            </div>
+                            <!--block-->
+
+                        </div>
+                        <!-- slide-box -->
+
+                        <p class="slidetext">
+                            아임유어박스에서
+                        </p>
+
+                    </div>
+                    <!--slide-area-->
+                </div>
+                <!--inner-->
+                <p class="cont1-text">사장님께선<span>물건판매</span>만 하세요.<br>물류는 <span>아임유어박스</span>가 다 아니까</p>
+
+            </div>
+            <!-- class : cont--inner -->
         </div>
-        <!--cont2-->
+        <!-- class : cont1 -->
 
-
-        <div class="cont3">
+        <div class="cont1-button cont-box">
             <div class="cont--inner">
-                <div class="counter--box box-line">
-                    <img src="images/3pl01.svg" alt="박스설명01">
-                    <p class="counter--cont">3PL 경력</p>
-                    <p id="counter1" class="counter--text"></p><span class="unit">년</span>
-                </div>
-                <div class="counter--box box-line">
-                    <img src="images/3pl02.svg" alt="박스설명02">
-                    <p class="counter--cont">1일 평균 출고량</p>
-                    <p id="counter2" class="counter--text"></p><span class="unit">건</span class="unit">
-                </div>
-                <div class="counter--box box-line2">
-                    <img src="images/3pl03.svg" alt="박스설명03">
-                    <p class="counter--cont">취급 카테고리 수</p>
-                    <p id="counter3" class="counter--text"></p><span class="unit">개</span>
-                </div>
-
-                <span class="line"></span>
-
-                <span class="mobile">포장부터 출고까지 모든 물류를 full로<br> 13년 경력의 fullfillment 서비스와 성장하세요
-                </span>
+                <a class="button">예상견적<p class="button-text">내 물류상황에 맞는<br>상세한 견적을 확인하고 싶으시다면?</p></a>
+                <a class="button">간편문의<p class="button-text">물류 전문가와 빠른 상담을 통해<br>견적을 확인하고 싶으시다면?</p></a>
             </div>
         </div>
-        <!--cont3-->
+        <!--cont-1button-->
 
-        <div class="cont4">
-            <h3>
-                <p class="bold">Fullfillment</p>
-                <br>풀필먼트, 왜 필요할까요?</h3>
+
+        <div class="cont2 orange-back cont-box">
             <div class="cont--inner">
-                <div class="counter--box">
-                    <img src="images/3pl04.svg" alt="박스설명04">
-                    <div class="text-box">
-                        <p class="counter--cont">인건비/임대료</p>
-                        <span class="about text">약</span>
-                        <p id="counter4" class="counter--text"></p>
-                        <span class="unit">만원</span>
-                        <p class="">감소</p>
+                <p class="title">Fulfillment</p>
+                <h3 class="sub-title">이 모든게 한곳에서 가능해야
+                    <span class=bold>'FULL'</span>fullfillment</h3>
+
+                <div class="cont2--container">
+
+                    <div class="icon-box">
+                        <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/boximage01.svg" alt="test" class="icon-box-iamge">
+                        <p class="icon-text1">재고보관/관리</p>
+                        <p class="icon-text2">WMS를 통한 실시간 재고관리</p>
                     </div>
+                    <!--icon-box-->
+
+                    <div class="icon-box">
+                        <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/boximage02.svg" alt="test" class="icon-box-iamge">
+                        <p class="icon-text1">주문출고처리</p>
+                        <p class="icon-text2">온라인 주문의 입출고 대응 및 상품의 전달완료까지 꼼꼼히 확인</p>
+                    </div>
+                    <!--icon-box-->
+
+                    <div class="icon-box">
+                        <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/boximage04.svg" alt="test" class="icon-box-iamge">
+                        <p class="icon-text1">반품관리</p>
+                        <p class="icon-text2">반품된 상품의 검품 및 양품화 작업</p>
+                    </div>
+                    <!--icon-box-->
+
+
+                    <div class="icon-box">
+                        <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/boximage03.svg" alt="test" class="icon-box-iamge">
+                        <p class="icon-text1">전문가 컨설팅</p>
+                        <p class="icon-text2">10년 이상 경력의 물류 전문가의 컨설팅 제공</p>
+                    </div>
+                    <!--icon-box-->
+
+
+                    <div class="icon-box">
+                        <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/boximage05.svg" alt="test" class="icon-box-iamge">
+                        <p class="icon-text1">상품화 작업</p>
+                        <p class="icon-text2">최종 상품화에 필요한 모든 임가공 서비스 제공</p>
+                    </div>
+                    <!--icon-box-->
+
+
+                    <div class="icon-box">
+                        <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/boximage06.svg" alt="test" class="icon-box-iamge">
+                        <p class="icon-text1">기타 모든 물류</p>
+                        <p class="icon-text2">고객님의 서비스 운영에 필요한 모든 물류 서비스의 전반을 제공합니다.</p>
+                    </div>
+                    <!--icon-box-->
+
+
                 </div>
-                <div class="counter--box">
-                    <img src="images/3pl05.svg" alt="박스설명05">
-                    <div class="text-box">
-                        <p class="counter--cont">오배송률</p>
-                        <span class="about text">약</span>
-                        <p id="counter5" class="counter--text"></p>
-                        <span class="unit">%</span>
-                        <p class="">감소</p>
-                    </div>
-                </div>
-                <div class="counter--box">
-                    <img src="images/3pl06.svg" alt="박스설명06">
-                    <div class="text-box">
-                        <p class="counter--cont">출고소요 시간</p>
-                        <span class="about text">약</span>
-                        <p id="counter6" class="counter--text"></p>
-                        <span class="unit">시간</span>
-                        <p class="">감소</p>
-                    </div>
-                </div>
-                <p class="cont-text">이커머스 시장에서 필수인 빠르고 정확한 배송,<br>
-                    <span class="bold">아임유어박스의 풀필먼트 서비스</span>로 합리적으로 경험하세요!
-                </p>
-            </div>
-            <!-- cont--inner -->
-
-        </div>
-        <!--cont4-->
-
-        <div class="cont5">
-            <h3 class="cont-text">왜 아임유어박스어야 할까요?</h3>
-
-            <ul class="timeline">
-
-                <!-- Item 1 -->
-                <li>
-                    <div class="direction-r">
-                        <div class="flag-wrapper">
-                            <span class="flag">2019</span>
-
-                        </div>
-                        <div class="desc"><span>13년간의 대기업 물류경험을 바탕</span>으로<br> 소상공인 및 이커머스를 위한 풀필먼트 서비스<br><span>'아임유어박스'</span>런칭</div>
-                    </div>
-                </li>
-
-                <!-- Item 2 -->
-                <li>
-                    <div class="direction-l">
-                        <div class="flag-wrapper">
-                            <span class="flag">2017</span>
-
-                        </div>
-                        <div class="desc">한섬, 온앤온 물류대행 시작</div>
-                    </div>
-                </li>
-
-                <!-- Item 3 -->
-                <li>
-                    <div class="direction-r">
-                        <div class="flag-wrapper">
-                            <span class="flag">2016</span>
-
-                        </div>
-                        <div class="desc">호텔신라, LF 물류대행 시작</div>
-                    </div>
-                </li>
-
-                <!-- Item 4 -->
-                <li>
-                    <div class="direction-l">
-                        <div class="flag-wrapper">
-                            <span class="flag">2015</span>
-
-                        </div>
-                        <div class="desc">K2, 콜롬비아 스포츠웨어 물류대행 시작</div>
-                    </div>
-                </li>
-
-                <!-- Item 5 -->
-                <li>
-                    <div class="direction-r">
-                        <div class="flag-wrapper">
-                            <span class="flag">2013</span>
-
-                        </div>
-                        <div class="desc">에스콰이아 쿠첸 물류대행 시작</div>
-                    </div>
-                </li>
-                <!-- Item 6 -->
-                <li>
-                    <div class="direction-l">
-                        <div class="flag-wrapper">
-                            <span class="flag">2011</span>
-
-                        </div>
-                        <div class="desc">신세계푸드, 코웨이 화장품, 웅진 쿠첸 물류대행시작</div>
-                    </div>
-                </li>
-
-                <!-- Item 7 -->
-                <li>
-                    <div class="direction-r">
-                        <div class="flag-wrapper">
-                            <span class="flag">2007</span>
-
-                        </div>
-                        <div class="desc"><span>(주)에이티엔 회사설립</span></div>
-                    </div>
-                </li>
-            </ul>
-            <p class="cont-text"><span>3PL 직접 운영 경력</span>으로<br>
-                <span>대기업 수준의 풀필먼트 서비스</span>를 제공합니다.</p>
+                <!--cont2--container-->
 
 
-        </div>
-        <!--cont5-->
-
-        <div class="cont6">
-            <div class="cont--inner">
-                <h3><span>아임유어박스</span>는 물류의 모든 것을 제공합니다.<br> 아임유어박스의 풀필먼트 서비스로 <br>물류업무 부담을 줄여보세요.</h3>
-
-                <div class="cont6--container">
-                    <div class="process">
-                        <div class="cont6--image"><img src="images/process1.svg" alt="업무설명-5"></div>
-                        <div class="cont6--text">
-                            <h4>재고관리</h4>
-                        </div>
-                        <!--cont6--text-->
-                    </div>
-                    <!--process-->
-
-                    <div class="process">
-                        <div class="cont6--image"><img src="images/process2.svg" alt="업무설명-8"></div>
-                        <div class="cont6--text">
-                            <h4>출고처리</h4>
-                        </div>
-                        <!--cont6--text-->
-                    </div>
-                    <!--process-->
-
-
-                    <div class="process">
-                        <div class="cont6--image"><img src="images/process3.svg" alt="업무설명-7"></div>
-                        <div class="cont6--text">
-                            <h4>포장/임가공</h4>
-                        </div>
-                        <!--cont6--text-->
-                    </div>
-                    <!--process-->
-
-                    <div class="process">
-                        <div class="cont6--image"><img src="images/process5.svg" alt="업무설명-6"></div>
-                        <div class="cont6--text">
-                            <h4>그 외 물류의 모든것</h4>
-                        </div>
-                        <!--cont6--text-->
-                    </div>
-                    <!--process-->
-                </div>
-                <!--cont6--container-->
-                <a class="button">자세히보기</a>
             </div>
             <!--cont--inner-->
         </div>
-        <!--cont6-->
-
-        <div class="cont7">
-            <div class="cont--inner">
-                <p class="cont-text">아임유어박스의 스마트 물류 시스템으로<br> 출고오류률 0%에 도전합니다</p>
-                <a class="button">자세히보기</a>
-            </div>
-        </div>
-        <!--cont7-->
-
-
-
-        <div class="cont8">
-            <div class="cont--inner">
-                <p class="cont-text">이미 201개의 업체가 아임유어박스와 함께하고 있습니다.</p>
-                <a class="button">더보기</a>
-            </div>
-        </div>
-        <!--cont8-->
-
-
-        <div class="cont9">
-            <div class="cont--inner">
-                <a class="button">전화문의 신청</a>
-                <a class="button">예상견적 확인하기</a>
-
-            </div>
-        </div>
-        <!--cont9-->
-
-
     </div>
-    <!--container-->
+    <!-- class : cont2 -->
 
+    <div class="cont3 cont-box">
+        <div class="cont--inner">
+            <h3 class="sub-title">풀필먼트Fulfillment, 왜 필요 할까요?</h3>
+            <p class="cont3-text">이커머스 시장에서 필수인 빠르고 정확한 배송,<br><span class="bold">아임유어박스의 풀필먼트 서비스</span>로 합리적으로 경험하세요!</p>
 
-    <footer id="footer">
-        <div class="inner">
+            <div class="counter--box box-line">
+                <p id="counter1" class="counter--text"></p><span class="unit"> %</span>
+                <p class="counter--cont">인건비/임대료<br>감소</p>
+            </div>
+            <div class="counter--box box-line">
+                <p id="counter2" class="counter--text"></p><span class="unit"> %</span class="unit">
+                        <p class="counter--cont">오배송률<br>감소</p>
+                </div>
+                <div class="counter--box box-line2"> 
+                    <p id="counter3" class="counter--text"></p><span class="unit"> 시간</span>
+                <span class="line"></span>
+                <p class="counter--cont">월 주문 처리시간<br>감소</p>
+            </div>
+        </div>
+        <!--cont--inner-->
+    </div>
+    <!-- class : cont3 -->
 
-            <div class="footer-logo">
-                <img src="images/logo_white.png" alt="footerlogo" />
-                <p class="copy">
-                    Copyright &copy; 2019 I’m your box Inc. All Rights Reserved.
+    <div class="cont4 orange-back cont-box">
+        <div class="cont--inner">
+            <p class="title">서비스 소개</p>
+            <h3 class="sub-title">로지스 팩토리(Logis Factory)</h3>
+        </div>
+        <!--cont--inner-->
+        <div class="back-img-box">
+            <div class="left-image1">
+                <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/back-img01.jpg" alt="background-images01">
+            </div>
+            <!--left-image1-->
+            <div class="right-box">
+                <p class="box-text">포장, 라벨, 선물세트 등 임가공의 모든 것을 한곳에!<br> 상품화의 전 단계를 아임유어박스가 책임집니다.</p>
+
+                <p class="more-view"><a href="service.html" target="_blank">자세히보기 <i class="fas fa-chevron-right"></a></i>
+
                 </p>
             </div>
-            <!--footer-center-->
+            <!-- right-box-->
+        </div>
+        <!--back-img-box-->
+    </div>
+    <!--cont4-->
 
-            <div class="footer-sns">
-                <ul class="sns">
-                    <li>
-                        <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://blog.naver.com/imyourbox" target="_blank"><i class="fab fa-blogger-b fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-                    </li>
-                </ul>
-                <!--sns-->
+
+    <div class="cont5 cont-box">
+        <div class="cont--inner">
+            <p class="title">서비스 소개</p>
+            <h3 class="sub-title">스마트 물류 시스템</h3>
+        </div>
+        <!--cont--inner-->
+        <div class="back-img-box">
+            <div class="right-image1">
+                <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/back-img02.jpg" alt="background-images02">
             </div>
-            <!--footer-sns-->
+            <!--left-image1-->
+            <div class="left-box">
+                <p class="box-text">주문 확인부터 패킹까지 전과정 시스템화로 스마트하게<br>오류 없이 빠른 스마트 물류를 체험하세요.</p>
 
+                <p class="more-view"><a href="service.html" target="_blank">자세히보기 <i class="fas fa-chevron-right"></a></i>
+
+
+            </div>
+            <!-- right-box-->
+        </div>
+        <!--back-img-box-->
+    </div>
+    <!-- class : cont5 -->
+
+    <div class="cont6 orange-back cont-box">
+        <div class="cont--inner">
+            <p class="title">제휴 서비스</p>
+            <h3 class="sub-title">수도권 당일배송</h3>
+        </div>
+        <!--cont--inner-->
+        <div class="back-img-box">
+            <div class="left-image1">
+                <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/back-img03.jpg" alt="background-images03">
+            </div>
+            <!--left-image1-->
+            <div class="right-box">
+                <p class="box-text">단 한개의 물건도 당일배송·새벽배송 가능!<br> 아임유어박스에서 프리미엄 서비스를 경험하세요.</p>
+
+                <p class="more-view"><a href="service.html" target="_blank">자세히보기 <i class="fas fa-chevron-right"></a></i>
+
+                </p>
+            </div>
+            <!-- right-box-->
+        </div>
+        <!--back-img-box-->
+    </div>
+    <!-- class : cont6 -->
+
+    <div class="cont7 cont-box">
+        <div class="cont--inner">
+            <p class="title">제휴 서비스</p>
+            <h3 class="sub-title">미국 아마존 입점</h3>
+        </div>
+        <!--cont--inner-->
+        <div class="back-img-box">
+            <div class="right-image1">
+                <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/back-img04.jpg" alt="background-images04">
+            </div>
+            <!--left-image1-->
+            <div class="left-box">
+                <p class="box-text">미국 아마존 진출을 원하는 셀러를 위한 맞춤 솔루션!<br> 아임유어박스에서는 아마존 진출이 쉬워집니다.</p>
+
+                <p class="more-view"><a href="service.html#tab2" target="_blank">자세히보기 <i class="fas fa-chevron-right"></a></i>
+
+                </p>
+            </div>
+            <!-- right-box-->
+        </div>
+        <!--back-img-box-->
+    </div>
+    <!-- class : cont7 -->
+
+    <div class="cont8 orange-back cont-box">
+        <div class="cont--inner">
+            <h3>NEWS</h3>
+           
+            <!-- <button class="slick-prev">
+                <i class="fas fa-angle-right"></i>
+            </button>
+             <button class="slick-next"> 
+                <i class="fas fa-angle-left"></i>
+             </button> -->
+            <section class="regular slider">
+               
+                <div class="news-cont">
+                    <a href="#none" target="blank" alt="새페이지">
+                        <div class="news-img-area">
+                            <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/contractor01.jpg">
+                            <i class="fas fa-arrow-right fa-2x arrow"></i>
+                        </div>
+                        <!--news-img-area-->
+                        <p class="news-title">1번 - 설명이 오지게 많아요 설명이 오지게 많아요</p>
+                    </a>
+                </div>
+                <!--news-cont-->
+                <div class="news-cont">
+                    <a href="#none" target="blank" alt="새페이지">
+                        <div class="news-img-area">
+                            <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/contractor02.jpg">
+                            <i class="fas fa-arrow-right fa-2x arrow"></i>
+                        </div>
+                        <!--news-img-area-->
+                        <p class="news-title">2번 - 설명이 오지게 많아요 설명이 오지게 많아요</p>
+                    </a>
+                </div>
+                <!--news-cont-->
+                <div class="news-cont">
+                    <a href="#none" target="blank" alt="새페이지">
+                        <div class="news-img-area">
+                            <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/contractor03.jpg">
+                            <i class="fas fa-arrow-right fa-2x arrow"></i>
+                        </div>
+                        <!--news-img-area-->
+                        <p class="news-title">3번 - 설명이 오지게 많아요 설명이 오지게 많아요</p>
+                    </a>
+                </div>
+                <!--news-cont-->
+                <div class="news-cont">
+                    <a href="#none" target="blank" alt="새페이지">
+                        <div class="news-img-area">
+                            <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/contractor04.jpg">
+                            <i class="fas fa-arrow-right fa-2x arrow"></i>
+                        </div>
+                        <!--news-img-area-->
+                        <p class="news-title">4번 - 설명이 오지게 많아요 설명이 오지게 많아요</p>
+                    </a>
+                </div>
+                <!--news-cont-->
+            </section>
+
+        </div>
+        <!--cont--inner-->
+    </div>
+    <!-- class : cont8 -->
+
+    <div class="cont9 cont-box">
+
+        <section id="stepfour" class="secton">
+            <div class="section__container">
+                <!-- <div class="liner"></div>  -->
+                <div class="cont--inner">
+                    <h3>우리회사의 Fullfillment 고민,<br> 13년차 전문가와 상담하세요</h3>
+                </div>
+                <div class="stepFour__wrapper">
+                <div class="detail__container stepFour__container first__detail__container">
+                    <div class="stepone__category companyNameWrapper">
+                        <span class="stepone__category-title">업체명 *</span>
+                    </div>
+                    <div class="stepfour__detail__input__container">
+                        <input type="input"class="detail__input company__input customer_company" placeholder="   회사명"></input>
+                    </div>
+                </div>
+                    <div class="detail__container stepFour__container second__detail__container" >
+                        <div class="stepone__category companyNameWrapper">
+                            <span class="stepone__category-title">연락처 *</span>
+                        </div>
+                        <div class="detail__input__container stepfour__detail__input__container">
+                            <input type="input"class="detail__input company__input customer_phone" placeholder="   핸드폰번호"></input>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepFour__wrapper">
+                    <div class="detail__container stepFour__container first__detail__container">
+                        <div class="stepone__category companyNameWrapper">
+                            <span class="stepone__category-title">이메일 *</span>
+                        </div>
+                        <div class="detail__input__container stepfour__detail__input__container">
+                            <input type="input"class="detail__input company__input customer_email" placeholder="   Email"></input>
+                        </div>
+                </div>
+                <div class="detail__container stepFour__container second__detail__container">
+                    <div class="stepone__category companyNameWrapper">
+                        <span class="stepone__category-title">담당자 성함 *</span>
+                    </div>
+                    <div class="detail__input__container stepfour__detail__input__container">
+                        <input type="input"class="detail__input company__input customer_manager_name" placeholder="   담당자명"></input>
+                    </div>
+                </div>
+                </div>
+                   
+                <div class="detail__container memo__container">
+                    <div class="stepone__category companyNameWrapper">
+                        <span class="stepone__category-title">상담 내용 *</span>
+                    </div>
+                    <div class="memo__input__container">
+                        <textarea class="detail__textarea customer_memo" rows="5" cols="33" placeholder="판매상품의 종류, 취급수, 취급방법 등 상담에 도움이 될 정보를 입력해주세요."></textarea>
+                    </div>
+                </div>
+                <div class="stepone__category endfour__container">
+                    <div class="last__checkbox">
+                        <input id="permission" type="checkbox">
+                        <label for="permission" ><span>개인정보 수집 및 이용목적에 동의합니다.
+                            입력해주신 개인정보는 문의/상담 목적으로 사용되며 사용 후 즉시 폐기됩니다.</span></label>
+                        </div>
+                       
+                </div>
+                <a class="button">전화문의 신청</a>
+            </div>
+        
+        </section>
+           
+        <!--cont--inner-->
+    </div>
+    <!-- class : cont9 -->
+
+    <div class="cont10 range-back cont-box">
+        <div class="cont--inner">
+            <p class=""></p>
+            <a class="button">예상견적 확인하기</a>
+        </div>
+        <!--cont--inner-->
+    </div>
+    <!-- class : cont9 -->
+
+</div>
+<!-- id : container -->
+
+
+<footer id="footer">
+    <div class="inner">
+        <div class="cont--inner">
+            <div class="logo-div">
+                <div class="footer-logo logo-width">
+                    <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/logo_white.png" alt="footerlogo">
+                </div>
+                <!--footer-logo-->
+
+
+                <a href="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/Imyourbox.pdf" alt=소개서 target="blank">
+                    <p class="logo-width service-download">서비스 소개서 다운로드<i class="fas fa-caret-square-down"></i></p>
+                </a>
+                <p class="logo-width call"><i class="fas fa-phone-alt"></i>대표번호 031-635-1471</p>
+
+
+                <div class="footer-sns logo-width">
+                    <ul class="sns">
+                        <li>
+                            <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://blog.naver.com/imyourbox" target="_blank"><i class="fab fa-blogger-b fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                        </li>
+                    </ul>
+                    <!--sns-->
+                </div>
+                <!--footer-sns-->
+            </div>
+            <!--logo-div-->
 
             <div class="contact">
-                <p class="company">&#40;주&#41;에이티엔</p>
-                <p>대표이사 안동석</p>
-                <p>사업자등록번호 126-86-03002</p>
-                <p class="last">대표번호 031-635-1471</p>
-                <p>이메일 help&#64;newatn.co.kr</p>
-                <p>
-                    경기도 이천시 마장면 덕평로 771-10<br>&#40;구주소 &#58; 경기도 이천시 마장면 이평리 293-8 &#41;
-                </p>
-                <p>
-                    서울 금천구 가산디지털1로 165 가산비즈니스센터 403호<br>&#40; 구주소 &#58; 서울 금천구 가산동 371-6 가산비즈니스센터 403호&#41;
-                </p>
+                <div class="contact-text1">
+                    <span class="company">&#40;주&#41;에이티엔</span>
+                    <span>대표이사 안동석</span>
+                    <span>사업자등록번호 126-86-03002</span>
+                    <p>이메일 help&#64;newatn.co.kr</p>
+                </div>
+                <!--contact-text1-->
+                <div class="contact-text2">
+                    <p>
+                        경기도 이천시 마장면 덕평로 771-10<br>&#40;구주소 &#58; 경기도 이천시 마장면 이평리 293-8 &#41;
+                    </p>
+                    <p>
+                        서울 금천구 가산디지털1로 165 가산비즈니스센터 403호<br>&#40; 구주소 &#58; 서울 금천구 가산동 371-6 가산비즈니스센터 403호&#41;
+                    </p>
+                </div>
+                <!--contact-text2-->
             </div>
             <!-- contact -->
+
+
+            <div class="use-div">
+                <ul class="use">
+                    <li><a href="access.html">이용약관</a></li>
+                    <li><a href="access2.html" class="bold">개인정보처리방침</a></li>
+                    <li><a href="contact.html">오시는길</a></li>
+                </ul>
+                <!--use-->
+            </div>
+            <!-- use-div-->
+            <p class="copy">
+                Copyright &copy; 2019 I’m your box Inc. All Rights Reserved.
+            </p>
         </div>
-        <!--top-->
-
-        <div class="use-div">
-            <ul class="use">
-                <li><a href="access.html">이용약관</a></li>
-                <li><a href="access2.html" class="bold">개인정보처리방침</a></li>
-                <li><a href="contact.html">오시는길</a></li>
-            </ul>
-            <!--info-->
-        </div>
-        <!-- at_area-->
-        </div>
-        <!-- inner-->
+    </div>
+    <!-- inner-->
 
 
-    </footer>
+</footer>
 
 
-    <script>
-        const width = window.screen.width;
-        console.log(width);
-        if (width < 480) {
-            console.log(width);
-            const mainVideo = document.querySelector(".con1__mainVideo");
-            mainVideo.autoplay = "none";
-            mainVideo.preload = 'none';
-        }
-    </script>
+<!-- kakao chat -->
+<div
+id="kakao-talk-channel-chat-button"
+data-channel-public-id="_jMSxcj"
+data-title="consult"
+data-size="large"
+data-color="yellow"
+data-shape="pc"
+data-support-multiple-densities="true"
+></div>
 
-
-    <script>
-        function numberCounter(target_frame, target_number) {
-            this.count = 0;
-            this.diff = 0;
-            this.target_count = parseInt(target_number);
-            this.target_frame = document.getElementById(target_frame);
-            this.timer = null;
-            this.counter();
-        };
-        numberCounter.prototype.counter = function() {
-            var self = this;
-            this.diff = this.target_count - this.count;
-
-            if (this.diff > 0) {
-                self.count += Math.ceil(this.diff / 5);
-            }
-
-            this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-            if (this.count < this.target_count) {
-                this.timer = setTimeout(function() {
-                    self.counter();
-                }, 20);
-            } else {
-                clearTimeout(this.timer);
-            }
-        };
-
-        new numberCounter("counter1", 15);
-        new numberCounter("counter2", 1126);
-        new numberCounter("counter3", 999);
-        new numberCounter("counter4", 1531);
-        new numberCounter("counter5", 15);
-        new numberCounter("counter6", 250);
-    </script>
 </body>
 
 </html>

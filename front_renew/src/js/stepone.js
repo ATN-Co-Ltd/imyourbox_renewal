@@ -23,10 +23,16 @@ buttons_category.forEach((e) => {
   });
 });
 
+
+
+
+
+
 //상세 품목
 let detailInput = "";
+
 const input_detail = document.querySelector(".detail__input");
-input_detail.addEventListener("input", (e) => {
+input_detail.addEventListener('input', (e) => {
   detailInput = e.target.value;
   console.log(detailInput);
   input_detail.style.backgroundColor = white;

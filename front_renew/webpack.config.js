@@ -22,7 +22,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader,'css-loader',"sass-loader",],
       },
       {
-        test: /\.(png|jpe?g|gif|pdf)$/i,
+        test: /\.(png|jpe?g|gif|pdf|jpg)$/i,
         loader: 'file-loader',
         options: {
             name:'[path][name].[ext]',
@@ -46,6 +46,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'estimate.html',
       template: path.resolve(__dirname, "src", "estimate.html")
+    }),
+   
+    new webpack.ProvidePlugin({
+      $:"jquery",
+      jQuery: 'jquery'
     }),
     new BundleAnalyzerPlugin(),
   ],

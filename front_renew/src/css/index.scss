@@ -351,3 +351,38 @@ p.button-text {
   padding: 3em 0;
   text-align: center;
 }
+
+//희중짠거
+.simpleOrder__checkbox {
+  margin-bottom: 0 !important;
+}
+
+.simple__input {
+  border: 0.5px solid #c4c4c4;
+  background: #f2f2f2;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  height: 2.8125rem;
+  max-width: 100%;
+  width: 100%;
+  margin-top: 1.5625rem;
+  font-size: 0.8125rem;
+}
+
+.simple__input:focus {
+  background: #ffffff;
+}
+
+.simple__textarea {
+  border: 0.5px solid #c4c4c4;
+  background: #f2f2f2;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  max-width: 100%;
+  width: 100%;
+  margin-top: 1.5625rem;
+  //font-size: 0.8125rem;
+}
+.simple__textarea:focus {
+  background: #ffffff;
+}

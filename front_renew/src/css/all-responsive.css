@@ -163,6 +163,11 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .inner,
+  .cont--inner {
+    overflow: visible !important;
+  }
+
   input[id="menuicon"] + label {
     display: none;
   }

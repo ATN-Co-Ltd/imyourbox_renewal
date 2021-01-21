@@ -119,7 +119,7 @@ input[id="menuicon"] {
 }
 
 input[id="menuicon"] + label {
-  display: block;
+  //display: block; //희중
   width: 20px;
   height: 20px;
   position: fixed;
@@ -186,7 +186,7 @@ input[id="menuicon"]:checked + label + div {
   position: fixed;
   top: 0;
   right: -300px;
-  z-index: 1;
+  z-index: 100;
   transition: all 0.35s;
 }
 
@@ -250,8 +250,7 @@ input[id="menuicon"]:checked + label + div {
 
 .inner,
 .cont--inner {
-  // overflow: hidden;
-  overflow: visible;
+  overflow: hidden;
 }
 
 h3 {
@@ -424,9 +423,9 @@ h3 {
   margin-top: -25px;
   border: none;
   background: transparent;
-  color: #f18b24;
+  color: #777;
   font-family: monospace;
-  font-size: 5rem;
+  font-size: 2.8rem;
   z-index: 3000;
   outline: none;
   cursor: pointer;
@@ -435,7 +434,7 @@ h3 {
 .slick-arrow:hover,
 .slick-arrow:active,
 .slick-arrow:focus {
-  color: #f18b24;
+  color: #777;
 }
 
 .slick-prev {

@@ -3,6 +3,7 @@ import jQuery from 'jquery';
 import {CountUp} from 'countup.js';
 import { orderInfo } from './lib/api/order_info';
 import Swal from 'sweetalert2';
+import kakoChatBtn from './lib/chat/kakaochat';
 const white = "#ffffff";
 let simpleOrderObj = {
     customer_company : "",
@@ -125,6 +126,10 @@ window.onload = function() {
       checkbox.addEventListener('change',(e)=> {
         isAgreePersonalInfo = e.target.checked;
       })
+
+
+    //카카오버튼
+    kakoChatBtn();
 
     //전화문의신청
      const HTMLcallSimpleOrderBtn = document.querySelector('.callSimpleOrderBtn');

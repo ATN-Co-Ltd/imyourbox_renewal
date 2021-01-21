@@ -250,7 +250,8 @@ input[id="menuicon"]:checked + label + div {
 
 .inner,
 .cont--inner {
-  overflow: hidden;
+  // overflow: hidden;
+  overflow: visible;
 }
 
 h3 {
@@ -423,11 +424,18 @@ h3 {
   margin-top: -25px;
   border: none;
   background: transparent;
-  color: #fff;
+  color: #f18b24;
   font-family: monospace;
   font-size: 5rem;
   z-index: 3000;
   outline: none;
+  cursor: pointer;
+}
+
+.slick-arrow:hover,
+.slick-arrow:active,
+.slick-arrow:focus {
+  color: #f18b24;
 }
 
 .slick-prev {
@@ -438,10 +446,11 @@ h3 {
   right: -50px;
   text-align: right;
 }
-/* .slick-prev:before,
-.slick-next:before {
-  color: red !important;
-} */
+
+.slick-next:before,
+.slick-prev:before {
+  display: none;
+}
 
 .slick-slide {
   transition: all ease-in-out 0.3s;

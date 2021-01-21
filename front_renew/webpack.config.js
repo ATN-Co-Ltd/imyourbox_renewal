@@ -47,6 +47,10 @@ module.exports = {
       filename: 'estimate.html',
       template: path.resolve(__dirname, "src", "estimate.html")
     }),
+    new HtmlWebpackPlugin({
+      filename: 'service.html',
+      template: path.resolve(__dirname, "src", "service.html")
+    }),
    
     new webpack.ProvidePlugin({
       $:"jquery",

@@ -24,9 +24,6 @@ jQuery(function($) {
 
 //카운트js
 const HTMLcon3 = document.querySelector('.counter1');
-
-
-
 window.onscroll = myScroll;
 let counter = 0;
 function myScroll(){
@@ -47,7 +44,6 @@ function myScroll(){
 }
 myScroll();
 
-
 //메인 뉴스 케러셀
 $(()=> {
     $(".regular").slick({
@@ -57,8 +53,18 @@ $(()=> {
         slidesToScroll: 1,
         autoplay: true,
         arrows:true,
-        cssEase: 'linear',
         prevArrow:'<button class="slick-prev"><i class="fas fa-angle-left"></i></button>',
         nextArrow:'<button class="slick-next"><i class="fas fa-angle-right"></i></button>',
+        
 })
+})
+
+
+
+//간단견적버튼
+const HTMLsimpleOrderButton = document.querySelector('.simpleOrderBtn');
+
+HTMLsimpleOrderButton.addEventListener('click',(e)=> {
+    const scrollTo = document.querySelector('.news-title');
+    scrollTo.scrollIntoView({ behavior: "smooth" });
 })

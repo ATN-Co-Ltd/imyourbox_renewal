@@ -52,8 +52,8 @@ module.exports = {
       template: path.resolve(__dirname, "src", "service.html")
     }),
     new HtmlWebpackPlugin({
-      filename: 'content.html',
-      template: path.resolve(__dirname, "src", "content.html")
+      filename: 'introduction.html',
+      template: path.resolve(__dirname, "src", "introduction.html")
     }),
    
     new webpack.ProvidePlugin({

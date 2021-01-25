@@ -11,34 +11,18 @@
     <meta name="keywords" content="imyourbox,i'myourbox,아임유어박스,3PL서비스,3PL,4PL,온라인쇼핑,온라인쇼핑물류,기업물류,소상공인물류,블로그마켓,3rdPartyLogistic,재고관리,포장대행,포장작업,택배대행,물류대행,택배배송,택배발송,WMS,OMS,e-Logistics,e-commer,이커머스,풀필먼트,fullfillment,물류보관,운송대행,보관,세트포장,셋트포장,소분작업,소분택배,소호사무실,소호,soho,blogmarket,스타트업,start-up,의류포장,악세서리포장,신발포장,화장품포장,잡화포장,임가공,짐보관,창고임대,공간임대,"
     />
     <meta name="author" content="limhanel" />
-
     <title>아임유어박스</title>
-
-    <link rel="shortcut icon" href="images/imyourbox.ico" />
-
+    <link rel="shortcut icon" href="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/imyourbox.ico" />
+    
     <!-- 폰트어썸 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
 
     <!-- css부분 -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/all-html.css" />
-    <link rel="stylesheet" type="text/css" href="css/all-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="css/service.css" />
-    <link rel="stylesheet" type="text/css" href="css/service-responsive.css" />
-
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- 폰트 -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -49,13 +33,13 @@
     <header id="header">
         <div class="inner">
             <h1 class="logo">
-                <a href="index.html"><img src="images/horizontal-logo.png" alt="아임유어박스">IMYOURBOX</a>
+                <a href="index.html"><img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/horizontal-logo.png" alt="아임유어박스">IMYOURBOX</a>
             </h1>
 
             <div class="header--gnb pc">
                 <ul class="gnb">
                     <li>
-                        <a href="enquiry.html">간편문의</a>
+                        <a href="index.html#simpleOrder">간편문의</a>
                     </li>
                     <li>
                         <a href="estimate.html">예상견적</a>
@@ -84,7 +68,7 @@
                 <p>MENU</p>
                 <ul class="gnb">
                     <li>
-                        <a href="#none">간편문의</a>
+                        <a href="index.html#simpleOrder">간편문의</a>
                     </li>
                     <li>
                         <a href="estimate.html">예상견적</a>
@@ -133,10 +117,10 @@
 
         <div class="main" style="text-align:left">
 
-            <input id="tab1" type="radio" name="tabs" checked>
+            <input id="tab1" type="radio" name="tabs">
             <label for="tab1">풀필먼트</label>
 
-            <input id="tab2" type="radio" name="tabs">
+            <input id="tab2" type="radio" name="tabs" >
             <label for="tab2">로지스팩토리</label>
 
 
@@ -149,7 +133,7 @@
 
 
             <section id="content1" style="margin-bottom:20px;">
-                <div class=cont1>
+                <div class=service__cont1>
                     <div class="cont--inner">
                         <p class="main-text">풀필먼트란?</p>
                         <p class="sub-text"><br>고객의 주문부터 출고/반품 관리까지 진행하는 <br> 물류대행 원스톱 서비스입니다.<br><br> 아임유어박스의 풀필먼트 서비스를 이용하시면<br>물류 고민 없이 핵심 업무에 집중하실 수 있습니다.
@@ -432,8 +416,9 @@
             </section>
 
             <section id="content2" style="margin-bottom:20px;">
-                <div class=cont1>
+                <div class=service__cont1>
                     <div class="cont--inner">
+                        <a name='logisFactory'></a>
                         <p class="main-text">로지스 팩토리(Logis Factory)</p>
                         <p class="sub-text"><br>선물포장부터 태그 작업, 소분 포장까지 상품화에 필요한<br>모든 임가공을 제공하는 아임유어박스만의 올인원 임가공 서비스입니다.<br><br> 아임유어박스의 로지스 팩토리를 이용하시면 아임유어박스에서<br>상품화부터 출고까지 모든 과정을 한곳에서 진행할 수 있습니다.
                         </p>
@@ -689,7 +674,7 @@
             <!--section2-->
 
             <section id="content3" style="margin-bottom:20px;">
-                <div class=cont1>
+                <div class=service__cont1>
                     <div class="cont--inner">
                         <p class="main-text">스마트 물류시스템</p>
                         <p class="sub-text"><br>아임유어박스만의 자동화된 스마트 물류 시스템으로<br>출고오류율 0%에 도전합니다.
@@ -798,7 +783,120 @@
             <!--section3-->
 
             <section id="content4" style="margin-bottom:20px;">
-                tab menu4의 내용
+                <div class=service__cont1>
+                    <div class="cont--inner">
+                        <p class="main-text" style="color:blue">당일배송 with 오늘의픽업</p>
+                        <p class="sub-text"><br>당일배송, 이제 경쟁력이 아니라 필수입니다.<br>
+                            <br> 아임유어박스 고객이라면 누구나 대형 물류 기업 수준의<br>당일배송+새벽배송이 가능합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cont2 cont-box blue-back">
+                    <div class="cont--inner">
+                        <p class="title" style="color:blue">오늘의 픽업</p>
+                        <div class="content4-box">
+                            <div class="right-side">
+                                <p class="content4-text ">수도권 허브 물류센터</p>
+                            </div>
+                            <!--right-side-->
+                            <div class="left-side">
+                                <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/service-img01.png">
+                                <p class="content4-img-text1">서울 및 경기 지역에 위치한 허브센터를 통해 특화된 서비스를 제공합니다.</p>
+                                <p class="content4-img-text2">*경기도는 일부 지역만 서비스 이용이 가능합니다. 자세한 내용은 문의해주시면 친절히 답변드리겠습니다.</p>
+                            </div>
+                            <!--left-side-->
+                        </div>
+                        <!--content4-box-->
+
+                    </div>
+                    <!--cont--inner-->
+                </div>
+                <!--cont-box-->
+
+                <div class="cont3 cont-box">
+                    <div class="cont--inner">
+
+                        <div class="content4-box">
+                            <div class="right-side">
+                                <p class="content4-text ">플렉스 라이더 시스템</p>
+                            </div>
+                            <!--right-side-->
+                            <div class="left-side">
+                                <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/service-img02.png">
+                                <p class="content4-img-text1">정규 라이더 뿐만 아니라 플렉스 라이더 시스템을 활용하기 때문에 보다 안정적인 배송이 가능합니다.</p>
+                            </div>
+
+                        </div>
+                        <!--content4-box-->
+
+                    </div>
+                    <!--cont--inner-->
+                </div>
+                <!--cont-box-->
+
+                <div class="cont4 green-back">
+                    <div class="cont--inner">
+                        <p class="main-text" style="color:#68BB4B">아마존진출 with 위드온나인</p>
+                        <p class="sub-text"><br>당일배송, 이제 경쟁력이 아니라 필수입니다.<br>
+                            <br> 아임유어박스 고객이라면 누구나 대형 물류 기업 수준의<br>당일배송+새벽배송이 가능합니다.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="cont5 cont-box">
+                    <div class="cont--inner">
+                        <p class="title" style="color:#68BB4B">WithOn9</p>
+                        <div class="content4-box">
+                            <div class="right-side">
+                                <p class="content4-text ">개인/중소기업 맞춤 솔루션</p>
+                            </div>
+                            <!--right-side-->
+                            <div class="left-side">
+                                <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/service-img03.png">
+                                <p class="content4-img-text1">중소셀러에 맞춘 독보적인 솔루션으로 어려웠던 아마존 입점의 장벽을 낮춰드립니다.</p>
+
+                            </div>
+                            <!--left-side-->
+                        </div>
+                        <!--content4-box-->
+
+                    </div>
+                    <!--cont--inner-->
+                </div>
+                <!--cont-box-->
+
+                <div class="cont6 cont-box green-back">
+                    <div class="cont--inner">
+                        <div class="content4-box">
+                            <div class="right-side">
+                                <p class="content4-text ">FBA/FBM 동시진행</p>
+                            </div>
+                            <!--right-side-->
+                            <div class="left-side">
+                                <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/service-img04.png">
+                                <p class="content4-img-text1">아마존 입점 뿐만 아니라, 현지 센터가 없어 해결이 어려웠던 반품 및 재고 물량에 대한 관리까지 도와드립니다.</p>
+                            </div>
+                        </div>
+                        <!--content4-box-->
+
+                    </div>
+                    <!--cont--inner-->
+                </div>
+                <!--cont-box-->
+
+
+                <div class="cont7 cont-box">
+                    <div class="cont--inner">
+
+                        <p class="">소상공인과 스타트업의 <span class="bold">물류대행 파트너,</span><br> 아임유어박스와 함께하세요</p>
+                        <p class="large-text">문의전화 <span class="bold">031-635-1471</span></p>
+
+                        <a class="button" href="estimate.html">예상견적</a>
+                        <a class="button">간편문의</a>
+                    </div>
+                </div>
             </section>
 
         </div>
@@ -811,7 +909,7 @@
             <div class="cont--inner">
                 <div class="logo-div">
                     <div class="footer-logo logo-width">
-                        <img src="images/logo_white.png" alt="footerlogo">
+                        <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/logo_white.png" alt="footerlogo">
                     </div>
                     <!--footer-logo-->
 
@@ -893,17 +991,6 @@
         });
     </script>
 
-
-<!-- kakao chat -->
-<div
-id="kakao-talk-channel-chat-button"
-data-channel-public-id="_jMSxcj"
-data-title="consult"
-data-size="large"
-data-color="yellow"
-data-shape="pc"
-data-support-multiple-densities="true"
-></div>
 </body>
 
 </html>

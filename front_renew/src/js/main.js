@@ -70,12 +70,69 @@ $(()=> {
 })
 
 
+console.log('엥?');
+
+let isTab1Active = true;
+let isTab2Active = false;
+let isTab3Active = false;
+let isTab4Active = false;
+let isAmazonActive = false;
+
 
 
 
 //간단문의신청
 window.onload = function() {
 
+    window.localStorage.setItem('tab1',JSON.stringify(isTab1Active));
+    window.localStorage.setItem('tab2',JSON.stringify(isTab2Active));
+    window.localStorage.setItem('tab3',JSON.stringify(isTab3Active));
+    window.localStorage.setItem('tab4',JSON.stringify(isTab4Active));
+    window.localStorage.setItem('amazon',JSON.stringify(isAmazonActive));
+    //해당서비스 버튼을 눌렸을때 해당 탭으로 이동하기
+    //로직스 팩토리
+    const HTMLLogicsFactoryAtag = document.getElementById("logisFactory");
+    HTMLLogicsFactoryAtag.style.cursor='pointer';
+    HTMLLogicsFactoryAtag.addEventListener('click',(e)=> {
+        isTab1Active = false;
+        isTab2Active = true;
+        window.localStorage.setItem('tab1',JSON.stringify(isTab1Active));
+        window.localStorage.setItem('tab2',JSON.stringify(isTab2Active));
+        location.href ="/service.html";
+    })
+    //스마트물류시스템
+    const HTMLSmartFulfillmentyAtag = document.getElementById("smartFulfillment");
+    HTMLSmartFulfillmentyAtag.style.cursor='pointer';
+    HTMLSmartFulfillmentyAtag.addEventListener('click',(e)=> {
+        isTab1Active = false;
+        isTab3Active = true;;
+        window.localStorage.setItem('tab1',JSON.stringify(isTab1Active));
+        window.localStorage.setItem('tab3',JSON.stringify(isTab3Active));
+        location.href ="/service.html";
+    })
+    //오늘의픽업
+    const HTMLTodayPickupAtag = document.getElementById("todaypickup");
+    HTMLTodayPickupAtag.style.cursor='pointer';
+    HTMLTodayPickupAtag.addEventListener('click',(e)=> {
+        isTab1Active = false;
+        isTab4Active = true;;
+        window.localStorage.setItem('tab1',JSON.stringify(isTab1Active));
+        window.localStorage.setItem('tab4',JSON.stringify(isTab4Active));
+        location.href ="/service.html";
+    })
+    //아마존
+    const HTMLAmazon = document.getElementById("amazon");
+    HTMLAmazon.style.cursor='pointer';
+    HTMLAmazon.addEventListener('click',(e)=> {
+        isTab1Active = false;
+        isTab4Active = true;;
+        isAmazonActive = true;;
+        window.localStorage.setItem('tab1',JSON.stringify(isTab1Active));
+        window.localStorage.setItem('tab4',JSON.stringify(isTab4Active));
+        window.localStorage.setItem('amazon',JSON.stringify(isAmazonActive));
+        location.href ="/service.html";
+    })
+// 끝
 
 
     //간편문의버튼

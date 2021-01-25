@@ -23,11 +23,6 @@ buttons_category.forEach((e) => {
   });
 });
 
-
-
-
-
-
 //상세 품목
 let detailInput = "";
 

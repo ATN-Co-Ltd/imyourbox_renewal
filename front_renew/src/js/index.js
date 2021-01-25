@@ -3,6 +3,8 @@ import "regenerator-runtime/runtime";
 import 'slick-carousel';
 import './main';
 import './service';
+import "./access";
+import './introduction';
 import './stepone';
 import '../css/style.css';
 import './stepTwo';

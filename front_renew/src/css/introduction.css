@@ -1,130 +1,139 @@
 /*-----container영역-----*/
 
-.cont1 {
-    background: rgb(255, 169, 51);
-    background: linear-gradient(290deg, rgba(255, 169, 51, 1) 0%, rgba(255, 153, 82, 1) 70%, rgba(255, 56, 14, 1) 100%);
-    padding: 7em 0;
-    margin-top: 60px;
+.intro__cont1 {
+  background: rgb(255, 169, 51);
+  background: linear-gradient(
+    290deg,
+    rgba(255, 169, 51, 1) 0%,
+    rgba(255, 153, 82, 1) 70%,
+    rgba(255, 56, 14, 1) 100%
+  );
+  padding: 7em 0;
+  margin-top: 60px;
 }
 
-.cont1 .cont--inner {
-    position: relative;
-    z-index: 2;
+.intro__cont1 .cont--inner {
+  position: relative;
+  z-index: 2;
 }
 
-.cont1 .cont--inner {
-    overflow: visible;
+.intro__cont1 .cont--inner {
+  overflow: visible;
 }
 
-.cont1 img {
-    width: 300px;
-    position: absolute;
-    top: calc(50% - 150px);
-    right: 0;
-    opacity: 0.7;
-    z-index: 1;
+.intro__cont1 img {
+  width: 300px;
+  position: absolute;
+  top: calc(50% - 150px);
+  right: 0;
+  opacity: 0.7;
+  z-index: 1;
 }
 
-.cont1 p {
-    color: #fff
+.intro__cont1 .cont--inner p {
+  color: #fff;
 }
-
 
 /*--타임라인 / cont5 영역--*/
 
 .timeline {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 20px;
-    padding: 1em 0;
-    list-style-type: none;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 1em 0;
+  list-style-type: none;
 }
 
 .timeline:before {
-    position: absolute;
-    top: 0;
-    content: ' ';
-    display: block;
-    width: 5px;
-    height: 100%;
-    margin-left: -1px;
-    background: rgb(255, 207, 168);
-    z-index: 5;
+  position: absolute;
+  top: 0;
+  content: " ";
+  display: block;
+  width: 5px;
+  height: 100%;
+  margin-left: -1px;
+  background: rgb(255, 207, 168);
+  z-index: 5;
 }
 
 .timeline li:after {
-    content: "";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 .directions {
-    position: relative;
-    width: 100%;
-    float: left;
-    text-align: left;
+  position: relative;
+  width: 100%;
+  float: left;
+  text-align: left;
 }
 
 .flag-wrapper {
-    position: relative;
-    display: inline-block;
-    text-align: center;
+  position: relative;
+  display: inline-block;
+  text-align: center;
 }
 
 .flag {
-    position: relative;
-    padding: 6px 10px;
-    border-radius: 0px;
-    font-weight: 700;
-    text-align: left;
-    color: #f15e24;
+  position: relative;
+  padding: 6px 10px;
+  border-radius: 0px;
+  font-weight: 700;
+  text-align: left;
+  color: #f15e24;
 }
 
 .directions .flag:before {
-    position: absolute;
-    content: ' ';
-    display: block;
-    width: 10px;
-    height: 10px;
-    background: #fff;
-    border-radius: 10px;
-    border: 4px solid rgb(255, 128, 10);
-    z-index: 10;
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 10px;
+  border: 4px solid rgb(255, 128, 10);
+  z-index: 10;
 }
 
 .desc {
-    letter-spacing: -0.06em;
+  letter-spacing: -0.06em;
 }
 
 .partner-cont {
-    overflow: hidden;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-    box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
 }
 
 .partner-cont img {
-    width: 100%
+  width: 100%;
 }
 
 .partner-text {
-    text-align: left;
-    background-color: #fff;
-    border-top: 1px solid #ccc;
+  text-align: left;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
 }
 
 .partner-title {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .contact2-box {
-    float: left;
-    text-align: left;
+  float: left;
+  text-align: left;
 }
 
 .contact2-left,
 .contact2-right {
-    float: left;
+  float: left;
+}
+
+/* 희중 */
+.intro__cont4 .cont--inner {
+  overflow: hidden !important;
 }

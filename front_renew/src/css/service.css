@@ -28,6 +28,13 @@
   overflow: hidden;
 }
 
+#content4 .cont--inner {
+  overflow: hidden !important;
+}
+/* #content4 .cont--inner {
+  overflow: visible;
+} */
+
 /* #container .cont--inner {
     max-width: 1024px;
 } */
@@ -160,4 +167,9 @@
 
 #content4 .cont7 {
   text-align: center;
+}
+
+/* 희중이가 짠거 */
+.factory__cont--inner {
+  overflow: hidden !important;
 }

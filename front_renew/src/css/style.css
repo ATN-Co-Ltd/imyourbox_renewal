@@ -11,7 +11,7 @@
 @import "./stepthree.scss";
 @import "./stepfour.scss";
 @import "./stepresult.scss";
-
+@import "./access.css";
 #kakao-talk-channel-chat-button {
   position: fixed;
   top: 80vh;

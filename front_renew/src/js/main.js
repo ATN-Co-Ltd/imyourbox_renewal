@@ -70,17 +70,14 @@ $(()=> {
 })
 
 
-console.log('엥?');
 
 let isTab1Active = true;
 let isTab2Active = false;
 let isTab3Active = false;
 let isTab4Active = false;
 let isAmazonActive = false;
-
-
-
-
+let isTermsOfService = false
+let isPersonalInfoProcessing = false
 //간단문의신청
 window.onload = function() {
 
@@ -89,6 +86,30 @@ window.onload = function() {
     window.localStorage.setItem('tab3',JSON.stringify(isTab3Active));
     window.localStorage.setItem('tab4',JSON.stringify(isTab4Active));
     window.localStorage.setItem('amazon',JSON.stringify(isAmazonActive));
+    window.localStorage.setItem('termsOfService',JSON.stringify(isTermsOfService));
+    window.localStorage.setItem('personalInfoProcessing',JSON.stringify(isPersonalInfoProcessing));
+
+    //풋터개인정보처리
+    const HTMLTermsOfService = document.getElementById('termsOfService')
+    HTMLTermsOfService.style.cursor='pointer';
+    HTMLTermsOfService.addEventListener('click',(e)=> {
+        isTermsOfService = true;
+        window.localStorage.setItem('termsOfService',JSON.stringify(isTermsOfService));
+        location.href ="/access.html";
+    })
+    const HTMLPersonalInfoProcessing = document.getElementById('personalInfoProcessing')
+    HTMLPersonalInfoProcessing.style.cursor='pointer';
+    HTMLPersonalInfoProcessing.addEventListener('click',(e)=> {
+        isPersonalInfoProcessing = true;
+        isTermsOfService = false;
+        window.localStorage.setItem('personalInfoProcessing',JSON.stringify(isPersonalInfoProcessing));
+        window.localStorage.setItem('termsOfService',JSON.stringify(isTermsOfService));
+        location.href ="/access.html";
+    })
+    //풋터개인정보처리 끝
+
+
+
     //해당서비스 버튼을 눌렸을때 해당 탭으로 이동하기
     //로직스 팩토리
     const HTMLLogicsFactoryAtag = document.getElementById("logisFactory");
@@ -174,7 +195,6 @@ window.onload = function() {
     input_customer_memo.addEventListener('input',e=> {
         input_customer_memo.style.backgroundColor = white;
         simpleOrderObj.customer_memo = e.target.value;
-        console.log(simpleOrderObj);
     })
 
     //개인정보동의
@@ -219,7 +239,6 @@ window.onload = function() {
         }
         else {
             orderInfo(simpleOrderObj).then((r)=> {
-                console.log(r.data);
                 Swal.fire({
                     icon:'success',
                     text:`${r.data}`,
@@ -267,5 +286,16 @@ window.onload = function() {
         }
        
       })
+
+      //footer
+
+      let tell  = document.querySelector('.tell');
+      if(screen.width < 450)
+      {
+        tell.style.cursor = 'pointer';
+        tell.addEventListener('click',(e)=> [
+            location.href="tel:0316351471"
+        ])
+      }
     
 }

@@ -59,8 +59,8 @@
     color: #fff;
     text-align: right;
   }
-  .cont1 {
-    background-size: 500%;
+  .main__cont1 {
+    background-size: 500% !important;
     padding: 3em 0;
   }
   .cont1-button .button {

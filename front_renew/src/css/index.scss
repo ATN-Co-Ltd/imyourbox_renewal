@@ -248,4 +248,5 @@ p.button-text {
 }
 .icon-box:hover {
   transform: scale(1.07);
+  transition: all 0.15s ease-in-out;
 }

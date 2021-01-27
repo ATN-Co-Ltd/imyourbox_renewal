@@ -13,14 +13,11 @@ import './stepFour';
 import './price';
 import './button';
 import './stepresult';
-
 import KakaoChat from './lib/chat/kakaochat';
-
 import './lib/marketing/wcsLog';
 import './lib/marketing/kakao';
 import './lib/marketing/google';
 import './lib/marketing/mirae';
-
 KakaoChat();
 
 

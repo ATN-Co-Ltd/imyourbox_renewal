@@ -3,13 +3,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const WebpackCdnPlugin = require('webpack-cdn-plugin');
 const webpack = require('webpack');
 
 module.exports = {
   entry: { index: path.resolve(__dirname, "src/js/index.js") },
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath:'',
+    publicPath:"",
   },
   module: {
     rules: [
@@ -72,4 +73,8 @@ module.exports = {
     splitChunks: { chunks: "all" }
   },
 
+  devServer : {
+    host:'0.0.0.0',
+    port:3065,
+  }
 };

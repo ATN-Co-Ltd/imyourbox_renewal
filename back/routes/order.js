@@ -76,7 +76,7 @@ router.post("/order_info", async (req, res, next) => {
     }
     await axios
       .post(
-        "https://wh.jandi.com/connect-api/webhook/18447744/6f4ca941899922f6c7a94460abf62a35",
+        "https://wh.jandi.com/connect-api/webhook/18447744/6a8dfa0cad56835de45724b61415ecdd",
         {
           headers: {
             Accept: "application/vnd.tosslab.jandi-v2+json",
@@ -204,7 +204,7 @@ router.post("/detail_order_info", async (req, res, next) => {
     }
     await axios
       .post(
-        "https://wh.jandi.com/connect-api/webhook/18447744/6f4ca941899922f6c7a94460abf62a35",
+        "https://wh.jandi.com/connect-api/webhook/18447744/6a8dfa0cad56835de45724b61415ecdd",
         {
           headers: {
             Accept: "application/vnd.tosslab.jandi-v2+json",

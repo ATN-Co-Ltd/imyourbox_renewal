@@ -250,3 +250,7 @@ p.button-text {
   transform: scale(1.07);
   transition: all 0.15s ease-in-out;
 }
+.simple__textarea::placeholder {
+  padding-top: 1.875rem;
+  padding-left: 0.5rem;
+}

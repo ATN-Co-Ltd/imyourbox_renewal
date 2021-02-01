@@ -199,12 +199,12 @@
     display: block;
   }
   .left-image1 {
-    width: 1200px;
+    width: 1024px;
     position: absolute;
     left: 0;
   }
   .right-image1 {
-    width: 1200px;
+    width: 1024px;
     position: absolute;
     right: 0;
   }
@@ -314,5 +314,11 @@
   p.large-text {
     font-size: 22px;
     margin: 30px 0;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1123px) {
+  .slick-arrow {
+    visibility: hidden;
   }
 }

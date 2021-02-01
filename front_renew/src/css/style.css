@@ -14,8 +14,10 @@
 @import "./access.css";
 #kakao-talk-channel-chat-button {
   position: fixed;
-  top: 80vh;
-  right: 5vw;
+  /* top: 80vh;
+  right: 5vw; */
+  right: 1.2rem;
+  bottom: 6.25rem;
   cursor: pointer;
   z-index: 5000;
 }

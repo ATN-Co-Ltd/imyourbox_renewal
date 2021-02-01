@@ -1,3 +1,6 @@
+//카카오
+
+
 //상품종류
 const product_category = [];
 const buttons_category = document.querySelectorAll(

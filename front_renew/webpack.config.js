@@ -45,8 +45,8 @@ module.exports = {
       template: path.resolve(__dirname, "src", "index.html")
     }),
     new HtmlWebpackPlugin({
-      filename: 'estimate.html',
-      template: path.resolve(__dirname, "src", "estimate.html")
+      filename: 'price.html',
+      template: path.resolve(__dirname, "src", "price.html")
     }),
     new HtmlWebpackPlugin({
       filename: 'service.html',

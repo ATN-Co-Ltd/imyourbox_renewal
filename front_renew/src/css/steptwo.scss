@@ -25,6 +25,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 
 input[type="checkbox"] {
   width: 1.875rem;
+  min-width: 1.875rem;
   height: 1.875rem !important;
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);

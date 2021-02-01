@@ -15,16 +15,12 @@ let simpleOrderObj = {
 //메인 첫번쨰 케러셀
 jQuery(function($) {
     let ticker = function() {
-        // let  i=1;
-        // let k = 1;
         setTimeout(() =>{
-           // console.log(`머가문제야 ${i++}`);
             $('#ticker li:first').animate({
                 marginTop: '-40px',
                 color: 'black',
                 
             }, 400, function() {
-               // console.log(`아무문제없으 ${k++}`);
                 $(this).detach().appendTo('ul#ticker').removeAttr('style');
             });
             ticker();

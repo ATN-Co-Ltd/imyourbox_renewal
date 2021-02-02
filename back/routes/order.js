@@ -190,6 +190,7 @@ router.post("/detail_order_info", async (req, res, next) => {
     setJandiStrFunc("상품취급주의사항", `${arrCautiontype}`);
     setJandiStrFunc("문의할물류서비스", `${arrServiceKinds}`);
     setJandiStrFunc("보관타입", `${req.body.input_store_type}`);
+    setJandiStrFunc("물류보관량", `${req.body.input_store_num}`);
     setJandiStrFunc("박스사이즈", `${req.body.input_box_size}`);
     setJandiStrFunc("sku양", `${req.body.input_sku_store_num}`);
     setJandiStrFunc("입고예정일", `${req.body.input_store_date}`);

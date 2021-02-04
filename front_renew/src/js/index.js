@@ -1,6 +1,10 @@
 import "core-js/stable"
 import "regenerator-runtime/runtime";
 import 'slick-carousel';
+import './lib/marketing/wcsLog';
+import './lib/marketing/kakao';
+import './lib/marketing/google';
+import './lib/marketing/mirae';
 import './main';
 import './service';
 import "./access";
@@ -14,10 +18,7 @@ import './price';
 import './button';
 import './stepresult';
 import KakaoChat from './lib/chat/kakaochat';
-import './lib/marketing/wcsLog';
-import './lib/marketing/kakao';
-import './lib/marketing/google';
-import './lib/marketing/mirae';
+
  KakaoChat();
 
 

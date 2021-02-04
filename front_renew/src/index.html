@@ -440,7 +440,10 @@
                        
                 </div>
 
-                <a class="button callSimpleOrderBtn">전화문의 신청</a>
+                <a class="button callSimpleOrderBtn"  onclick="gtag('event', 'service', {
+                    'event_category' : '(리뉴얼후)간단견적버튼',
+                    'event_label' : '(renewal)simpleOrderBtn'
+                  })">전화문의 신청</a>
             </div>
         
         </section>
@@ -472,9 +475,13 @@
                 <!--footer-logo-->
 
 
-                <a href="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/Imyourbox.pdf" alt=소개서 target="blank">
-                    <p class="logo-width service-download">서비스 소개서 다운로드<i class="fas fa-caret-square-down"></i></p>
-                </a>
+                <a href="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/Imyourbox.pdf" alt=소개서 target="blank" 
+                onclick="gtag('event', 'service', {
+                'event_category' : '(리뉴얼후)서비스소개서',
+                'event_label' : '(renewal)serviceFile'
+              })">
+                <p class="logo-width service-download">서비스 소개서 다운로드<i class="fas fa-caret-square-down"></i></p>
+             </a>
                 <p class="logo-width call"><i class="fas fa-phone-alt"></i><a class="tell">대표번호 031-635-1471</a></p>
 
 

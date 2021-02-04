@@ -41,7 +41,8 @@ const googleScriptTwoFun = () => {
     gtag("config", "UA-146580343-1");
 }
 
-
+googleScriptoneFun();
+googleScriptTwoFun();
 // gtag("js", new Date());
 // gtag("config", "UA-146580343-1");
 // gtag("config", "AW-611833307");

@@ -6,7 +6,6 @@ import './lib/marketing/kakao';
 import './lib/marketing/google';
 import './lib/marketing/mirae';
 import './lib/marketing/mob';
-import './detectBrowser';
 import './main';
 import './service';
 import "./access";

@@ -345,7 +345,7 @@ input[type="checkbox"]:checked {
     .check {
       position: absolute;
       margin-top: 5%;
-      margin-left: 30%;
+      margin-left: 25%;
       height: 1.25rem;
       width: 1.25rem;
       background-color: var(--color__white);
@@ -375,6 +375,9 @@ input[type="checkbox"]:checked {
       input:checked ~ .check:after {
         display: block;
       }
+    }
+    .radio__description {
+      line-height: 1.2em !important;
     }
   }
   .barcode__radio__groups li:hover {

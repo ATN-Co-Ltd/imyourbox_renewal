@@ -179,8 +179,9 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   text-align: center;
 }
 .stepone__category__list li {
-  width: calc((100%-16px) / 5);
-  // width: 4.6875rem;
+  //width: calc((100%-16px) / 5);
+  width: calc((100% - 16px) / 5);
+  //width: 4.6875rem;
   height: 75px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
@@ -314,7 +315,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 .storageType__container__buttons li {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  width: calc((128%-16px) / 3);
+  width: calc((128% - 16px) / 3);
   height: 2.5rem;
   margin-left: 0.9375rem;
   margin-top: 0.5625rem;
@@ -391,7 +392,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 .barcode__radio__groups li {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  width: calc((128%-16px) / 3);
+  width: calc((128% - 16px) / 3);
   height: 2.5rem;
   margin-left: 0.9375rem;
   margin-top: 0.5625rem;
@@ -544,7 +545,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   flex-flow: row wrap;
   text-align: center;
   li {
-    width: calc((130%-16px) / 3);
+    width: calc((130% - 16px) / 3);
     // width: 165px;
     // width: 4.6875rem;
     height: 109px;
@@ -675,7 +676,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     margin-left: 1.875rem;
   }
   .stepone__category__list li {
-    width: calc((100%-16px) / 10);
+    width: calc((100% - 16px) / 10);
     height: 6.875rem;
     margin-bottom: 5rem;
     .stepone__category__list__label__input {
@@ -729,7 +730,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     }
   }
   .storageType__container__buttons li {
-    width: calc((128%-16px) / 6);
+    width: calc((128% - 16px) / 6);
     height: 2.8125rem;
     margin-bottom: 5rem;
   }
@@ -745,7 +746,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   .barcode__radio__groups li {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
-    width: calc((128%-16px) / 4.4);
+    width: calc((128% - 16px) / 4.4);
     height: 2.5rem;
   }
   .option__title__container {
@@ -779,7 +780,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   .productCaution__list {
     margin: 0 auto;
     li {
-      width: calc((104%-16px) / 6);
+      width: calc((104% - 16px) / 6);
       // width: 165px;
       // width: 4.6875rem;
       height: 130px;

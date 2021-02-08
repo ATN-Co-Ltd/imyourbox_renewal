@@ -23,7 +23,7 @@ jQuery(function($) {
                 marginTop: '-40px',
                 color: 'black',
             }, 400, function() {
-                console.log($(this).detach().appendTo('ul#ticker').length);
+              
                 $(this).detach().appendTo('ul#ticker').removeAttr('style');
             });
         }, 2000);

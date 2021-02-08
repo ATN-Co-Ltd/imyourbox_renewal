@@ -4,6 +4,9 @@ import { courier_bag, processing_need, releasepackaing, use_service } from './st
 import { arr_logistics_service_kinds, inputStoreBoxsizeValue, inputStoreCount, inputStoreDate, inputStoreValue, outputBoxCount, outputBoxsizeValue, service_launching_status, skuInputStoreCount } from './stepTwo';
 import {detailOrderInfo} from './lib/api/detail_order_info';
 import Swal from 'sweetalert2';
+import { gtagDetailOrder } from './lib/marketing/google';
+import { naverConv } from './lib/marketing/naver';
+import { mobConvScriptDetailOrder } from './lib/marketing/mob';
 let stepStatus = 1;
 
 //값이 비어있을때 메세지
@@ -206,6 +209,18 @@ nextBtn.addEventListener('click',()=> {
                 }
             })
         }else {
+
+//지태그
+gtagDetailOrder();
+//네이버전환스크립트
+naverConv();
+//모비온전환스크립트
+mobConvScriptDetailOrder();
+
+
+
+
+
 //상세견적정보
 const detailOrderData = {
     customer_company,
@@ -316,12 +331,6 @@ preBtn.addEventListener('click',()=> {
         
     }
 })
-
-
-
-
-
-    
 
 export {
     errMsg,

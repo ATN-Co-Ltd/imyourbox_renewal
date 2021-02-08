@@ -2,7 +2,7 @@
 
 export function naverConv(){
     var _nasa={};
-    _nasa["cnv"] = wcs.cnv("4","100000"); // 전환유형, 전환가치 설정해야함. 설치매뉴얼 참고
+    _nasa["cnv"] = wcs.cnv("4","1"); // 전환유형, 전환가치 설정해야함. 설치매뉴얼 참고
     wcs_do(_nasa);
     }
     
@@ -10,6 +10,7 @@ export function naverConv(){
     
     const naverCommonScript = document.createElement('script');
     naverCommonScript.addEventListener('load',()=> {
+      
         if (!wcs_add) var wcs_add={};
         wcs_add["wa"] = "s_1083285baf10";
         if (!_nasa) var _nasa={};

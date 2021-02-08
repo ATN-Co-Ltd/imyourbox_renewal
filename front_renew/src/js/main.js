@@ -4,6 +4,8 @@ import {CountUp} from 'countup.js';
 import { orderInfo } from './lib/api/order_info';
 import Swal from 'sweetalert2';
 import kakoChatBtn from './lib/chat/kakaochat';
+import { naverConv } from './lib/marketing/naver';
+import { mobConvScriptSimpleOrder } from './lib/marketing/mob';
 const white = "#ffffff";
 let simpleOrderObj = {
     customer_company : "",
@@ -12,23 +14,24 @@ let simpleOrderObj = {
     customer_phone : "",
     customer_memo : "",
 }
+
 //메인 첫번쨰 케러셀
 jQuery(function($) {
     let ticker = function() {
-        setTimeout(() =>{
+        setInterval(() =>{
             $('#ticker li:first').animate({
                 marginTop: '-40px',
                 color: 'black',
-                
             }, 400, function() {
+                console.log($(this).detach().appendTo('ul#ticker').length);
                 $(this).detach().appendTo('ul#ticker').removeAttr('style');
             });
-            ticker();
         }, 2000);
     };
-    
     ticker();
 });
+
+
 
 
 
@@ -238,6 +241,11 @@ window.onload = function() {
             })
         }
         else {
+            //네이버전환스크립트
+            naverConv();
+            mobConvScriptSimpleOrder();
+
+
             orderInfo(simpleOrderObj).then((r)=> {
                 Swal.fire({
                     icon:'success',

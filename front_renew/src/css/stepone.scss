@@ -385,7 +385,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   justify-content: center;
   flex-flow: row wrap;
   text-align: center;
-  .none {
+  .blankcontainer {
     visibility: hidden;
   }
 }
@@ -819,6 +819,16 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   }
   .stepone__progress__bar:before {
     width: 100%;
+  }
+  .stepBtn__nextBtn,
+  .stepBtn__preBtn {
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .stepBtn__nextBtn,
+  .stepBtn__preBtn {
+    margin-bottom: 7rem;
   }
 }
 

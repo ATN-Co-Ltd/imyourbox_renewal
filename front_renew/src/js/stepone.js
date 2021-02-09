@@ -21,7 +21,7 @@ buttons_category.forEach((e) => {
       checked__icon.style.color = "#f18b24";
       checked__icon.style.opacity = 0.7;
     }
-    // console.log(product_category);
+    
     e.classList.toggle(CLICKED_CLASS);
   });
 });
@@ -45,10 +45,7 @@ const buttons_storage_type = document.querySelectorAll(
 buttons_storage_type.forEach((e) => {
   e.addEventListener("click", () => {
     const checked__icon = e.parentElement.childNodes[2];
-    console.log(checked__icon);
     const splitStorageType = e.className.split(" ")[1];
-    console.log(`${splitStorageType}`);
-    console.log(arr_storage_type.includes(splitStorageType));
     if (arr_storage_type.includes(splitStorageType)) {
       arr_storage_type.splice(arr_storage_type.indexOf(splitStorageType), 1);
       e.style.color = "#474747";
@@ -66,6 +63,7 @@ buttons_storage_type.forEach((e) => {
 });
 
 //바코드여부
+
 let barcodeValue = "";
 const radio__havebarcode = document.querySelector(".barcode__radio__groups");
 radio__havebarcode.addEventListener("change", (e) => {
@@ -73,7 +71,6 @@ radio__havebarcode.addEventListener("change", (e) => {
   const black = "#000000";
   const selectedColor = "#f18b24";
   barcodeValue = e.target.value;
-  console.log(barcodeValue);
   switch (barcodeValue) {
     case "have_barcode":
       selected[0].style.boxShadow = "0px 0px 5px 0px #ff9948";

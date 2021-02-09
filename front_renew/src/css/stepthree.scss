@@ -234,7 +234,7 @@
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     width: calc((128% - 16px) / 3);
-    height: 12.5rem;
+    height: 13.5rem;
     padding-top: 0.625rem;
     padding-left: 0.875rem;
     margin: 0.5625rem auto;
@@ -311,6 +311,9 @@
   .barcode__radio__groups li:hover {
     box-shadow: 0px 0px 5px 0px #ff9948;
   }
+  .output__radio__description {
+    line-height: 1em !important;
+  }
 }
 
 //responsive
@@ -355,7 +358,7 @@
   .output__radio__groups {
     li {
       width: calc((127% - 16px) / 3);
-      height: 8.125rem;
+      height: 9.125rem;
       margin: 0 0.5rem;
       label {
         div {

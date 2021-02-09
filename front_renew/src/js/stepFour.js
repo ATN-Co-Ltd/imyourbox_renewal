@@ -1,3 +1,4 @@
+import { validateEmail } from "./lib/validation/validate";
 
 //업체명
 let customer_company = "";
@@ -9,6 +10,9 @@ let customer_email = "";
 let customer_manager_name = "";
 //상담내용
 let customer_memo = "";
+
+//이메일유효성검사
+let HTMLeamilErrorMsg = document.getElementById('emailCheck');
 
 const white = "#ffffff";
 
@@ -30,9 +34,20 @@ input_customer_phone.addEventListener('input',e=> {
 
 
 const input_customer_email = document.querySelector(".customer_email");
+
 input_customer_email.addEventListener('input',e=> {
+   
     input_customer_email.style.backgroundColor = white;
     customer_email = e.target.value;
+    //유효성체크
+    if(!validateEmail(customer_email) && customer_email.length > 0)
+    {
+        HTMLeamilErrorMsg.style.visibility ='visible';
+        HTMLeamilErrorMsg.style.display ='';
+        HTMLeamilErrorMsg.textContent = `* ${customer_email} 은 잘못된 이메일 형식입니다.`
+    }else {
+        HTMLeamilErrorMsg.style.display ='none';
+    }
     
 })
 
@@ -58,6 +73,8 @@ const checkbox = document.querySelector('#permission');
 checkbox.addEventListener('change',(e)=> {
     permissionPersonalInfo = e.target.checked;
 })
+
+
 
 
 export {

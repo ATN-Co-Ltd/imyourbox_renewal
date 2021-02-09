@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import { gtagDetailOrder } from './lib/marketing/google';
 import { naverConv } from './lib/marketing/naver';
 import { mobConvScriptDetailOrder } from './lib/marketing/mob';
+import { validateEmail } from './lib/validation/validate';
 let stepStatus = 1;
 
 //값이 비어있을때 메세지
@@ -169,6 +170,20 @@ nextBtn.addEventListener('click',()=> {
             Swal.fire({
                 icon:'warning',
                 text:`이메일을 입력해주세요`,
+                confirmButtonText:'확인'
+                
+            }).then((result)=> {
+                if(result.isConfirmed) {
+                    stepStatus = 4;
+                    return;
+                }
+            })
+        }
+       else if(!validateEmail(customer_email))
+        {
+            Swal.fire({
+                icon:'warning',
+                text:`이메일 형식이 올바르지않습니다.`,
                 confirmButtonText:'확인'
                 
             }).then((result)=> {

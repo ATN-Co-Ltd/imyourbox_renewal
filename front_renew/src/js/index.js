@@ -21,7 +21,7 @@ import './button';
 import './stepresult';
 import KakaoChat from './lib/chat/kakaochat';
 
- KakaoChat();
+KakaoChat();
 
 
 

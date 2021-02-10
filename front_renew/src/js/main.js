@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import kakoChatBtn from './lib/chat/kakaochat';
 import { naverConv } from './lib/marketing/naver';
 import { mobConvScriptSimpleOrder } from './lib/marketing/mob';
+import { validateEmail } from './lib/validation/validate';
 const white = "#ffffff";
 let simpleOrderObj = {
     customer_company : "",
@@ -23,7 +24,6 @@ jQuery(function($) {
                 marginTop: '-40px',
                 color: 'black',
             }, 400, function() {
-              
                 $(this).detach().appendTo('ul#ticker').removeAttr('style');
             });
         }, 2000);
@@ -79,8 +79,10 @@ let isTab2Active = false;
 let isTab3Active = false;
 let isTab4Active = false;
 let isAmazonActive = false;
-let isTermsOfService = false
-let isPersonalInfoProcessing = false
+let isTermsOfService = false;
+let isPersonalInfoProcessing = false;
+//이메일유효성검사
+let HTMLSimpleOrderEamilErrorMsg = document.getElementById('simpe__emailCheck');
 //간단문의신청
 window.onload = function() {
 
@@ -178,11 +180,23 @@ window.onload = function() {
     simple_input_customer_phone.style.backgroundColor = white;
     simpleOrderObj.customer_phone = e.target.value;
     })
+
+
+
     //이메일
     const input_customer_email = document.querySelector(".simple_customer_email");
     input_customer_email.addEventListener('input',e=> {
         input_customer_email.style.backgroundColor = white;
         simpleOrderObj.customer_email = e.target.value;
+        if(!validateEmail(simpleOrderObj.customer_email) && simpleOrderObj.customer_email.length >0 )
+        {
+            HTMLSimpleOrderEamilErrorMsg.style.visibility = 'visible';
+            HTMLSimpleOrderEamilErrorMsg.style.display = '';
+            HTMLSimpleOrderEamilErrorMsg.textContent = `* ${simpleOrderObj.customer_email} 은 잘못된 이메일 형식입니다.`
+        }
+        else {
+            HTMLSimpleOrderEamilErrorMsg.style.display = 'none'; 
+        }
         
     })
 
@@ -220,6 +234,19 @@ window.onload = function() {
             Swal.fire({
                 icon:'warning',
                 text:`필수항목들을 모두 채워주세요`,
+                confirmButtonText:'확인'
+                
+            }).then((result)=> {
+                if(result.isConfirmed) {
+                    return;
+                }
+            })
+        }
+        else if(!validateEmail(simpleOrderObj.customer_email))
+        {
+            Swal.fire({
+                icon:'warning',
+                text:`이메일 형식이 올바르지 않습니다.`,
                 confirmButtonText:'확인'
                 
             }).then((result)=> {

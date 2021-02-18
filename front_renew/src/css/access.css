@@ -67,7 +67,6 @@ p.extrabold {
 @media screen and (min-width: 0px) and (max-width: 1023px) {
   #container {
     font-size: 15px;
-    padding: 1.5em 0;
   }
   p.extrabold {
     font-size: 17px;

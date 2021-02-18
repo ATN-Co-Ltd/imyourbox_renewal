@@ -1,4 +1,7 @@
 @media screen and (min-width: 0px) and (max-width: 1023px) {
+  #container {
+    margin-top: 52px;
+  }
   .pc {
     display: none;
   }
@@ -163,6 +166,9 @@
 }
 
 @media screen and (min-width: 1024px) {
+  #container {
+    margin-top: 62px;
+  }
   .inner,
   .cont--inner {
     overflow: visible !important;

@@ -2,6 +2,9 @@
   #container {
     margin-top: 52px;
   }
+  h1.logo {
+    padding: 0px;
+  }
   .pc {
     display: none;
   }
@@ -168,6 +171,9 @@
 @media screen and (min-width: 1024px) {
   #container {
     margin-top: 62px;
+  }
+  h1.logo {
+    padding: 5px;
   }
   .inner,
   .cont--inner {

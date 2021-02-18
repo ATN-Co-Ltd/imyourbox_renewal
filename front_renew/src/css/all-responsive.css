@@ -29,7 +29,7 @@
   }
   .back-img-box {
     position: relative;
-    width: 100vw;
+    /* width: 100vw; */
     height: 300px;
   }
   .left-image1 {
@@ -190,7 +190,7 @@
   }
   .back-img-box {
     position: relative;
-    width: 100vw;
+    /* width: 100vw; */
     height: 600px;
   }
   .back-img-box:after {

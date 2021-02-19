@@ -1,7 +1,6 @@
 import "core-js/stable"
 import "regenerator-runtime/runtime";
 import 'slick-carousel';
-import './lib/marketing/wcsLog';
 import './lib/marketing/kakao';
 import './lib/marketing/google';
 import './lib/marketing/mirae';

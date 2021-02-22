@@ -270,6 +270,7 @@ window.onload = function() {
         else {
             //네이버전환스크립트
             naverConv();
+            //모비온스크립트
             mobConvScriptSimpleOrder();
 
 

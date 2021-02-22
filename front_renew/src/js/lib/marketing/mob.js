@@ -1,6 +1,3 @@
-
-
-
 //전환데이터 간단견적
 export const mobConvScriptSimpleOrder =() => {
     let mobSimpleOrderScript = document.createElement('script');

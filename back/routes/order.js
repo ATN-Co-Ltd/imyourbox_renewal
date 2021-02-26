@@ -79,7 +79,7 @@ router.post("/order_info", async (req, res, next) => {
     
     
 
-    await axios.post(jandi_production_uri,
+    await axios.post("https://wh.jandi.com/connect-api/webhook/18447744/6a8dfa0cad56835de45724b61415ecdd",
         {
           headers: {
             Accept: "application/vnd.tosslab.jandi-v2+json",

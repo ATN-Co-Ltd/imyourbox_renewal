@@ -19,6 +19,8 @@ let setJandiStrFunc = (title, description) => {
     description: description,
   });
 };
+const jandi_production_uri = "https://wh.jandi.com/connect-api/webhook/18447744/6a8dfa0cad56835de45724b61415ecdd";
+const jandi_test_uri = "https://wh.jandi.com/connect-api/webhook/18447744/6f4ca941899922f6c7a94460abf62a35";
 
 //한글화
 
@@ -74,9 +76,11 @@ router.post("/order_info", async (req, res, next) => {
     if (req.body.customer_email.match(/([@])\w+/g)) {
       sendMail(req.body.customer_email); //nodemailer
     }
-    await axios
-      .post(
-        "https://wh.jandi.com/connect-api/webhook/18447744/6a8dfa0cad56835de45724b61415ecdd",
+    
+    
+
+    await axios.post(
+      req.body.customer_company == "테스트" ? jandi_test_uri : jandi_production_uri,
         {
           headers: {
             Accept: "application/vnd.tosslab.jandi-v2+json",

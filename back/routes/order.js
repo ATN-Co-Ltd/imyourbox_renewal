@@ -79,8 +79,7 @@ router.post("/order_info", async (req, res, next) => {
     
     
 
-    await axios.post(
-      req.body.customer_company == "테스트" ? jandi_test_uri : jandi_production_uri,
+    await axios.post(jandi_production_uri,
         {
           headers: {
             Accept: "application/vnd.tosslab.jandi-v2+json",

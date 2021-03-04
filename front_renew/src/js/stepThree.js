@@ -134,7 +134,7 @@ jumpToFourBtn.addEventListener('click',(e)=> {
                 stepbar__one.style.display='none';
                 stepbar__two.style.display='none';
                 stepbar__three.style.display='none';
-                stepbar__four.style.display='';
+                stepbar__four.style.display='block';
                 nextBtn.value ="예상견적 확인";
             }
           })
@@ -148,7 +148,7 @@ jumpToFourBtn.addEventListener('click',(e)=> {
     stepbar__one.style.display='none';
     stepbar__two.style.display='none';
     stepbar__three.style.display='none';
-    stepbar__four.style.display='';
+    stepbar__four.style.display='block';
     nextBtn.value ="예상견적 확인";
     }
 })

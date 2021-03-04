@@ -43,9 +43,9 @@ steptwo.style.display='none';
 stepthree.style.display='none';
 stepfour.style.display='none';
 stepresult.style.display='none';
-stepbar__two.style.display="none";
-stepbar__three.style.display="none";
-stepbar__four.style.display="none";
+// stepbar__two.style.display="none";
+// stepbar__three.style.display="none";
+// stepbar__four.style.display="none";
 
 
 nextBtn.addEventListener('click',()=> {
@@ -81,7 +81,7 @@ nextBtn.addEventListener('click',()=> {
         stepthree.style.display = 'none';
         stepfour.style.display = 'none';
         steptwo.style.display = '';
-        stepbar__two.style.display='';
+        stepbar__two.style.display='block';
         stepbar__three.style.display='none';
         stepbar__four.style.display='none';
         stepbar__one.style.display='none';
@@ -116,7 +116,7 @@ nextBtn.addEventListener('click',()=> {
         stepfour.style.display = 'none';
         stepbar__one.style.display='none';
         stepbar__two.style.display='none';
-        stepbar__three.style.display='';
+        stepbar__three.style.display='block';
         stepbar__four.style.display='none';  
     }
     else if(stepStatus === 4)
@@ -128,7 +128,7 @@ nextBtn.addEventListener('click',()=> {
         stepbar__one.style.display='none';
         stepbar__two.style.display='none';
         stepbar__three.style.display='none';
-        stepbar__four.style.display='';
+        stepbar__four.style.display='block';
         // nextBtn.style.display="";
         nextBtn.value ="예상견적 확인";
     }
@@ -329,7 +329,7 @@ preBtn.addEventListener('click',()=> {
         stepthree.style.display = 'none';
         stepfour.style.display = 'none';
         stepbar__one.style.display='none';
-        stepbar__two.style.display='';
+        stepbar__two.style.display='block';
         stepbar__three.style.display='none';
     }
     else if(stepStatus === 3)
@@ -340,10 +340,10 @@ preBtn.addEventListener('click',()=> {
         stepfour.style.display = 'none';
         stepbar__one.style.display='none';
         stepbar__two.style.display='none';
-        stepbar__three.style.display='';
+        stepbar__three.style.display='block';
         stepbar__four.style.display='none';
         nextBtn.value ="다음";
-        
+           
     }
 })
 

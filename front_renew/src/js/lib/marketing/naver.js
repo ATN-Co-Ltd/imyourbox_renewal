@@ -6,7 +6,6 @@ export function naverConv(){
         var _nasa={};
         _nasa["cnv"] = wcs.cnv("4","1"); // 전환유형, 전환가치 설정해야함. 설치매뉴얼 참고
         wcs_do(_nasa);
-        console.log('naver?');
     })
     naverScript.type='text/javascript';
     naverScript.src="//wcs.naver.net/wcslog.js";

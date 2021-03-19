@@ -22,7 +22,7 @@ async function SendmailTransport(email) {
         '<p><img alt=""src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/imyourboxmail.jpg" style="height:724px; width:1024px" /></p>',
       attachments: [
         {
-          filename: "아임유어박스 회사소개서_2021",
+          filename: "아임유어박스 회사소개서_2021.pdf",
           path: "./files/Imyourbox.pdf",
           contentType: 'application/pdf'
         },

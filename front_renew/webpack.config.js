@@ -5,13 +5,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const WebpackCdnPlugin = require('webpack-cdn-plugin');
 const webpack = require('webpack');
-
+const production = process.env.NODE_ENV === "production";
 module.exports = {
   entry: { index: path.resolve(__dirname, "src/js/index.js") },
   output: {
     path: path.resolve(__dirname, "dist"),
     publicPath:"",
   },
+  mode: production ? "production" : "development",
+  devtool: production ? "hidden-source-map" : "eval",
   module: {
     rules: [
       {

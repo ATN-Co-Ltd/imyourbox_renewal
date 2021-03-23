@@ -5,7 +5,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const WebpackCdnPlugin = require('webpack-cdn-plugin');
 const webpack = require('webpack');
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const production = process.env.NODE_ENV === "production";
+const isAnalyze = process.env.ANALYZE === "true";
 module.exports = {
   entry: { index: path.resolve(__dirname, "src/js/index.js") },
   output: {
@@ -14,6 +16,7 @@ module.exports = {
   },
   mode: production ? "production" : "development",
   devtool: production ? "hidden-source-map" : "eval",
+  target:'web',
   module: {
     rules: [
       {
@@ -66,7 +69,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: 'introduction.html',
-      template: path.resolve(__dirname, "src", "introduction.html")
+      template: path.resolve(__dirname, "src", "introduction.html"), 
     }),
     new HtmlWebpackPlugin({
       filename: 'access.html',
@@ -78,15 +81,29 @@ module.exports = {
       $:"jquery",
       jQuery: 'jquery'
     }),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: isAnalyze ? true: false
+    }),
   ],
 
   optimization: {
-    splitChunks: { chunks: "all" }
+    splitChunks: { chunks: "all" },
+    minimizer: [
+      new UglifyJSPlugin({
+        uglifyOptions: {
+          compress:{
+            drop_console: production ? true : false,
+          }
+        }
+      })
+    ]
+    
   },
 
   devServer : {
-    host:'0.0.0.0',
+    host:'localhost',
     port:3000,
+    hotOnly:true,
+    hot:true,
   }
 };

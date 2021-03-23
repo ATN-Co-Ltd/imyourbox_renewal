@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "browserslist":[
+  "browserslist": [
     "ie 11"
   ],
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "start": "webpack serve",
+    "dev": "webpack --mode development --hot-only",
+    "build": "cross-env NODE_ENV=production ANALYZE=false webpack --mode production",
+    "start": "cross-env NODE_ENV=production ANALYZE=true webpack serve",
     "test": "webpack-dev-server --mode development --host 0.0.0.0 --hot --open --useLocalIp"
   },
   "keywords": [],
@@ -35,6 +35,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "core-js": "^3.8.1",
     "countup.js": "^2.0.7",
+    "cross-env": "^7.0.3",
     "file-loader": "^6.2.0",
     "flatpickr": "^4.6.6",
     "jquery": "^3.5.1",
@@ -44,6 +45,7 @@
     "regenerator-runtime": "^0.13.7",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^10.12.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-cdn-plugin": "^3.3.1",
     "wnumb": "^1.2.0"
   }

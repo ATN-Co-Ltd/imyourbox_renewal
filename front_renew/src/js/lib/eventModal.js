@@ -1,6 +1,10 @@
 import "jquery.cookie";
 
-if (window.location.pathname === "/index.html") {
+if (
+  window.location.pathname === "/" ||
+  window.location.pathname === "/index.html"
+) {
+  console.log("entered");
   const mainPop = document.getElementById("mainpop");
   function checkCookie() {
     let cookiedata = document.cookie;
@@ -56,7 +60,6 @@ if (window.location.pathname === "/index.html") {
 
   $(function () {
     $(".btn_close").click(function () {
-      console.log("???????");
       eventPopupHide(1);
     });
   });

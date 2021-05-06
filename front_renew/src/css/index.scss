@@ -268,3 +268,57 @@ p.button-text {
   padding-top: 1.875rem;
   padding-left: 0.5rem;
 }
+
+#mainpop {
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  z-index: 1000000;
+  display: none;
+}
+
+#mainpop img {
+  width: 100%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  #mainclose a {
+    font-size: 14px;
+    padding: 12px 0;
+  }
+  #mainpop {
+    width: 90vw;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #mainpop {
+    width: 400px;
+    top: calc(50% - 300px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #mainclose a {
+    font-size: 16px;
+    padding: 15px 0;
+  }
+}
+
+#mainclose a {
+  text-align: center;
+  width: calc(50% - 2px);
+  border: 1px solid #ccc;
+  float: left;
+  background-color: #fff;
+  cursor: pointer;
+  color: rgb(78, 78, 78);
+}
+
+#mainclose a:hover {
+  color: #5d88ff;
+  background-color: #e2e7ee;
+  font-weight: 600;
+}

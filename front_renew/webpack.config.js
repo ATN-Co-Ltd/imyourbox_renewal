@@ -17,7 +17,7 @@ module.exports = {
   },
   mode: production ? "production" : "development",
   devtool: production ? "hidden-source-map" : "eval",
-  target: "web",
+  target: ["web", "es5"],
   module: {
     rules: [
       {

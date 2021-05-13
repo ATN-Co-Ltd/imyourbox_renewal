@@ -4,7 +4,6 @@ if (
   window.location.pathname === "/" ||
   window.location.pathname === "/index.html"
 ) {
-  console.log("entered");
   const mainPop = document.getElementById("mainpop");
   function checkCookie() {
     let cookiedata = document.cookie;
@@ -67,6 +66,28 @@ if (
   $(function () {
     $(".close_text").click(function () {
       eventPopupHide(0);
+    });
+  });
+  const total = $("#poppop img").length, // get the number of slides
+    rand = Math.floor(Math.random() * total); // random number
+
+  console.log(rand);
+  //팝업 뉴스 케러셀
+  $(() => {
+    $("#poppop").slick({
+      dots: true,
+      infinite: true,
+      fade: true,
+      autoplaySpeed: 5000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: true,
+      initialSlide: rand,
+      prevArrow:
+        '<button class="custom__slick-prev"><i class="fas fa-angle-left"></i></button>',
+      nextArrow:
+        '<button class="custom__slick-next"><i class="fas fa-angle-right"></i></button>',
     });
   });
 }

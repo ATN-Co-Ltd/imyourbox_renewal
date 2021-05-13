@@ -269,6 +269,29 @@ p.button-text {
   padding-left: 0.5rem;
 }
 
+.slick-dots {
+  background-color: #fff;
+  // width: 380px;
+  // margin-left: 0.6rem;
+  // border-right: 1px solid #ccc;
+  // border-left: 1px solid #ccc;
+}
+.custom__slick-prev {
+  left: 0px;
+  visibility: visible;
+}
+.custom__slick-next {
+  right: 0px;
+  visibility: visible;
+}
+//처음 팝업케러셀 숨김
+.popimg {
+  visibility: hidden;
+}
+.slick-initialized {
+  visibility: visible;
+}
+
 #mainpop {
   color: #fff;
   position: absolute;

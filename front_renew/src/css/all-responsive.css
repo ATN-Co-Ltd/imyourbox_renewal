@@ -320,7 +320,8 @@
     font-size: 16px;
     padding: 26px 15px;
   }
-  .slick-slide {
+
+  .regular .slick-slide {
     margin: 0px 10px;
   }
   p.large-text {

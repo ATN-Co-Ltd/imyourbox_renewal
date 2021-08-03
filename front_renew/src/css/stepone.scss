@@ -337,18 +337,22 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     border-radius: 20px;
     font-family: "Noto Sans KR", sans-serif;
   }
-  .refrigerated_storage {
-    background-color: #f2f2f2;
-    color: #bfbfbf;
-  }
-  .fronze_storage {
-    background-color: #f2f2f2;
-    color: #bfbfbf;
-  }
+  // .refrigerated_storage {
+  //   background-color: #f2f2f2;
+  //   color: #bfbfbf;
+  // }
+  // .fronze_storage {
+  //   background-color: #f2f2f2;
+  //   color: #bfbfbf;
+  // }
+  .refrigerated_storage:hover,
+  .fronze_storage:hover,
   .room_temperature:hover,
   .low_temperature:hover {
     box-shadow: 0px 0px 5px 0px #ff9948;
   }
+  .refrigerated_storage.clicked,
+  .fronze_storage.clicked,
   .room_temperature.clicked,
   .low_temperature.clicked {
     box-shadow: 0px 0px 5px 0px #ff9948;

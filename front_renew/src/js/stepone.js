@@ -1,6 +1,5 @@
 //카카오
 
-
 //상품종류
 const product_category = [];
 const buttons_category = document.querySelectorAll(
@@ -21,7 +20,7 @@ buttons_category.forEach((e) => {
       checked__icon.style.color = "#f18b24";
       checked__icon.style.opacity = 0.7;
     }
-    
+
     e.classList.toggle(CLICKED_CLASS);
   });
 });
@@ -30,7 +29,7 @@ buttons_category.forEach((e) => {
 let detailInput = "";
 
 const input_detail = document.querySelector(".detail__input");
-input_detail.addEventListener('input', (e) => {
+input_detail.addEventListener("input", (e) => {
   detailInput = e.target.value;
   console.log(detailInput);
   input_detail.style.backgroundColor = white;

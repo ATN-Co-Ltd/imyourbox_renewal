@@ -29,6 +29,7 @@
 }
 
 .stepbox__three {
+  display: none;
   width: 100%;
   height: 30px;
   max-width: 1200px;
@@ -146,10 +147,13 @@
   justify-content: center;
   flex-flow: row wrap;
   text-align: center;
+  li:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
   li {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
-    width: calc((180%-16px) / 2);
+    width: calc((180% - 16px) / 2);
     height: 2.5rem;
     margin: 0 auto 0.8125rem auto;
     font-size: 0.9375rem;
@@ -162,12 +166,18 @@
       padding-top: 0.625rem;
       padding-left: 0.875rem;
       cursor: pointer;
+      // width: inherit;
+      height: inherit;
+      :hover {
+        box-shadow: none;
+      }
     }
     input {
       position: absolute;
       opacity: 0;
       cursor: pointer;
     }
+
     .check {
       position: absolute;
       top: 0.5rem;
@@ -191,8 +201,8 @@
     }
     label {
       .check:after {
-        top: 5px;
-        left: 5.1px;
+        top: 0.25rem;
+        left: 0.25rem;
         width: 10px;
         height: 10px;
         border-radius: 50%;
@@ -203,9 +213,9 @@
       }
     }
   }
-  .radio__groups li:hover {
-    box-shadow: 0px 0px 5px 0px #ff9948;
-  }
+}
+.processinglist {
+  margin: 0 auto 8rem auto;
 }
 
 .output__radio__groups {
@@ -224,8 +234,8 @@
   li {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    width: calc((128%-16px) / 3);
-    height: 12.5rem;
+    width: calc((128% - 16px) / 3);
+    height: 13.5rem;
     padding-top: 0.625rem;
     padding-left: 0.875rem;
     margin: 0.5625rem auto;
@@ -248,11 +258,11 @@
         text-align: left;
       }
     }
-    .pallet {
-      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+    .total {
+      background: url("#{$baseURL}/packing.svg") no-repeat center;
     }
-    .box {
-      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+    .only {
+      background: url("#{$baseURL}/box.svg") no-repeat center;
     }
     .pallet,
     .box {
@@ -287,8 +297,8 @@
     }
     label {
       .check:after {
-        top: 5px;
-        left: 5.1px;
+        top: 0.25rem;
+        left: 0.25rem;
         width: 10px;
         height: 10px;
         border-radius: 50%;
@@ -301,6 +311,9 @@
   }
   .barcode__radio__groups li:hover {
     box-shadow: 0px 0px 5px 0px #ff9948;
+  }
+  .output__radio__description {
+    line-height: 1em !important;
   }
 }
 
@@ -338,15 +351,15 @@
     li {
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
       border-radius: 20px;
-      width: calc((128%-16px) / 4.4);
+      width: calc((128% - 16px) / 4.4);
       height: 2.5rem;
     }
   }
 
   .output__radio__groups {
     li {
-      width: calc((127%-16px) / 3);
-      height: 8.125rem;
+      width: calc((127% - 16px) / 3);
+      height: 9.125rem;
       margin: 0 0.5rem;
       label {
         div {
@@ -365,6 +378,7 @@
   .processinglist {
     margin-bottom: 7.5rem;
   }
+
   .inputDate {
     display: flex;
     justify-content: flex-start;

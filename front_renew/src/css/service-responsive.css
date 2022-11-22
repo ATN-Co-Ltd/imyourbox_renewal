@@ -1,0 +1,91 @@
+@media screen and (min-width: 0px) and (max-width: 1023px) {
+  .main-text {
+    font-size: 20px;
+  }
+  .sub-text {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+  #content1,
+  #content2,
+  #content3,
+  #content4 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .service__cont1,
+  #content4 .cont4 {
+    padding: 3em 1em;
+  }
+  #header .inner {
+    width: 100%;
+  }
+  /*------추가-------*/
+  .content4-text {
+    font-size: 18px;
+    margin: 15px 0;
+    text-align: center;
+  }
+  .content4-img-text1 {
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .content4-img-text2 {
+    font-size: 12px;
+  }
+  #content4 .cont4 {
+    padding: 4em 0 3.5em 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-text {
+    font-size: 25px;
+  }
+  .sub-text {
+    font-size: 15px;
+    margin-bottom: 70px;
+  }
+  .service__cont1 {
+    padding: 5em 0;
+  }
+  #header .inner {
+    width: 1024px;
+  }
+  /*------추가-------*/
+  .content4-box {
+    margin: 40px 0;
+  }
+  .content4-text {
+    font-size: 25px;
+    padding: 0 30px;
+  }
+  .content4-box .left-side,
+  .content4-box .right-side {
+    width: 50%;
+  }
+  .cont2 .content4-box .left-side,
+  .cont2 .content4-box .right-side,
+  .cont5 .content4-box .left-side,
+  .cont5 .content4-box .right-side {
+    float: left;
+  }
+  .cont3 .content4-box .left-side,
+  .cont3 .content4-box .right-side,
+  .cont6 .content4-box .left-side,
+  .cont6 .content4-box .right-side {
+    float: right;
+  }
+  .content4-img-text1 {
+    margin: 15px 0;
+    font-size: 17px;
+    text-align: left;
+  }
+  .content4-img-text2 {
+    font-size: 14px;
+    text-align: left;
+  }
+  #content4 .cont4 {
+    padding: 6em 0 5.5em 0;
+  }
+}

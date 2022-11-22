@@ -1,0 +1,192 @@
+@media screen and (min-width: 0px) and (max-width: 1023px) {
+  .cont1 .cont--inner {
+    margin: 0 1em;
+  }
+  .timeline:before {
+    left: 18px;
+  }
+  .flag {
+    font-size: 20px;
+    margin-left: 21px;
+  }
+  .desc {
+    font-size: 14px;
+    line-height: 1.5em;
+    margin-left: 25px;
+  }
+  .timeline span.bold {
+    padding: 0 10px;
+  }
+  .directions .flag:before {
+    top: 15px;
+  }
+  .mobile-desc {
+    margin-top: -23px;
+  }
+  .desc-blank {
+    margin-left: 48px;
+  }
+  .timeline li {
+    padding: 20px 10px;
+  }
+  .partner-title {
+    font-size: 16px;
+  }
+  .partner-sub-title {
+    font-size: 13px;
+  }
+  .partner-cont {
+    width: 160px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+  .partner-text {
+    padding: 15px;
+  }
+  .contact2-box {
+    width: 100%;
+    float: left;
+  }
+  .contact2-left > p {
+    margin-bottom: 60px;
+    font-size: 14px;
+  }
+  .contact2-left {
+    width: 23%;
+    padding: 0 10px;
+  }
+  .contact2-right > p {
+    margin-bottom: 46px;
+    font-size: 14px;
+  }
+  .contact2-right {
+    width: 77%;
+  }
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+  .contact2-text1 {
+    font-size: 17px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .contact2-text2 {
+    font-size: 15px;
+    margin-bottom: 50px;
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  /* 단천리 */
+  .map {
+    width: 100%;
+    float: initial;
+  }
+  .cont4 p.title {
+    margin-bottom: 3em;
+  }
+  .iframe {
+    margin-bottom: 5em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desc {
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-left: 120px;
+  }
+  .directions .flag:before {
+    left: -28px;
+    margin-top: -6px;
+  }
+  .flag {
+    font-size: 25px;
+    margin-left: 110px;
+  }
+  .timeline:before {
+    left: 100px;
+  }
+  .timeline span.bold {
+    padding: 0 15px 0 0;
+  }
+  .directions .flag:before {
+    top: 50%;
+  }
+  .mobile-desc {
+    margin-top: -28px;
+  }
+  .desc-blank {
+    margin-left: 47px;
+  }
+  .timeline li {
+    padding: 35px 10px;
+  }
+  .partner-cont {
+    width: 30%;
+    border-radius: 20px;
+    margin: 5px 1.65%;
+    float: left;
+  }
+  .partner-text {
+    padding: 25px;
+  }
+  .partner-title {
+    font-size: 20px;
+  }
+  .partner-sub-title {
+    font-size: 15px;
+  }
+  .contact2-box {
+    width: 100%;
+    float: left;
+  }
+  .contact2-left > p {
+    margin-bottom: 70px;
+    font-size: 16px;
+  }
+  .contact2-left {
+    width: 30%;
+  }
+  .contact2-right > p {
+    /* margin-bottom: 45px; */
+    margin-bottom: 48px;
+    font-size: 16px;
+  }
+  .contact2-right {
+    width: 70%;
+  }
+  iframe {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 3em;
+  }
+  .contact2-text1 {
+    font-size: 20px;
+  }
+  .contact2-text2 {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  /* 단천리 */
+  .map {
+    width: 50%;
+    padding: 0 2%;
+    float: left;
+  }
+  .map-1 {
+    width: 100%;
+  }
+  .map-1 .contact2-box .contact2-left {
+    width: 15%;
+  }
+  .map-1 .contact2-box .contact2-right {
+    width: 85%;
+  }
+  .cont4 p.title {
+    margin-bottom: 2em;
+  }
+}

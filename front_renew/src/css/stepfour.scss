@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+$baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 :root {
   --syboml__color: #ff9948;
   --background_color_one: #fff;
@@ -20,7 +21,26 @@
   --color__deactive: #f2f2f2;
 }
 
+.detail__textarea {
+  border: 0.5px solid #c4c4c4;
+  background: #f2f2f2;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  max-width: 100%;
+  width: 100%;
+  margin-top: 1.5625rem;
+  //font-size: 0.8125rem;
+}
+.detail__textarea:focus {
+  background: #ffffff;
+}
+
+.lastStep {
+  margin-top: 9rem;
+}
+
 .stepbox__four {
+  display: none;
   width: 100%;
   height: 30px;
   max-width: 1200px;
@@ -123,6 +143,14 @@
     width: 5.5rem;
   }
 }
+#emailCheck {
+  //visibility: hidden;
+  color: rgb(254, 16, 0);
+  text-align: left;
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
 
 //responsive
 @media screen and (min-width: 768px) {
@@ -132,7 +160,7 @@
     justify-content: center;
   }
   .stepFour__container {
-    width: calc((130%-16px) / 3);
+    width: calc((130% - 16px) / 3);
     margin-bottom: 0%;
   }
   .memo__container {
@@ -152,6 +180,9 @@
   }
   #permission {
     width: 1.875rem !important;
+  }
+  .last__checkbox {
+    margin-bottom: 7.75rem;
   }
 }
 

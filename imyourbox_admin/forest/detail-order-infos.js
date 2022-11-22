@@ -6,15 +6,7 @@ const { collection } = require('forest-express-sequelize');
 // - Smart relationships: https://docs.forestadmin.com/documentation/reference-guide/relationships/create-a-smart-relationship
 // - Smart segments: https://docs.forestadmin.com/documentation/reference-guide/segments/smart-segments
 collection('detailOrderInfos', {
-  actions: [{
-    name : "견적서보기"
-  }],
-  isSearchable: true,
-  fields: [
-    {
-      field: 'salesManager',
-      type: 'String',
-    }
-  ],
+  actions: [],
+  fields: [],
   segments: [],
 });

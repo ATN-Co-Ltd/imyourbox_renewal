@@ -35,6 +35,31 @@ module.exports = (sequelize, DataTypes) => {
       field: 'reg_date',
       allowNull: false,
     },
+     manager : {
+      type: DataTypes.ENUM('1','2','3','4'),
+      field: 'manager',
+      allowNull: true,
+    },
+    estimateDoc : {
+      type: DataTypes.STRING,
+      field: 'estimateDoc',
+      allowNull: true,
+    },
+    contractDoc : {
+      type: DataTypes.STRING,
+      field: 'contractDoc',
+      allowNull: true,
+    },
+    contract_status: {
+      type: DataTypes.ENUM,
+      values:["no_response", "no_negotiation","compare_otherCompany","inquire_storeType","ongoing_negotiation","complete_negotiation"],
+      allowNull: true,
+    },
+    history : {
+      type: DataTypes.STRING,
+      field: 'history',
+      allowNull: true,
+    },
     createdAt: {
       type: DataTypes.DATE,
     },

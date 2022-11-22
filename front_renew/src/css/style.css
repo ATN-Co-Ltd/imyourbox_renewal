@@ -1,9 +1,23 @@
-@import "./access.css";
-@import "./contact.css";
 @import "./index.scss";
-@import "./price.css";
 @import "./responsive.css";
+@import "./all-html.scss";
+@import "./introduction.css";
+@import "./introduction-responsive.css";
+@import "./all-responsive.css";
+@import "./service-responsive.css";
+@import "./service.css";
 @import "./stepone.scss";
 @import "./steptwo.scss";
 @import "./stepthree.scss";
 @import "./stepfour.scss";
+@import "./stepresult.scss";
+@import "./access.css";
+#kakao-talk-channel-chat-button {
+  position: fixed;
+  /* top: 80vh;
+  right: 5vw; */
+  right: 1.2rem;
+  bottom: 6.25rem;
+  cursor: pointer;
+  z-index: 5000;
+}

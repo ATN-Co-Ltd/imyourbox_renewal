@@ -17,7 +17,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   --color_divider: #ffd18c;
   --color_category_description: #666666;
   --color_button_deactive: #ffffff;
-  --color__white: #ffffff;
+  --color__white: #050404;
   --color__tesxt: #23232;
   --color__checked__font: #f18b24;
   --color__deactive: #f2f2f2;
@@ -25,6 +25,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 
 input[type="checkbox"] {
   width: 1.875rem;
+  min-width: 1.875rem;
   height: 1.875rem !important;
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
@@ -69,6 +70,8 @@ input[type="checkbox"]:checked {
   &:after {
     display: none;
   }
+  width: 30px !important;
+  height: 26px !important;
   border: none;
   box-shadow: none;
   background-color: #ff8d33;
@@ -77,9 +80,11 @@ input[type="checkbox"]:checked {
   border-right: 10px solid transparent;
   border-bottom: 10px solid transparent;
 }
+
 // noUiSlider end
 
 .stepbox__two {
+  display: none;
   width: 100%;
   height: 30px;
   max-width: 1200px;
@@ -164,7 +169,7 @@ input[type="checkbox"]:checked {
   width: 100%;
   max-width: 100%;
   margin-top: 100px;
-  margin: 0 auto;
+  // margin: 0 auto;
   height: inherit;
   display: flex;
   flex-direction: column;
@@ -174,6 +179,10 @@ input[type="checkbox"]:checked {
     display: flex;
     flex-direction: column;
   }
+}
+
+.stepTwo__title {
+  margin: 0.5rem 5% 0 5%;
 }
 
 .top__divider {
@@ -222,7 +231,7 @@ input[type="checkbox"]:checked {
   flex-flow: row wrap;
   text-align: center;
   li {
-    width: calc((100%-16px) / 1);
+    width: calc((100% - 16px) / 1);
     // width: 165px;
     // width: 4.6875rem;
     height: 90px;
@@ -233,9 +242,11 @@ input[type="checkbox"]:checked {
     margin-top: 0.5625rem;
     i {
       position: relative;
-      bottom: 95%;
-
-      left: 45%;
+      // bottom: 95%;
+      // left: 45%;
+      width: 2rem;
+      left: 93%;
+      bottom: 50%;
       color: #ffffff;
     }
   }
@@ -292,7 +303,7 @@ input[type="checkbox"]:checked {
   li {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    width: calc((128%-16px) / 3);
+    width: calc((128% - 16px) / 3);
     height: 12.5rem;
     padding-top: 0.625rem;
     padding-left: 0.875rem;
@@ -317,10 +328,10 @@ input[type="checkbox"]:checked {
       }
     }
     .pallet {
-      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+      background: url("#{$baseURL}/pallet.svg") no-repeat center;
     }
     .box {
-      background: url("#{$baseURL}/processing04.svg") no-repeat center;
+      background: url("#{$baseURL}/box.svg") no-repeat center;
     }
     .pallet,
     .box {
@@ -335,7 +346,7 @@ input[type="checkbox"]:checked {
     .check {
       position: absolute;
       margin-top: 5%;
-      margin-left: 30%;
+      margin-left: 25%;
       height: 1.25rem;
       width: 1.25rem;
       background-color: var(--color__white);
@@ -355,8 +366,8 @@ input[type="checkbox"]:checked {
     }
     label {
       .check:after {
-        top: 5px;
-        left: 5.1px;
+        top: 0.25rem;
+        left: 0.25rem;
         width: 10px;
         height: 10px;
         border-radius: 50%;
@@ -444,6 +455,9 @@ input[type="checkbox"]:checked {
     margin-bottom: 4.9375rem;
   }
 }
+.end__container {
+  margin: 0 auto 8rem auto;
+}
 
 //물품보관량 - 박스선택했을때
 .box__checked__container {
@@ -461,7 +475,7 @@ input[type="checkbox"]:checked {
       visibility: hidden;
     }
     li {
-      width: calc((100%-16px) / 1);
+      width: calc((100% - 16px) / 1);
       height: 5.625rem;
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
       border-radius: 10px;
@@ -505,8 +519,8 @@ input[type="checkbox"]:checked {
       }
       label {
         .check:after {
-          top: 5px;
-          left: 5.1px;
+          top: 0.25rem;
+          left: 0.25rem;
           width: 10px;
           height: 10px;
           border-radius: 50%;
@@ -550,7 +564,7 @@ input[type="checkbox"]:checked {
       display: none;
     }
     li {
-      width: calc((100%-16px) / 1);
+      width: calc((100% - 16px) / 1);
       height: 90px;
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
       border-radius: 10px;
@@ -594,8 +608,8 @@ input[type="checkbox"]:checked {
       }
       label {
         .check:after {
-          top: 5px;
-          left: 5.1px;
+          top: 0.25rem;
+          left: 0.25rem;
           width: 10px;
           height: 10px;
           border-radius: 50%;
@@ -634,7 +648,7 @@ input[type="checkbox"]:checked {
   .logistics_service_kinds__container {
     margin-bottom: 5rem;
     li {
-      width: calc((130%-16px) / 3);
+      width: calc((130% - 16px) / 3);
       margin: 0.5625rem 0.5rem 0 0.5rem;
     }
     .logistics_service_kinds__list-title {
@@ -644,7 +658,7 @@ input[type="checkbox"]:checked {
 
   .inputStoreType__radio__groups {
     li {
-      width: calc((127%-16px) / 3);
+      width: calc((127% - 16px) / 3);
       height: 8.125rem;
       margin: 0 0.5rem;
       label {
@@ -671,6 +685,10 @@ input[type="checkbox"]:checked {
       }
     }
   }
+  .end__container {
+    margin: 0 auto;
+  }
+
   .calendar-inputStoreDate::placeholder {
     background-position: 7% center;
   }
@@ -683,10 +701,14 @@ input[type="checkbox"]:checked {
         display: block;
       }
       li {
-        width: calc((130%-16px) / 3);
+        width: calc((130% - 16px) / 3);
         margin-left: 0.5rem;
         margin-right: 0.5rem;
       }
     }
+  }
+
+  .step__two__last {
+    margin-bottom: 7.375rem;
   }
 }

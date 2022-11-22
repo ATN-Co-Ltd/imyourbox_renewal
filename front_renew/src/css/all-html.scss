@@ -1,0 +1,594 @@
+/* ----전체css영역---- */
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+a,
+p,
+span {
+  decoration: none;
+  text-decoration: none;
+  color: #444;
+  font-weight: 200;
+  letter-spacing: -0.05em;
+  line-height: 1.5em;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* ----헤더css영역---- */
+
+#header:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  padding: 10px;
+  background-color: rgba(256, 256, 256);
+}
+
+h1.logo {
+  text-align: center;
+  width: 130px;
+  display: inline-block;
+}
+
+h1.logo a {
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+h1.logo a img {
+  width: 100%;
+}
+
+.header--gnb {
+  float: right;
+}
+
+.header--gnb ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.header--gnb ul li {
+  float: left;
+  padding-top: 10px;
+}
+
+.header--gnb ul li a {
+  font-size: 1em;
+  margin: 0 15px;
+  display: block;
+  text-align: center;
+}
+
+.header--gnb ul li a:hover {
+  color: #f18b24;
+}
+
+.header--gnb ul li:last-child {
+  padding-top: 0px;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+.header--gnb ul li:last-child a {
+  border: 1px solid #f18b24;
+  margin-left: 25px;
+  padding: 0.6em 1.5em;
+  transition: all 0.3s ease 0s;
+  box-sizing: border-box;
+  font-weight: 600;
+  color: #f18b24;
+  border-radius: 10px;
+}
+
+.header--gnb ul li:last-child a:hover {
+  background-color: #f18b24;
+  box-shadow: 0px 15px 20px rgba(255, 155, 41, 0.288);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* --------------모바일 헤더 메뉴부분 css------------- */
+
+input[id="menuicon"] {
+  display: none;
+}
+
+input[id="menuicon"] + label {
+  //display: block; //희중
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  transition: all 0.35s;
+  cursor: pointer;
+}
+
+input[id="menuicon"]:checked + label {
+  z-index: 2;
+  right: 260px;
+}
+
+input[id="menuicon"] + label span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 30px;
+  background: #f18b24;
+  transition: all 0.35s;
+}
+
+input[id="menuicon"]:checked + label span {
+  background: #333;
+}
+
+input[id="menuicon"] + label span:nth-child(1) {
+  top: 0;
+}
+
+input[id="menuicon"] + label span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[id="menuicon"] + label span:nth-child(3) {
+  bottom: 0;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+input[id="menuicon"]:checked + label + div {
+  right: 0;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background: #222;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  z-index: 100;
+  transition: all 0.35s;
+}
+
+.sidebar p {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #f18b24;
+}
+
+.sidebar ul.gnb li {
+  border-bottom: solid 1px #777;
+}
+
+.sidebar ul.gnb li:hover {
+  background-color: #f18b24;
+}
+
+.sidebar ul.gnb li a {
+  display: inline-block;
+  color: #fff;
+  padding: 15px;
+  font-size: 1em;
+}
+
+.sidebar ul.sns {
+  width: 100%;
+  margin: 14.5px 30px;
+  text-align: center;
+}
+
+.sidebar ul.sns:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.sidebar .sns li {
+  float: left;
+  margin: 0 20px;
+}
+
+#footer ul.sns li {
+  margin: 0 15px;
+}
+
+.sidebar ul.sns li a {
+  font-size: 0.3;
+  color: #ccc;
+}
+
+.sidebar ul.sns li a:hover {
+  color: #f18b24;
+}
+
+/*---------- container공통영역 ----------*/
+
+.inner {
+  margin: 0 auto;
+}
+
+.inner,
+.cont--inner {
+  overflow: hidden;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  line-height: 1.5em;
+}
+
+#container {
+  margin-top: 50px;
+}
+
+.title {
+  font-weight: 900;
+  line-height: 20px;
+  color: #ff9948;
+}
+
+.sub-title {
+  text-align: center;
+  font-weight: 500;
+  color: #474747;
+}
+
+.orange-back {
+  background: rgba(255, 166, 63, 0.08);
+}
+
+.blue-back {
+  background: rgba(109, 150, 255, 0.08);
+}
+
+.green-back {
+  background: rgba(173, 255, 109, 0.08);
+}
+
+.cont-box {
+  text-align: center;
+}
+
+.icon-box {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  position: relative;
+  text-align: left;
+  float: left;
+}
+
+.icon-text1 {
+  font-weight: 700;
+}
+
+.right-box {
+  text-align: left;
+  background: #ffffff;
+  position: absolute;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.left-box {
+  text-align: right;
+  box-sizing: border-box;
+  position: absolute;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.more-view {
+  margin-top: 20px;
+}
+
+.more-view a {
+  color: #f18b24;
+}
+
+.back-img-box {
+  overflow: hidden;
+}
+
+/* -------footer css 영역------- */
+
+#footer {
+  background-color: #222;
+}
+
+#footer a,
+#footet p,
+#footer span {
+  color: #fff;
+}
+
+#footer .logo-div {
+  width: 100%;
+  padding: 35px 0;
+}
+
+#footer .contact {
+  width: 100%;
+}
+
+.logo-width {
+  text-align: center;
+}
+
+.logo-width img {
+  width: 180px;
+  text-align: center;
+}
+
+.copy {
+  font-size: 0.8em;
+  color: #ccc;
+  padding-bottom: 50px;
+}
+
+.company {
+  font-weight: 600;
+}
+
+.service-download,
+.call {
+  margin-top: 25px;
+}
+
+.service-download {
+  color: #f18b24;
+}
+
+.service-download i {
+  margin-left: 6px;
+}
+
+.call {
+  color: #fff;
+}
+
+.call i {
+  margin-right: 6px;
+}
+
+.contact-text1,
+.contact-text2 {
+  width: 100%;
+}
+
+/*슬라이드영역*/
+
+* {
+  box-sizing: border-box;
+}
+
+.slider {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: -25px;
+  border: none;
+  background: transparent;
+  color: #777;
+  font-family: monospace;
+  font-size: 2.8rem;
+  z-index: 3000;
+  outline: none;
+  cursor: pointer;
+}
+
+.slick-arrow:hover,
+.slick-arrow:active,
+.slick-arrow:focus {
+  color: #777;
+}
+
+.slick-prev {
+  left: -50px;
+  text-align: left;
+}
+.slick-next {
+  right: -50px;
+  text-align: right;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  display: none;
+}
+
+.slick-slide {
+  transition: all ease-in-out 0.3s;
+  opacity: 0.4;
+}
+
+.slick-active {
+  opacity: 0.7;
+}
+
+.slick-current {
+  opacity: 1;
+}
+
+.news-cont {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 1px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.news-cont:hover .news-img-area i {
+  color: #f18b24;
+}
+
+.news-cont:hover {
+  opacity: 0.5;
+}
+
+.news-img-area {
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+
+.news-img-area i {
+  position: absolute;
+  color: #666;
+}
+
+.slide-cont {
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.slide-cont:hover {
+  opacity: 0.5;
+}
+
+/* .news-img-area i:hover {
+    color: #f18b24;
+} */
+
+.news-title {
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 0 0 10px 10px;
+}
+
+.contractor-text {
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 0 0 10px 10px;
+}
+
+.news-img-area i {
+  color: #f18b24;
+}
+
+.slide-img-area {
+  position: relative;
+}
+
+.slide-title {
+  position: absolute;
+  color: #000;
+}
+
+.slide-sub-title {
+  position: absolute;
+  color: #000;
+  font-weight: 700;
+}
+
+/* #footer .footer-sns {
+    width: 205px;
+} */
+
+#footer .use-div {
+  width: 100%;
+  padding: 1em 0;
+}
+
+#footer .footer-sns {
+  margin-top: 20px;
+}
+
+#footer .footer-sns:after,
+#footer .use-div:after,
+#footer .logo-div:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+#footer ul.sns li,
+#footer ul.use li {
+  display: inline-block;
+  text-align: center;
+}
+
+#footer ul.use li {
+  margin: 0 10px;
+}
+
+#footer ul.use li a {
+  color: #fff;
+}
+
+#footer ul.sns li a {
+  color: #999;
+}
+
+#footer ul.sns li a:hover {
+  color: #fff;
+}
+
+#footer .contact {
+  width: 100%;
+}
+
+#footer .contact p {
+  display: block;
+  margin: 0.5em 0;
+  color: rgb(231, 231, 231) !important;
+}

@@ -137,7 +137,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   color: var(--syboml__color);
   font-weight: 900;
   font-size: 1.125rem;
-  margin: 0rem 5%;
+  margin: 2rem 5% 0 5%;
 }
 .stepone__description {
   font-weight: 500;
@@ -179,8 +179,9 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   text-align: center;
 }
 .stepone__category__list li {
-  width: calc((100%-16px) / 5);
-  // width: 4.6875rem;
+  //width: calc((100%-16px) / 5);
+  width: calc((100% - 16px) / 5);
+  //width: 4.6875rem;
   height: 75px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
@@ -314,7 +315,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 .storageType__container__buttons li {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  width: calc((128%-16px) / 3);
+  width: calc((128% - 16px) / 3);
   height: 2.5rem;
   margin-left: 0.9375rem;
   margin-top: 0.5625rem;
@@ -336,18 +337,15 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     border-radius: 20px;
     font-family: "Noto Sans KR", sans-serif;
   }
-  .refrigerated_storage {
-    background-color: #f2f2f2;
-    color: #bfbfbf;
-  }
-  .fronze_storage {
-    background-color: #f2f2f2;
-    color: #bfbfbf;
-  }
+
+  .refrigerated_storage:hover,
+  .fronze_storage:hover,
   .room_temperature:hover,
   .low_temperature:hover {
     box-shadow: 0px 0px 5px 0px #ff9948;
   }
+  .refrigerated_storage.clicked,
+  .fronze_storage.clicked,
   .room_temperature.clicked,
   .low_temperature.clicked {
     box-shadow: 0px 0px 5px 0px #ff9948;
@@ -384,14 +382,14 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   justify-content: center;
   flex-flow: row wrap;
   text-align: center;
-  .none {
+  .blankcontainer {
     visibility: hidden;
   }
 }
 .barcode__radio__groups li {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  width: calc((128%-16px) / 3);
+  width: calc((128% - 16px) / 3);
   height: 2.5rem;
   margin-left: 0.9375rem;
   margin-top: 0.5625rem;
@@ -405,6 +403,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     padding-top: 0.625rem;
     padding-left: 0.875rem;
     cursor: pointer;
+    height: 100%;
   }
   input {
     position: absolute;
@@ -434,8 +433,8 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   }
   label {
     .check:after {
-      top: 5px;
-      left: 5.1px;
+      top: 0.25rem;
+      left: 0.25rem;
       width: 10px;
       height: 10px;
       border-radius: 50%;
@@ -537,13 +536,13 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 
 .productCaution__list {
   display: flex;
-  margin: 0 auto;
+  margin: 0 auto 8rem auto;
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
   text-align: center;
   li {
-    width: calc((130%-16px) / 3);
+    width: calc((130% - 16px) / 3);
     // width: 165px;
     // width: 4.6875rem;
     height: 109px;
@@ -616,6 +615,8 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   }
 }
 .stepBtn {
+  border-top: 1px solid #ffa63f;
+  z-index: 2;
   position: fixed;
   width: 100%;
   max-width: 100%;
@@ -672,7 +673,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     margin-left: 1.875rem;
   }
   .stepone__category__list li {
-    width: calc((100%-16px) / 10);
+    width: calc((100% - 16px) / 10);
     height: 6.875rem;
     margin-bottom: 5rem;
     .stepone__category__list__label__input {
@@ -726,7 +727,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     }
   }
   .storageType__container__buttons li {
-    width: calc((128%-16px) / 6);
+    width: calc((128% - 16px) / 6);
     height: 2.8125rem;
     margin-bottom: 5rem;
   }
@@ -742,7 +743,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   .barcode__radio__groups li {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
-    width: calc((128%-16px) / 4.4);
+    width: calc((128% - 16px) / 4.4);
     height: 2.5rem;
   }
   .option__title__container {
@@ -774,8 +775,9 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   }
 
   .productCaution__list {
+    margin: 0 auto;
     li {
-      width: calc((104%-16px) / 6);
+      width: calc((104% - 16px) / 6);
       // width: 165px;
       // width: 4.6875rem;
       height: 130px;
@@ -789,6 +791,7 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     }
   }
   .stepBtn {
+    border-top: 0;
     position: static;
     margin: 0 auto;
     width: 100%;
@@ -813,6 +816,16 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   }
   .stepone__progress__bar:before {
     width: 100%;
+  }
+  .stepBtn__nextBtn,
+  .stepBtn__preBtn {
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .stepBtn__nextBtn,
+  .stepBtn__preBtn {
+    margin-bottom: 7rem;
   }
 }
 

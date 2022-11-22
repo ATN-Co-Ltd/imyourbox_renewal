@@ -19,6 +19,8 @@ let setJandiStrFunc = (title, description) => {
     description: description,
   });
 };
+const jandi_production_uri = "https://wh.jandi.com/connect-api/webhook/18447744/6a8dfa0cad56835de45724b61415ecdd";
+const jandi_test_uri = "https://wh.jandi.com/connect-api/webhook/18447744/6f4ca941899922f6c7a94460abf62a35";
 
 //한글화
 
@@ -74,9 +76,10 @@ router.post("/order_info", async (req, res, next) => {
     if (req.body.customer_email.match(/([@])\w+/g)) {
       sendMail(req.body.customer_email); //nodemailer
     }
-    await axios
-      .post(
-        "https://wh.jandi.com/connect-api/webhook/18447744/6f4ca941899922f6c7a94460abf62a35",
+    
+    
+
+    await axios.post(req.body.customer_company === "테스트" ? jandi_test_uri : jandi_production_uri,
         {
           headers: {
             Accept: "application/vnd.tosslab.jandi-v2+json",
@@ -190,6 +193,7 @@ router.post("/detail_order_info", async (req, res, next) => {
     setJandiStrFunc("상품취급주의사항", `${arrCautiontype}`);
     setJandiStrFunc("문의할물류서비스", `${arrServiceKinds}`);
     setJandiStrFunc("보관타입", `${req.body.input_store_type}`);
+    setJandiStrFunc("물류보관량", `${req.body.input_store_num}`);
     setJandiStrFunc("박스사이즈", `${req.body.input_box_size}`);
     setJandiStrFunc("sku양", `${req.body.input_sku_store_num}`);
     setJandiStrFunc("입고예정일", `${req.body.input_store_date}`);
@@ -203,8 +207,7 @@ router.post("/detail_order_info", async (req, res, next) => {
       sendMail(req.body.customer_email); //nodemailer
     }
     await axios
-      .post(
-        "https://wh.jandi.com/connect-api/webhook/18447744/6f4ca941899922f6c7a94460abf62a35",
+      .post(req.body.customer_company === "테스트" ? jandi_test_uri : jandi_production_uri,
         {
           headers: {
             Accept: "application/vnd.tosslab.jandi-v2+json",

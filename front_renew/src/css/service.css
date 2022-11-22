@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.header--gnb .gnb li:nth-child(3) {
+  color: #f18b24 !;
+  font-weight: 700;
+}
+
+#container .main {
+  border-radius: 7px;
+  padding-top: 20px;
+  background: #ffffff;
+  margin: 0 auto;
+}
+
+#container section {
+}
+
+#content1,
+#content2,
+#content3,
+#content4 {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 4px solid #ff7322;
+  overflow: hidden;
+}
+
+#content4 .cont--inner {
+  overflow: hidden !important;
+}
+/* #content4 .cont--inner {
+  overflow: visible;
+} */
+
+/* #container .cont--inner {
+    max-width: 1024px;
+} */
+
+#container input {
+  display: none;
+}
+
+#container label {
+  display: inline-block;
+  padding: 15px 0;
+  box-sizing: border-box;
+  width: calc(25% - 5px);
+  font-weight: 500;
+  color: #666;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+#container label:hover {
+  color: #f15e24;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+  background-color: #f18b24;
+  border: 1px solid #f18b24;
+  box-shadow: 0px 10px 10px rgba(197, 105, 0, 0.288);
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover p {
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+
+.button {
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #f15e24;
+  transition: all 0.3s ease 0s;
+  box-sizing: border-box;
+  color: #f15e24;
+  display: inline-block;
+  font-size: 1.1em;
+  padding: 0.8em 3em;
+  border-radius: 30px;
+  margin: 7px 0;
+}
+
+.button p {
+  font-size: 0.8em;
+  color: rgb(54, 54, 54);
+}
+
+/*input 클릭시, label 스타일*/
+
+#container input:checked + label {
+  color: #fff;
+  border-radius: 7px 7px 0 0;
+  box-sizing: border-box;
+  background-color: #ff7322;
+  transition: all 0.3s ease 0s;
+}
+
+#container input:checked + label:hover {
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+  transition: all 0.5s ease 0s;
+}
+
+/*-------- cont1 영역 css --------*/
+
+.main-content {
+  text-align: left;
+  background: rgb(255, 154, 30);
+  background: linear-gradient(
+    25deg,
+    rgba(255, 154, 30, 1) 0%,
+    rgba(250, 62, 62, 1) 43%,
+    rgba(255, 179, 0, 1) 100%
+  );
+  padding: 5em 0;
+}
+
+.main-content .cont--inner > p {
+  color: #fff;
+}
+
+/*-------- content 영역 css --------*/
+
+.main-text,
+.sub-text {
+  color: #474747;
+}
+
+/*------------추가한 css-----------*/
+
+.content4-box {
+  width: 100%;
+}
+
+.content4-text {
+  font-weight: bold;
+}
+
+.content4-box img,
+.content4-box p {
+  width: 100%;
+}
+
+.content4-img-text1 {
+  font-weight: 550;
+}
+
+.content4-img-text2 {
+  opacity: 0.6;
+}
+
+#content4 .cont-box {
+  text-align: left;
+}
+
+#content4 .cont7 {
+  text-align: center;
+}
+
+/* 희중이가 짠거 */
+.factory__cont--inner {
+  overflow: hidden !important;
+}

@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const jwt = require('express-jwt');
 const morgan = require('morgan');
+const dotenv = require("dotenv");
+dotenv.config();
 const {
   errorHandler,
   ensureAuthenticated,

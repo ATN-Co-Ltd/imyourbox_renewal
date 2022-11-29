@@ -7,9 +7,9 @@
     "ie 11"
   ],
   "scripts": {
-    "dev": "webpack --mode development",
+    "dev": "cross-env NODE_ENV=development webpack serve",
     "build": "cross-env NODE_ENV=production ANALYZE=false webpack --mode production",
-    "start": "cross-env NODE_ENV=production ANALYZE=true webpack serve",
+    "start": "cross-env NODE_ENV=production ANALYZE=false webpack serve",
     "test": "webpack-dev-server --mode development --host 0.0.0.0 --hot --open --useLocalIp"
   },
   "keywords": [],

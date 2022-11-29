@@ -6,8 +6,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const jwt = require('express-jwt');
 const morgan = require('morgan');
-const dotenv = require("dotenv");
-dotenv.config();
 const {
   errorHandler,
   ensureAuthenticated,
@@ -16,7 +14,7 @@ const {
 
 const app = express();
 
-let allowedOrigins = [/\.forestadmin\.com$/];
+let allowedOrigins = [/\.forestadmin\.com$/, /localhost:\d{4}$/];
 
 if (process.env.CORS_ORIGINS) {
   allowedOrigins = allowedOrigins.concat(process.env.CORS_ORIGINS.split(','));
@@ -24,12 +22,20 @@ if (process.env.CORS_ORIGINS) {
 
 const corsConfig = {
   origin: allowedOrigins,
-  allowedHeaders: ['Authorization', 'X-Requested-With', 'Content-Type'],
   maxAge: 86400, // NOTICE: 1 day
   credentials: true,
 };
 
 app.use(morgan('tiny'));
+// Support for request-private-network as the `cors` package
+// doesn't support it by default
+// See: https://github.com/expressjs/cors/issues/236
+app.use((req, res, next) => {
+  if (req.headers['access-control-request-private-network']) {
+    res.setHeader('access-control-allow-private-network', 'true');
+  }
+  next(null);
+});
 app.use('/forest/authentication', cors({
   ...corsConfig,
   // The null origin is sent by browsers for redirected AJAX calls
@@ -46,6 +52,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(jwt({
   secret: process.env.FOREST_AUTH_SECRET,
   credentialsRequired: false,
+  algorithms: ['HS256'],
 }));
 
 app.use('/forest', (request, response, next) => {

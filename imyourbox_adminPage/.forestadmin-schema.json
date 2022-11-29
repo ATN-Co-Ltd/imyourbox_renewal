@@ -48,7 +48,7 @@
       "inverseOf": null,
       "validations": []
     }, {
-      "field": "contract_status",
+      "field": "contractStatus",
       "type": "Enum",
       "defaultValue": null,
       "enums": [
@@ -82,16 +82,12 @@
       "isFilterable": true,
       "isPrimaryKey": false,
       "isReadOnly": false,
-      "isRequired": true,
+      "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
       "reference": null,
       "inverseOf": null,
-      "validations": [{
-        "message": null,
-        "type": "is present",
-        "value": null
-      }]
+      "validations": []
     }, {
       "field": "createdAt",
       "type": "Date",
@@ -116,12 +112,16 @@
       "isFilterable": true,
       "isPrimaryKey": false,
       "isReadOnly": false,
-      "isRequired": false,
+      "isRequired": true,
       "isSortable": true,
       "isVirtual": false,
       "reference": null,
       "inverseOf": null,
-      "validations": []
+      "validations": [{
+        "message": null,
+        "type": "is present",
+        "value": null
+      }]
     }, {
       "field": "customerEmail",
       "type": "String",
@@ -131,12 +131,16 @@
       "isFilterable": true,
       "isPrimaryKey": false,
       "isReadOnly": false,
-      "isRequired": false,
+      "isRequired": true,
       "isSortable": true,
       "isVirtual": false,
       "reference": null,
       "inverseOf": null,
-      "validations": []
+      "validations": [{
+        "message": null,
+        "type": "is present",
+        "value": null
+      }]
     }, {
       "field": "customerManagerName",
       "type": "String",
@@ -146,12 +150,16 @@
       "isFilterable": true,
       "isPrimaryKey": false,
       "isReadOnly": false,
-      "isRequired": false,
+      "isRequired": true,
       "isSortable": true,
       "isVirtual": false,
       "reference": null,
       "inverseOf": null,
-      "validations": []
+      "validations": [{
+        "message": null,
+        "type": "is present",
+        "value": null
+      }]
     }, {
       "field": "customerMemo",
       "type": "String",
@@ -176,12 +184,16 @@
       "isFilterable": true,
       "isPrimaryKey": false,
       "isReadOnly": false,
-      "isRequired": false,
+      "isRequired": true,
       "isSortable": true,
       "isVirtual": false,
       "reference": null,
       "inverseOf": null,
-      "validations": []
+      "validations": [{
+        "message": null,
+        "type": "is present",
+        "value": null
+      }]
     }, {
       "field": "detailOrderInfoSeqLogisticsServiceKinds",
       "type": ["Number"],
@@ -194,8 +206,8 @@
       "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
-      "reference": "logisticsServiceKinds.detailOrderInfoSeqKey",
-      "inverseOf": null,
+      "reference": "logisticsServiceKinds.id",
+      "inverseOf": "detailOrderInfoSeq",
       "relationship": "HasMany",
       "validations": []
     }, {
@@ -210,8 +222,8 @@
       "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
-      "reference": "productCategorys.detailOrderInfoSeqKey",
-      "inverseOf": null,
+      "reference": "productCategorys.id",
+      "inverseOf": "detailOrderInfoSeq",
       "relationship": "HasMany",
       "validations": []
     }, {
@@ -226,8 +238,8 @@
       "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
-      "reference": "productionCautions.detailOrderInfoSeqKey",
-      "inverseOf": null,
+      "reference": "productionCautions.id",
+      "inverseOf": "detailOrderInfoSeq",
       "relationship": "HasMany",
       "validations": []
     }, {
@@ -242,8 +254,8 @@
       "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
-      "reference": "storeTypes.detailOrderInfoSeqKey",
-      "inverseOf": null,
+      "reference": "storeTypes.id",
+      "inverseOf": "detailOrderInfoSeq",
       "relationship": "HasMany",
       "validations": []
     }, {
@@ -255,12 +267,16 @@
       "isFilterable": true,
       "isPrimaryKey": false,
       "isReadOnly": false,
-      "isRequired": false,
+      "isRequired": true,
       "isSortable": true,
       "isVirtual": false,
       "reference": null,
       "inverseOf": null,
-      "validations": []
+      "validations": [{
+        "message": null,
+        "type": "is present",
+        "value": null
+      }]
     }, {
       "field": "estimateDoc",
       "type": "String",
@@ -451,22 +467,18 @@
     }, {
       "field": "outputPackaing",
       "type": "Enum",
-      "defaultValue": "total_packaing",
+      "defaultValue": null,
       "enums": ["total_packaing", "only_packaing"],
       "integration": null,
       "isFilterable": true,
       "isPrimaryKey": false,
       "isReadOnly": false,
-      "isRequired": true,
+      "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
       "reference": null,
       "inverseOf": null,
-      "validations": [{
-        "message": null,
-        "type": "is present",
-        "value": null
-      }]
+      "validations": []
     }, {
       "field": "processingNeed",
       "type": "Enum",
@@ -476,16 +488,12 @@
       "isFilterable": true,
       "isPrimaryKey": false,
       "isReadOnly": false,
-      "isRequired": true,
+      "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
       "reference": null,
       "inverseOf": null,
-      "validations": [{
-        "message": null,
-        "type": "is present",
-        "value": null
-      }]
+      "validations": []
     }, {
       "field": "productUrl",
       "type": "String",
@@ -572,22 +580,18 @@
     }, {
       "field": "useService",
       "type": "Enum",
-      "defaultValue": "first",
+      "defaultValue": null,
       "enums": ["first", "using"],
       "integration": null,
       "isFilterable": true,
       "isPrimaryKey": false,
       "isReadOnly": false,
-      "isRequired": true,
+      "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
       "reference": null,
       "inverseOf": null,
-      "validations": [{
-        "message": null,
-        "type": "is present",
-        "value": null
-      }]
+      "validations": []
     }],
     "segments": [],
     "actions": []
@@ -628,8 +632,8 @@
       "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
-      "reference": "detailOrderInfos.detailOrderInfoSeqKey",
-      "inverseOf": null,
+      "reference": "detailOrderInfos.seq",
+      "inverseOf": "detailOrderInfoSeqLogisticsServiceKinds",
       "relationship": "BelongsTo",
       "validations": []
     }, {
@@ -715,7 +719,7 @@
       "inverseOf": null,
       "validations": []
     }, {
-      "field": "contract_status",
+      "field": "contractStatus",
       "type": "Enum",
       "defaultValue": null,
       "enums": [
@@ -864,7 +868,8 @@
         "1",
         "2",
         "3",
-        "4"
+        "4",
+        "5"
       ],
       "integration": null,
       "isFilterable": true,
@@ -933,8 +938,8 @@
     "segments": [],
     "actions": []
   }, {
-    "name": "others_order_infos",
-    "nameOld": "others_order_infos",
+    "name": "othersOrderInfos",
+    "nameOld": "othersOrderInfos",
     "icon": null,
     "integration": null,
     "isReadOnly": false,
@@ -958,7 +963,7 @@
       "inverseOf": null,
       "validations": []
     }, {
-      "field": "contract_status",
+      "field": "contractStatus",
       "type": "Enum",
       "defaultValue": null,
       "enums": [
@@ -1183,6 +1188,25 @@
       "isVirtual": false,
       "reference": null,
       "inverseOf": null,
+      "validations": [{
+        "message": null,
+        "type": "is present",
+        "value": null
+      }]
+    }, {
+      "field": "updateAt",
+      "type": "Date",
+      "defaultValue": null,
+      "enums": null,
+      "integration": null,
+      "isFilterable": true,
+      "isPrimaryKey": false,
+      "isReadOnly": false,
+      "isRequired": false,
+      "isSortable": true,
+      "isVirtual": false,
+      "reference": null,
+      "inverseOf": null,
       "validations": []
     }, {
       "field": "updatedAt",
@@ -1267,8 +1291,8 @@
       "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
-      "reference": "detailOrderInfos.detailOrderInfoSeqKey",
-      "inverseOf": null,
+      "reference": "detailOrderInfos.seq",
+      "inverseOf": "detailOrderInfoSeqProductCategorys",
       "relationship": "BelongsTo",
       "validations": []
     }, {
@@ -1366,8 +1390,8 @@
       "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
-      "reference": "detailOrderInfos.detailOrderInfoSeqKey",
-      "inverseOf": null,
+      "reference": "detailOrderInfos.seq",
+      "inverseOf": "detailOrderInfoSeqProductionCautions",
       "relationship": "BelongsTo",
       "validations": []
     }, {
@@ -1400,6 +1424,38 @@
       "reference": null,
       "inverseOf": null,
       "validations": []
+    }],
+    "segments": [],
+    "actions": []
+  }, {
+    "name": "sequelizeMeta",
+    "nameOld": "sequelizeMeta",
+    "icon": null,
+    "integration": null,
+    "isReadOnly": false,
+    "isSearchable": true,
+    "isVirtual": false,
+    "onlyForRelationships": false,
+    "paginationType": "page",
+    "fields": [{
+      "field": "name",
+      "type": "String",
+      "defaultValue": null,
+      "enums": null,
+      "integration": null,
+      "isFilterable": true,
+      "isPrimaryKey": true,
+      "isReadOnly": false,
+      "isRequired": true,
+      "isSortable": true,
+      "isVirtual": false,
+      "reference": null,
+      "inverseOf": null,
+      "validations": [{
+        "message": null,
+        "type": "is present",
+        "value": null
+      }]
     }],
     "segments": [],
     "actions": []
@@ -1440,8 +1496,8 @@
       "isRequired": false,
       "isSortable": true,
       "isVirtual": false,
-      "reference": "detailOrderInfos.detailOrderInfoSeqKey",
-      "inverseOf": null,
+      "reference": "detailOrderInfos.seq",
+      "inverseOf": "detailOrderInfoSeqStoreTypes",
       "relationship": "BelongsTo",
       "validations": []
     }, {
@@ -1503,11 +1559,13 @@
     "actions": []
   }],
   "meta": {
-    "database_type": "mysql",
     "liana": "forest-express-sequelize",
-    "liana_version": "6.6.0",
-    "engine": "nodejs",
-    "engine_version": "12.16.1",
-    "orm_version": "5.15.2"
+    "liana_version": "8.5.14",
+    "stack": {
+      "database_type": "mysql",
+      "engine": "nodejs",
+      "engine_version": "16.4.2",
+      "orm_version": "5.15.2"
+    }
   }
 }

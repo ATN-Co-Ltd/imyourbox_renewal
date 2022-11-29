@@ -1,23 +1,19 @@
 const newCaclulateStoreFee = (storeType, storeValue, boxsize) => {
-  let oneDayStorePrice = 0;
+  let oneDayStorePrice = 600;
   let monthStoreprice = 0;
+  let boxcount = 70;
   if (storeType === "pallet") {
-    oneDayStorePrice = 600;
     //파레트일떄 월보관료
     console.log(`caclulateStoreFee ${monthStoreprice}`);
     return (monthStoreprice = storeValue * oneDayStorePrice * 30);
   } else if (storeType === "box") {
-    console.log("hello box!!");
-    let boxcount = 70;
     if (boxsize === null) {
       console.log("설마여기로들어오나?");
       return;
     }
     let covnvertToPlt = Math.floor(storeValue / boxcount);
-    oneDayStorePrice = 600;
+
     //박스일때 월보관료
-    console.log(storeValue);
-    console.log(covnvertToPlt);
     console.log(
       `caclulateStoreFee when Box ${covnvertToPlt * oneDayStorePrice * 30}`
     );
@@ -30,13 +26,12 @@ const newCacluateDeliveryFee = (
   outputBoxSize,
   outputType
 ) => {
-  let deliveryFeeBySize = 0;
+  let deliveryFeeBySize = 2900;
   let packingFee = 0;
   let monthDeliveryFee = 0;
   if (outputBoxSize === null) {
     return;
   }
-  deliveryFeeBySize = 2900;
 
   if (outputType === "total_packaing") {
     packingFee = 400;

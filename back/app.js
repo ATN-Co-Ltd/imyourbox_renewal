@@ -41,6 +41,7 @@ app.use(
       "https://www.imyourbox.co.kr",
       "https://www.imyourbox.com",
       "http://localhost:3000",
+      "https://d3nb52okhkikjo.cloudfront.net",
     ],
     credentials: true,
   })
